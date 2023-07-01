@@ -52,6 +52,11 @@ a {
     font-style: 16px;
     cursor: pointer;
     font-family: Paytone One;
+    transition: all 0.2s ease-in-out;
+}
+
+.navbar .btn:hover {
+    filter: brightness(110%);
 }
 
 .navbar .social-icons {
@@ -91,6 +96,11 @@ a {
 .navbar .navigation li {
     color: #fff;
     margin: 0 10px;
+    transition: all 0.1s ease-in-out;
+}
+
+.navbar .navigation li:hover{
+    border-bottom: 2px solid white;
 }
 
 #menuPanel {
@@ -217,7 +227,11 @@ a {
     font-family: Paytone One;
     font-size: 14px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+}
 
+.boton-comprar .btn-comprar:hover {
+    filter: brightness(110%);
 }
 
 @media only screen and (max-width: 767px) {
@@ -310,6 +324,12 @@ a {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     line-height: 12px;
+    transition: all 0.2s ease-in-out;
+}
+
+.eventos .cuadradito:hover {
+    transform: translateY(2px);
+    filter: brightness(120%);
 }
 
 @media screen and (max-width: 767px) {
@@ -533,8 +553,8 @@ a {
     line-height: 15px;
 }
 
-.recorrido .slick-prev,
-.recorrido .slick-next {
+.slick-prev.rec,
+.slick-next.rec {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -549,8 +569,8 @@ a {
     cursor: pointer;
 }
 
-.recorrido .slick-prev::before,
-.recorrido .slick-next::before {
+.slick-prev.rec::before,
+.slick-next.rec::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -562,11 +582,11 @@ a {
     border-right: 4px solid #fff;
 }
 
-.recorrido .slick-prev::before {
+.slick-prev.rec::before {
     transform: translate(-30%, -50%) rotate(-135deg);
 }
 
-.recorrido .slick-next::before {
+.slick-next.rec::before {
     transform: translate(-70%, -50%) rotate(40deg);
 }
 
@@ -649,6 +669,11 @@ a {
     cursor: pointer;
     font-family: Paytone One;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+.pollo-vacilon .buttons button:hover {
+    filter: brightness(120%);
 }
 
 @media screen and (max-width: 767px) {
@@ -733,6 +758,13 @@ a {
 .container-explorar .card img {
     width: 100%;
     height: auto;
+    filter: brightness(80%);
+    transition: all 0.2s ease-in-out;
+}
+
+.container-explorar .card img:hover{
+    transform: scale(1.2);
+    filter: brightness(100%);
 }
 
 .container-explorar .rectangle {
@@ -927,6 +959,13 @@ a {
 .container-paquetes .card img {
     width: 100%;
     height: auto;
+    filter: brightness(80%);
+    transition: all 0.2s ease-in-out;
+}
+
+.container-paquetes .card img:hover{
+    transform: scale(1.2);
+    filter: brightness(100%);
 }
 
 .container-paquetes .rectangle {
@@ -1052,6 +1091,11 @@ footer .botones button {
     font-family: Paytone One;
     font-size: 14px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+}
+
+footer .botones button:hover {
+    filter: brightness(120%);
 }
 
 footer .redes-sociales {
