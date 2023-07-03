@@ -65,26 +65,3 @@ ScrollReveal().reveal('.scroll-reveal', {
     origin: 'bottom', // Punto de origen: inferior
     reset: true
 });
-
-
-/* OPTIMIZACION */
-
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // Cargar la imagen cuando sea visible
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.onload = () => {
-                img.removeAttribute('data-src');
-                observer.unobserve(img);
-            };
-        }
-    });
-});
-
-// Observar todas las imágenes con el atributo data-src
-const images = document.querySelectorAll('img[data-src]');
-images.forEach(img => {
-    observer.observe(img);
-});
