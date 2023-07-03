@@ -100,7 +100,7 @@ a {
     transition: all 0.1s ease-in-out;
 }
 
-.navbar .navigation li:hover{
+.navbar .navigation li:hover {
     border-bottom: 2px solid white;
 }
 
@@ -179,9 +179,11 @@ a {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background-color: #683A10;
+    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    background-repeat: repeat;
+    background-size: cover;
     width: 100%;
-    height: 80px;
+    height: 90px;
 }
 
 .boton-comprar .container {
@@ -249,122 +251,6 @@ a {
     .boton-comprar .columna-2 {
         text-align: center;
         margin-left: 0;
-    }
-}
-
-/* PROXIMOS CONCIERTOS Y EVENTOS */
-
-.eventos {
-    background-color: #9B4917;
-    height: 100px;
-}
-
-.eventos .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    justify-content: center;
-    gap: 20px;
-}
-
-.eventos .columna-1 {
-    display: flex;
-    flex-direction: column;
-}
-
-.eventos .columna-1 h2 {
-    color: #FFF;
-    font-size: 20px;
-    font-family: Paytone One;
-    font-style: normal;
-    font-weight: 400;
-    margin: 0;
-}
-
-.eventos .columna-2 {
-    flex: 0 0 auto;
-}
-
-.eventos .logo {
-    height: 65px;
-    width: auto;
-}
-
-.eventos .columna-3 {
-    display: flex;
-}
-
-.eventos .cuadradito h3 {
-    margin-bottom: 1px;
-    color: #000;
-    font-size: 20px;
-    font-family: Jockey One;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0.1px;
-}
-
-.eventos .cuadradito p {
-    color: #000;
-    font-size: 10px;
-    font-family: Paytone One;
-}
-
-.eventos .cuadradito {
-    background-color: #FFE74D;
-    width: 120px;
-    height: 65px;
-    margin: 0 5px;
-    text-align: left;
-    padding: 5px;
-    padding-left: 10px;
-    color: #000;
-    font-size: 12px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 6px;
-    line-height: 12px;
-    transition: all 0.2s ease-in-out;
-}
-
-.eventos .cuadradito:hover {
-    transform: translateY(2px);
-    filter: brightness(120%);
-}
-
-@media screen and (max-width: 767px) {
-
-    .eventos {
-        height: 450px;
-        padding-top: 30px;
-    }
-
-    .eventos .container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    .eventos .columna-1 {
-        order: 2;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    .eventos .columna-2 {
-        order: 1;
-        align-self: center;
-    }
-
-    .eventos .columna-3 {
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .eventos .cuadradito {
-        width: 200px;
-        margin-top: 10px;
     }
 }
 
@@ -763,7 +649,7 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
-.container-explorar .card img:hover{
+.container-explorar .card img:hover {
     transform: scale(1.2);
     filter: brightness(100%);
 }
@@ -964,7 +850,7 @@ a {
     transition: all 0.2s ease-in-out;
 }
 
-.container-paquetes .card img:hover{
+.container-paquetes .card img:hover {
     transform: scale(1.2);
     filter: brightness(100%);
 }
