@@ -3,9 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(images/bg/trianglify-lowres\ \(1\).png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #77C043;
 }
 
 a {
@@ -17,6 +15,9 @@ a {
 /* NAV */
 .navbar {
     width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
 }
 
 .navbar .row-1 {
@@ -47,7 +48,7 @@ a {
 }
 
 .navbar .btn {
-    background-color: #FBB916;
+    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
     color: #000;
     padding: 10px 20px;
     border: none;
@@ -222,7 +223,7 @@ a {
 }
 
 .boton-comprar .btn-comprar {
-    background-color: #FBB916;
+    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
     color: #000;
     padding: 10px 20px;
     border: none;
@@ -271,7 +272,7 @@ a {
 .introduccion .columna-1 {
     width: 400px;
     height: 350px;
-    background-color: #136635;
+    background-image: linear-gradient(to right bottom, #136635, #2f7d36, #4d9434, #6fab2d, #95c121);
 }
 
 .introduccion .columna-1 .contenido {
@@ -373,7 +374,7 @@ a {
 
 .recorrido h1 {
     margin-bottom: 30px;
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-family: Paytone One;
     font-style: normal;
@@ -510,7 +511,6 @@ a {
 .pollo-vacilon .container img {
     width: 100%;
     height: auto;
-    filter: brightness(70%);
 }
 
 .pollo-vacilon .content {
@@ -549,7 +549,7 @@ a {
 .pollo-vacilon .buttons button {
     width: 200px;
     height: 50px;
-    background-color: #FBB916;
+    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
     color: black;
     margin-right: 10px;
     border: none;
@@ -635,7 +635,7 @@ a {
 
 .container-explorar h1 {
     margin-bottom: 30px;
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-family: Paytone One;
     font-style: normal;
@@ -656,7 +656,7 @@ a {
 }
 
 .container-explorar .rectangle {
-    background-color: #136635;
+    background-image: linear-gradient(to right bottom, #95c121, #6fab2d, #4d9434, #2f7d36, #136635);
     width: 380px;
     height: 100px;
     display: flex;
@@ -724,7 +724,7 @@ a {
 
 .mapa h1 {
     margin-bottom: 30px;
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-family: Paytone One;
     font-style: normal;
@@ -836,7 +836,7 @@ a {
 
 .container-paquetes h1 {
     margin-bottom: 30px;
-    color: #000;
+    color: #fff;
     font-size: 20px;
     font-family: Paytone One;
     font-style: normal;
@@ -857,7 +857,7 @@ a {
 }
 
 .container-paquetes .rectangle {
-    background-color: #95C121;
+    background-image: linear-gradient(to right bottom, #95c121, #6fab2d, #4d9434, #2f7d36, #136635);
     width: 380px;
     height: 100px;
     display: flex;
@@ -869,14 +869,14 @@ a {
 }
 
 .container-paquetes .rectangle h3 {
-    color: #000000;
+    color: #fff;
     font-size: 20px;
     font-family: Paytone One;
     padding: 10px 0px 0px 20px;
 }
 
 .container-paquetes .rectangle p {
-    color: #000000;
+    color: #fff;
     margin-top: 0;
     font-size: 13px;
     padding: 0px 10px 0px 20px;
@@ -972,7 +972,7 @@ footer .columna-2 h3 {
 }
 
 footer .botones button {
-    background-color: #FBB916;
+    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
     color: #000;
     padding: 10px 20px;
     border: none;
