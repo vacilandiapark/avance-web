@@ -656,7 +656,7 @@ a {
 }
 
 .container-explorar .rectangle {
-    background-image: linear-gradient(to right bottom, #95c121, #6fab2d, #4d9434, #2f7d36, #136635);
+    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     width: 380px;
     height: 100px;
     display: flex;
@@ -857,7 +857,7 @@ a {
 }
 
 .container-paquetes .rectangle {
-    background-image: linear-gradient(to right bottom, #95c121, #6fab2d, #4d9434, #2f7d36, #136635);
+    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     width: 380px;
     height: 100px;
     display: flex;
