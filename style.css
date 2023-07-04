@@ -807,114 +807,6 @@ a {
     }
 }
 
-/* PAQUETES Y RESERVAS */
-
-.container-paquetes {
-    max-width: 1200px;
-    height: auto;
-    margin: 0 auto;
-    margin-top: 40px;
-}
-
-.container-paquetes .row {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    /* Alineación inferior */
-    margin-bottom: 25px;
-    gap: 30px;
-}
-
-.container-paquetes .card {
-    width: 380px;
-    height: 300px;
-    position: relative;
-    /* Añadido */
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-}
-
-.container-paquetes h1 {
-    margin-bottom: 30px;
-    color: #fff;
-    font-size: 20px;
-    font-family: Paytone One;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.container-paquetes .card img {
-    width: 100%;
-    height: auto;
-    filter: brightness(80%);
-    transition: all 0.2s ease-in-out;
-}
-
-.container-paquetes .card img:hover {
-    transform: scale(1.2);
-    filter: brightness(100%);
-}
-
-.container-paquetes .rectangle {
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
-    width: 380px;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    /* Alineación inferior */
-    line-height: 0.4;
-}
-
-.container-paquetes .rectangle h3 {
-    color: #fff;
-    font-size: 20px;
-    font-family: Paytone One;
-    padding: 10px 0px 0px 20px;
-}
-
-.container-paquetes .rectangle p {
-    color: #fff;
-    margin-top: 0;
-    font-size: 13px;
-    padding: 0px 10px 0px 20px;
-    font-family: Patrick Hand;
-    line-height: 1.2;
-}
-
-/* Estilos para pantallas pequeñas (hasta 768px) */
-@media (max-width: 768px) {
-    .container-paquetes .row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .container-paquetes .card {
-        width: calc(100% - 30px);
-        max-width: 380px;
-        height: 300px;
-        margin: 10px;
-        position: relative;
-        /* Añadido */
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        overflow: hidden;
-    }
-
-    .container-paquetes .card img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        /* Añadido */
-    }
-
-    .container-paquetes h1 {
-        text-align: center;
-    }
-}
-
 /* FOOTER */
 
 footer {
@@ -1203,4 +1095,83 @@ footer .logo img {
 
 #whatsapp-input button:hover {
     background-color: #128C7E;
+}
+
+/* FORMULARIO DE CONTACTO */
+
+.form-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: white;
+    margin-top: 35px;
+    font-family: 'Jockey One', sans-serif;
+    text-align: center;
+    /* Agregado para centrar el contenido */
+}
+
+.form-container h2 {
+    color: white;
+    font-family: Paytone One;
+}
+
+.form-container .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Agregado para envolver los elementos en caso de falta de espacio */
+    margin-bottom: 20px;
+    justify-content: center;
+    /* Agregado para centrar los elementos */
+}
+
+.form-container .form-group {
+    flex: 1;
+    margin: 0 35px 0 15px;
+    /* Ajuste de margen para espaciado uniforme */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+    /* Ajuste de alineación del texto */
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container .topic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    /* Agregado para envolver los botones en caso de falta de espacio */
+    justify-content: center;
+    /* Agregado para centrar los botones */
+    gap: 10px;
+}
+
+.form-container button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    font-style: 16px;
+    cursor: pointer;
+    font-family: Paytone One;
+    transition: all 0.2s ease-in-out;
 }
