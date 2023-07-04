@@ -25,9 +25,25 @@
   <!-- Contenedor del botón de WhatsApp -->
   <div id="whatsapp-button">
     <div id="whatsapp-chat">
-      <div id="whatsapp-message">¿Cómo podemos ayudarte?</div>
-      <a href="https://api.whatsapp.com/send?phone=xxxxxxxxxxx" target="_blank" id="whatsapp-link">Abrir WhatsApp</a>
-      <button id="whatsapp-close">Cerrar</button>
+      <div id="whatsapp-header">
+        <div id="whatsapp-avatar">
+          <img src="images/274996682_108713358421596_5386262468476296445_n.jpg" alt="Avatar">
+        </div>
+        <div id="whatsapp-title">Vacilandia Park</div>
+        <button id="whatsapp-close">&times;</button>
+      </div>
+      <div id="whatsapp-messages">
+        <div class="message received">
+          <span class="bubble">Hola, ¿en qué puedo ayudarte?</span>
+        </div>
+        <div class="message sent">
+          <span class="bubble">Hola, tengo una pregunta sobre...</span>
+        </div>
+      </div>
+      <div id="whatsapp-input">
+        <input type="text" id="whatsapp-message-input" placeholder="Escribe tu mensaje...">
+        <button id="whatsapp-send">Enviar</button>
+      </div>
     </div>
     <div id="whatsapp-icon">
       <img src="images/whatsapp_318-219850.avif" alt="WhatsApp">
