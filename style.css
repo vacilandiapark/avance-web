@@ -1057,3 +1057,72 @@ footer .logo img {
         max-width: 100%;
     }
 }
+
+/* WHATSAPP */
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+#whatsapp-icon img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#whatsapp-chat {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 280px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9998;
+    
+    font-family: Paytone One;
+}
+
+#whatsapp-chat.open {
+    display: block;
+}
+
+#whatsapp-message {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#whatsapp-link {
+    display: block;
+    background-color: #25D366;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#whatsapp-link:hover {
+    background-color: #128C7E;
+}
+
+#whatsapp-close {
+    display: block;
+    background-color: #E5E5E5;
+    color: #333;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#whatsapp-close:hover {
+    background-color: #ccc;
+}

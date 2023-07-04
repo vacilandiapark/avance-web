@@ -65,3 +65,26 @@ ScrollReveal().reveal('.scroll-reveal', {
     origin: 'bottom', // Punto de origen: inferior
     reset: true
 });
+
+/* WHATSAPP */
+
+// Obtener elementos del DOM
+const button = document.getElementById('whatsapp-icon');
+const chatBox = document.getElementById('whatsapp-chat');
+const closeButton = document.getElementById('whatsapp-close');
+
+// Función para abrir la ventana de chat
+function openChat() {
+    chatBox.classList.add('open');
+}
+
+// Función para cerrar la ventana de chat
+function closeChat() {
+    chatBox.classList.remove('open');
+}
+
+// Evento click en el botón de WhatsApp
+button.addEventListener('click', openChat);
+
+// Evento click en el botón de cerrar
+closeButton.addEventListener('click', closeChat);
