@@ -272,7 +272,7 @@ a {
 .introduccion .columna-1 {
     width: 400px;
     height: 350px;
-    background-image: linear-gradient(to right bottom, #136635, #2f7d36, #4d9434, #6fab2d, #95c121);
+    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
 }
 
 .introduccion .columna-1 .contenido {
