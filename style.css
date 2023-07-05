@@ -11,7 +11,7 @@
     --bg-rectangulos: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
-    --font-terciario: font-family: Patrick Hand;
+    --font-terciario: Patrick Hand;
 }
 
 
@@ -230,7 +230,7 @@ a {
 .boton-comprar p {
     color: var(--color-blanco);
     font-size: 14px;
-    var(--font-terciario);
+    font-family: var(--font-terciario);
     font-style: normal;
     font-weight: 400;
 }
@@ -454,7 +454,7 @@ a {
 .explorar .card-content p {
     color: var(--color-blanco);
     font-size: 14px;
-    var(--font-terciario);
+    font-family: var(--font-terciario);
     font-style: normal;
     font-weight: 400;
     line-height: 15px;
@@ -551,7 +551,7 @@ a {
 .pollo-vacilon .content p {
     color: var(--color-blanco);
     font-size: 20px;
-    var(--font-terciario);
+    font-family: var(--font-terciario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -697,7 +697,7 @@ a {
     margin-top: 0;
     font-size: 13px;
     padding: 0px 10px 0px 20px;
-    var(--font-terciario);
+    font-family: var(--font-terciario);
     line-height: 1.2;
 }
 
@@ -803,7 +803,7 @@ a {
 .mapa .rectangulo p {
     color: var(--color-blanco);
     font-size: 18px;
-    var(--font-terciario);
+    font-family: (--font-terciario);
     line-height: 1;
 }
 
