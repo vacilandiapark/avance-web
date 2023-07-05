@@ -30,7 +30,7 @@ $(document).ready(function () {
     });
 });
 
-// CARRUSEL RECORRIDO VACILÓN //
+// CARRUSEL EXPLORA EL PARQUE //
 
 $(document).ready(function () {
     // Carrusel para pantallas grandes (más de 768px)

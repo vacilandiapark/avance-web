@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #136635;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -364,15 +365,15 @@ a {
     }
 }
 
-/* CARRUSEL RECORRIDO VACILÓN */
+/* CARRUSEL EXPLORA EL PARQUE */
 
-.recorrido {
+.explorar {
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 30px;
 }
 
-.recorrido h1 {
+.explorar h1 {
     margin-bottom: 30px;
     color: #fff;
     font-size: 20px;
@@ -382,11 +383,11 @@ a {
     line-height: normal;
 }
 
-.recorrido .container {
+.explorar .container {
     width: 100%;
 }
 
-.recorrido .carrusel-recorrido {
+.explorar .carrusel-recorrido {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -394,7 +395,7 @@ a {
     -webkit-overflow-scrolling: touch;
 }
 
-.recorrido .card {
+.explorar .card {
     width: 350px;
     height: 400px;
     background-color: #fff;
@@ -405,13 +406,13 @@ a {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.recorrido .card img {
+.explorar .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.recorrido .card-content {
+.explorar .card-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -424,7 +425,7 @@ a {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.recorrido .card-content h3 {
+.explorar .card-content h3 {
     color: #FFF;
     font-size: 20px;
     font-family: Paytone One;
@@ -433,7 +434,7 @@ a {
     line-height: 1px;
 }
 
-.recorrido .card-content p {
+.explorar .card-content p {
     color: #FFF;
     font-size: 14px;
     font-family: Patrick Hand;
@@ -481,12 +482,12 @@ a {
 
 @media screen and (max-width: 767px) {
 
-    .recorrido {
+    .explorar  {
         margin-top: 70%;
         text-align: center;
     }
 
-    .recorrido h1 {
+    .explorar  h1 {
         margin-left: 11px;
         margin-right: 11px;
     }
@@ -608,14 +609,14 @@ a {
 
 /* EXPLORAR NUESTRO PARQUE */
 
-.container-explorar {
+.container-planificar {
     max-width: 1200px;
     height: 650px;
     margin: 0 auto;
     margin-top: 40px;
 }
 
-.container-explorar .row {
+.container-planificar .row {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -624,7 +625,7 @@ a {
     gap: 30px;
 }
 
-.container-explorar .card {
+.container-planificar .card {
     width: 380px;
     height: 300px;
     position: relative;
@@ -633,7 +634,7 @@ a {
     overflow: hidden;
 }
 
-.container-explorar h1 {
+.container-planificar h1 {
     margin-bottom: 30px;
     color: #fff;
     font-size: 20px;
@@ -643,19 +644,19 @@ a {
     line-height: normal;
 }
 
-.container-explorar .card img {
+.container-planificar .card img {
     width: 100%;
     height: auto;
     filter: brightness(80%);
     transition: all 0.2s ease-in-out;
 }
 
-.container-explorar .card img:hover {
+.container-planificar .card img:hover {
     transform: scale(1.2);
     filter: brightness(100%);
 }
 
-.container-explorar .rectangle {
+.container-planificar .rectangle {
     background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     width: 380px;
     height: 100px;
@@ -667,14 +668,14 @@ a {
     line-height: 0.4;
 }
 
-.container-explorar .rectangle h3 {
+.container-planificar .rectangle h3 {
     color: #fff;
     font-size: 20px;
     font-family: Paytone One;
     padding: 10px 0px 0px 20px;
 }
 
-.container-explorar .rectangle p {
+.container-planificar .rectangle p {
     color: #fff;
     margin-top: 0;
     font-size: 13px;
@@ -685,13 +686,13 @@ a {
 
 /* Estilos para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
-    .container-explorar .row {
+    .container-planificar .row {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .container-explorar .card {
+    .container-planificar .card {
         width: calc(100% - 30px);
         max-width: 380px;
         height: 300px;
@@ -702,14 +703,14 @@ a {
         overflow: hidden;
     }
 
-    .container-explorar .card img {
+    .container-planificar .card img {
         width: 100%;
         height: auto;
         object-fit: cover;
         /* Añadido */
     }
 
-    .container-explorar h1 {
+    .container-planificar h1 {
         text-align: center;
     }
 }
@@ -898,7 +899,7 @@ footer .columna-3 {
 }
 
 footer .logo img {
-    max-width: 160px;
+    max-width: 300px;
     max-height: 100%;
 }
 
@@ -960,9 +961,14 @@ footer .logo img {
 }
 
 #whatsapp-icon img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#whatsapp-icon img:hover{
+    filter: brightness(150%);
 }
 
 #whatsapp-chat {
@@ -1134,6 +1140,7 @@ footer .logo img {
     display: block;
     margin-bottom: 5px;
     text-align: left;
+    font-size: 25px;
     /* Ajuste de alineación del texto */
 }
 
