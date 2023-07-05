@@ -1,15 +1,32 @@
+:root{
+    --color-primario:#136635;
+    --color-secundario: #95C121;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-negro: #000;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro:#FFE74D;
+    --color-botones: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
+    --bg-rectangulos: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    --font-primario: Paytone One;
+    --font-secundario: 'Jockey One', sans-serif;
+    --font-terciario: font-family: Patrick Hand;
+}
+
+
 html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #136635;
+    background-color: var(--color-primario);
     scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none !important;
-    color: white;
+    color: var(--color-blanco);
     list-style: none;
 }
 
@@ -23,7 +40,7 @@ a {
 
 .navbar .row-1 {
     height: 80px;
-    background-color: #136635;
+    background-color: var(--color-primario);
 }
 
 .navbar .row-2 {
@@ -31,7 +48,7 @@ a {
     justify-content: center;
     align-items: center;
     height: 40px;
-    background-color: #95C121;
+    background-color: var(--color-secundario);
 }
 
 .navbar .container {
@@ -49,13 +66,13 @@ a {
 }
 
 .navbar .btn {
-    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
-    color: #000;
+    background-image: var(--color-botones);
+    color: var(--color-negro);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
     cursor: pointer;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
 }
 
@@ -64,7 +81,7 @@ a {
 }
 
 .navbar .social-icons {
-    color: #fff;
+    color: var(--color-blanco);
     display: flex;
 }
 
@@ -85,7 +102,7 @@ a {
 .navbar .line {
     width: 100%;
     height: 3px;
-    background-color: #fff;
+    background-color: var(--color-blanco);
 }
 
 .navbar .navigation {
@@ -94,23 +111,23 @@ a {
     align-items: center;
     list-style: none;
     padding: 0;
-    font-family: 'Jockey One', sans-serif;
+    font-family: var(--font-secundario);
 }
 
 .navbar .navigation li {
-    color: #fff;
+    color: var(--color-blanco);
     margin: 0 10px;
     transition: all 0.1s ease-in-out;
 }
 
 .navbar .navigation li:hover {
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--color-blanco);
 }
 
 #menuPanel {
     display: none;
-    background-color: #136635;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
     position: fixed;
     top: 0;
     right: -350px;
@@ -128,7 +145,7 @@ a {
 .panel-navigation {
     list-style: none;
     padding: 0;
-    font-family: 'Jockey One', sans-serif;
+    font-family: var(--font-secundario);
 }
 
 .panel-navigation li {
@@ -182,7 +199,7 @@ a {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    background-image: var(--bg-rectangulos);
     background-repeat: repeat;
     background-size: cover;
     width: 100%;
@@ -203,17 +220,17 @@ a {
 }
 
 .boton-comprar h2 {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
 }
 
 .boton-comprar p {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 14px;
-    font-family: Patrick Hand;
+    var(--font-terciario);
     font-style: normal;
     font-weight: 400;
 }
@@ -224,13 +241,13 @@ a {
 }
 
 .boton-comprar .btn-comprar {
-    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
-    color: #000;
+    background-image: var(--color-botones);
+    color: var(--color-negro);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
     cursor: pointer;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-size: 14px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.2s ease-in-out;
@@ -273,7 +290,7 @@ a {
 .introduccion .columna-1 {
     width: 400px;
     height: 350px;
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    background-image: var(--bg-rectangulos);
 }
 
 .introduccion .columna-1 .contenido {
@@ -281,16 +298,16 @@ a {
 }
 
 .introduccion .columna-1 h2 {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
 
 .introduccion .columna-1 p {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 13px;
     font-family: Patua One;
     font-style: normal;
@@ -320,8 +337,8 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #136635;
-    color: #ffffff;
+    background-color: var(--color-primario);
+    color: var(--color-blanco)fff;
     font-size: 20px;
     padding: 10px;
     cursor: pointer;
@@ -375,9 +392,9 @@ a {
 
 .explorar h1 {
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -398,7 +415,7 @@ a {
 .explorar .card {
     width: 350px;
     height: 400px;
-    background-color: #fff;
+    background-color: var(--color-blanco);
     position: relative;
     flex-shrink: 0;
     margin-right: 20px;
@@ -418,26 +435,26 @@ a {
     left: 0;
     width: 100%;
     height: 100px;
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
-    color: #fff;
+    background-image: var(--bg-rectangulos);
+    color: var(--color-blanco);
     padding: 10px 50px 0px 50px;
     box-sizing: border-box;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .explorar .card-content h3 {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
     line-height: 1px;
 }
 
 .explorar .card-content p {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 14px;
-    font-family: Patrick Hand;
+    var(--font-terciario);
     font-style: normal;
     font-weight: 400;
     line-height: 15px;
@@ -448,8 +465,8 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #136635;
-    color: #fff;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -468,8 +485,8 @@ a {
     transform: translate(-50%, -50%);
     width: 14px;
     height: 14px;
-    border-top: 4px solid #fff;
-    border-right: 4px solid #fff;
+    border-top: 4px solid var(--color-blanco);
+    border-right: 4px solid var(--color-blanco);
 }
 
 .slick-prev.rec::before {
@@ -519,22 +536,22 @@ a {
     padding-left: 70px;
     top: 50%;
     transform: translateY(-50%);
-    color: white;
+    color: var(--color-blanco);
 }
 
 .pollo-vacilon .content h2 {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 30px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
-    line-height: 0.5;
+    line-height: 1.2;
 }
 
 .pollo-vacilon .content p {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Patrick Hand;
+    var(--font-terciario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -550,13 +567,13 @@ a {
 .pollo-vacilon .buttons button {
     width: 200px;
     height: 50px;
-    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
+    background-image: var(--color-botones);
     color: black;
     margin-right: 10px;
     border: none;
     font-size: 15px;
     cursor: pointer;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.2s ease-in-out;
 }
@@ -636,9 +653,9 @@ a {
 
 .container-planificar h1 {
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -657,7 +674,7 @@ a {
 }
 
 .container-planificar .rectangle {
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    background-image: var(--bg-rectangulos);
     width: 380px;
     height: 100px;
     display: flex;
@@ -669,18 +686,18 @@ a {
 }
 
 .container-planificar .rectangle h3 {
-    color: #fff;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     padding: 10px 0px 0px 20px;
 }
 
 .container-planificar .rectangle p {
-    color: #fff;
+    color: var(--color-blanco);
     margin-top: 0;
     font-size: 13px;
     padding: 0px 10px 0px 20px;
-    font-family: Patrick Hand;
+    var(--font-terciario);
     line-height: 1.2;
 }
 
@@ -726,9 +743,9 @@ a {
 
 .mapa h1 {
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -769,24 +786,24 @@ a {
     left: 0;
     width: 100%;
     height: 70;
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
-    color: #ffffff;
+    background-image: var(--bg-rectangulos);
+    color: var(--color-blanco)fff;
     padding: 10px 0px 0px 20px;
     box-sizing: border-box;
     /* Agregado */
 }
 
 .mapa .rectangulo h2 {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     line-height: .3;
 }
 
 .mapa .rectangulo p {
-    color: #FFF;
+    color: var(--color-blanco);
     font-size: 18px;
-    font-family: Patrick Hand;
+    var(--font-terciario);
     line-height: 1;
 }
 
@@ -812,7 +829,7 @@ a {
 /* FOOTER */
 
 footer {
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    background-image: var(--bg-rectangulos);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -838,9 +855,9 @@ footer .columna-1 ul {
     list-style: none;
     padding: 40px 0px 0px 0px;
     margin: 0;
-    color: white;
+    color: var(--color-blanco);
     font-size: 15px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
 }
 
 footer .columna-1 ul li {
@@ -859,19 +876,19 @@ footer .columna-2 {
 
 footer .columna-2 h3 {
     margin-bottom: 10px;
-    color: white;
+    color: var(--color-blanco);
     font-size: 32px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
 }
 
 footer .botones button {
-    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
-    color: #000;
+    background-image: var(--color-botones);
+    color: var(--color-negro);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
     cursor: pointer;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-size: 14px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: all 0.2s ease-in-out;
@@ -883,7 +900,7 @@ footer .botones button:hover {
 
 footer .redes-sociales {
     margin-top: 15px;
-    color: white;
+    color: var(--color-blanco);
 }
 
 footer .columna-2 .redes-sociales i {
@@ -977,7 +994,7 @@ footer .logo img {
     bottom: 100px;
     right: 40px;
     width: 320px;
-    background-color: #fff;
+    background-color: var(--color-blanco);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     z-index: 9998;
@@ -1030,14 +1047,14 @@ footer .logo img {
 
 #whatsapp-title {
     flex: 1;
-    color: #fff;
+    color: var(--color-blanco);
     font-weight: bold;
 }
 
 #whatsapp-close {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--color-blanco);
     font-size: 20px;
     cursor: pointer;
 }
@@ -1091,7 +1108,7 @@ footer .logo img {
 
 #whatsapp-input button {
     background-color: #25D366;
-    color: #fff;
+    color: var(--color-blanco);
     padding: 8px 16px;
     border: none;
     border-radius: 20px;
@@ -1115,12 +1132,16 @@ footer .logo img {
 
 .contacto-container h1 {
     margin-bottom: 30px;
-    color: #fff;
+    color: var(--color-blanco);
     font-size: 20px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.contacto-container h2{
+    line-height: 0.5;
 }
 
 .form-container {
@@ -1137,10 +1158,10 @@ footer .logo img {
 .form-container .col-2 {
     flex: 1;
     height: 540px;
-    background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    background-image: var(--bg-rectangulos);
     padding: 20px;
-    color: #fff;
-    font-family: 'Jockey One', sans-serif;
+    color: var(--color-blanco);
+    font-family: var(--font-secundario);
 }
 
 @media (max-width: 768px) {
@@ -1169,13 +1190,13 @@ footer .logo img {
 
 .form-container .form-row {
     margin-bottom: 20px;
-    font-family: 'Jockey One', sans-serif;
+    font-family: var(--font-secundario);
 }
 
 .form-container .form-label {
     display: block;
     margin-bottom: 5px;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
 }
 
 .form-container .form-input {
@@ -1217,15 +1238,15 @@ footer .logo img {
     width: 100%;
     height: 40px;
     background: #333;
-    color: #fff;
+    color: var(--color-blanco);
     border: none;
     cursor: pointer;
-    background-image: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
-    color: #000;
+    background-image: var(--color-botones);
+    color: var(--color-negro);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
     cursor: pointer;
-    font-family: Paytone One;
+    font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
 }
