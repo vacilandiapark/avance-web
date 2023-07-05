@@ -5,6 +5,7 @@
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-negro: #000;
+    --color-gris: rgb(104, 104, 104);
     --color-amarillo: #FBB916;
     --color-amarillo-claro:#FFE74D;
     --color-botones: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
@@ -12,6 +13,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: Patrick Hand;
+    --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -20,13 +22,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: var(--color-primario);
+    background-color: var(--color-blanco);
     scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none !important;
-    color: var(--color-blanco);
     list-style: none;
 }
 
@@ -48,7 +49,8 @@ a {
     justify-content: center;
     align-items: center;
     height: 40px;
-    background-color: var(--color-secundario);
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
 }
 
 .navbar .container {
@@ -87,6 +89,7 @@ a {
 
 .navbar .social-icons a {
     margin-right: 5px;
+    color: var(--color-blanco);
 }
 
 .navbar .hamburger {
@@ -114,14 +117,17 @@ a {
     font-family: var(--font-secundario);
 }
 
+.navbar a{
+    color: var(--color-gris);
+}
+
 .navbar .navigation li {
-    color: var(--color-blanco);
     margin: 0 10px;
     transition: all 0.1s ease-in-out;
 }
 
 .navbar .navigation li:hover {
-    border-bottom: 2px solid var(--color-blanco);
+    transform: scale(1.02);
 }
 
 #menuPanel {
@@ -199,7 +205,8 @@ a {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background-image: var(--bg-rectangulos);
+    background-color: var(--color-primario);
+    box-shadow: var(--sombra);
     background-repeat: repeat;
     background-size: cover;
     width: 100%;
@@ -249,7 +256,7 @@ a {
     cursor: pointer;
     font-family: var(--font-primario);
     font-size: 14px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sombra);
     transition: all 0.2s ease-in-out;
 }
 
@@ -392,7 +399,7 @@ a {
 
 .explorar h1 {
     margin-bottom: 30px;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     font-style: normal;
@@ -420,7 +427,7 @@ a {
     flex-shrink: 0;
     margin-right: 20px;
     margin-left: 20px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sombra);
 }
 
 .explorar .card img {
@@ -439,7 +446,7 @@ a {
     color: var(--color-blanco);
     padding: 10px 50px 0px 50px;
     box-sizing: border-box;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sombra);
 }
 
 .explorar .card-content h3 {
@@ -574,7 +581,7 @@ a {
     font-size: 15px;
     cursor: pointer;
     font-family: var(--font-primario);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sombra);
     transition: all 0.2s ease-in-out;
 }
 
@@ -647,13 +654,13 @@ a {
     height: 300px;
     position: relative;
     /* Añadido */
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sombra);
     overflow: hidden;
 }
 
 .container-planificar h1 {
     margin-bottom: 30px;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     font-style: normal;
@@ -716,7 +723,7 @@ a {
         margin: 10px;
         position: relative;
         /* Añadido */
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        box-shadow: var(--sombra);
         overflow: hidden;
     }
 
@@ -743,7 +750,7 @@ a {
 
 .mapa h1 {
     margin-bottom: 30px;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     font-style: normal;
@@ -836,6 +843,10 @@ footer {
     width: 100%;
 }
 
+footer a{
+    color: var(--color-blanco);
+}
+
 footer .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -890,7 +901,7 @@ footer .botones button {
     cursor: pointer;
     font-family: var(--font-primario);
     font-size: 14px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--sombra);
     transition: all 0.2s ease-in-out;
 }
 
@@ -996,7 +1007,7 @@ footer .logo img {
     width: 320px;
     background-color: var(--color-blanco);
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--sombra);
     z-index: 9998;
     font-family: Arial, sans-serif;
     animation: jellyAnimation 0.6s;
@@ -1132,7 +1143,7 @@ footer .logo img {
 
 .contacto-container h1 {
     margin-bottom: 30px;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     font-style: normal;
@@ -1146,6 +1157,10 @@ footer .logo img {
 
 .form-container {
     display: flex;
+}
+
+.form-container a{
+    color: var(--color-blanco);
 }
 
 .form-container .col-1 {
@@ -1193,12 +1208,6 @@ footer .logo img {
     font-family: var(--font-secundario);
 }
 
-.form-container .form-label {
-    display: block;
-    margin-bottom: 5px;
-    font-family: var(--font-primario);
-}
-
 .form-container .form-input {
     width: 95%;
     padding-left: 20px;
@@ -1207,7 +1216,7 @@ footer .logo img {
     height: 30px;
     font-size: 14px;
     border: none;
-    border-bottom: 1px solid rgb(97, 97, 97);
+    border-bottom: 1px solid var(--color-gris);
 }
 
 .form-container .form-select {
@@ -1215,11 +1224,11 @@ footer .logo img {
     padding-left: 20px;
     padding-top: 7px;
     padding-bottom: 7px;
-    color: rgb(104, 104, 104);
+    color: var(--color-gris);
     height: 45px;
     font-size: 14px;
     border: none;
-    border-bottom: 1px solid rgb(97, 97, 97);
+    border-bottom: 1px solid var(--color-gris);
 }
 
 .form-container .form-textarea {
@@ -1228,25 +1237,28 @@ footer .logo img {
     padding-left: 20px;
     padding-top: 7px;
     padding-bottom: 7px;
-    color: rgb(104, 104, 104);
+    color: var(--color-gris);
     font-size: 14px;
     border: none;
-    border-bottom: 1px solid rgb(97, 97, 97);
+    border-bottom: 1px solid var(--color-gris);
 }
 
 .form-container .form-submit {
     width: 100%;
     height: 40px;
     background: #333;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     border: none;
     cursor: pointer;
     background-image: var(--color-botones);
-    color: var(--color-negro);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
     cursor: pointer;
     font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
+}
+
+.form-container .form-submit:hover{
+    filter: brightness(150%);
 }
