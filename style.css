@@ -1109,7 +1109,8 @@ footer .logo img {
     max-width: 1200px;
     height: 700px;
     margin: 0 auto;
-    padding: 0 20px; /* Agregado margen a los costados */
+    padding: 0 20px;
+    /* Agregado margen a los costados */
 }
 
 .contacto-container h1 {
@@ -1127,25 +1128,24 @@ footer .logo img {
 }
 
 .form-container .col-1 {
-    width: 100%;
+    width: 400px;
     height: auto;
     background: #d4d4d4;
     padding: 30px;
 }
 
 .form-container .col-2 {
-    width: 100%;
+    flex: 1;
     height: 540px;
     background-image: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     padding: 20px;
     color: #fff;
     font-family: 'Jockey One', sans-serif;
-    margin-bottom: 20px; /* Agregado margen inferior */
 }
 
 @media (max-width: 768px) {
 
-    .contacto-container{
+    .contacto-container {
         margin-bottom: 600px;
     }
 
@@ -1155,13 +1155,15 @@ footer .logo img {
 
     .form-container .col-1 {
         width: 100%;
-        margin-bottom: 0; /* Eliminado margen inferior */
+        margin-bottom: 0;
+        /* Eliminado margen inferior */
     }
 
     .form-container .col-2 {
         width: 100%;
         flex: 1;
-        margin-bottom: 0; /* Eliminado margen inferior */
+        margin-bottom: 0;
+        /* Eliminado margen inferior */
     }
 }
 
