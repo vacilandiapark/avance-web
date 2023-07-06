@@ -24,6 +24,7 @@ body {
     box-sizing: border-box;
     background-color: var(--color-blanco);
     scroll-behavior: smooth;
+    border: 1px solid black;
 }
 
 a {
@@ -158,7 +159,7 @@ a {
     margin: 10px 0;
 }
 
-.panel-navigation li a{
+.panel-navigation li a {
     color: var(--color-blanco);
 }
 
@@ -1459,5 +1460,10 @@ footer .logo img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+    }
+
+    #paquetes-cumpleañeros .arrow-up,
+    #paquetes-cumpleañeros .arrow-down{
+        display: none;
     }
 }
