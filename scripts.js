@@ -1,3 +1,23 @@
+
+$(document).ready(function () {
+    $('a[href^="#"]').on('click', function (event) {
+        event.preventDefault();
+
+        var target = $(this).attr('href');
+        var offset = 200; // Ajusta este valor según sea necesario
+        var targetPosition = $(target).offset().top;
+        var scrollToPosition = targetPosition - offset;
+
+        $('html, body').animate({
+            scrollTop: scrollToPosition
+        }, 0);
+    });
+});
+
+
+
+// RESPONSIVE NAVBAR//
+
 $(document).ready(function () {
     $('.hamburger').click(function () {
         $('#menuPanel').toggleClass('open');
@@ -40,7 +60,7 @@ $(document).ready(function () {
         prevArrow: '<button class="slick-prev rec" type="button"></button>',
         nextArrow: '<button class="slick-next rec" type="button"></button>',
         autoplay: true, // Agregado para hacer que el carrusel se mueva automáticamente
-        autoplaySpeed: 2000, // Velocidad en milisegundos entre las transiciones automáticas
+        autoplaySpeed: 1000, // Velocidad en milisegundos entre las transiciones automáticas
         responsive: [
             {
                 // Configuración para pantallas móviles (menos de 768px)
@@ -107,6 +127,10 @@ $(document).ready(function () {
     var $thumbnails = $('.thumbnails');
     var $arrowUp = $('.arrow-up');
     var $arrowDown = $('.arrow-down');
+    var $modal = $('#modal');
+    var $modalContent = $('.modal-content');
+    var $modalImage = $modalContent.find('img');
+    var $modalClose = $('.close');
 
     $carousel.slick({
         autoplay: true,
@@ -130,7 +154,8 @@ $(document).ready(function () {
         nextArrow: '',
         centerMode: true,
         centerPadding: '0',
-        focusOnSelect: true
+        focusOnSelect: true,
+        scroll: true // Habilitar el desplazamiento con la rueda del mouse
     });
 
     $arrowUp.click(function () {
@@ -140,6 +165,45 @@ $(document).ready(function () {
     $arrowDown.click(function () {
         $thumbnails.slick('slickNext');
     });
-});
 
-/* CARACTERISTICAS */
+    $carousel.on('click', 'img', function () {
+        var imgSrc = $(this).attr('src');
+        $modalImage.attr('src', imgSrc);
+        $modal.show();
+    });
+
+    $modalClose.click(function () {
+        $modal.hide();
+    });
+
+    $modal.click(function (e) {
+        if ($(e.target).hasClass('modal-content')) {
+            $modal.hide();
+        }
+    });
+
+    $(document).keydown(function (e) {
+        if (e.keyCode === 27) {
+            $modal.hide();
+        }
+    });
+
+    $('.cuadrado').on('click', function () {
+        var imgSrc = $(this).find('img').attr('src');
+        $modalImage.attr('src', imgSrc);
+        $modal.show();
+
+        // Establecer una escala más grande para la imagen ampliada en el modal
+        $modalImage.css('transform', 'scale(1.8)');
+    });
+
+    // Desplazamiento del carrusel de thumbnails con la rueda del mouse
+    $thumbnails.on('wheel', function (e) {
+        e.preventDefault();
+        if (e.originalEvent.deltaY < 0) {
+            $thumbnails.slick('slickPrev');
+        } else {
+            $thumbnails.slick('slickNext');
+        }
+    });
+});

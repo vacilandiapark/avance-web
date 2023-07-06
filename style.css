@@ -14,6 +14,7 @@
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: Patrick Hand;
     --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
 }
 
 
@@ -24,7 +25,6 @@ body {
     box-sizing: border-box;
     background-color: var(--color-blanco);
     scroll-behavior: smooth;
-    border: 1px solid black;
 }
 
 a {
@@ -581,12 +581,20 @@ footer .logo img {
     margin-right: 20px;
     margin-left: 20px;
     box-shadow: var(--sombra);
+    overflow: hidden;
 }
 
 .explorar .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    filter: brightness(80%);
+}
+
+.explorar .card img:hover {
+    transform: scale(1.2);
+    filter: brightness(100%);
 }
 
 .explorar .card-content {
@@ -1166,6 +1174,23 @@ footer .logo img {
     display: flex;
 }
 
+.form-container button {
+    background-image: var(--color-botones);
+    color: var(--color-negro);
+    padding: 10px 20px;
+    border: none;
+    font-style: 16px;
+    cursor: pointer;
+    font-family: var(--font-primario);
+    font-size: 14px;
+    box-shadow: var(--sombra);
+    transition: all 0.2s ease-in-out;
+}
+
+.form-container button:hover {
+    filter: brightness(120%);
+}
+
 .form-container a {
     color: var(--color-blanco);
 }
@@ -1179,7 +1204,7 @@ footer .logo img {
 
 .form-container .col-2 {
     flex: 1;
-    height: 540px;
+    height: auto;
     background-image: var(--bg-rectangulos);
     padding: 20px;
     color: var(--color-blanco);
@@ -1368,7 +1393,7 @@ footer .logo img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color-primario);
+    background-color: var(--color-terciario);
     border: none;
     color: var(--color-blanco);
     cursor: pointer;
@@ -1498,6 +1523,12 @@ footer .logo img {
     justify-content: center;
     text-align: center;
     font-family: var(--font-secundario);
+    transition: all 0.3s ease-in-out;
+}
+
+#caracteristicas .rectangulo:hover {
+    background-color: var(--color-negro);
+    color: var(--color-amarillo-claro);
 }
 
 #caracteristicas .rectangulo i {
@@ -1520,5 +1551,75 @@ footer .logo img {
         max-width: 100%;
         height: auto;
         padding: 15px;
+    }
+}
+
+/* PRODUCTOS DEL PAQUETE CUMPLEAÑERO */
+
+#productos-paq-cumple {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+#productos-paq-cumple .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#productos-paq-cumple .cuadrado {
+    width: 380px;
+    height: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#productos-paq-cumple .rectangulo {
+    background-color: var(--color-primario);
+    width: 380px;
+    height: 100px;
+}
+
+#productos-paq-cumple .cuadrado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    max-width: 100%;
+    /* Agregado */
+    max-height: 100%;
+    /* Agregado */
+    cursor: pointer;
+}
+
+#productos-paq-cumple .cuadrado img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #productos-paq-cumple .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #productos-paq-cumple .card {
+        margin-bottom: 30px;
+    }
+
+    #productos-paq-cumple .cuadrado {
+        width: 100%;
+        height: auto;
+    }
+
+    #productos-paq-cumple .cuadrado img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
