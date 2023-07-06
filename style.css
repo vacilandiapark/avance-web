@@ -12,7 +12,7 @@
     --bg-rectangulos: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
-    --font-terciario: Patrick Hand;
+    --font-terciario: 'Belanosima', sans-serif;
     --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
     --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
 }
@@ -454,25 +454,19 @@ footer .logo img {
 }
 
 .introduccion .columna-1 .contenido {
-    padding: 60px;
+    padding: 50px;
 }
 
 .introduccion .columna-1 h2 {
     color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
 }
 
 .introduccion .columna-1 p {
     color: var(--color-blanco);
-    font-size: 13px;
-    font-family: Patua One;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-size: 15px;
+    font-family: var(--font-terciario);
 }
 
 .introduccion .columna-2 {
@@ -605,7 +599,7 @@ footer .logo img {
     height: 100px;
     background-image: var(--bg-rectangulos);
     color: var(--color-blanco);
-    padding: 10px 50px 0px 50px;
+    padding: 10px 0px 0px 30px;
     box-sizing: border-box;
     box-shadow: var(--sombra);
 }
@@ -843,7 +837,6 @@ footer .logo img {
 
 .container-planificar .rectangle {
     background-image: var(--bg-rectangulos);
-    width: 380px;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -851,20 +844,19 @@ footer .logo img {
     bottom: 0;
     /* Alineación inferior */
     line-height: 0.4;
+    padding: 10px 60px 0px 30px;
 }
 
 .container-planificar .rectangle h3 {
     color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
-    padding: 10px 0px 0px 20px;
 }
 
 .container-planificar .rectangle p {
     color: var(--color-blanco);
     margin-top: 0;
     font-size: 13px;
-    padding: 0px 10px 0px 20px;
     font-family: var(--font-terciario);
     line-height: 1.2;
 }
