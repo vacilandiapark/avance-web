@@ -98,3 +98,45 @@ closeButton.addEventListener('click', toggleChat);
 
 // Evento click en el botón de enviar
 sendButton.addEventListener('click', sendMessage);
+
+
+// PÁGINA PAQUETE CUMPLEAÑERO //
+
+$(document).ready(function () {
+    $('.carousel').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false
+    });
+
+    $('.thumbnail').on('click', function () {
+        var index = $(this).index();
+        $('.carousel').slick('slickGoTo', index);
+    });
+
+    var isDragging = false;
+    var startY, scrollTop;
+
+    $('.thumbnail-column').on('mousedown', function (e) {
+        isDragging = true;
+        startY = e.clientY;
+        scrollTop = $(this).scrollTop();
+    });
+
+    $(document).on('mousemove', function (e) {
+        if (isDragging) {
+            var y = e.clientY;
+            var delta = y - startY;
+            $('.thumbnail-column').scrollTop(scrollTop - delta);
+        }
+    });
+
+    $(document).on('mouseup', function () {
+        isDragging = false;
+    });
+});
