@@ -103,40 +103,41 @@ sendButton.addEventListener('click', sendMessage);
 // PÁGINA PAQUETE CUMPLEAÑERO //
 
 $(document).ready(function () {
-    $('.carousel').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 1,
-        adaptiveHeight: true,
+    var $carousel = $('.carousel');
+    var $thumbnails = $('.thumbnails');
+    var $arrowUp = $('.arrow-up');
+    var $arrowDown = $('.arrow-down');
+
+    $carousel.slick({
         autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: false
+        autoplaySpeed: 2000,
+        arrows: false,
+        dots: false,
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 1,
+        asNavFor: '.thumbnails'
     });
 
-    $('.thumbnail').on('click', function () {
-        var index = $(this).index();
-        $('.carousel').slick('slickGoTo', index);
+    $thumbnails.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        vertical: true,
+        verticalSwiping: true,
+        asNavFor: '.carousel',
+        focusOnSelect: true,
+        prevArrow: '',
+        nextArrow: '',
+        centerMode: true,
+        centerPadding: '0',
+        focusOnSelect: true
     });
 
-    var isDragging = false;
-    var startY, scrollTop;
-
-    $('.thumbnail-column').on('mousedown', function (e) {
-        isDragging = true;
-        startY = e.clientY;
-        scrollTop = $(this).scrollTop();
+    $arrowUp.click(function () {
+        $thumbnails.slick('slickPrev');
     });
 
-    $(document).on('mousemove', function (e) {
-        if (isDragging) {
-            var y = e.clientY;
-            var delta = y - startY;
-            $('.thumbnail-column').scrollTop(scrollTop - delta);
-        }
-    });
-
-    $(document).on('mouseup', function () {
-        isDragging = false;
+    $arrowDown.click(function () {
+        $thumbnails.slick('slickNext');
     });
 });
