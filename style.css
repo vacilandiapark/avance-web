@@ -1298,7 +1298,7 @@ footer .logo img {
     font-family: var(--font-secundario);
     color: var(--color-gris);
     font-size: 16px;
-    line-height: 0.5;
+    line-height: 1.2;
 }
 
 #paquetes-cumpleañeros .columnas {
@@ -1463,7 +1463,46 @@ footer .logo img {
     }
 
     #paquetes-cumpleañeros .arrow-up,
-    #paquetes-cumpleañeros .arrow-down{
+    #paquetes-cumpleañeros .arrow-down {
         display: none;
+    }
+}
+
+/* CARACTERISTICAS */
+
+#caracteristicas {
+    background-color: var(--color-primario);
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+#caracteristicas .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#caracteristicas .rectangulo {
+    width: 120px;
+    height: 65px;
+    background-color: var(--color-amarillo-claro);
+    box-shadow: var(--sombra);
+}
+
+@media screen and (max-width: 767px) {
+
+    #caracteristicas{
+        margin-top: -5cm;
+    }
+
+    #caracteristicas .container {
+        max-width: 100%;
+        height: auto;
+        padding: 15px;
     }
 }

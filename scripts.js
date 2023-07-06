@@ -141,3 +141,5 @@ $(document).ready(function () {
         $thumbnails.slick('slickNext');
     });
 });
+
+/* CARACTERISTICAS */
