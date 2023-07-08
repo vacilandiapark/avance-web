@@ -1500,7 +1500,7 @@ footer .logo img {
 /* CARACTERISTICAS */
 
 #caracteristicas {
-    background-color: var(--color-terciario);
+    background: var(--bg-rectangulos);
     margin-top: 45px;
     margin-bottom: 45px;
 }
