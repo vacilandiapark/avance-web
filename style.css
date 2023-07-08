@@ -4,6 +4,7 @@
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
+    --color-verde-opaco: #2f975aaf;
     --color-negro: #000;
     --color-gris: rgb(104, 104, 104);
     --color-amarillo: #FBB916;
@@ -15,6 +16,7 @@
     --font-terciario: 'Belanosima', sans-serif;
     --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
     --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
+    --inset: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);;
 }
 
 
@@ -437,7 +439,10 @@ footer .logo img {
 /* INTRODUCCIÓN */
 
 .introduccion {
-    margin-top: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--color-verde-opaco);
+    box-shadow: var(--inset);
 }
 
 .introduccion .container {
@@ -538,24 +543,19 @@ footer .logo img {
 
 /* CARRUSEL EXPLORA EL PARQUE */
 
-.explorar {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-top: 30px;
-}
-
 .explorar h1 {
+    margin-top: 0;
+    padding-top: 20px;
     margin-bottom: 30px;
     color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
 
 .explorar .container {
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .explorar .carrusel-recorrido {
@@ -788,14 +788,20 @@ footer .logo img {
 
 /* EXPLORAR NUESTRO PARQUE */
 
-.container-planificar {
-    max-width: 1200px;
-    height: 650px;
-    margin: 0 auto;
-    margin-top: 40px;
+.planificar{
+    background-color: var(--color-verde-opaco);
+    box-shadow: var(--inset);
 }
 
-.container-planificar .row {
+.planificar .container-planificar {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.planificar .container-planificar .row {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -804,7 +810,7 @@ footer .logo img {
     gap: 30px;
 }
 
-.container-planificar .card {
+.planificar .container-planificar .card {
     width: 380px;
     height: 300px;
     position: relative;
@@ -813,9 +819,9 @@ footer .logo img {
     overflow: hidden;
 }
 
-.container-planificar h1 {
+.planificar .container-planificar h1 {
     margin-bottom: 30px;
-    color: var(--color-negro);
+    color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
     font-style: normal;
@@ -823,19 +829,19 @@ footer .logo img {
     line-height: normal;
 }
 
-.container-planificar .card img {
+.planificar .container-planificar .card img {
     width: 100%;
     height: auto;
     filter: brightness(80%);
     transition: all 0.2s ease-in-out;
 }
 
-.container-planificar .card img:hover {
+.planificar .container-planificar .card img:hover {
     transform: scale(1.2);
     filter: brightness(100%);
 }
 
-.container-planificar .rectangle {
+.planificar .container-planificar .rectangle {
     background-image: var(--bg-rectangulos);
     height: 100px;
     display: flex;
@@ -847,13 +853,13 @@ footer .logo img {
     padding: 10px 60px 0px 30px;
 }
 
-.container-planificar .rectangle h3 {
+.planificar .container-planificar .rectangle h3 {
     color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
 }
 
-.container-planificar .rectangle p {
+.planificar .container-planificar .rectangle p {
     color: var(--color-blanco);
     margin-top: 0;
     font-size: 13px;
@@ -863,13 +869,13 @@ footer .logo img {
 
 /* Estilos para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
-    .container-planificar .row {
+    .planificar .container-planificar .row {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .container-planificar .card {
+    .planificar .container-planificar .card {
         width: calc(100% - 30px);
         max-width: 380px;
         height: 300px;
@@ -880,14 +886,14 @@ footer .logo img {
         overflow: hidden;
     }
 
-    .container-planificar .card img {
+    .planificar .container-planificar .card img {
         width: 100%;
         height: auto;
         object-fit: cover;
         /* Añadido */
     }
 
-    .container-planificar h1 {
+    .planificar .container-planificar h1 {
         text-align: center;
     }
 }
@@ -897,7 +903,7 @@ footer .logo img {
 .mapa {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 45px;
 }
 
@@ -1140,17 +1146,27 @@ footer .logo img {
 
 /* FORMULARIO DE CONTACTO */
 
-.contacto-container {
+.contacto{
+    background-color: var(--color-verde-opaco);
+    padding-top: 20px;
+    padding-bottom: 60px;
+    box-shadow: var(--inset);
+}
+
+.contacto .contacto-container {
     max-width: 1200px;
     height: 700px;
     margin: 0 auto;
-    padding: 0 20px;
     /* Agregado margen a los costados */
 }
 
-.contacto-container h1 {
+.contacto .form-container {
+    display: flex;
+}
+
+.contacto .contacto-container h1 {
     margin-bottom: 30px;
-    color: var(--color-negro);
+    color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
     font-style: normal;
@@ -1158,15 +1174,11 @@ footer .logo img {
     line-height: normal;
 }
 
-.contacto-container h2 {
+.contacto .contacto-container h2 {
     line-height: 1.2;
 }
 
-.form-container {
-    display: flex;
-}
-
-.form-container button {
+.contacto .form-container button {
     background-image: var(--color-botones);
     color: var(--color-negro);
     padding: 10px 20px;
@@ -1179,22 +1191,22 @@ footer .logo img {
     transition: all 0.2s ease-in-out;
 }
 
-.form-container button:hover {
+.contacto .form-container button:hover {
     filter: brightness(120%);
 }
 
-.form-container a {
+.contacto .form-container a {
     color: var(--color-blanco);
 }
 
-.form-container .col-1 {
+.contacto .form-container .col-1 {
     width: 400px;
     height: auto;
     background: #d4d4d4;
     padding: 30px;
 }
 
-.form-container .col-2 {
+.contacto .form-container .col-2 {
     flex: 1;
     height: auto;
     background-image: var(--bg-rectangulos);
@@ -1205,21 +1217,21 @@ footer .logo img {
 
 @media (max-width: 768px) {
 
-    .contacto-container {
+    .contacto .contacto-container {
         margin-bottom: 600px;
     }
 
-    .form-container {
+    .contacto .form-container {
         flex-wrap: wrap;
     }
 
-    .form-container .col-1 {
+    .contacto .form-container .col-1 {
         width: 100%;
         margin-bottom: 0;
         /* Eliminado margen inferior */
     }
 
-    .form-container .col-2 {
+    .contacto .form-container .col-2 {
         width: 100%;
         flex: 1;
         margin-bottom: 0;
@@ -1227,12 +1239,12 @@ footer .logo img {
     }
 }
 
-.form-container .form-row {
+.contacto .form-container .form-row {
     margin-bottom: 20px;
     font-family: var(--font-secundario);
 }
 
-.form-container .form-input {
+.contacto .form-container .form-input {
     width: 95%;
     padding-left: 20px;
     padding-top: 7px;
@@ -1243,7 +1255,7 @@ footer .logo img {
     border-bottom: 1px solid var(--color-gris);
 }
 
-.form-container .form-select {
+.contacto .form-container .form-select {
     width: 100.5%;
     padding-left: 20px;
     padding-top: 7px;
@@ -1255,7 +1267,7 @@ footer .logo img {
     border-bottom: 1px solid var(--color-gris);
 }
 
-.form-container .form-textarea {
+.contacto .form-container .form-textarea {
     width: 95%;
     height: 100px;
     padding-left: 20px;
@@ -1267,7 +1279,7 @@ footer .logo img {
     border-bottom: 1px solid var(--color-gris);
 }
 
-.form-container .form-submit {
+.contacto .form-container .form-submit {
     width: 100%;
     height: 40px;
     background: #333;
@@ -1283,7 +1295,7 @@ footer .logo img {
     transition: all 0.2s ease-in-out;
 }
 
-.form-container .form-submit:hover {
+.contacto .form-container .form-submit:hover {
     filter: brightness(150%);
 }
 
