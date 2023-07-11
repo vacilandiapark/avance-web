@@ -36,10 +36,18 @@ a {
 /* NAV */
 .navbar {
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9999;
-    position: absolute;
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled .row-1 {
+    background-color: var(--color-primario);
+}
+
+.navbar.scrolled .row-2 {
+    background-color: var(--color-secundario);
 }
 
 .navbar .row-1 {
