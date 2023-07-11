@@ -676,43 +676,6 @@ footer .logo img {
     line-height: 15px;
 }
 
-.slick-prev.rec,
-.slick-next.rec {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: var(--color-primario);
-    color: var(--color-blanco);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    outline: none;
-    z-index: 9999;
-    cursor: pointer;
-}
-
-.slick-prev.rec::before,
-.slick-next.rec::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 14px;
-    height: 14px;
-    border-top: 4px solid var(--color-blanco);
-    border-right: 4px solid var(--color-blanco);
-}
-
-.slick-prev.rec::before {
-    transform: translate(-30%, -50%) rotate(-135deg);
-}
-
-.slick-next.rec::before {
-    transform: translate(-70%, -50%) rotate(40deg);
-}
-
 @media screen and (max-width: 767px) {
 
     .explorar {
