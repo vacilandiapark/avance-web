@@ -28,13 +28,14 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('.slick-carousel').slick({
-        autoplay: true, // Activar reproducción automática
-        prevArrow: $('.slick-prev'), // Selector del botón de navegación anterior
-        nextArrow: $('.slick-next'), // Selector del botón de navegación siguiente
-        autoplaySpeed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 1, // Cambiar el valor a 3 para que pase de 3 en 3
+        autoplay: true,
+        prevArrow: $('.slick-prev'),
+        nextArrow: $('.slick-next'),
+        autoplaySpeed: 1000,
     });
 });
-
 
 // CARRUSEL INTRODUCCION //
 
