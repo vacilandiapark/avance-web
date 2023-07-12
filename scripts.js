@@ -45,6 +45,16 @@ $(document).ready(function () {
         prevArrow: $('.slick-prev'),
         nextArrow: $('.slick-next'),
         autoplaySpeed: 1000,
+        responsive: [
+            {
+                // Configuración para pantallas móviles (menos de 768px)
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
 });
 
@@ -53,8 +63,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     $(".carrusel").slick({
         arrows: true,
-        prevArrow: '<button type="button" class="slick-prev">&#8249;</button>',
-        nextArrow: '<button type="button" class="slick-next">&#8250;</button>',
+        prevArrow: '<button class="slick-prev rec" type="button"><i class="fas fa-chevron-circle-left fa-2xl"></i></button>',
+        nextArrow: '<button class="slick-next rec" type="button"><i class="fas fa-chevron-circle-right fa-2xl"></i></button>',
         autoplay: true,
         autoplaySpeed: 2000,
         fade: true,
@@ -69,8 +79,8 @@ $(document).ready(function () {
     $('.carrusel-recorrido').slick({
         slidesToShow: 3,
         slidesToScroll: 1, // Cambiado a 1 para que se mueva de uno en uno
-        prevArrow: '<button class="slick-prev rec" type="button"></button>',
-        nextArrow: '<button class="slick-next rec" type="button"></button>',
+        prevArrow: '<button class="slick-prev rec" type="button"><i class="fas fa-chevron-circle-left fa-2xl"></i></button>',
+        nextArrow: '<button class="slick-next rec" type="button"><i class="fas fa-chevron-circle-right fa-2xl"></i></button>',
         autoplay: true, // Agregado para hacer que el carrusel se mueva automáticamente
         autoplaySpeed: 1000, // Velocidad en milisegundos entre las transiciones automáticas
         responsive: [
