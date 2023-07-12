@@ -24,10 +24,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(19, 102, 53, 0.9), rgba(149, 193, 33, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     scroll-behavior: smooth;
 }
 
@@ -378,8 +374,12 @@ footer .logo img {
 /* CARRUSEL */
 
 .carousel-banner {
-    padding-top: 35px;
     padding-bottom: 35px;
+    padding-top: 10px;
+    background-image: linear-gradient(rgba(245, 130, 32, 0.9), rgba(255, 210, 0, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .carousel-banner .container-promo {
@@ -391,9 +391,10 @@ footer .logo img {
 .carousel-banner .container-promo h1 {
     margin-bottom: 30px;
     color: var(--color-blanco);
-    font-size: 20px;
+    font-size: 35px;
     font-family: var(--font-primario);
     font-weight: 400;
+    text-align: center;
 }
 
 .carousel-banner .slick-carousel .promo {
@@ -425,7 +426,10 @@ footer .logo img {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background: transparent;
+    background-image: linear-gradient(rgba(236, 33, 39, 0.9), rgba(234, 11, 139, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
     height: 90px;
 }
@@ -610,15 +614,19 @@ footer .logo img {
 
 .explorar {
     padding-top: 25px;
-    padding-bottom: 45px;
+    padding-bottom: 55px;
+    background-image: linear-gradient(rgba(119, 192, 67, 0.9), rgba(43, 171, 226, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .explorar h1 {
-    margin-bottom: 30px;
     color: var(--color-blanco);
-    font-size: 20px;
+    font-size: 35px;
     font-family: var(--font-primario);
     font-weight: 400;
+    text-align: center;
 }
 
 .explorar .container {
@@ -838,10 +846,15 @@ footer .logo img {
 /* EXPLORAR NUESTRO PARQUE */
 
 .planificar {
+    background-image: linear-gradient(rgba(114, 76, 159, 0.9),rgba(67, 47, 135, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     box-shadow: var(--inset);
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
     animation: AnimationName 5s ease infinite;
+    padding-top: 10px;
 }
 
 .planificar .container-planificar {
@@ -870,13 +883,11 @@ footer .logo img {
 }
 
 .planificar .container-planificar h1 {
-    margin-bottom: 30px;
     color: var(--color-blanco);
-    font-size: 20px;
+    font-size: 35px;
     font-family: var(--font-primario);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    text-align: center;
 }
 
 .planificar .container-planificar .card img {
@@ -963,13 +974,11 @@ footer .logo img {
 }
 
 .mapa h1 {
-    margin-bottom: 30px;
     color: var(--color-negro);
-    font-size: 20px;
+    font-size: 35px;
     font-family: var(--font-primario);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    text-align: center;
 }
 
 .mapa .contenedor {
@@ -1224,13 +1233,11 @@ footer .logo img {
 }
 
 .contacto .contacto-container h1 {
-    margin-bottom: 30px;
     color: var(--color-negro);
-    font-size: 20px;
+    font-size: 35px;
     font-family: var(--font-primario);
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    text-align: center;
 }
 
 .contacto .contacto-container h2 {
