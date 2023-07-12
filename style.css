@@ -353,20 +353,23 @@ footer .logo img {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    filter: saturate(150%) brightness(70%);
-    background-color: var(--color-primario);
+    position: relative;
 }
 
 .banner .banner-video img {
     width: 100%;
     height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(0, 0, 0);
+    filter: saturate(150%) brightness(70%);
 }
 
 @media only screen and (max-width: 767px) {
     .banner .banner-video {
         height: 100%;
     }
-
 }
 
 /* CARRUSEL */
@@ -407,8 +410,8 @@ footer .logo img {
 }
 
 @media only screen and (max-width: 767px) {
-    .carousel-banner{
-        margin-top: 7em;
+    .carousel-banner {
+        margin-top: 26%;
     }
 }
 
@@ -547,19 +550,22 @@ footer .logo img {
 .introduccion .slick-prev,
 .introduccion .slick-next {
     position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--color-blanco);
     top: 50%;
     transform: translateY(-50%);
-    color: var(--color-blanco);
     font-size: 15px;
     padding: 10px;
     cursor: pointer;
     z-index: 999;
-    border: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .introduccion .slick-prev:hover,
 .introduccion .slick-next:hover {
     filter: brightness(150%);
+    color: var(--color-negro);
 }
 
 .introduccion .slick-prev {
