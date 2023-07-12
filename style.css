@@ -801,6 +801,10 @@ footer .logo img {
 
 @media screen and (max-width: 767px) {
 
+    .pollo-vacilon{
+        padding: 0;
+    }
+
     .pollo-vacilon .container img {
         height: 100%;
         width: auto;
@@ -926,6 +930,11 @@ footer .logo img {
 
 /* Estilos para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
+    
+    .planificar .container-planificar{
+        margin: 0;
+    }
+
     .planificar .container-planificar .row {
         display: flex;
         flex-direction: column;
@@ -1030,6 +1039,11 @@ footer .logo img {
 
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 767px) {
+
+    .mapa{
+        padding: 0;
+    }
+
     .mapa-iframe {
         padding-bottom: 0;
     }
@@ -1269,6 +1283,11 @@ footer .logo img {
 }
 
 @media (max-width: 768px) {
+
+    .contacto{
+        padding: 0;
+        text-align: center;
+    }
 
     .contacto .contacto-container {
         margin-bottom: 600px;
