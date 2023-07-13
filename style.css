@@ -8,14 +8,14 @@
     --color-gris: rgb(104, 104, 104);
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: linear-gradient(to right bottom, #fbb916, #fcc525, #fdd033, #fedc40, #ffe74d);
+    --color-botones: #D2D90B;
     --bg-rectangulos: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Belanosima', sans-serif;
     --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
     --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
-    --inset: ;
+    --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 0.5);
     --max-width: 1200px;
 }
 
@@ -25,6 +25,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background-image: url("images/asasasa.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 a {
@@ -77,7 +81,7 @@ a {
 }
 
 .navbar .btn {
-    background-image: var(--color-botones);
+    background-color: var(--color-botones);
     color: var(--color-negro);
     padding: 10px 20px;
     border: none;
@@ -124,6 +128,10 @@ a {
     list-style: none;
     padding: 0;
     font-family: var(--font-secundario);
+}
+
+.navbar .navigation a {
+    font-size: 20px;
 }
 
 .navbar a {
@@ -252,12 +260,12 @@ footer .columna-2 {
 footer .columna-2 h3 {
     margin-bottom: 10px;
     color: var(--color-blanco);
-    font-size: 32px;
+    font-size: 25px;
     font-family: var(--font-primario);
 }
 
 footer .botones button {
-    background-image: var(--color-botones);
+    background-color: var(--color-botones);
     color: var(--color-negro);
     padding: 10px 20px;
     border: none;
@@ -416,9 +424,10 @@ footer .logo img {
 }
 
 @media only screen and (max-width: 767px) {
+
     .banner-overlay h1,
     .banner-overlay p,
-    .banner-overlay button{
+    .banner-overlay button {
         display: none;
     }
 }
@@ -427,7 +436,7 @@ footer .logo img {
     width: 200px;
     margin-top: 30px;
     height: 50px;
-    background-image: var(--color-botones);
+    background-color: var(--color-botones);
     color: black;
     border: none;
     font-size: 15px;
@@ -443,10 +452,7 @@ footer .logo img {
 .carousel-banner {
     padding-bottom: 35px;
     padding-top: 10px;
-    background-image: linear-gradient(rgba(24, 64, 30, 0.9), rgba(210, 217, 11, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    box-shadow: var(--inset);
 }
 
 .carousel-banner .container-promo {
@@ -458,7 +464,7 @@ footer .logo img {
 .carousel-banner .container-promo h1 {
     margin-bottom: 30px;
     color: var(--color-blanco);
-    font-size: 35px;
+    font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: center;
@@ -493,12 +499,9 @@ footer .logo img {
 /* BOTON COMPRAR */
 
 .boton-comprar {
-    background-image: linear-gradient(rgba(24, 64, 30, 0.9), rgba(210, 217, 11, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     width: 100%;
     height: 90px;
+    box-shadow: var(--inset);
 }
 
 .boton-comprar .container {
@@ -516,7 +519,7 @@ footer .logo img {
 
 .boton-comprar h2 {
     color: var(--color-blanco);
-    font-size: 20px;
+    font-size: 25px;
     font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
@@ -524,7 +527,7 @@ footer .logo img {
 
 .boton-comprar p {
     color: var(--color-blanco);
-    font-size: 14px;
+    font-size: 16px;
     font-family: var(--font-terciario);
     font-style: normal;
     font-weight: 400;
@@ -536,7 +539,7 @@ footer .logo img {
 }
 
 .boton-comprar .btn-comprar {
-    background-image: var(--color-botones);
+    background-color: var(--color-botones);
     color: var(--color-negro);
     padding: 10px 20px;
     border: none;
@@ -682,15 +685,13 @@ footer .logo img {
 .explorar {
     padding-top: 25px;
     padding-bottom: 55px;
-    background-image: linear-gradient(rgba(24, 64, 30, 0.9), rgba(210, 217, 11, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    box-shadow: var(--inset);
 }
 
 .explorar h1 {
     color: var(--color-blanco);
-    font-size: 35px;
+    font-size: 25px;
+    margin-bottom: 35px;
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: center;
@@ -853,7 +854,7 @@ footer .logo img {
 .pollo-vacilon .buttons button {
     width: 200px;
     height: 50px;
-    background-image: var(--color-botones);
+    background-color: var(--color-botones);
     color: black;
     margin-right: 10px;
     border: none;
@@ -913,10 +914,6 @@ footer .logo img {
 /* EXPLORAR NUESTRO PARQUE */
 
 .planificar {
-    background-image: linear-gradient(rgba(24, 64, 30, 0.9), rgba(210, 217, 11, 0.9)), url("images/Landings/VCLNDIA_IMG_2613.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     box-shadow: var(--inset);
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
@@ -951,7 +948,7 @@ footer .logo img {
 
 .planificar .container-planificar h1 {
     color: var(--color-blanco);
-    font-size: 35px;
+    font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: center;
@@ -1042,7 +1039,7 @@ footer .logo img {
 
 .mapa h1 {
     color: var(--color-negro);
-    font-size: 35px;
+    font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: center;
@@ -1282,7 +1279,6 @@ footer .logo img {
     background-color: var(--color-blanco);
     padding-top: 20px;
     padding-bottom: 60px;
-    box-shadow: var(--inset);
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
     animation: AnimationName 5s ease infinite;
@@ -1301,7 +1297,7 @@ footer .logo img {
 
 .contacto .contacto-container h1 {
     color: var(--color-negro);
-    font-size: 35px;
+    font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: center;
@@ -1312,7 +1308,7 @@ footer .logo img {
 }
 
 .contacto .form-container button {
-    background-image: var(--color-botones);
+    background-color: var(--color-botones);
     color: var(--color-negro);
     padding: 10px 20px;
     border: none;
@@ -1440,23 +1436,23 @@ footer .logo img {
 /* PÁGINA PAQUETES CUMPLEAÑEROS */
 
 #paquetes-cumpleañeros {
-    max-width: var(--max-width);
-    height: 685px;
-    margin: 0 auto;
-    margin-top: 45px;
+    background-color: var(--color-blanco);
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 #paquetes-cumpleañeros .container {
-    width: 100%;
-    height: 100%;
+    max-width: var(--max-width);
+    height: 685px;
+    margin: 0 auto;
     text-align: left;
 }
 
 #paquetes-cumpleañeros h1 {
-    margin: 20px;
     color: black;
-    font-size: 24px;
-    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 0;
     font-family: var(--font-primario);
 }
 
@@ -1638,9 +1634,7 @@ footer .logo img {
 /* CARACTERISTICAS */
 
 #caracteristicas {
-    background: var(--bg-rectangulos);
-    margin-top: 45px;
-    margin-bottom: 45px;
+    background: transparent;
 }
 
 #caracteristicas .container {
@@ -1699,8 +1693,9 @@ footer .logo img {
 /* PRODUCTOS DEL PAQUETE CUMPLEAÑERO */
 
 #productos-paq-cumple {
-    margin-top: 45px;
-    margin-bottom: 45px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-color: var(--color-blanco);
 }
 
 #productos-paq-cumple .container {
