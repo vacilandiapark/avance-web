@@ -1,15 +1,4 @@
 :root {
-    --color-primario: #18401E;
-    --color-secundario: #D2D90B;
-    --color-terciario: #683A10;
-    --color-cuaternario: #9B4917;
-    --color-blanco: #fff;
-    --color-negro: #000;
-    --color-gris: rgb(104, 104, 104);
-    --color-amarillo: #FBB916;
-    --color-amarillo-claro: #FFE74D;
-    --color-botones: #D2D90B;
-    --bg-rectangulos: #18401E;
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Belanosima', sans-serif;
@@ -17,6 +6,36 @@
     --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
+}
+
+body#zona-gamer {
+    --color-primario: #EC2127;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #fff;
+    --color-subtitle: #fff;
+    --color-gris: rgb(104, 104, 104);
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #f1484d;
+    --bg-rectangulos: #18401E;
+}
+
+body#inicio {
+    --color-primario: #18401E;
+    --color-secundario: #D2D90B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #fff;
+    --color-subtitle: #000;
+    --color-gris: rgb(104, 104, 104);
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #D2D90B;
+    --bg-rectangulos: #18401E;
 }
 
 html,
@@ -46,7 +65,7 @@ a {
 }
 
 .navbar.scrolled .row-1 {
-    background-color: #18401ecc;
+    background-color: var(--color-primario);
     backdrop-filter: blur(25px);
 }
 
@@ -87,7 +106,7 @@ a {
 
 .navbar .btn {
     background-color: var(--color-botones);
-    color: var(--color-negro);
+    color: var(--color-subtitle);
     padding: 10px 20px;
     border: none;
     box-shadow: var(--sombra);
@@ -121,12 +140,6 @@ a {
     cursor: pointer;
 }
 
-.navbar .line {
-    width: 100%;
-    height: 3px;
-    background-color: var(--color-blanco);
-}
-
 .navbar .navigation {
     display: flex;
     justify-content: center;
@@ -138,11 +151,7 @@ a {
 
 .navbar .navigation a {
     font-size: 20px;
-    color: var(--color-blanco);
-}
-
-.navbar a {
-    color: var(--color-blanco);
+    color: var(--color-title);
 }
 
 .navbar a:hover {
@@ -215,6 +224,7 @@ a {
 /* FOOTER */
 
 footer {
+    background: var(--color-primario);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -272,7 +282,7 @@ footer .columna-2 h3 {
 
 footer .botones button {
     background-color: var(--color-botones);
-    color: var(--color-negro);
+    color: var(--color-subtitle);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
@@ -362,7 +372,7 @@ footer .logo img {
 
 /* BANNER */
 
-.banner{
+.banner {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -436,7 +446,7 @@ footer .logo img {
 .banner .banner-overlay button {
     margin-top: 20px;
     background-color: var(--color-botones);
-    color: var(--color-negro);
+    color: var(--color-subtitle);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
@@ -514,7 +524,7 @@ footer .logo img {
 
 .boton-comprar .btn-comprar {
     background-color: var(--color-botones);
-    color: var(--color-negro);
+    color: var(--color-subtitle);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
@@ -545,6 +555,59 @@ footer .logo img {
         text-align: center;
         margin-left: 0;
     }
+}
+
+/* OFERTAS CARRUSEL */
+
+.ofertas {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.ofertas .ofertas-carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.ofertas .ofertas-carousel div {
+    flex: 0 0 100%;
+}
+
+.ofertas .ofertas-carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ofertas .slick-prev,
+.ofertas .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--color-blanco);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.ofertas .slick-prev:hover,
+.ofertas .slick-next:hover {
+    filter: brightness(150%);
+    color: var(--color-negro);
+}
+
+.ofertas .slick-prev {
+    left: 10px;
+}
+
+.ofertas .slick-next {
+    right: 10px;
 }
 
 /* CARRUSEL */
