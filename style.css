@@ -9,13 +9,13 @@
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #D2D90B;
-    --bg-rectangulos: url("images/istockphoto-1083302826-1024x1024-transformed.jpeg.jpg");
+    --bg-rectangulos: #18401E;
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Belanosima', sans-serif;
-    --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+    --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
     --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
-    --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 0.5);
+    /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
 }
 
@@ -25,7 +25,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background-image: url("images/asasasa.jpg");
+    background: linear-gradient(to bottom, rgba(24, 64, 30, 0.9), rgba(24, 64, 30, 0.9)), url(images/bg/P1100622.JPG);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -46,11 +46,16 @@ a {
 }
 
 .navbar.scrolled .row-1 {
-    background-color: var(--color-primario);
+    background-color: #18401ecc;
+    backdrop-filter: blur(25px);
 }
 
 .navbar.scrolled .row-2 {
-    background-color: var(--color-secundario);
+    background-color: var(--color-blanco);
+}
+
+.navbar.scrolled .row-2 a {
+    color: var(--color-negro);
 }
 
 .navbar .row-1 {
@@ -132,6 +137,7 @@ a {
 
 .navbar .navigation a {
     font-size: 20px;
+    color: var(--color-blanco);
 }
 
 .navbar a {
@@ -208,7 +214,7 @@ a {
 /* FOOTER */
 
 footer {
-    background-image: var(--bg-rectangulos);
+    background: var(--bg-rectangulos);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -457,7 +463,7 @@ footer .logo img {
 
 .carousel-banner .container-promo {
     max-width: var(--max-width);
-    height: 500px;
+    height: 100%;
     margin: auto;
 }
 
@@ -499,9 +505,11 @@ footer .logo img {
 /* BOTON COMPRAR */
 
 .boton-comprar {
+    background-color: var(--color-primario);
     width: 100%;
     height: 90px;
     box-shadow: var(--inset);
+    padding: 10px 0px 0px 0px;
 }
 
 .boton-comprar .container {
@@ -514,7 +522,7 @@ footer .logo img {
 }
 
 .boton-comprar .columna-1 {
-    line-height: 0.5;
+    line-height: 1;
 }
 
 .boton-comprar h2 {
@@ -523,6 +531,8 @@ footer .logo img {
     font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
 
 .boton-comprar p {
@@ -559,6 +569,7 @@ footer .logo img {
 
     .boton-comprar {
         height: 170px;
+        padding-bottom: 25px;
     }
 
     .boton-comprar .container {
@@ -590,7 +601,7 @@ footer .logo img {
 .introduccion .columna-1 {
     width: 400px;
     height: 350px;
-    background-image: var(--bg-rectangulos);
+    background: var(--bg-rectangulos);
 }
 
 .introduccion .columna-1 .contenido {
@@ -740,11 +751,12 @@ footer .logo img {
     left: 0;
     width: auto;
     height: 100px;
-    background-image: var(--bg-rectangulos);
+    background: var(--bg-rectangulos);
     color: var(--color-blanco);
-    padding: 10px 0px 0px 30px;
     box-sizing: border-box;
     box-shadow: var(--sombra);
+    padding: 10px;
+    text-align: center;
 }
 
 .explorar .card-content h3 {
@@ -944,6 +956,7 @@ footer .logo img {
     /* Añadido */
     box-shadow: var(--sombra);
     overflow: hidden;
+    text-align: center;
 }
 
 .planificar .container-planificar h1 {
@@ -967,7 +980,7 @@ footer .logo img {
 }
 
 .planificar .container-planificar .rectangle {
-    background-image: var(--bg-rectangulos);
+    background: var(--bg-rectangulos);
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -1080,7 +1093,7 @@ footer .logo img {
     left: 0;
     width: 100%;
     height: 70;
-    background-image: var(--bg-rectangulos);
+    background: var(--bg-rectangulos);
     color: var(--color-blanco)fff;
     padding: 10px 0px 0px 20px;
     box-sizing: border-box;
@@ -1097,7 +1110,7 @@ footer .logo img {
 .mapa .rectangulo p {
     color: var(--color-blanco);
     font-size: 18px;
-    font-family: (--font-terciario);
+    font-family: var(--font-terciario);
     line-height: 1;
 }
 
@@ -1338,7 +1351,7 @@ footer .logo img {
 .contacto .form-container .col-2 {
     flex: 1;
     height: auto;
-    background-image: var(--bg-rectangulos);
+    background: var(--bg-rectangulos);
     padding: 20px;
     color: var(--color-blanco);
     font-family: var(--font-secundario);
@@ -1416,11 +1429,9 @@ footer .logo img {
 .contacto .form-container .form-submit {
     width: 100%;
     height: 40px;
-    background: #333;
     color: var(--color-negro);
     border: none;
     cursor: pointer;
-    background-image: var(--color-botones);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
