@@ -96,18 +96,6 @@ $(document).ready(function () {
     });
 });
 
-/* SCROLL REVEAL */
-
-ScrollReveal().reveal('.scroll-reveal', {
-    delay: 0,
-    duration: 1000,
-    easing: 'cubic-bezier(0.215, 0.61, 0.355, 1)',
-    scale: 0.8, // Reducir escala inicialmente
-    distance: '50px', // Desplazamiento hacia arriba
-    origin: 'bottom', // Punto de origen: inferior
-    reset: true
-});
-
 /* WHATSAPP */
 
 // Obtener elementos del DOM

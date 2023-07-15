@@ -25,7 +25,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background: linear-gradient(to bottom, rgba(24, 64, 30, 0.9), rgba(24, 64, 30, 0.9)), url(images/bg/P1100622.JPG);
+    background: linear-gradient(to bottom, rgba(24, 64, 30, 0.9), rgba(24, 64, 30, 0.9)), url(materials/bg/P1100622.JPG);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -90,6 +90,7 @@ a {
     color: var(--color-negro);
     padding: 10px 20px;
     border: none;
+    box-shadow: var(--sombra);
     font-style: 16px;
     cursor: pointer;
     font-family: var(--font-primario);
@@ -214,7 +215,6 @@ a {
 /* FOOTER */
 
 footer {
-    background: var(--bg-rectangulos);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -408,6 +408,10 @@ footer .logo img {
     justify-content: center;
 }
 
+.banner-overlay .container img {
+    width: 250px;
+}
+
 .banner-overlay h1 {
     color: var(--color-blanco);
     font-size: 35px;
@@ -439,16 +443,15 @@ footer .logo img {
 }
 
 .banner-overlay button {
-    width: 200px;
-    margin-top: 30px;
-    height: 50px;
+    margin-top: 20px;
     background-color: var(--color-botones);
-    color: black;
+    color: var(--color-negro);
+    padding: 10px 20px;
     border: none;
-    font-size: 15px;
+    font-style: 16px;
     cursor: pointer;
-    font-family: var(--font-primario);
     box-shadow: var(--sombra);
+    font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
 }
 
@@ -480,6 +483,7 @@ footer .logo img {
     overflow: hidden;
     margin-right: 10px;
     margin-left: 10px;
+    box-shadow: var(--sombra);
 }
 
 .carousel-banner .slick-carousel img {
@@ -823,6 +827,7 @@ footer .logo img {
     height: 350px;
     position: relative;
     overflow: hidden;
+    box-shadow: var(--sombra);
 }
 
 .pollo-vacilon .container img {
@@ -1069,6 +1074,7 @@ footer .logo img {
     padding-bottom: 56.25%;
     /* Proporción 16:9 (para un mapa de Google Maps) */
     height: 0;
+    box-shadow: var(--sombra);
 }
 
 .mapa-iframe-responsive {
@@ -1306,6 +1312,7 @@ footer .logo img {
 
 .contacto .form-container {
     display: flex;
+    box-shadow: var(--sombra);
 }
 
 .contacto .contacto-container h1 {
