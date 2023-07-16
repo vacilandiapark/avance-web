@@ -38,16 +38,26 @@ body#inicio {
     --bg-rectangulos: #18401E;
 }
 
+#inicio {
+    background: linear-gradient(to bottom, rgba(24, 64, 30, 0.9), rgba(24, 64, 30, 0.9)), url(materials/bg/P1100622.JPG);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#zona-gamer {
+    background: linear-gradient(to bottom, rgba(236, 33, 39, 0.9), rgba(236, 33, 39, 0.9)), url(materials/bg/P1100622.JPG);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
 html,
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    background: linear-gradient(to bottom, rgba(24, 64, 30, 0.9), rgba(24, 64, 30, 0.9)), url(materials/bg/P1100622.JPG);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
 }
 
 a {
@@ -77,15 +87,15 @@ a {
     color: var(--color-negro);
 }
 
-body#inicio .navbar{
+body#inicio .navbar {
     position: sticky;
 }
 
-body#inicio .navbar .row-2{
+body#inicio .navbar .row-2 {
     background-color: var(--color-blanco);
 }
 
-body#inicio .navbar .row-2 a{
+body#inicio .navbar .row-2 a {
     color: var(--color-negro);
 }
 
@@ -236,7 +246,6 @@ body#inicio .navbar .row-2 a{
 /* FOOTER */
 
 footer {
-    background: var(--color-primario);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -424,7 +433,6 @@ footer .logo img {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -679,7 +687,7 @@ footer .logo img {
 .introduccion {
     padding-top: 40px;
     padding-bottom: 40px;
-    background-color: var(--color-blanco);
+    background: var(--color-blanco);
 }
 
 .introduccion .container {
@@ -687,6 +695,7 @@ footer .logo img {
     margin: 0 auto;
     height: 350px;
     display: flex;
+    box-shadow: var(--sombra);
 }
 
 .introduccion .columna-1 {
@@ -903,7 +912,7 @@ footer .logo img {
 /* POLLO VACILÓN */
 
 .pollo-vacilon {
-    background-color: var(--color-blanco);
+    background: var(--color-blanco);
     padding-top: 45px;
     padding-bottom: 45px;
     text-align: left;
@@ -1139,7 +1148,7 @@ footer .logo img {
 /* MAPA GOOGLE MAPS */
 
 .mapa {
-    background-color: var(--color-blanco);
+    background: var(--color-blanco);
     display: flex;
     justify-content: center;
     padding-bottom: 45px;
@@ -1386,7 +1395,7 @@ footer .logo img {
 /* FORMULARIO DE CONTACTO */
 
 .contacto {
-    background-color: var(--color-blanco);
+    background: var(--color-blanco);
     padding-top: 20px;
     padding-bottom: 60px;
     -webkit-animation: AnimationName 5s ease infinite;
@@ -1868,5 +1877,230 @@ footer .logo img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+}
+
+/* PÁGINA ZONA GAMER */
+
+/* MUESTRAS */
+
+.muestras {
+    padding-top: 25px;
+    padding-bottom: 55px;
+    box-shadow: var(--inset);
+    background: var(--color-blanco);
+}
+
+.muestras h1 {
+    color: var(--color-negro);
+    font-size: 25px;
+    margin-bottom: 35px;
+    font-family: var(--font-primario);
+    font-weight: 400;
+    text-align: center;
+}
+
+.muestras .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.muestras .carrusel-muestras {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.muestras .card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+.muestras .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+    filter: brightness(80%);
+}
+
+.muestras .card img:hover {
+    transform: scale(1.2);
+    filter: brightness(100%);
+}
+
+.muestras .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: 100px;
+    background: var(--color-primario);
+    color: var(--color-blanco);
+    box-sizing: border-box;
+    box-shadow: var(--sombra);
+    padding: 10px;
+    text-align: center;
+}
+
+.muestras .card-content h3 {
+    color: var(--color-blanco);
+    font-size: 20px;
+    font-family: var(--font-primario);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1px;
+}
+
+.muestras .card-content p {
+    color: var(--color-blanco);
+    font-size: 14px;
+    font-family: var(--font-terciario);
+    font-style: normal;
+    line-height: 15px;
+}
+
+.muestras .slick-prev,
+.muestras .slick-next {
+    border: none;
+    background: transparent;
+}
+
+.muestras .slick-prev i,
+.muestras .slick-next i {
+    color: var(--color-negro);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.muestras .slick-prev i:hover,
+.muestras .slick-next i:hover {
+    filter: brightness(150%);
+}
+
+@media screen and (max-width: 767px) {
+
+    .muestras {
+        text-align: center;
+    }
+
+    .muestras h1 {
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+}
+
+/* JUEGOS */
+
+.juegos {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.juegos .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    box-shadow: var(--sombra);
+}
+
+.juegos .columna-1 {
+    width: 400px;
+}
+
+.juegos .columna-1 .contenido {
+    padding: 50px;
+}
+
+.juegos .columna-1 h2 {
+    color: var(--color-blanco);
+    font-size: 20px;
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.juegos .columna-1 p {
+    color: var(--color-blanco);
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: var(--font-terciario);
+}
+
+.juegos .columna-2 {
+    width: 800px;
+}
+
+.juegos .carrusel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.juegos .carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.juegos .slick-prev,
+.juegos .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--color-blanco);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.juegos .slick-prev:hover,
+.juegos .slick-next:hover {
+    filter: brightness(150%);
+    color: var(--color-negro);
+}
+
+.juegos .slick-prev {
+    left: 10px;
+}
+
+.juegos .slick-next {
+    right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .juegos {
+        margin: 0;
+        padding-top: 0;
+        margin-bottom: 30%;
+    }
+
+    .juegos .container {
+        flex-direction: column;
+    }
+
+    .juegos .columna-1 {
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    .juegos .columna-2 {
+        order: 1;
+        width: 100%;
+        height: auto;
     }
 }

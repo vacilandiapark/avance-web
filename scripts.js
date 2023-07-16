@@ -231,3 +231,29 @@ $(document).ready(function () {
         }
     });
 });
+
+// PÁGINA ZONA GAMER //
+
+// CARRUSEL MUESTRAS //
+
+$(document).ready(function () {
+    // Carrusel para pantallas grandes (más de 768px)
+    $('.carrusel-muestras').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1, // Cambiado a 1 para que se mueva de uno en uno
+        prevArrow: '<button class="slick-prev rec" type="button"><i class="fa-sharp fa-solid fa-circle-left fa-2xl"></i></button>',
+        nextArrow: '<button class="slick-next rec" type="button"><i class="fa-sharp fa-solid fa-circle-right fa-2xl"></i></button>',
+        autoplay: true, // Agregado para hacer que el carrusel se mueva automáticamente
+        autoplaySpeed: 1000, // Velocidad en milisegundos entre las transiciones automáticas
+        responsive: [
+            {
+                // Configuración para pantallas móviles (menos de 768px)
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
+    });
+});
