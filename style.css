@@ -61,7 +61,7 @@ a {
     position: fixed;
     top: 0;
     z-index: 9999;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar.scrolled .row-1 {
@@ -74,6 +74,18 @@ a {
 }
 
 .navbar.scrolled .row-2 a {
+    color: var(--color-negro);
+}
+
+body#inicio .navbar{
+    position: sticky;
+}
+
+body#inicio .navbar .row-2{
+    background-color: var(--color-blanco);
+}
+
+body#inicio .navbar .row-2 a{
     color: var(--color-negro);
 }
 
@@ -278,6 +290,7 @@ footer .columna-2 h3 {
     color: var(--color-blanco);
     font-size: 25px;
     font-family: var(--font-primario);
+    font-weight: lighter;
 }
 
 footer .botones button {
@@ -690,11 +703,13 @@ footer .logo img {
     color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
+    font-weight: lighter;
 }
 
 .introduccion .columna-1 p {
     color: var(--color-blanco);
     font-size: 15px;
+    font-weight: lighter;
     font-family: var(--font-terciario);
 }
 
@@ -1074,6 +1089,7 @@ footer .logo img {
     color: var(--color-blanco);
     font-size: 20px;
     font-family: var(--font-primario);
+    font-weight: lighter;
 }
 
 .planificar .container-planificar .rectangle p {
@@ -1185,6 +1201,7 @@ footer .logo img {
     font-size: 20px;
     font-family: var(--font-primario);
     line-height: .3;
+    font-weight: lighter;
 }
 
 .mapa .rectangulo p {
@@ -1399,6 +1416,7 @@ footer .logo img {
 
 .contacto .contacto-container h2 {
     line-height: 1.2;
+    font-weight: lighter;
 }
 
 .contacto .form-container button {
