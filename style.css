@@ -53,7 +53,7 @@ a {
 /* NAV */
 .navbar {
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9999;
     transition: all 0.3s ease;
@@ -1855,226 +1855,80 @@ footer .logo img {
 
 /* PÁGINA ZONA GAMER */
 
-/* MUESTRAS */
-
-.muestras {
-    padding-top: 15px;
-    padding-bottom: 55px;
-    box-shadow: var(--inset);
-    background: var(--color-blanco);
+.atracciones-section {
+    padding: 30px 0;
 }
 
-.muestras h1 {
-    color: var(--color-negro);
+.atracciones-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 270px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-gris);
+    /* Ajusta la altura según tus necesidades */
+}
+
+.atracciones-section .column1 {
+    width: 650px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.atracciones-section .column1 h2 {
     font-size: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     font-family: var(--font-primario);
-    font-weight: 400;
-    text-align: center;
+    font-weight: lighter;
 }
 
-.muestras .container {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.muestras .carrusel-muestras {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
-.muestras .card {
-    width: 300px;
-    height: 400px;
-    position: relative;
-    flex-shrink: 0;
-    margin-right: 10px;
-    margin-left: 10px;
-    box-shadow: var(--sombra);
-    overflow: hidden;
-}
-
-.muestras .card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.3s ease-in-out;
-    filter: brightness(80%);
-}
-
-.muestras .card img:hover {
-    transform: scale(1.2);
-    filter: brightness(100%);
-}
-
-.muestras .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: auto;
-    height: 100px;
-    background: var(--color-primario);
-    color: var(--color-blanco);
-    box-sizing: border-box;
-    box-shadow: var(--sombra);
-    padding: 10px;
-    text-align: center;
-}
-
-.muestras .card-content h3 {
-    color: var(--color-blanco);
-    font-size: 20px;
-    font-family: var(--font-primario);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1px;
-}
-
-.muestras .card-content p {
-    color: var(--color-blanco);
-    font-size: 14px;
+.atracciones-section .column1 p {
+    font-size: 16px;
     font-family: var(--font-terciario);
-    font-style: normal;
-    line-height: 15px;
+    color: var(--color-gris);
 }
 
-.muestras .slick-prev,
-.muestras .slick-next {
-    border: none;
-    background: transparent;
-}
-
-.muestras .slick-prev i,
-.muestras .slick-next i {
-    color: var(--color-negro);
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.muestras .slick-prev i:hover,
-.muestras .slick-next i:hover {
-    filter: brightness(150%);
-}
-
-@media screen and (max-width: 767px) {
-
-    .muestras {
-        text-align: center;
-    }
-
-    .muestras h1 {
-        margin-left: 11px;
-        margin-right: 11px;
-    }
-}
-
-/* JUEGOS */
-
-.juegos {
-    background-color: var(--color-blanco);
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.juegos .container {
-    max-width: var(--max-width);
-    margin: 0 auto;
+.atracciones-section .column2 {
+    width: 550px;
     height: auto;
-    display: flex;
-    box-shadow: var(--sombra);
-}
-
-.juegos .columna-1 {
-    width: 400px;
-}
-
-.juegos .columna-1 .contenido {
-    padding: 50px;
-}
-
-.juegos .columna-1 h2 {
-    color: var(--color-negro);
-    font-size: 20px;
-    font-family: var(--font-primario);
-    font-weight: lighter;
-}
-
-.juegos .columna-1 p {
-    color: var(--color-negro);
-    font-size: 15px;
-    font-weight: lighter;
-    font-family: var(--font-terciario);
-}
-
-.juegos .columna-2 {
-    width: 800px;
-}
-
-.juegos .carrusel {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 
-.juegos .carrusel img {
+.atracciones-section .column2 iframe {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.juegos .slick-prev,
-.juegos .slick-next {
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    color: var(--color-blanco);
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 15px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 999;
+    height: 270px;
     transition: all 0.3s ease-in-out;
 }
 
-.juegos .slick-prev:hover,
-.juegos .slick-next:hover {
-    filter: brightness(150%);
-    color: var(--color-negro);
+.atracciones-section .column2 img:hover {
+    transform: scale(1.1);
 }
 
-.juegos .slick-prev {
-    left: 10px;
-}
-
-.juegos .slick-next {
-    right: 10px;
-}
-
-@media screen and (max-width: 767px) {
-
-    .juegos {
-        margin: 0;
-        padding-top: 0;
-        margin-bottom: 30%;
-    }
-
-    .juegos .container {
+@media only screen and (max-width: 767px) {
+    .atracciones-section .container {
         flex-direction: column;
-    }
-
-    .juegos .columna-1 {
-        order: 2;
-        width: 100%;
         height: auto;
     }
 
-    .juegos .columna-2 {
+    .atracciones-section .column1,
+    .atracciones-section .column2 {
+        width: 100%;
+        padding: 0 20px;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .atracciones-section .column2 {
         order: 1;
-        width: 100%;
-        height: auto;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .atracciones-section .column2 iframe {
+        height: 200px;
+        /* Ajusta la altura del video según tus necesidades */
     }
 }
