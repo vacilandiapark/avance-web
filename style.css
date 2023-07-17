@@ -1,10 +1,11 @@
 :root {
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
-    --font-terciario: 'Belanosima', sans-serif;
-    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --font-terciario: 'Poppins', sans-serif;
+    --sombra: 0 2px 20px rgba(131, 131, 131, 0.5);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
+    --color-borde: #cdcfcf;
 }
 
 body#zona-gamer {
@@ -14,8 +15,8 @@ body#zona-gamer {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #fff;
-    --color-subtitle: #fff;
-    --color-gris: rgb(148, 148, 148);
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #f1484d;
@@ -29,8 +30,8 @@ body#inicio {
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
     --color-title: #fff;
-    --color-subtitle: #000;
-    --color-gris: rgb(148, 148, 148);
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #D2D90B;
@@ -603,53 +604,120 @@ footer .logo img {
     right: 10px;
 }
 
-/* CARRUSEL */
+/* PROMOCIONES CARRUSEL */
 
-.carousel-banner {
-    padding-bottom: 35px;
-    box-shadow: var(--inset);
+.promociones {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    position: relative;
+    padding: 20px;
 }
 
-.carousel-banner .container-promo {
-    max-width: var(--max-width);
-    height: 100%;
-    margin: auto;
+.promociones .gradient-left,
+.promociones .gradient-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    /* Adjust the width of the gradient as needed */
+    pointer-events: none;
+    z-index: 2;
 }
 
-.carousel-banner .container-promo h1 {
-    margin-bottom: 30px;
-    color: var(--color-negro);
-    font-size: 25px;
-    font-family: var(--font-primario);
-    font-weight: 400;
-    text-align: left;
+.promociones .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
-.carousel-banner .slick-carousel .promo {
+.promociones .gradient-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.promociones .container {
+    max-width: 1390px;
+    margin: 0 auto;
+    position: relative;
     overflow: hidden;
-    box-shadow: var(--sombra);
 }
 
-.carousel-banner .slick-carousel img {
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    transition: all 0.3s ease-in;
-    filter: brightness(70%);
+.promociones .container .title {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promociones .container .title h1 {
+    font-family: var(--font-primario);
+    margin: 0;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.promociones .container .title p {
+    color: var(--color-subtitle);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.promociones .carousel-explorar {
+    display: flex;
+    margin: 0 -10px;
+    overflow: hidden;
+}
+
+.promociones .card {
     cursor: pointer;
+    width: 400px;
+    /* Make each card occupy 25% of the container width with a gap of 20px */
+    text-align: center;
+    margin: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
 }
 
-.carousel-banner .slick-carousel img:hover {
+.promociones .card:hover {
+    box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
+}
+
+.promociones .card .image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.promociones .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.promociones .card img:hover {
     transform: scale(1.1);
-    filter: brightness(100%);
 }
 
-@media only screen and (max-width: 767px) {
-    .carousel-banner {
-        text-align: center;
-    }
+.promociones .slick-prev,
+.promociones .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 3;
 }
 
+.promociones .slick-prev {
+    left: 0;
+}
+
+.promociones .slick-next {
+    right: 0;
+}
 
 /* INTRODUCCIÓN */
 
@@ -665,7 +733,7 @@ footer .logo img {
     height: 350px;
     display: flex;
     box-shadow: var(--sombra);
-    border: 1px solid var(--color-gris);
+    border: 1px solid var(--color-borde);
     border-radius: 10px;
 }
 
@@ -675,7 +743,9 @@ footer .logo img {
 }
 
 .introduccion .columna-1 .contenido {
-    padding: 50px;
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .introduccion .columna-1 h2 {
@@ -686,7 +756,7 @@ footer .logo img {
 }
 
 .introduccion .columna-1 p {
-    color: var(--color-gris);
+    color: var(--color-subtitle);
     font-size: 15px;
     font-weight: lighter;
     font-family: var(--font-terciario);
@@ -766,118 +836,139 @@ footer .logo img {
 /* CARRUSEL EXPLORA EL PARQUE */
 
 .explorar {
-    padding-top: 25px;
-    padding-bottom: 55px;
-    box-shadow: var(--inset);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    position: relative;
+    padding: 20px;
 }
 
-.explorar h1 {
-    color: var(--color-negro);
-    font-size: 25px;
-    margin-bottom: 35px;
-    font-weight: lighter;
-    font-family: var(--font-primario);
-    text-align: left;
+.explorar .gradient-left,
+.explorar .gradient-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    /* Adjust the width of the gradient as needed */
+    pointer-events: none;
+    z-index: 2;
+}
+
+.explorar .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.explorar .gradient-right {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .explorar .container {
-    max-width: var(--max-width);
+    max-width: 1390px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.explorar .container .title {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.explorar .carrusel-recorrido {
+.explorar .container .title h1 {
+    font-family: var(--font-primario);
+    margin: 0;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.explorar .container .title p {
+    color: var(--color-subtitle);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.explorar .carousel-explorar {
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    margin: 0 -10px;
+    overflow: hidden;
 }
 
 .explorar .card {
-    width: 350px;
-    height: 400px;
-    position: relative;
-    flex-shrink: 0;
-    margin-right: 20px;
-    margin-left: 20px;
-    box-shadow: var(--sombra);
+    cursor: pointer;
+    width: 400px;
+    /* Make each card occupy 25% of the container width with a gap of 20px */
+    text-align: center;
+    margin: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+}
+
+.explorar .card:hover {
+    box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
+}
+
+.explorar .card .image {
+    width: 100%;
+    height: 250px;
     overflow: hidden;
 }
 
 .explorar .card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
-    filter: brightness(80%);
 }
 
 .explorar .card img:hover {
-    transform: scale(1.2);
-    filter: brightness(100%);
+    transform: scale(1.1);
 }
 
-.explorar .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: auto;
-    height: 100px;
-    background: var(--bg-rectangulos);
-    color: var(--color-blanco);
-    box-sizing: border-box;
-    box-shadow: var(--sombra);
-    padding: 10px;
-    text-align: center;
+.explorar .text {
+    font-size: 16px;
+    height: auto;
+    text-align: left;
+    padding: 10px 20px 0px 30px;
 }
 
-.explorar .card-content h3 {
-    color: var(--color-blanco);
-    font-size: 20px;
+.explorar .text h1 {
+    margin: 0;
     font-family: var(--font-primario);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1px;
+    font-weight: lighter;
+    font-size: 22px;
 }
 
-.explorar .card-content p {
-    color: var(--color-blanco);
-    font-size: 14px;
+.explorar .text p {
     font-family: var(--font-terciario);
-    font-style: normal;
-    font-weight: 400;
-    line-height: 15px;
+    color: var(--color-subtitle);
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 .explorar .slick-prev,
 .explorar .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
     border: none;
-    background: transparent;
-}
-
-.explorar .slick-prev i,
-.explorar .slick-next i {
-    color: var(--color-negro);
-    transition: all 0.3s ease-in-out;
     cursor: pointer;
+    font-weight: bold;
+    z-index: 3;
 }
 
-.explorar .slick-prev i:hover,
-.explorar .slick-next i:hover {
-    filter: brightness(150%);
+.explorar .slick-prev {
+    left: 0;
 }
 
-@media screen and (max-width: 767px) {
-
-    .explorar {
-        text-align: center;
-    }
-
-    .explorar h1 {
-        margin-left: 11px;
-        margin-right: 11px;
-    }
+.explorar .slick-next {
+    right: 0;
 }
+
 
 /* POLLO VACILÓN */
 
@@ -896,6 +987,8 @@ footer .logo img {
     position: relative;
     overflow: hidden;
     box-shadow: var(--sombra);
+    border-radius: 10px;
+    border: var(--color-borde);
 }
 
 .pollo-vacilon .container img {
@@ -1019,64 +1112,61 @@ footer .logo img {
     align-items: flex-end;
     /* Alineación inferior */
     margin-bottom: 25px;
-    gap: 30px;
+    gap: 10px;
 }
 
-.planificar .container-planificar .card {
-    width: 380px;
-    height: 300px;
-    position: relative;
-    /* Añadido */
-    box-shadow: var(--sombra);
+.planificar .card {
+    cursor: pointer;
+    width: 400px;
+    /* Make each card occupy 25% of the container width with a gap of 20px */
+    text-align: center;
+    margin: 8px;
     overflow: hidden;
-    text-align: center;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
 }
 
-.planificar .container-planificar h1 {
-    color: var(--color-negro);
-    font-size: 25px;
-    font-family: var(--font-primario);
-    font-weight: 400;
-    text-align: center;
+.planificar .card:hover {
+    box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
 }
 
-.planificar .container-planificar .card img {
+.planificar .card .image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.planificar .card img {
     width: 100%;
     height: auto;
-    filter: brightness(80%);
-    transition: all 0.2s ease-in-out;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
 }
 
-.planificar .container-planificar .card img:hover {
-    transform: scale(1.2);
-    filter: brightness(100%);
+.planificar .card img:hover {
+    transform: scale(1.1);
 }
 
-.planificar .container-planificar .rectangle {
-    background: var(--bg-rectangulos);
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    bottom: 0;
-    /* Alineación inferior */
-    line-height: 0.4;
-    padding: 10px 60px 0px 30px;
+.planificar .text {
+    font-size: 16px;
+    height: auto;
+    text-align: left;
+    padding: 10px 20px 0px 30px;
 }
 
-.planificar .container-planificar .rectangle h3 {
-    color: var(--color-blanco);
-    font-size: 20px;
+.planificar .text h1 {
+    margin: 0;
     font-family: var(--font-primario);
     font-weight: lighter;
+    font-size: 22px;
 }
 
-.planificar .container-planificar .rectangle p {
-    color: var(--color-blanco);
-    margin-top: 0;
-    font-size: 13px;
+.planificar .text p {
     font-family: var(--font-terciario);
-    line-height: 1.2;
+    color: var(--color-subtitle);
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 /* Estilos para pantallas pequeñas (hasta 768px) */
@@ -1129,7 +1219,7 @@ footer .logo img {
     font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .mapa .contenedor {
@@ -1144,6 +1234,8 @@ footer .logo img {
     /* Proporción 16:9 (para un mapa de Google Maps) */
     height: 0;
     box-shadow: var(--sombra);
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
 }
 
 .mapa-iframe-responsive {
@@ -1168,15 +1260,14 @@ footer .logo img {
     left: 0;
     width: 100%;
     height: 70;
-    background: var(--bg-rectangulos);
-    color: var(--color-blanco)fff;
+    background: var(--color-blanco);
     padding: 10px 0px 0px 20px;
     box-sizing: border-box;
     /* Agregado */
 }
 
 .mapa .rectangulo h2 {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     line-height: .3;
@@ -1184,7 +1275,7 @@ footer .logo img {
 }
 
 .mapa .rectangulo p {
-    color: var(--color-blanco);
+    color: var(--color-gris);
     font-size: 18px;
     font-family: var(--font-terciario);
     line-height: 1;

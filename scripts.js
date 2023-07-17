@@ -89,26 +89,42 @@ $(document).ready(function () {
 // CARRUSEL EXPLORA EL PARQUE //
 
 $(document).ready(function () {
-    // Carrusel para pantallas grandes (más de 768px)
-    $('.carrusel-recorrido').slick({
+    $('.carousel-explorar').slick({
         slidesToShow: 3,
-        slidesToScroll: 1, // Cambiado a 1 para que se mueva de uno en uno
-        prevArrow: '<button class="slick-prev rec" type="button"><i class="fa-sharp fa-solid fa-circle-left fa-2xl"></i></button>',
-        nextArrow: '<button class="slick-next rec" type="button"><i class="fa-sharp fa-solid fa-circle-right fa-2xl"></i></button>',
-        autoplay: true, // Agregado para hacer que el carrusel se mueva automáticamente
-        autoplaySpeed: 1000, // Velocidad en milisegundos entre las transiciones automáticas
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+        nextArrow: '<button type="button" class="slick-next">Next</button>',
+        centerMode: true,
+        centerPadding: '100px', // Adjust the padding as needed to control the size of the cards on the sides
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 3000, // Set the time interval for autoplay in milliseconds (3 seconds in this example)
+        infinite: true, // Disable infinite looping
         responsive: [
             {
-                // Configuración para pantallas móviles (menos de 768px)
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: '150px' // Adjust the padding as needed for the responsive view
+                }
+            },
+            {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
+                    centerPadding: '50px' // Adjust the padding as needed for the responsive view
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '20px' // Adjust the padding as needed for the responsive view
                 }
             }
         ]
     });
 });
+
 
 /* WHATSAPP */
 
@@ -233,4 +249,3 @@ $(document).ready(function () {
 });
 
 // PÁGINA ZONA GAMER //
-
