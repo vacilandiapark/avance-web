@@ -2,8 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Belanosima', sans-serif;
-    --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
-    --sombra-amarillo: 0px 10px 10px 0px rgba(255, 231, 77, 0.25);
+    /* --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.5); */
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
 }
@@ -38,20 +37,6 @@ body#inicio {
     --bg-rectangulos: #18401E;
 }
 
-#inicio {
-    background: linear-gradient(to bottom, rgba(24, 64, 30, 0.9), rgba(24, 64, 30, 0.9)), url(materials/bg/P1100622.JPG);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-#zona-gamer {
-    background: linear-gradient(to bottom, rgba(236, 33, 39, 0.9), rgba(236, 33, 39, 0.9)), url(materials/bg/P1100622.JPG);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
 html,
 body {
     margin: 0;
@@ -68,7 +53,7 @@ a {
 /* NAV */
 .navbar {
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 9999;
     transition: all 0.3s ease;
@@ -76,7 +61,6 @@ a {
 
 .navbar.scrolled .row-1 {
     background-color: var(--color-primario);
-    backdrop-filter: blur(25px);
 }
 
 .navbar.scrolled .row-2 {
@@ -87,21 +71,9 @@ a {
     color: var(--color-negro);
 }
 
-body#inicio .navbar {
-    position: sticky;
-}
-
-body#inicio .navbar .row-2 {
-    background-color: var(--color-blanco);
-}
-
-body#inicio .navbar .row-2 a {
-    color: var(--color-negro);
-}
-
 .navbar .row-1 {
     height: 80px;
-    background-color: transparent;
+    background: var(--color-primario);
 }
 
 .navbar .row-2 {
@@ -109,7 +81,7 @@ body#inicio .navbar .row-2 a {
     justify-content: center;
     align-items: center;
     height: 40px;
-    background-color: transparent;
+    background-color: var(--color-blanco);
 }
 
 .navbar .container {
@@ -168,12 +140,12 @@ body#inicio .navbar .row-2 a {
     align-items: center;
     list-style: none;
     padding: 0;
-    font-family: var(--font-secundario);
+    font-family: var(--font-terciario);
 }
 
 .navbar .navigation a {
     font-size: 20px;
-    color: var(--color-title);
+    color: var(--color-negro);
 }
 
 .navbar a:hover {
@@ -246,6 +218,7 @@ body#inicio .navbar .row-2 a {
 /* FOOTER */
 
 footer {
+    background: var(--color-primario);
     background-repeat: no-repeat;
     background-size: cover;
     height: 300px;
@@ -392,7 +365,7 @@ footer .logo img {
 /* PAGINA INICIO PRINCIPAL */
 
 
-/* BANNER */
+/* BANNER SUBPÁGINAS*/
 
 .banner {
     position: relative;
@@ -647,7 +620,7 @@ footer .logo img {
 
 .carousel-banner .container-promo h1 {
     margin-bottom: 30px;
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
@@ -802,7 +775,7 @@ footer .logo img {
 }
 
 .explorar h1 {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 25px;
     margin-bottom: 35px;
     font-family: var(--font-primario);
@@ -811,7 +784,7 @@ footer .logo img {
 }
 
 .explorar .container {
-    max-width: var(--max-width);
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -887,14 +860,14 @@ footer .logo img {
 
 .explorar .slick-prev i,
 .explorar .slick-next i {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .explorar .slick-prev i:hover,
 .explorar .slick-next i:hover {
-    color: var(--color-negro);
+    filter: brightness(150%);
 }
 
 @media screen and (max-width: 767px) {
@@ -1063,7 +1036,7 @@ footer .logo img {
 }
 
 .planificar .container-planificar h1 {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
@@ -1885,7 +1858,7 @@ footer .logo img {
 /* MUESTRAS */
 
 .muestras {
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 55px;
     box-shadow: var(--inset);
     background: var(--color-blanco);
@@ -1901,7 +1874,7 @@ footer .logo img {
 }
 
 .muestras .container {
-    max-width: var(--max-width);
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -2001,6 +1974,7 @@ footer .logo img {
 /* JUEGOS */
 
 .juegos {
+    background-color: var(--color-blanco);
     padding-top: 40px;
     padding-bottom: 40px;
 }
@@ -2022,14 +1996,14 @@ footer .logo img {
 }
 
 .juegos .columna-1 h2 {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     font-weight: lighter;
 }
 
 .juegos .columna-1 p {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 15px;
     font-weight: lighter;
     font-family: var(--font-terciario);
