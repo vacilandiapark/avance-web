@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Belanosima', sans-serif;
-    /* --sombra: 0px 10px 10px 0px rgba(0, 0, 0, 0.5); */
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
 }
@@ -15,7 +15,7 @@ body#zona-gamer {
     --color-blanco: #fff;
     --color-title: #fff;
     --color-subtitle: #fff;
-    --color-gris: rgb(104, 104, 104);
+    --color-gris: rgb(148, 148, 148);
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #f1484d;
@@ -30,7 +30,7 @@ body#inicio {
     --color-blanco: #fff;
     --color-title: #fff;
     --color-subtitle: #000;
-    --color-gris: rgb(104, 104, 104);
+    --color-gris: rgb(148, 148, 148);
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
     --color-botones: #D2D90B;
@@ -53,7 +53,7 @@ a {
 /* NAV */
 .navbar {
     width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 9999;
     transition: all 0.3s ease;
@@ -369,7 +369,7 @@ footer .logo img {
 
 .banner {
     position: relative;
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
 }
 
@@ -388,8 +388,7 @@ footer .logo img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    object-position: center;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(-20%);
     filter: saturate(150%) brightness(70%);
 }
 
@@ -608,7 +607,6 @@ footer .logo img {
 
 .carousel-banner {
     padding-bottom: 35px;
-    padding-top: 10px;
     box-shadow: var(--inset);
 }
 
@@ -624,13 +622,11 @@ footer .logo img {
     font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .carousel-banner .slick-carousel .promo {
     overflow: hidden;
-    margin-right: 10px;
-    margin-left: 10px;
     box-shadow: var(--sombra);
 }
 
@@ -669,12 +665,13 @@ footer .logo img {
     height: 350px;
     display: flex;
     box-shadow: var(--sombra);
+    border: 1px solid var(--color-gris);
+    border-radius: 10px;
 }
 
 .introduccion .columna-1 {
     width: 400px;
     height: 350px;
-    background: var(--bg-rectangulos);
 }
 
 .introduccion .columna-1 .contenido {
@@ -682,14 +679,14 @@ footer .logo img {
 }
 
 .introduccion .columna-1 h2 {
-    color: var(--color-blanco);
+    color: var(--color-negro);
     font-size: 20px;
     font-family: var(--font-primario);
     font-weight: lighter;
 }
 
 .introduccion .columna-1 p {
-    color: var(--color-blanco);
+    color: var(--color-gris);
     font-size: 15px;
     font-weight: lighter;
     font-family: var(--font-terciario);
@@ -778,13 +775,13 @@ footer .logo img {
     color: var(--color-negro);
     font-size: 25px;
     margin-bottom: 35px;
+    font-weight: lighter;
     font-family: var(--font-primario);
-    font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .explorar .container {
-    max-width: 1300px;
+    max-width: var(--max-width);
     margin: 0 auto;
 }
 
@@ -1859,6 +1856,26 @@ footer .logo img {
     padding: 30px 0;
 }
 
+.atracciones-section .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.atracciones-section .text h1 {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+.atracciones-section .text p {
+    font-family: var(--font-terciario);
+    color: var(--color-gris);
+    font-size: 20px;
+}
+
 .atracciones-section .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1887,7 +1904,7 @@ footer .logo img {
 }
 
 .atracciones-section .column1 p {
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--font-terciario);
     color: var(--color-gris);
 }
@@ -1909,9 +1926,16 @@ footer .logo img {
 }
 
 @media only screen and (max-width: 767px) {
+
+    .atracciones-section .text {
+        text-align: center;
+    }
+
     .atracciones-section .container {
         flex-direction: column;
         height: auto;
+        margin: 25px;
+        text-align: center;
     }
 
     .atracciones-section .column1,
@@ -1930,5 +1954,96 @@ footer .logo img {
     .atracciones-section .column2 iframe {
         height: 200px;
         /* Ajusta la altura del video según tus necesidades */
+    }
+}
+
+/* OPCIONES GAMER */
+
+.opciones-gamer-section {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.opciones-gamer-section .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.opciones-gamer-section .text h1 {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+.opciones-gamer-section .text p {
+    font-family: var(--font-terciario);
+    color: var(--color-gris);
+    font-size: 20px;
+}
+
+.opciones-gamer-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    gap: 30px;
+    /* Espacio entre las cards */
+}
+
+.opciones-gamer-section .card {
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid var(--color-gris);
+    overflow: hidden;
+}
+
+.opciones-gamer-section .card .image {
+    overflow: hidden;
+    width: 400px;
+    height: 300px;
+}
+
+.opciones-gamer-section .card img {
+    width: 100%;
+    height: auto;
+    transform: translateY(-25%);
+    border-radius: 5px 5px 0 0;
+}
+
+.opciones-gamer-section .card-text {
+    text-align: left;
+    padding: 15px 50px 15px 50px;
+}
+
+.opciones-gamer-section .card-text h1 {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    margin: 0;
+}
+
+.opciones-gamer-section .card-text p {
+    color: var(--color-gris);
+    font-family: var(--font-terciario);
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Estilos para dispositivos pequeños */
+@media only screen and (max-width: 767px) {
+    .opciones-gamer-section .container {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .opciones-gamer-section .card {
+        width: calc(50% - 5px);
+        margin-bottom: 10px;
     }
 }
