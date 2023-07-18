@@ -92,8 +92,8 @@ $(document).ready(function () {
     $('.carousel-explorar').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
-        prevArrow: '<button type="button" class="slick-prev">Previous</button>',
-        nextArrow: '<button type="button" class="slick-next">Next</button>',
+        prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
+        nextArrow: '<button type="button" class="slick-next">Siguiente</button>',
         centerMode: true,
         centerPadding: '100px', // Adjust the padding as needed to control the size of the cards on the sides
         autoplay: true, // Enable autoplay

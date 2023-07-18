@@ -46,13 +46,14 @@ body {
     scroll-behavior: smooth;
 }
 
-img{
+img {
     filter: saturate(140%);
 }
 
 a {
     text-decoration: none !important;
     list-style: none;
+    color: var(--color-title);
 }
 
 /* NAV */
@@ -72,13 +73,9 @@ a {
     background-color: var(--color-blanco);
 }
 
-.navbar.scrolled .row-2 a {
-    color: var(--color-negro);
-}
-
 .navbar .row-1 {
     height: 80px;
-    background: var(--color-primario);
+    background: var(--color-title);
 }
 
 .navbar .row-2 {
@@ -87,6 +84,7 @@ a {
     align-items: center;
     height: 40px;
     background-color: var(--color-blanco);
+    overflow: hidden;
 }
 
 .navbar .container {
@@ -131,6 +129,7 @@ a {
 
 .navbar .hamburger {
     display: none;
+    color: var(--color-blanco);
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -144,14 +143,19 @@ a {
     justify-content: center;
     align-items: center;
     list-style: none;
-    padding: 0;
     font-family: var(--font-secundario);
     font-weight: lighter;
 }
 
 .navbar .navigation a {
     font-size: 20px;
-    color: var(--color-negro);
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .navigation a:hover {
+    background-color: var(--color-primario);
+    color: white;
 }
 
 .navbar a:hover {
@@ -159,7 +163,6 @@ a {
 }
 
 .navbar .navigation li {
-    margin: 0 10px;
     transition: all 0.1s ease-in-out;
 }
 
@@ -776,6 +779,12 @@ footer .logo img {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.introduccion .carrusel:hover {
+    box-shadow: var(--sombra);
 }
 
 .introduccion .carrusel img {
@@ -879,13 +888,14 @@ footer .logo img {
     margin: 0 auto;
 }
 
-.explorar a{
+.explorar a {
     color: var(--color-title);
 }
 
 .explorar .container .title h1 {
     font-family: var(--font-primario);
     margin: 0;
+    color: var(--color-title);
     font-weight: lighter;
     font-size: 30px;
 }
@@ -939,7 +949,7 @@ footer .logo img {
     font-size: 16px;
     height: auto;
     text-align: left;
-    padding: 10px 20px 0px 30px;
+    padding: 10px 20px 3px 30px;
 }
 
 .explorar .text h1 {
@@ -947,13 +957,14 @@ footer .logo img {
     font-family: var(--font-primario);
     font-weight: lighter;
     font-size: 22px;
+    color: var(--color-blanco);
 }
 
 .explorar .text p {
     font-family: var(--font-terciario);
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .explorar .slick-prev,
@@ -995,9 +1006,27 @@ footer .logo img {
     height: 350px;
     position: relative;
     overflow: hidden;
-    box-shadow: var(--sombra);
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
 
+.pollo-vacilon .container:hover {
+    box-shadow: var(--sombra);
+}
+
+.pollo-vacilon .gradient-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 70%;
+    /* Adjust the width of the gradient as needed */
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pollo-vacilon .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, rgb(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
 }
 
 .pollo-vacilon .container img {
@@ -1009,6 +1038,7 @@ footer .logo img {
     position: absolute;
     padding-left: 70px;
     top: 50%;
+    z-index: 5;
     transform: translateY(-50%);
     color: var(--color-blanco);
 }
@@ -1105,14 +1135,13 @@ footer .logo img {
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
     animation: AnimationName 5s ease infinite;
-    padding-top: 10px;
 }
 
 .planificar .container-planificar {
     max-width: var(--max-width);
     margin: 0 auto;
     margin-top: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .planificar .container-planificar h1 {
@@ -1137,7 +1166,7 @@ footer .logo img {
     text-align: center;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-
+    height: auto;
     border-radius: 10px;
 }
 
@@ -1163,7 +1192,6 @@ footer .logo img {
 
 .planificar .text {
     font-size: 16px;
-    height: auto;
     text-align: left;
     padding: 10px 20px 0px 30px;
 }
@@ -1198,11 +1226,9 @@ footer .logo img {
     .planificar .container-planificar .card {
         width: calc(100% - 30px);
         max-width: 380px;
-        height: 300px;
         margin: 10px;
         position: relative;
         /* Añadido */
-        box-shadow: var(--sombra);
         overflow: hidden;
     }
 
@@ -1224,7 +1250,7 @@ footer .logo img {
     background: var(--color-blanco);
     display: flex;
     justify-content: center;
-    padding-bottom: 45px;
+    padding-bottom: 10px;
 }
 
 .mapa h1 {
@@ -1245,9 +1271,12 @@ footer .logo img {
     position: relative;
     /* Proporción 16:9 (para un mapa de Google Maps) */
     height: 50vh;
-    box-shadow: var(--sombra);
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
 
+.mapa .mapa-iframe:hover{
+    box-shadow: var(--sombra);
 }
 
 .mapa-iframe-responsive {
@@ -1486,6 +1515,7 @@ footer .logo img {
 .contacto .contacto-container h2 {
     line-height: 1.2;
     font-weight: lighter;
+    color: var(--color-title);
 }
 
 .contacto .form-container button {
@@ -1506,7 +1536,7 @@ footer .logo img {
 }
 
 .contacto .form-container a {
-    color: var(--color-negro);
+    color: var(--color-gris);
 }
 
 .contacto .form-container .col-1 {
