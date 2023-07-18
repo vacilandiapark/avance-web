@@ -23,6 +23,21 @@ body#zona-gamer {
     --bg-rectangulos: #18401E;
 }
 
+body#restaurante {
+    --color-primario: #F58220;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #F58220;
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #f19544;
+    --bg-rectangulos: #18401E;
+}
+
 body#inicio {
     --color-primario: #18401E;
     --color-secundario: #D2D90B;
@@ -103,7 +118,7 @@ a {
 
 .navbar .btn {
     background-color: var(--color-botones);
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     padding: 10px 20px;
     border: none;
     box-shadow: var(--sombra);
@@ -286,7 +301,7 @@ footer .columna-2 h3 {
 
 footer .botones button {
     background-color: var(--color-botones);
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
@@ -437,18 +452,18 @@ footer .logo img {
 
 .banner .banner-overlay p {
     color: var(--color-blanco);
-    font-family: var(--font-secundario);
-    font-weight: 400;
-    font-size: 200%;
+    font-family: var(--font-terciario);
+    font-weight: bold;
+    font-size: 120%;
     text-align: center;
-    margin: 0;
+    margin-top: 10px;
     padding: 0;
 }
 
 .banner .banner-overlay button {
     margin-top: 20px;
     background-color: var(--color-botones);
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
@@ -526,7 +541,7 @@ footer .logo img {
 
 .boton-comprar .btn-comprar {
     background-color: var(--color-botones);
-    color: var(--color-subtitle);
+    color: var(--color-blanco);
     padding: 10px 20px;
     border: none;
     font-style: 16px;
@@ -964,7 +979,9 @@ footer .logo img {
     font-family: var(--font-terciario);
     color: var(--color-blanco);
     font-size: 18px;
-    margin-top: 5px;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
 .explorar .slick-prev,
@@ -1072,7 +1089,7 @@ footer .logo img {
     width: 200px;
     height: 50px;
     background-color: var(--color-botones);
-    color: black;
+    color: var(--color-blanco);
     margin-right: 10px;
     border: none;
     font-size: 15px;
@@ -1254,18 +1271,18 @@ footer .logo img {
 
 /* MARCAS */
 
-.marcas{
+.marcas {
     padding-top: 30px;
     padding-bottom: 30px;
 }
 
-.marcas .container{
+.marcas .container {
     max-width: 1200px;
     display: flex;
     margin: 0 auto;
 }
 
-.marcas img{
+.marcas img {
     margin: 0 auto;
     width: auto;
     height: 100px;
@@ -1687,18 +1704,19 @@ footer .logo img {
 
 #paquetes-cumpleañeros h1 {
     color: black;
-    text-align: center;
-    font-size: 25px;
-    margin-top: 0;
+    font-size: 30px;
+    margin: 0;
+    font-weight: lighter;
+    color: var(--color-title);
     font-family: var(--font-primario);
 }
 
 #paquetes-cumpleañeros p {
-    margin: 20px;
-    font-family: var(--font-secundario);
-    color: var(--color-gris);
-    font-size: 16px;
-    line-height: 1.2;
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 20px;
 }
 
 #paquetes-cumpleañeros .columnas {
@@ -1713,16 +1731,17 @@ footer .logo img {
 }
 
 #paquetes-cumpleañeros .columna1 .carousel {
-    width: 800px;
+    width: 830px;
+    margin-right: 20px;
     height: 500px;
 }
 
 #paquetes-cumpleañeros .columna1 .carousel img {
-    width: 800px;
     height: 540px;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 #paquetes-cumpleañeros .columna1 .carousel img:hover {
@@ -1768,20 +1787,14 @@ footer .logo img {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--color-terciario);
+    background-color: var(--color-primario);
     border: none;
     color: var(--color-blanco);
     cursor: pointer;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#paquetes-cumpleañeros .arrow-up:hover,
-#paquetes-cumpleañeros .arrow-down:hover {
-    opacity: 1;
 }
 
 #paquetes-cumpleañeros .arrow-up {
@@ -2158,7 +2171,7 @@ footer .logo img {
     transition: all 0.3s ease-in-out;
 }
 
-.opciones .card:hover{
+.opciones .card:hover {
     box-shadow: var(--sombra);
 }
 
@@ -2229,5 +2242,112 @@ footer .logo img {
 
     .opciones .container-planificar h1 {
         text-align: center;
+    }
+}
+
+/* PÁGINA RESTAURANTE */
+
+.didi-food {
+    padding-top: 30px;
+}
+
+.didi-food .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.didi-food .text h1 {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    margin: 0;
+    color: var(--color-title);
+    padding: 0;
+    font-size: 30px;
+}
+
+.didi-food .text p {
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.didi-food .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-gris);
+    /* Ajusta la altura según tus necesidades */
+}
+
+.didi-food .column1 {
+    width: 450px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.didi-food .column1 h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--color-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.didi-food .column1 p {
+    font-size: 20px;
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+}
+
+.didi-food .column2 {
+    width: 650px;
+    height: auto;
+    overflow: hidden;
+}
+
+.didi-food .column2 iframe,
+.didi-food .column2 img {
+    width: 500px;
+    height: auto;
+    padding-left: 10%;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .didi-food .text {
+        text-align: center;
+    }
+
+    .didi-food .container {
+        flex-direction: column;
+        height: auto;
+        margin: 25px;
+        text-align: center;
+    }
+
+    .didi-food .column1,
+    .didi-food .column2 {
+        width: 100%;
+        padding: 0 20px;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .didi-food .column2 {
+        order: 1;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .didi-food .column2 iframe {
+        height: 200px;
+        /* Ajusta la altura del video según tus necesidades */
     }
 }
