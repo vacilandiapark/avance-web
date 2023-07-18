@@ -14,7 +14,7 @@ body#zona-gamer {
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
-    --color-title: #fff;
+    --color-title: #EC2127;
     --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -29,7 +29,7 @@ body#inicio {
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
     --color-blanco: #fff;
-    --color-title: #fff;
+    --color-title: #18401E;
     --color-subtitle: #373e41;
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
@@ -44,6 +44,10 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+}
+
+img{
+    filter: saturate(140%);
 }
 
 a {
@@ -649,6 +653,7 @@ footer .logo img {
 .promociones .container .title h1 {
     font-family: var(--font-primario);
     margin: 0;
+    color: var(--color-title);
     font-weight: lighter;
     font-size: 30px;
 }
@@ -749,7 +754,7 @@ footer .logo img {
 }
 
 .introduccion .columna-1 h2 {
-    color: var(--color-negro);
+    color: var(--color-title);
     font-size: 20px;
     font-family: var(--font-primario);
     font-weight: lighter;
@@ -874,6 +879,10 @@ footer .logo img {
     margin: 0 auto;
 }
 
+.explorar a{
+    color: var(--color-title);
+}
+
 .explorar .container .title h1 {
     font-family: var(--font-primario);
     margin: 0;
@@ -902,7 +911,6 @@ footer .logo img {
     margin: 8px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-
     border-radius: 10px;
 }
 
@@ -1110,6 +1118,7 @@ footer .logo img {
 .planificar .container-planificar h1 {
     font-family: var(--font-primario);
     font-weight: lighter;
+    color: var(--color-title);
     font-size: 25px;
 }
 
@@ -1219,7 +1228,7 @@ footer .logo img {
 }
 
 .mapa h1 {
-    color: var(--color-negro);
+    color: var(--color-title);
     font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
@@ -1234,9 +1243,8 @@ footer .logo img {
 
 .mapa .mapa-iframe {
     position: relative;
-    padding-bottom: 56.25%;
     /* Proporción 16:9 (para un mapa de Google Maps) */
-    height: 0;
+    height: 50vh;
     box-shadow: var(--sombra);
     border-radius: 10px;
 
@@ -1271,7 +1279,7 @@ footer .logo img {
 }
 
 .mapa .rectangulo h2 {
-    color: var(--color-negro);
+    color: var(--color-title);
     font-size: 20px;
     font-family: var(--font-primario);
     line-height: .3;
@@ -1287,18 +1295,6 @@ footer .logo img {
 
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 767px) {
-
-    .mapa {
-        padding: 0;
-    }
-
-    .mapa-iframe {
-        padding-bottom: 0;
-    }
-
-    .mapa-iframe-responsive {
-        position: static;
-    }
 
     .mapa h1 {
         text-align: center;
@@ -1476,16 +1472,15 @@ footer .logo img {
 
 .contacto .form-container {
     display: flex;
-    box-shadow: var(--sombra);
     border-radius: 10px;
 }
 
 .contacto .contacto-container h1 {
-    color: var(--color-negro);
+    color: var(--color-title);
     font-size: 25px;
     font-family: var(--font-primario);
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .contacto .contacto-container h2 {
