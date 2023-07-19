@@ -52,6 +52,21 @@ body#granja {
     --bg-rectangulos: #18401E;
 }
 
+body#piscinas {
+    --color-primario: #2BABE2;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #2BABE2;
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #6ebadb;
+    --bg-rectangulos: #18401E;
+}
+
 body#barcilon {
     --color-primario: #EA0B8B;
     --color-secundario: #EA0B8B;
@@ -124,12 +139,51 @@ a {
     transition: all 0.3s ease;
 }
 
+.sub-menu {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 200%;
+    background-color: var(--color-primario);
+    z-index: -5;
+    padding: 0;
+    font-size: 18px;
+    line-height: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    /* Ignore pointer events so it doesn't interfere with hover */
+
+    /* New CSS for the sliding effect */
+    transform: translateY(-10px);
+    /* Move the sub-menu up slightly to hide it */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navbar .sub-menu li {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    list-style-type: none;
+}
+
+.navbar ul{
+    padding: 0;
+}
+
+.navbar .sub-menu li a {
+    color: var(--color-blanco);
+    padding: 10px;
+}
+
 .navbar.scrolled .row-1 {
     background-color: var(--color-primario);
 }
 
 .navbar.scrolled .row-2 {
     background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
 }
 
 .navbar .row-1 {
@@ -143,7 +197,6 @@ a {
     align-items: center;
     height: 40px;
     background-color: var(--color-blanco);
-    overflow: hidden;
 }
 
 .navbar .container {
@@ -208,11 +261,14 @@ a {
 
 .navbar .navigation a {
     font-size: 20px;
-    padding: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
     transition: all 0.3s ease-in-out;
 }
 
-.navbar .navigation a:hover {
+.navbar .navigation li a:hover {
     background-color: var(--color-primario);
     color: white;
 }
@@ -223,6 +279,16 @@ a {
 
 .navbar .navigation li {
     transition: all 0.1s ease-in-out;
+    position: relative;
+}
+
+.navbar .navigation li:hover .sub-menu {
+    opacity: 1;
+    /* Make the sub-menu visible */
+    pointer-events: auto;
+    /* Enable pointer events to interact with sub-menu */
+    transform: translateY(0);
+    /* Slide down the sub-menu to its original position */
 }
 
 #menuPanel {
@@ -314,7 +380,6 @@ footer .columna-1 {
 
 footer .columna-1 ul {
     list-style: none;
-    padding: 40px 0px 0px 0px;
     margin: 0;
     color: var(--color-blanco);
     font-size: 15px;
@@ -1335,14 +1400,25 @@ body#inicio .explorar .text p {
 
 .marcas .container {
     max-width: 1200px;
-    display: flex;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    /* Centra las imágenes horizontalmente */
+    flex-wrap: wrap;
+    /* Envuelve las imágenes si no caben en una sola fila */
 }
 
 .marcas img {
-    margin: 0 auto;
-    width: auto;
-    height: 100px;
+    width: calc(100% / 7 - 20px);
+    /* Ajusta el tamaño de las imágenes en función del ancho del contenedor */
+    max-width: 150px;
+    /* Establece un tamaño máximo para las imágenes */
+    max-height: 117px;
+    /* Establece un tamaño máximo para la altura de las imágenes */
+    height: auto;
+    /* La altura se ajusta automáticamente según el ancho */
+    margin: 5px;
+    /* Espacio entre las imágenes */
 }
 
 /* MAPA GOOGLE MAPS */
