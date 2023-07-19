@@ -8,6 +8,20 @@
     --color-borde: #cdcfcf;
 }
 
+.btn,
+button,
+.btn-comprar {
+    border-radius: 10px;
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover,
+button:hover,
+.btn-comprar:hover {
+    box-shadow: var(--sombra) !important;
+}
+
 body#zona-gamer {
     --color-primario: #EC2127;
     --color-secundario: #EA0B8B;
@@ -2273,6 +2287,28 @@ footer .logo img {
     margin-top: 10px;
 }
 
+.didi-food .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.didi-food i {
+    margin-left: 10px;
+}
+
+.didi-food button {
+    background-color: var(--color-botones);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border: none;
+    box-shadow: var(--sombra);
+    font-style: 16px;
+    cursor: pointer;
+    font-family: var(--font-primario);
+    font-size: 17px;
+    transition: all 0.2s ease-in-out;
+}
+
 .didi-food .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -2288,7 +2324,7 @@ footer .logo img {
 }
 
 .didi-food .column1 {
-    width: 450px;
+    width: 600px;
     padding-left: 50px;
     padding-right: 50px;
 }
@@ -2308,7 +2344,7 @@ footer .logo img {
 }
 
 .didi-food .column2 {
-    width: 650px;
+    width: 600px;
     height: auto;
     overflow: hidden;
 }
@@ -2317,7 +2353,7 @@ footer .logo img {
 .didi-food .column2 img {
     width: 500px;
     height: auto;
-    padding-left: 10%;
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -2349,5 +2385,122 @@ footer .logo img {
     .didi-food .column2 iframe {
         height: 200px;
         /* Ajusta la altura del video según tus necesidades */
+    }
+}
+
+/* CATEGORIAS */
+
+.categorias {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background: var(--color-blanco);
+}
+
+.categorias .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: 350px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.categorias .columna-1 {
+    width: 650px;
+    height: 350px;
+}
+
+.categorias .columna-1 .contenido {
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.categorias .columna-1 h2 {
+    color: var(--color-title);
+    font-size: 35px;
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.categorias .columna-1 p {
+    color: var(--color-subtitle);
+    font-size: 20px;
+    font-weight: lighter;
+    font-family: var(--font-terciario);
+}
+
+.categorias .columna-2 {
+    width: 550px;
+    height: 350px;
+}
+
+.categorias .carrusel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.categorias .carrusel:hover {
+    box-shadow: var(--sombra);
+}
+
+.categorias .carrusel img {
+    width: auto;
+    height: 100%;
+}
+
+.categorias .slick-prev,
+.categorias .slick-next {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    color: var(--color-blanco);
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+}
+
+.categorias .slick-prev:hover,
+.categorias .slick-next:hover {
+    filter: brightness(150%);
+    color: var(--color-negro);
+}
+
+.categorias .slick-prev {
+    left: 10px;
+}
+
+.categorias .slick-next {
+    right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .categorias {
+        margin: 0;
+        padding-top: 0;
+        margin-bottom: 30%;
+    }
+
+    .categorias .container {
+        flex-direction: column;
+    }
+
+    .categorias .columna-1 {
+        order: 2;
+        width: 100%;
+        height: auto;
+    }
+
+    .categorias .columna-2 {
+        order: 1;
+        width: 100%;
+        height: auto;
     }
 }
