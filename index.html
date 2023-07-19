@@ -273,7 +273,7 @@
     </div>
     <div class="card" style="background:#EA0B8B;">
       <div class="image">
-        <a href=""><img src="materials/Explore-Park/350X 400 BARCILON.jpg" alt="Image 1"></a>
+        <a href="Barcilón.html"><img src="materials/Explore-Park/350X 400 BARCILON.jpg" alt="Image 1"></a>
       </div>
       <div class="text">
         <h1>Barcilón</h1>
@@ -400,23 +400,23 @@
         <div class="col-1">
           <form action="https://formspree.io/f/mrgwgzgz" method="POST">
             <div class="form-row">
-              <input type="text" id="name" class="form-input" name="name" placeholder="Nombre">
+              <input required type="text" id="name" class="form-input" name="name" placeholder="Nombre">
             </div>
 
             <div class="form-row">
-              <input type="text" id="apellido" class="form-input" name="apellido" placeholder="Apellido">
+              <input required type="text" id="apellido" class="form-input" name="apellido" placeholder="Apellido">
             </div>
 
             <div class="form-row">
-              <input type="email" id="email" class="form-input" name="_replyto" placeholder="Correo electrónico">
+              <input required type="email" id="email" class="form-input" name="_replyto" placeholder="Correo electrónico">
             </div>
 
             <div class="form-row">
-              <input type="tel" id="phone" class="form-input" name="phone" placeholder="Número de celular">
+              <input required type="tel" id="phone" class="form-input" name="phone" placeholder="Número de celular">
             </div>
 
             <div class="form-row">
-              <select id="topic" name="topic" class="form-select">
+              <select required id="topic" name="topic" class="form-select">
                 <option value="" disabled selected>Selecciona un tema</option>
                 <option value="paquetes">Paquetes Cumpleañeros</option>
                 <option value="reservas">Reservas y Espacios</option>
@@ -427,7 +427,7 @@
             </div>
 
             <div class="form-row">
-              <textarea id="message" class="form-textarea" name="message"
+              <textarea required id="message" class="form-textarea" name="message"
                 placeholder="Escribe aqui tu consulta..."></textarea>
             </div>
 

@@ -52,6 +52,21 @@ body#granja {
     --bg-rectangulos: #18401E;
 }
 
+body#barcilon {
+    --color-primario: #EA0B8B;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #EA0B8B;
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #ee60b1;
+    --bg-rectangulos: #18401E;
+}
+
 body#restaurante {
     --color-primario: #F58220;
     --color-secundario: #EA0B8B;
@@ -91,7 +106,7 @@ body {
 }
 
 img {
-    filter: saturate(140%);
+    filter: saturate(150%);
 }
 
 a {
@@ -1085,7 +1100,7 @@ body#inicio .explorar .text p {
 
 .pollo-vacilon .gradient-left {
     left: 0;
-    background: linear-gradient(to right, rgb(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, rgba(245, 130, 32, 0.8), rgba(255, 255, 255, 0));
 }
 
 .pollo-vacilon .container img {
@@ -2420,5 +2435,90 @@ body#inicio .explorar .text p {
     .didi-food .column2 iframe {
         height: 200px;
         /* Ajusta la altura del video según tus necesidades */
+    }
+}
+
+/* PÁGINA GRANJA */
+
+.animales {
+    padding-bottom: 70px;
+}
+
+.animales-container {
+    max-width: var(--max-width);
+    height: 250px;
+    margin: 0 auto;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+    margin-bottom: 20px;
+}
+
+.animales .text {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.animales .text h1 {
+    font-family: var(--font-primario);
+    color: var(--color-primario);
+    font-size: 30px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+.animales .text p {
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+    margin-top: 10px;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.animales-container .columna-1,
+.animales-container .columna-2 {
+    height: 100%;
+}
+
+.animales-container .columna-1 {
+    flex: 0 0 250px;
+}
+
+.animales-container .columna-2 {
+    flex: 1;
+    padding: 30px;
+}
+
+.animales-container .columna-2 h1 {
+    font-size: 30px;
+    font-family: var(--font-primario);
+    color: var(--color-primario);
+    margin: 0;
+}
+
+.animales-container .columna-2 p {
+    font-size: 20px;
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+}
+
+.animales-container .imagen-animal {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .animales-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .animales-container .columna-1,
+    .animales-container .columna-2 {
+        width: 100%;
+        height: auto;
     }
 }
