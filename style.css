@@ -108,7 +108,7 @@ body#inicio {
     --color-gris: #a1a1a1;
     --color-amarillo: #FBB916;
     --color-amarillo-claro: #FFE74D;
-    --color-botones: #D2D90B;
+    --color-botones: #5a8d62;
     --bg-rectangulos: #18401E;
 }
 
@@ -149,7 +149,6 @@ a {
     padding: 0;
     font-size: 18px;
     line-height: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none;
     /* Ignore pointer events so it doesn't interfere with hover */
@@ -168,7 +167,7 @@ a {
     list-style-type: none;
 }
 
-.navbar ul{
+.navbar ul {
     padding: 0;
 }
 
@@ -183,7 +182,6 @@ a {
 
 .navbar.scrolled .row-2 {
     background-color: var(--color-blanco);
-    box-shadow: var(--sombra);
 }
 
 .navbar .row-1 {
@@ -374,7 +372,7 @@ footer .columna-1 {
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -395,13 +393,13 @@ footer .columna-2 {
     height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     padding-left: 20px;
 }
 
 footer .columna-2 h3 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: var(--color-blanco);
     font-size: 25px;
     font-family: var(--font-primario);
@@ -2596,5 +2594,81 @@ body#inicio .explorar .text p {
     .animales-container .columna-2 {
         width: 100%;
         height: auto;
+    }
+}
+
+/* PÁGINA 404 */
+
+.full-screen-section {
+    display: flex;
+    height: 100vh;
+}
+
+.full-screen-section .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen-section .column-1 {
+    flex-basis: 30%;
+    overflow: hidden;
+}
+
+.full-screen-section .column-2 {
+    flex-basis: 70%;
+    display: flex;
+    padding: 60px;
+    flex-direction: column;
+    justify-content: center;
+    /* Centramos verticalmente el contenido */
+    align-items: flex-start;
+}
+
+.full-screen-section .column-2 h1 {
+    font-family: var(--font-secundario);
+    font-weight: lighter;
+    font-size: 85px;
+    margin: 0;
+    padding: 0;
+}
+
+.full-screen-section .column-2 p {
+    font-family: var(--font-terciario);
+    color: var(--color-gris);
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.full-screen-section .column-2 button {
+    background-color: var(--color-botones);
+    color: var(--color-blanco);
+    padding: 20px 20px;
+    border: none;
+    box-shadow: var(--sombra);
+    font-style: 16px;
+    cursor: pointer;
+    font-size: 20PX;
+    font-family: var(--font-primario);
+    transition: all 0.2s ease-in-out;
+}
+
+.full-screen-section .column-1 img {
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+    .full-screen-section {
+        flex-direction: column;
+    }
+
+    /* Reiniciamos el ancho de las columnas para que ocupen el 100% del ancho en móviles */
+    .full-screen-section .column-1,
+    .full-screen-section .column-2 {
+        flex-basis: 100%;
     }
 }
