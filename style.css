@@ -397,6 +397,57 @@ footer .container {
     display: flex;
 }
 
+footer .terms {
+    display: flex;
+    border-top: 1px solid white;
+    background: var(--color-primario);
+}
+
+footer .terms .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--color-blanco);
+    font-family: var(--font-terciario);
+    font-size: 8px;
+    text-align: center;
+}
+
+/* Estilo base para el enlace */
+footer .terms .text a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Animación para el efecto de hover */
+footer .terms .text a.rainbow-text:hover {
+    transform: translateY(-3px);
+    /* Cambiar la cantidad y dirección del movimiento */
+}
+
+/* Estilo para el enlace con efecto de arcoíris */
+footer .terms .text a.rainbow-text {
+    background-image: linear-gradient(45deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8a2be2, #ff0000, #8a2be2, #0000ff, #00ffff, #00ff00, #ffff00, #ff7f00);
+    background-size: 1800% 1800%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowAnimation 35s linear infinite;
+}
+
+/* Animación para el efecto de arcoíris */
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 1800% center;
+    }
+}
+
 footer .columna-1 {
     width: 300px;
     height: 300px;
@@ -1126,14 +1177,6 @@ body#restaurante .explorar img {
     padding-bottom: 20px;
 }
 
-body#inicio .explorar .text h1 {
-    color: var(--color-blanco);
-}
-
-body#inicio .explorar .text p {
-    color: var(--color-blanco);
-}
-
 .explorar .slick-prev,
 .explorar .slick-next {
     position: absolute;
@@ -1193,7 +1236,7 @@ body#inicio .explorar .text p {
 
 .pollo-vacilon .gradient-left {
     left: 0;
-    background: linear-gradient(to right, rgba(245, 130, 32, 0.8), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
 }
 
 .pollo-vacilon .container img {
@@ -2240,7 +2283,8 @@ body#inicio .explorar .text p {
     overflow: hidden;
 }
 
-.atracciones-section .column2 iframe {
+.atracciones-section .column2 iframe,
+.atracciones-section .column2 img {
     width: 100%;
     height: 270px;
     transition: all 0.3s ease-in-out;
@@ -2701,4 +2745,194 @@ body#inicio .explorar .text p {
     .full-screen-section .column-2 {
         flex-basis: 100%;
     }
+}
+
+/* PÁGINA PISCINAS */
+
+.piscinas {
+    padding-top: 30px;
+}
+
+.piscinas .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.piscinas i {
+    color: var(--color-primario);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+.piscinas b {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    color: var(--color-primario);
+}
+
+.piscinas .text h1 {
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    margin: 0;
+    color: var(--color-title);
+    padding: 0;
+    font-size: 30px;
+}
+
+.piscinas .text p {
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.piscinas .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-gris);
+    /* Ajusta la altura según tus necesidades */
+}
+
+.piscinas .column1 {
+    width: 600px;
+}
+
+.piscinas .column1 h2 {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--color-title);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.piscinas .column1 p {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    font-family: var(--font-terciario);
+    color: var(--color-subtitle);
+}
+
+.piscinas .column2 {
+    width: 600px;
+    height: auto;
+    overflow: hidden;
+}
+
+.piscinas .column2 iframe,
+.piscinas .column2 img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.piscinas .column2 img:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 767px) {
+
+    .piscinas .text {
+        text-align: center;
+    }
+
+    .piscinas .container {
+        flex-direction: column;
+        height: auto;
+        margin: 25px;
+        text-align: center;
+    }
+
+    .piscinas .column1,
+    .piscinas .column2 {
+        width: 100%;
+        padding: 0 20px;
+        order: initial;
+        /* Volvemos al orden original en versión desktop */
+    }
+
+    .piscinas .column2 {
+        order: 1;
+        /* Aseguramos que el iframe esté arriba en versión responsive */
+    }
+
+    .piscinas .column2 iframe {
+        height: 200px;
+        /* Ajusta la altura del video según tus necesidades */
+    }
+}
+
+/* PÁGINA CANCHAS */
+
+.canchas-container {
+    max-width: 1200px;
+    height: 450px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.canchas .title {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.canchas .title h1 {
+    font-family: var(--font-primario);
+    margin: 0;
+    color: var(--color-title);
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.canchas .title p {
+    color: var(--color-subtitle);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.canchas-container .columna1 {
+    width: 800px;
+    height: 450px;
+}
+
+.canchas-container .columna1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.canchas-container .columna2 {
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 15px;
+}
+
+.canchas-container .cuadrado {
+    width: 400px;
+    height: 150px;
+    border: 1px solid var(--color-borde);
+    /* Puedes cambiar el color aquí */
+    border-radius: 10px;
+}
+
+.canchas-container .cuadrado h1 {
+    padding-left: 20px;
+    color: var(--color-primario);
+    font-family: var(--font-secundario);
+    font-size: 20px;
 }
