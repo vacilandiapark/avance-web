@@ -37,6 +37,36 @@ body#zona-gamer {
     --bg-rectangulos: #18401E;
 }
 
+body#canchas {
+    --color-primario: #77C043;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #77C043;
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #97c575;
+    --bg-rectangulos: #18401E;
+}
+
+body#recorrido {
+    --color-primario: #724C9F;
+    --color-secundario: #EA0B8B;
+    --color-terciario: #683A10;
+    --color-cuaternario: #9B4917;
+    --color-blanco: #fff;
+    --color-title: #724C9F;
+    --color-subtitle: #373e41;
+    --color-gris: #a1a1a1;
+    --color-amarillo: #FBB916;
+    --color-amarillo-claro: #FFE74D;
+    --color-botones: #846ca1;
+    --bg-rectangulos: #18401E;
+}
+
 body#granja {
     --color-primario: #683A10;
     --color-secundario: #EA0B8B;
