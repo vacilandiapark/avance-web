@@ -2622,6 +2622,105 @@ body#restaurante .explorar img {
     }
 }
 
+/* PLATOS */
+
+.platos {
+    text-align: center;
+}
+
+.platos .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.platos h2 {
+    font-size: var(--size-title);
+    color: var(--color-primario);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    text-align: left;
+}
+
+.platos .carta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.platos .plato {
+    border-radius: 10px;
+}
+
+.platos .plato .info{
+    background: var(--color-blanco);
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    padding: 20px;
+}
+
+.platos .plato .image{
+    overflow: hidden;
+    border-radius: 10px;
+    height: 250px;
+}
+
+.platos .plato img{
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.platos .plato img:hover{
+    transform: scale(1.1);
+}
+
+.platos .plato h3 {
+    font-size: 24px;
+    font-family: var(--font-secundario);
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    color: var(--color-primario);
+}
+
+.platos .plato p{
+    font-size: 15px;
+    font-family: var(--font-terciario);
+    text-align: left;
+    margin: 0;
+    color: var(--color-subtitle);
+}
+
+.platos .tabs{
+    display: flex;
+}
+
+.platos .tab-btn {
+    font-size: var(--size-subtitle);
+    font-family: var(--font-terciario);
+    padding: 10px 20px;
+    color: #333;
+    border: none;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+.platos .tab-btn.active {
+    background-color: var(--color-primario);
+    color: #fff;
+}
+
+/* Estilos para las categorías */
+.platos .categoria {
+    display: grid;
+    padding-top: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+
 /* PÁGINA GRANJA */
 
 .animales {
@@ -2791,6 +2890,18 @@ body#restaurante .explorar img {
     padding-top: 30px;
 }
 
+.piscinas button {
+    background-color: var(--color-botones);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border: none;
+    font-style: 16px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    font-family: var(--font-primario);
+    transition: all 0.2s ease-in-out;
+}
+
 .piscinas .text {
     max-width: 1200px;
     margin: 0 auto;
@@ -2832,7 +2943,7 @@ body#restaurante .explorar img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 400px;
+    height: auto;
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 30px;
@@ -2843,11 +2954,11 @@ body#restaurante .explorar img {
 
 .piscinas .column1 {
     width: 600px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .piscinas .column1 h2 {
-    padding-left: 50px;
-    padding-right: 50px;
     font-size: 25px;
     margin-bottom: 10px;
     color: var(--color-title);
@@ -2856,8 +2967,6 @@ body#restaurante .explorar img {
 }
 
 .piscinas .column1 p {
-    padding-left: 50px;
-    padding-right: 50px;
     font-size: 20px;
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
@@ -2873,6 +2982,7 @@ body#restaurante .explorar img {
 .piscinas .column2 img {
     width: 100%;
     height: auto;
+    transform: scale(1.04);
     transition: all 0.3s ease-in-out;
 }
 
@@ -2914,7 +3024,7 @@ body#restaurante .explorar img {
 
 /* PÁGINA CANCHAS */
 
-.canchas{
+.canchas {
     padding-top: 40px;
 }
 
@@ -2961,7 +3071,7 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
 }
 
-.canchas-container .columna1 img:hover{
+.canchas-container .columna1 img:hover {
     transform: scale(1.1);
 }
 
@@ -2985,23 +3095,23 @@ body#restaurante .explorar img {
     transition: all 0.3s;
 }
 
-.canchas-container .content:nth-child(1){
+.canchas-container .content:nth-child(1) {
     background: var(--color-primario);
 }
 
-.canchas-container .content:hover{
+.canchas-container .content:hover {
     background: var(--color-primario);
 }
 
-.canchas-container .content:hover h1{
+.canchas-container .content:hover h1 {
     color: var(--color-blanco);
 }
 
-.canchas-container .content:hover p{
+.canchas-container .content:hover p {
     color: var(--color-blanco);
 }
 
-.canchas-container .content:hover i{
+.canchas-container .content:hover i {
     color: var(--color-blanco);
 }
 
@@ -3015,7 +3125,7 @@ body#restaurante .explorar img {
     font-size: 15px;
 }
 
-.canchas-container .content p{
+.canchas-container .content p {
     padding-left: 20px;
     padding-right: 20px;
     font-family: var(--font-terciario);
@@ -3024,11 +3134,11 @@ body#restaurante .explorar img {
     margin: 0;
 }
 
-.canchas-container .content i{
+.canchas-container .content i {
     color: var(--color-primario);
 }
 
-.canchas-container button{
+.canchas-container button {
     background-color: var(--color-botones);
     color: var(--color-blanco);
     padding: 10px 20px;

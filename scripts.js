@@ -161,6 +161,9 @@ closeButton.addEventListener('click', toggleChat);
 // Evento click en el botón de enviar
 sendButton.addEventListener('click', sendMessage);
 
+// Abrir el chat automáticamente al cargar la página
+toggleChat();
+
 
 // PÁGINA PAQUETE CUMPLEAÑERO //
 
@@ -251,3 +254,21 @@ $(document).ready(function () {
 });
 
 // PÁGINA ZONA GAMER //
+
+// PLATOS //
+
+function openCategory(categoryName) {
+    const categories = document.getElementsByClassName("categoria");
+    for (let i = 0; i < categories.length; i++) {
+        categories[i].style.display = "none";
+    }
+
+    const tabs = document.getElementsByClassName("tab-btn");
+    for (let i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove("active");
+    }
+
+    document.getElementById(categoryName).style.display = "grid";
+    const activeTab = document.querySelector(`[onclick="openCategory('${categoryName}')"]`);
+    activeTab.classList.add("active");
+}
