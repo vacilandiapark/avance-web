@@ -2,10 +2,13 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 2px 20px rgba(131, 131, 131, 0.5);
+    --sombra: 0 7px 10px rgba(131, 131, 131, 0.3);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
+    --color-fondo: #f8f8f8;
+    --size-title: 20px;
+    --size-subtitle: 17px;
 }
 
 .btn,
@@ -148,6 +151,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background: var(--color-fondo);
 }
 
 img {
@@ -706,7 +710,7 @@ footer .logo img {
 
 .boton-comprar h2 {
     color: var(--color-blanco);
-    font-size: 25px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-style: normal;
     font-weight: 400;
@@ -716,7 +720,7 @@ footer .logo img {
 
 .boton-comprar p {
     color: var(--color-blanco);
-    font-size: 16px;
+    font-size: var(--size-subtitle);
     font-family: var(--font-terciario);
     font-style: normal;
     font-weight: 400;
@@ -818,7 +822,6 @@ footer .logo img {
 /* PROMOCIONES CARRUSEL */
 
 .promociones {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     position: relative;
     padding: 20px;
 }
@@ -836,12 +839,12 @@ footer .logo img {
 
 .promociones .gradient-left {
     left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .promociones .gradient-right {
     right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .promociones .container {
@@ -861,13 +864,13 @@ footer .logo img {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: 30px;
+    font-size: var(--size-title);
 }
 
 .promociones .container .title p {
     color: var(--color-subtitle);
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
 }
 
@@ -937,7 +940,6 @@ footer .logo img {
 .introduccion {
     padding-top: 40px;
     padding-bottom: 40px;
-    background: var(--color-blanco);
 }
 
 .introduccion .container {
@@ -946,6 +948,9 @@ footer .logo img {
     height: 350px;
     display: flex;
     border-radius: 10px;
+    background: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
 }
 
 .introduccion .columna-1 {
@@ -982,7 +987,6 @@ footer .logo img {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 10px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1053,7 +1057,6 @@ footer .logo img {
 /* CARRUSEL EXPLORA EL PARQUE */
 
 .explorar {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     position: relative;
     padding: 20px;
 }
@@ -1071,12 +1074,12 @@ footer .logo img {
 
 .explorar .gradient-left {
     left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .explorar .gradient-right {
     right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
 }
 
 .explorar .container {
@@ -1100,13 +1103,13 @@ footer .logo img {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: 30px;
+    font-size: var(--size-title);
 }
 
 .explorar .container .title p {
     color: var(--color-subtitle);
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
 }
 
@@ -1125,6 +1128,8 @@ footer .logo img {
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
+    box-shadow: var(--sombra);
+    background: var(--color-blanco);
 }
 
 body#restaurante .explorar .card,
@@ -1153,11 +1158,17 @@ body#restaurante .explorar img {
     transform: scale(1.1);
 }
 
+.explorar .card:hover .text {
+    transform: translateY(-10%);
+}
+
 .explorar .text {
     font-size: 16px;
     height: auto;
     text-align: left;
+    background: var(--color-blanco);
     padding: 10px 20px 3px 30px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .explorar .text h1 {
@@ -1203,7 +1214,6 @@ body#restaurante .explorar img {
 /* POLLO VACILÓN */
 
 .pollo-vacilon {
-    background: var(--color-blanco);
     padding-top: 45px;
     padding-bottom: 45px;
     text-align: left;
@@ -1217,6 +1227,7 @@ body#restaurante .explorar img {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    box-shadow: var(--sombra);
     transition: all 0.3s ease-in-out;
 }
 
@@ -1236,12 +1247,13 @@ body#restaurante .explorar img {
 
 .pollo-vacilon .gradient-left {
     left: 0;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
+    ackground: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0));
 }
 
 .pollo-vacilon .container img {
     width: 100%;
     height: auto;
+    filter: brightness(80%) saturate(150%);
 }
 
 .pollo-vacilon .content {
@@ -1358,14 +1370,14 @@ body#restaurante .explorar img {
     font-family: var(--font-primario);
     font-weight: lighter;
     color: var(--color-title);
-    font-size: 30px;
+    font-size: var(--size-title);
     margin: 0;
 }
 
 .planificar .container-planificar p {
     color: var(--color-subtitle);
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
 }
 
@@ -1386,10 +1398,16 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
     height: auto;
     border-radius: 10px;
+    background-color: var(--color-blanco);
+    box-shadow: var(--sombra);
 }
 
 .planificar .card:hover {
     box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
+}
+
+.planificar .card:hover .text {
+    transform: translateY(-10%);
 }
 
 .planificar .card .image {
@@ -1412,6 +1430,8 @@ body#restaurante .explorar img {
     font-size: 16px;
     text-align: left;
     padding: 10px 20px 0px 30px;
+    background: var(--color-blanco);
+    transition: transform 0.3s ease-in-out;
 }
 
 .planificar .text h1 {
@@ -1484,7 +1504,7 @@ body#restaurante .explorar img {
     /* Ajusta el tamaño de las imágenes en función del ancho del contenedor */
     max-width: 150px;
     /* Establece un tamaño máximo para las imágenes */
-    max-height: 117px;
+    max-height: 111px;
     /* Establece un tamaño máximo para la altura de las imágenes */
     height: auto;
     /* La altura se ajusta automáticamente según el ancho */
@@ -1495,7 +1515,6 @@ body#restaurante .explorar img {
 /* MAPA GOOGLE MAPS */
 
 .mapa {
-    background: var(--color-blanco);
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
@@ -1503,7 +1522,7 @@ body#restaurante .explorar img {
 
 .mapa h1 {
     color: var(--color-title);
-    font-size: 25px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: left;
@@ -1520,6 +1539,7 @@ body#restaurante .explorar img {
     /* Proporción 16:9 (para un mapa de Google Maps) */
     height: 50vh;
     border-radius: 10px;
+    box-shadow: var(--sombra);
     transition: all 0.3s ease-in-out;
 }
 
@@ -1733,7 +1753,6 @@ body#restaurante .explorar img {
 /* FORMULARIO DE CONTACTO */
 
 .contacto {
-    background: var(--color-blanco);
     padding-bottom: 60px;
     -webkit-animation: AnimationName 5s ease infinite;
     -moz-animation: AnimationName 5s ease infinite;
@@ -1749,12 +1768,13 @@ body#restaurante .explorar img {
 
 .contacto .form-container {
     display: flex;
+    box-shadow: var(--sombra);
     border-radius: 10px;
 }
 
 .contacto .contacto-container h1 {
     color: var(--color-title);
-    font-size: 25px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     font-weight: 400;
     text-align: left;
@@ -1792,12 +1812,15 @@ body#restaurante .explorar img {
     height: auto;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
-    background: #d4d4d4;
+    background: #f0eded;
     padding: 30px;
 }
 
 .contacto .form-container .col-2 {
     flex: 1;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: var(--color-blanco);
     height: auto;
     padding: 20px;
     color: var(--color-negro);
@@ -1894,9 +1917,7 @@ body#restaurante .explorar img {
 /* PÁGINA PAQUETES CUMPLEAÑEROS */
 
 #paquetes-cumpleañeros {
-    background-color: var(--color-blanco);
     padding-top: 25px;
-    padding-bottom: 25px;
 }
 
 #paquetes-cumpleañeros .container {
@@ -1908,7 +1929,7 @@ body#restaurante .explorar img {
 
 #paquetes-cumpleañeros h1 {
     color: black;
-    font-size: 30px;
+    font-size: var(--size-title);
     margin: 0;
     font-weight: lighter;
     color: var(--color-title);
@@ -1918,7 +1939,7 @@ body#restaurante .explorar img {
 #paquetes-cumpleañeros p {
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
     padding-bottom: 20px;
 }
@@ -1938,6 +1959,11 @@ body#restaurante .explorar img {
     width: 830px;
     margin-right: 20px;
     height: 500px;
+    transition: all 0.3s ease-in-out;
+}
+
+#paquetes-cumpleañeros .columna1 .carousel:hover {
+    box-shadow: var(--sombra);
 }
 
 #paquetes-cumpleañeros .columna1 .carousel img {
@@ -1946,6 +1972,7 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: var(--sombra);
 }
 
 #paquetes-cumpleañeros .columna1 .carousel img:hover {
@@ -2233,19 +2260,20 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     padding: 0;
-    font-size: 30px;
+    font-size: var(--size-title);
 }
 
 .atracciones-section .text p {
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
 }
 
 .atracciones-section .container {
     max-width: 1200px;
     margin: 0 auto;
+    box-shadow: var(--sombra);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -2253,8 +2281,13 @@ body#restaurante .explorar img {
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 30px;
-    border: 1px solid var(--color-gris);
+    background: var(--color-blanco);
+    transition: all 0.3s ease-in-out;
     /* Ajusta la altura según tus necesidades */
+}
+
+.atracciones-section .container:hover {
+    box-shadow: var(--sombra);
 }
 
 .atracciones-section .column1 {
@@ -2345,14 +2378,14 @@ body#restaurante .explorar img {
     font-family: var(--font-primario);
     font-weight: lighter;
     color: var(--color-title);
-    font-size: 30px;
+    font-size: var(--size-title);
     margin: 0;
 }
 
 .opciones .container-planificar p {
     color: var(--color-subtitle);
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
     padding-bottom: 30px;
 }
@@ -2373,7 +2406,9 @@ body#restaurante .explorar img {
     overflow: hidden;
     height: auto;
     border-radius: 10px;
+    box-shadow: var(--sombra);
     transition: all 0.3s ease-in-out;
+    background: var(--color-blanco);
 }
 
 .opciones .card:hover {
@@ -2510,7 +2545,8 @@ body#restaurante .explorar img {
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 30px;
-    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra);
+    background: var(--color-blanco);
     /* Ajusta la altura según tus necesidades */
 }
 
@@ -2598,8 +2634,9 @@ body#restaurante .explorar img {
     margin: 0 auto;
     display: flex;
     border-radius: 10px;
-    border: 1px solid var(--color-borde);
     margin-bottom: 20px;
+    box-shadow: var(--sombra);
+    background: var(--color-blanco);
 }
 
 .animales .text {
@@ -2610,7 +2647,7 @@ body#restaurante .explorar img {
 .animales .text h1 {
     font-family: var(--font-primario);
     color: var(--color-primario);
-    font-size: 30px;
+    font-size: var(--size-title);
     font-weight: lighter;
     margin: 0;
 }
@@ -2619,7 +2656,7 @@ body#restaurante .explorar img {
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
     margin-top: 10px;
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     padding-bottom: 20px;
 }
 
@@ -2638,13 +2675,14 @@ body#restaurante .explorar img {
 }
 
 .animales-container .columna-2 h1 {
-    font-size: 30px;
+    font-size: var(--size-title);
     font-family: var(--font-primario);
     color: var(--color-primario);
     margin: 0;
 }
 
 .animales-container .columna-2 p {
+    font-size: var(--size-subtitle);
     font-size: 20px;
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
@@ -2778,13 +2816,13 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     padding: 0;
-    font-size: 30px;
+    font-size: var(--size-title);
 }
 
 .piscinas .text p {
     font-family: var(--font-terciario);
     color: var(--color-subtitle);
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
 }
 
@@ -2798,7 +2836,8 @@ body#restaurante .explorar img {
     overflow: hidden;
     border-radius: 10px;
     margin-bottom: 30px;
-    border: 1px solid var(--color-gris);
+    background: var(--color-blanco);
+    box-shadow: var(--sombra);
     /* Ajusta la altura según tus necesidades */
 }
 
@@ -2875,11 +2914,17 @@ body#restaurante .explorar img {
 
 /* PÁGINA CANCHAS */
 
+.canchas{
+    padding-top: 40px;
+}
+
 .canchas-container {
     max-width: 1200px;
     height: 450px;
     margin: 0 auto;
     display: flex;
+    margin-top: 30px;
+    gap: 20px;
 }
 
 .canchas .title {
@@ -2892,25 +2937,32 @@ body#restaurante .explorar img {
     margin: 0;
     color: var(--color-title);
     font-weight: lighter;
-    font-size: 30px;
+    font-size: var(--size-title);
 }
 
 .canchas .title p {
     color: var(--color-subtitle);
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: var(--size-subtitle);
     margin-top: 10px;
 }
 
 .canchas-container .columna1 {
     width: 800px;
     height: 450px;
+    overflow: hidden;
 }
 
 .canchas-container .columna1 img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.canchas-container .columna1 img:hover{
+    transform: scale(1.1);
 }
 
 .canchas-container .columna2 {
@@ -2919,20 +2971,72 @@ body#restaurante .explorar img {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding-left: 15px;
 }
 
-.canchas-container .cuadrado {
+.canchas-container .content {
     width: 400px;
-    height: 150px;
-    border: 1px solid var(--color-borde);
+    height: auto;
+    box-shadow: var(--sombra);
     /* Puedes cambiar el color aquí */
     border-radius: 10px;
+    background: var(--color-blanco);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: all 0.3s;
 }
 
-.canchas-container .cuadrado h1 {
+.canchas-container .content:nth-child(1){
+    background: var(--color-primario);
+}
+
+.canchas-container .content:hover{
+    background: var(--color-primario);
+}
+
+.canchas-container .content:hover h1{
+    color: var(--color-blanco);
+}
+
+.canchas-container .content:hover p{
+    color: var(--color-blanco);
+}
+
+.canchas-container .content:hover i{
+    color: var(--color-blanco);
+}
+
+.canchas-container .content h1 {
+    padding: 0;
+    margin: 0;
     padding-left: 20px;
     color: var(--color-primario);
-    font-family: var(--font-secundario);
-    font-size: 20px;
+    padding-right: 20px;
+    font-family: var(--font-terciario);
+    font-size: 15px;
+}
+
+.canchas-container .content p{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: var(--font-terciario);
+    color: var(--color-gris);
+    font-size: 15px;
+    margin: 0;
+}
+
+.canchas-container .content i{
+    color: var(--color-primario);
+}
+
+.canchas-container button{
+    background-color: var(--color-botones);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border: none;
+    width: 100%;
+    font-style: 16px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    font-family: var(--font-primario);
+    transition: all 0.2s ease-in-out;
 }
