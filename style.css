@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 7px 10px rgba(131, 131, 131, 0.3);
+    --sombra: 0 5px 10px rgba(131, 131, 131, 0.5);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -27,6 +27,7 @@ button:hover,
 
 body#zona-gamer {
     --color-primario: #EC2127;
+    --color-subnavbar: #96151a;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -42,6 +43,7 @@ body#zona-gamer {
 
 body#canchas {
     --color-primario: #77C043;
+    --color-subnavbar: #446e26;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -57,6 +59,7 @@ body#canchas {
 
 body#recorrido {
     --color-primario: #724C9F;
+    --color-subnavbar: #432F87;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -72,6 +75,7 @@ body#recorrido {
 
 body#granja {
     --color-primario: #683A10;
+    --color-subnavbar: #3a2109;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -87,6 +91,7 @@ body#granja {
 
 body#piscinas {
     --color-primario: #2BABE2;
+    --color-subnavbar: #196e92;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -102,6 +107,7 @@ body#piscinas {
 
 body#barcilon {
     --color-primario: #EA0B8B;
+    --color-subnavbar: #970b5a;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -117,6 +123,7 @@ body#barcilon {
 
 body#restaurante {
     --color-primario: #F58220;
+    --color-subnavbar: #aa5811;
     --color-secundario: #EA0B8B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -132,6 +139,7 @@ body#restaurante {
 
 body#inicio {
     --color-primario: #18401E;
+    --color-subnavbar: #0e2511;
     --color-secundario: #D2D90B;
     --color-terciario: #683A10;
     --color-cuaternario: #9B4917;
@@ -162,6 +170,76 @@ a {
     text-decoration: none !important;
     list-style: none;
     color: var(--color-title);
+}
+
+/* CONTENIDO*/
+
+.main {
+    margin-left: 100px;
+    /* Ancho del subnavbar + espacio deseado */
+}
+
+/* SUBNAVBAR*/
+
+.subnavbar {
+    background-color: var(--color-subnavbar);
+    color: #fff;
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.subnavbar a {
+    display: flex;
+    /* Utilizamos flexbox para alinear verticalmente los elementos */
+    align-items: center;
+    /* Alineamos los elementos verticalmente al centro */
+    font-family: var(--font-terciario);
+    font-size: 13px;
+    color: var(--color-blanco);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: var(--color-primario);
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.subnavbar a:hover{
+    filter: brightness(150%);
+}
+
+.subnavbar img {
+    height: 25px;
+    margin: 0 auto;
+    width: auto;
+}
+
+.subnavbar i {
+    margin: 0 auto;
+    font-size: 20px;
+    /* Establecemos un tamaño fijo para el icono */
+}
+
+
+@media only screen and (max-width: 768px) {
+    .subnavbar {
+        display: none;
+    }
+
+    .main {
+        margin: 0;
+    }
 }
 
 /* NAV */
@@ -948,17 +1026,19 @@ footer .logo img {
     height: 350px;
     display: flex;
     border-radius: 10px;
-    background: var(--color-blanco);
-    border-radius: 10px;
     box-shadow: var(--sombra);
+    border-radius: 10px;
 }
 
 .introduccion .columna-1 {
     width: 400px;
     height: 350px;
+    background: var(--color-blanco);
+    z-index: 99;
 }
 
 .introduccion .columna-1 .contenido {
+    margin: 0;
     padding-top: 50px;
     padding-left: 30px;
     padding-right: 30px;
@@ -1480,36 +1560,6 @@ body#restaurante .explorar img {
     .planificar .container-planificar h1 {
         text-align: center;
     }
-}
-
-/* MARCAS */
-
-.marcas {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.marcas .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    /* Centra las imágenes horizontalmente */
-    flex-wrap: wrap;
-    /* Envuelve las imágenes si no caben en una sola fila */
-}
-
-.marcas img {
-    width: calc(100% / 7 - 20px);
-    /* Ajusta el tamaño de las imágenes en función del ancho del contenedor */
-    max-width: 150px;
-    /* Establece un tamaño máximo para las imágenes */
-    max-height: 111px;
-    /* Establece un tamaño máximo para la altura de las imágenes */
-    height: auto;
-    /* La altura se ajusta automáticamente según el ancho */
-    margin: 5px;
-    /* Espacio entre las imágenes */
 }
 
 /* MAPA GOOGLE MAPS */
@@ -2651,7 +2701,7 @@ body#restaurante .explorar img {
     border-radius: 10px;
 }
 
-.platos .plato .info{
+.platos .plato .info {
     background: var(--color-blanco);
     margin-top: 10px;
     border-radius: 10px;
@@ -2659,19 +2709,19 @@ body#restaurante .explorar img {
     padding: 20px;
 }
 
-.platos .plato .image{
+.platos .plato .image {
     overflow: hidden;
     border-radius: 10px;
     height: 250px;
 }
 
-.platos .plato img{
+.platos .plato img {
     width: 100%;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
 }
 
-.platos .plato img:hover{
+.platos .plato img:hover {
     transform: scale(1.1);
 }
 
@@ -2684,7 +2734,7 @@ body#restaurante .explorar img {
     color: var(--color-primario);
 }
 
-.platos .plato p{
+.platos .plato p {
     font-size: 15px;
     font-family: var(--font-terciario);
     text-align: left;
@@ -2692,7 +2742,7 @@ body#restaurante .explorar img {
     color: var(--color-subtitle);
 }
 
-.platos .tabs{
+.platos .tabs {
     display: flex;
 }
 
