@@ -57,16 +57,21 @@
   </div>
   <!-- SUBNAVBAR -->
   <nav class="subnavbar">
-    <a href="index.html" title="Inicio"><i class="fa-solid fa-home"></i></a>
-    <a href="#" title="Calendario y Horario"><i class="fa-solid fa-calendar"></i></a>
-    <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0"
-      title="Télefono"><i class="fa-solid fa-phone"></i></a>
-    <a href="https://vaope.com/parque-acuatico/vacilandia-park" target="_blank" title="Comprar tickets"><i
-        class="fa-solid fa-ticket"></i></a>
+    <a href="index.html" title="Inicio" onclick="toggleInfo('inicio')"><i class="fa-solid fa-home"></i></a>
+    <a href="#" title="Calendario y Horario" onclick="toggleInfo('telefono')"><i class="fa-solid fa-phone"></i></a>
+    <a href="#" title="Calendario y Horario" onclick="toggleInfo('calendario')"><i class="fa-solid fa-calendar"></i></a>
     <!-- Agrega más elementos según tus necesidades -->
-    <a href="https://vecarena.com.pe/" target="_blank"><img src="materials/Logos/venconcierto.png"
-        alt="logo-concert"></a>
   </nav>
+
+  <!-- CONTENEDOR DE INFORMACIÓN -->
+  <div class="info-container" id="info-inicio">
+  </div>
+  <div class="info-container" id="info-telefono">
+    <img src="materials/5c77b58a003fa702a1d2791c.png" alt="">
+  </div>
+  <div class="info-container" id="info-calendario">
+    <!-- Aquí puedes mostrar la información correspondiente al botón "Calendario y Horario" -->
+  </div>
   <div class="main">
     <!-- NAVBAR VACILANDIA -->
     <div class="navbar" id="myNavbar">
@@ -277,8 +282,8 @@
             CAMPESTRE, EL POLLO VACILÓN!</h2>
           <p>Descubre nuestra variedad de comidas que tenemos para ti.</p>
           <div class="buttons">
-            <a href="https://drive.google.com/file/d/1bSMP91kpE1NjVownueUvZy0mViZxDp2X/view?usp=sharing"><button>DESCARGAR
-                CARTA</button></a>
+            <a href="https://drive.google.com/file/d/1bSMP91kpE1NjVownueUvZy0mViZxDp2X/view?usp=sharing"><button>CARTA
+                GASTRONÓMICA</button></a>
             <a href="Restaurante.html"><button>CÓNOCE MÁS</button></a>
           </div>
         </div>
@@ -371,7 +376,7 @@
         </div>
       </div>
     </section>
-    <!-- CONTACTO -->
+    <!-- CONTACTO
     <section class="contacto">
       <div class="contacto-container" id="contactanos">
         <h1>¿TIENES ALGUNA CONSULTA?</h1>
@@ -448,7 +453,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        d="M0,64L120,106.7C240,149,480,235,720,272C960,309,1200,299,1320,293.3L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+      </path>
+    </svg>
     <!-- FOOTER -->
     <footer>
       <div class="container">

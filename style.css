@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 5px 10px rgba(131, 131, 131, 0.5);
+    --sombra: 0 0 13px 0 rgba(0,0,0,0.5);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -162,6 +162,12 @@ body {
     background: var(--color-fondo);
 }
 
+svg {
+    fill: var(--color-primario);
+    fill-opacity: 1;
+    margin-bottom: -10px;
+}
+
 img {
     filter: saturate(150%);
 }
@@ -195,6 +201,7 @@ a {
     align-items: flex-start;
     padding: 10px;
     overflow-y: auto;
+    z-index: 999999999;
 }
 
 .subnavbar a {
@@ -215,7 +222,7 @@ a {
     transition: 0.3s ease-in-out;
 }
 
-.subnavbar a:hover{
+.subnavbar a:hover {
     filter: brightness(150%);
 }
 
@@ -231,6 +238,30 @@ a {
     /* Establecemos un tamaño fijo para el icono */
 }
 
+.info-container {
+    background-color: var(--color-fondo);
+    color: #fff;
+    width: 400px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    /* Alineamos el contenedor con el subnavbar */
+    display: flex;
+    z-index: 99999999;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    /* Escondemos el contenedor fuera de la pantalla */
+    transition: transform 0.3s ease-in-out;
+    /* Agregamos una transición suave */
+    pointer-events: none;
+    box-shadow: var(--sombra);
+    /* Evita que el contenedor sea interactivo antes de mostrarse */
+}
 
 @media only screen and (max-width: 768px) {
     .subnavbar {

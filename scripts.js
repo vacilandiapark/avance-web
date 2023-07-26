@@ -272,3 +272,31 @@ function openCategory(categoryName) {
     const activeTab = document.querySelector(`[onclick="openCategory('${categoryName}')"]`);
     activeTab.classList.add("active");
 }
+
+/* INFO CONTAINER */
+
+let currentType = null;
+
+// Función para mostrar u ocultar el contenedor de información correspondiente al botón presionado
+function toggleInfo(type) {
+    const infoContainer = document.getElementById(`info-${type}`);
+
+    // Si el contenedor ya está visible y es el mismo botón, lo ocultamos
+    if (currentType === type) {
+        infoContainer.style.transform = 'translateX(-100%)';
+        infoContainer.style.pointerEvents = 'none';
+        currentType = null;
+    } else {
+        // Ocultar el contenedor previo si existe
+        if (currentType) {
+            const prevInfoContainer = document.getElementById(`info-${currentType}`);
+            prevInfoContainer.style.transform = 'translateX(-100%)';
+            prevInfoContainer.style.pointerEvents = 'none';
+        }
+
+        // Mostrar el contenedor actual
+        infoContainer.style.transform = 'translateX(80px)';
+        infoContainer.style.pointerEvents = 'auto';
+        currentType = type;
+    }
+}
