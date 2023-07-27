@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 0 13px 0 rgba(0,0,0,0.5);
+    --sombra: 0 0 8px 0 rgba(0,0,0,0.3);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -181,25 +181,25 @@ a {
 /* CONTENIDO*/
 
 .main {
-    margin-left: 100px;
+    margin-left: 70px;
     /* Ancho del subnavbar + espacio deseado */
 }
 
 /* SUBNAVBAR*/
 
 .subnavbar {
-    background-color: var(--color-subnavbar);
+    background-color: var(--color-primario);
     color: #fff;
-    width: 80px;
+    width: 70px;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
+    padding-top: 5px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px;
     overflow-y: auto;
     z-index: 999999999;
 }
@@ -210,16 +210,17 @@ a {
     align-items: center;
     /* Alineamos los elementos verticalmente al centro */
     font-family: var(--font-terciario);
-    font-size: 13px;
     color: var(--color-blanco);
     text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background: var(--color-primario);
-    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     width: 100%;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
+    gap: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.subnavbar a:hover{
+    background: var(--color-primario);
 }
 
 .subnavbar a:hover {
@@ -234,25 +235,24 @@ a {
 
 .subnavbar i {
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 25px;
     /* Establecemos un tamaño fijo para el icono */
 }
 
 .info-container {
     background-color: var(--color-fondo);
     color: #fff;
-    width: 400px;
+    width: 500px;
     height: 100vh;
     position: fixed;
     top: 0;
-    left: 0px;
+    left: -10px;
     /* Alineamos el contenedor con el subnavbar */
     display: flex;
     z-index: 99999999;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 10px;
     overflow-y: auto;
     transform: translateX(-100%);
     /* Escondemos el contenedor fuera de la pantalla */
@@ -261,6 +261,71 @@ a {
     pointer-events: none;
     box-shadow: var(--sombra);
     /* Evita que el contenedor sea interactivo antes de mostrarse */
+}
+
+.info-container .text{
+    padding: 50px 30px;
+}
+
+.info-container .text i{
+    color: rgba(211, 211, 211, 0.63);
+    transform: translateX(-40px) translateY(-20px);
+    z-index: -999;
+    font-size: 150px;
+    position: absolute;
+}
+
+.info-container h1{
+    z-index: 2;
+    color: var(--color-subtitle);
+    font-family: var(--font-terciario);
+    font-size: var(--size-subtitle);
+    margin: 0;
+    margin-top: 20px;
+}
+
+.info-container h2{
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    font-size: 40px;
+    color: var(--color-primario);
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.info-container p{
+    color: #7b682d;
+    font-weight: bold;
+    margin: 0;
+    font-family: var(--font-terciario);
+    text-decoration: underline;
+}
+
+.info-container .buttons{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.info-container .buttons button{
+    color: var(--color-blanco);
+    background: var(--color-primario);
+    border: none;
+    width: 500px;
+    border-radius: 0;
+    padding-top: 20px;
+    font-family: var(--font-terciario);
+    font-weight: bold;
+    padding-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: var(--size-subtitle);
+}
+
+.info-container .buttons button:hover{
+    background: var(--color-blanco);
+    color: var(--font-primario);
+    border: 1px solid var(--color-primario);
 }
 
 @media only screen and (max-width: 768px) {
