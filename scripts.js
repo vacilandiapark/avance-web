@@ -300,3 +300,81 @@ function toggleInfo(type) {
         currentType = type;
     }
 }
+
+// CARRUSEL IMAGENES //
+
+$(document).ready(function () {
+    $('.carousel-imagenes').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
+        nextArrow: '<button type="button" class="slick-next">Siguiente</button>',
+        centerMode: true,
+        centerPadding: '100px', // Adjust the padding as needed to control the size of the cards on the sides
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 3000, // Set the time interval for autoplay in milliseconds (3 seconds in this example)
+        infinite: true, // Disable infinite looping
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: '150px' // Adjust the padding as needed for the responsive view
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '50px' // Adjust the padding as needed for the responsive view
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '20px' // Adjust the padding as needed for the responsive view
+                }
+            }
+        ]
+    });
+});
+
+// CARRUSEL OFRECER //
+
+$(document).ready(function () {
+    $('.carousel-ofrecer').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev">Anterior</button>',
+        nextArrow: '<button type="button" class="slick-next">Siguiente</button>',
+        centerMode: true,
+        centerPadding: '100px', // Adjust the padding as needed to control the size of the cards on the sides
+        autoplay: true, // Enable autoplay
+        autoplaySpeed: 3000, // Set the time interval for autoplay in milliseconds (3 seconds in this example)
+        infinite: true, // Disable infinite looping
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    centerPadding: '150px' // Adjust the padding as needed for the responsive view
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '50px' // Adjust the padding as needed for the responsive view
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    centerPadding: '20px' // Adjust the padding as needed for the responsive view
+                }
+            }
+        ]
+    });
+});

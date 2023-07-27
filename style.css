@@ -2,7 +2,7 @@
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 0 8px 0 rgba(0,0,0,0.3);
+    --sombra: 0 0 8px 0 rgba(0, 0, 0, 0.3);
     /* --inset: inset 0px 0px 500px 0px rgba(0, 0, 0, 1); */
     --max-width: 1200px;
     --color-borde: #cdcfcf;
@@ -219,7 +219,7 @@ a {
     transition: 0.2s ease-in-out;
 }
 
-.subnavbar a:hover{
+.subnavbar a:hover {
     background: var(--color-primario);
 }
 
@@ -263,11 +263,11 @@ a {
     /* Evita que el contenedor sea interactivo antes de mostrarse */
 }
 
-.info-container .text{
+.info-container .text {
     padding: 50px 30px;
 }
 
-.info-container .text i{
+.info-container .text i {
     color: rgba(211, 211, 211, 0.63);
     transform: translateX(-40px) translateY(-20px);
     z-index: -999;
@@ -275,7 +275,7 @@ a {
     position: absolute;
 }
 
-.info-container h1{
+.info-container h1 {
     z-index: 2;
     color: var(--color-subtitle);
     font-family: var(--font-terciario);
@@ -284,7 +284,7 @@ a {
     margin-top: 20px;
 }
 
-.info-container h2{
+.info-container h2 {
     font-family: var(--font-primario);
     font-weight: lighter;
     font-size: 40px;
@@ -293,7 +293,7 @@ a {
     margin-bottom: 20px;
 }
 
-.info-container p{
+.info-container p {
     color: #7b682d;
     font-weight: bold;
     margin: 0;
@@ -301,13 +301,13 @@ a {
     text-decoration: underline;
 }
 
-.info-container .buttons{
+.info-container .buttons {
     display: flex;
     justify-content: center;
     padding: 0;
 }
 
-.info-container .buttons button{
+.info-container .buttons button {
     color: var(--color-blanco);
     background: var(--color-primario);
     border: none;
@@ -322,7 +322,7 @@ a {
     font-size: var(--size-subtitle);
 }
 
-.info-container .buttons button:hover{
+.info-container .buttons button:hover {
     background: var(--color-blanco);
     color: var(--font-primario);
     border: 1px solid var(--color-primario);
@@ -398,6 +398,7 @@ a {
 }
 
 .navbar .row-2 {
+    box-shadow: var(--sombra);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -758,7 +759,7 @@ footer .logo img {
 /* BANNER SUBPÁGINAS*/
 
 .banner {
-    position: relative;
+    position: sticky;
     height: 50vh;
     overflow: hidden;
 }
@@ -776,7 +777,7 @@ footer .logo img {
 .banner .banner-video img,
 .banner .banner-video video {
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     object-fit: cover;
     transform: translateY(-20%);
     filter: saturate(150%) brightness(70%);
@@ -1080,11 +1081,6 @@ footer .logo img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    transition: all 0.3s ease-in-out;
-}
-
-.promociones .card img:hover {
-    transform: scale(1.1);
 }
 
 .promociones .slick-prev,
@@ -2261,15 +2257,15 @@ body#restaurante .explorar img {
 /* CARACTERISTICAS */
 
 #caracteristicas {
-    background: transparent;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #caracteristicas .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 10px;
     max-width: var(--max-width);
     height: 100px;
     margin: 0 auto;
@@ -2277,9 +2273,8 @@ body#restaurante .explorar img {
 
 #caracteristicas .rectangulo {
     width: 120px;
+    border-radius: 10px;
     height: 65px;
-    background-color: var(--color-amarillo-claro);
-    box-shadow: var(--sombra);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2289,19 +2284,23 @@ body#restaurante .explorar img {
     transition: all 0.3s ease-in-out;
 }
 
-#caracteristicas .rectangulo:hover {
-    background-color: var(--color-negro);
-    color: var(--color-amarillo-claro);
-}
-
 #caracteristicas .rectangulo i {
-    font-size: 28px;
-    margin-bottom: 8px;
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--color-primario);
 }
 
 #caracteristicas .rectangulo span {
-    font-size: 15px;
+    font-size: 25px;
+    font-family: var(--font-primario);
     margin-top: 8px;
+    color: var(--color-primario);
+    margin-bottom: 8px;
+}
+
+#caracteristicas .rectangulo p {
+    font-family: var(--font-terciario);
+    margin: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -2322,7 +2321,26 @@ body#restaurante .explorar img {
 #productos-paq-cumple {
     padding-top: 45px;
     padding-bottom: 45px;
-    background-color: var(--color-blanco);
+}
+
+#productos-paq-cumple .text {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+#productos-paq-cumple .text h1 {
+    font-size: var(--size-title);
+    color: var(--color-primario);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+#productos-paq-cumple .text p {
+    font-size: var(--size-subtitle);
+    color: var(--color-subtitle);
+    margin: 0;
+    font-family: var(--font-terciario);
 }
 
 #productos-paq-cumple .container {
@@ -3295,4 +3313,269 @@ body#restaurante .explorar img {
     box-shadow: var(--sombra);
     font-family: var(--font-primario);
     transition: all 0.2s ease-in-out;
+}
+
+/* PÁGINAS RESERVAS */
+
+/* IMAGENES CARRUSEL */
+
+.imagenes {
+    position: relative;
+    padding: 20px;
+}
+
+.imagenes .gradient-left,
+.imagenes .gradient-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    /* Adjust the width of the gradient as needed */
+    pointer-events: none;
+    z-index: 2;
+}
+
+.imagenes .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
+}
+
+.imagenes .gradient-right {
+    right: 0;
+    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
+}
+
+.imagenes .container {
+    max-width: 1390px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagenes .container .title {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagenes .container .title h1 {
+    font-family: var(--font-primario);
+    margin: 0;
+    color: var(--color-title);
+    font-weight: lighter;
+    font-size: var(--size-title);
+}
+
+.imagenes .container .title p {
+    color: var(--color-subtitle);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--size-subtitle);
+    margin-top: 10px;
+}
+
+.imagenes .carousel-explorar {
+    display: flex;
+    margin: 0 -10px;
+    overflow: hidden;
+}
+
+.imagenes .card {
+    cursor: pointer;
+    width: 400px;
+    height: 300px;
+    /* Make each card occupy 25% of the container width with a gap of 20px */
+    text-align: center;
+    margin: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.imagenes .card:hover {
+    box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
+}
+
+.imagenes .card .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.imagenes .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.imagenes .slick-prev,
+.imagenes .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.imagenes .slick-prev {
+    left: 0;
+}
+
+.imagenes .slick-next {
+    right: 0;
+}
+
+/* QUE OFRECEMOS */
+
+.ofrecer {
+    position: relative;
+    padding: 20px;
+}
+
+.ofrecer .gradient-left,
+.ofrecer .gradient-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    /* Adjust the width of the gradient as needed */
+    pointer-events: none;
+    z-index: 2;
+}
+
+.ofrecer .gradient-left {
+    left: 0;
+    background: linear-gradient(to right, var(--color-fondo), rgba(255, 255, 255, 0));
+}
+
+.ofrecer .gradient-right {
+    right: 0;
+    background: linear-gradient(to left, var(--color-fondo), rgba(255, 255, 255, 0));
+}
+
+.ofrecer .container {
+    max-width: 1390px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofrecer .container .title {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ofrecer .container .title h1 {
+    font-family: var(--font-primario);
+    margin: 0;
+    color: var(--color-title);
+    font-weight: lighter;
+    font-size: var(--size-title);
+}
+
+.ofrecer .container .title p {
+    color: var(--color-subtitle);
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--size-subtitle);
+    margin-top: 10px;
+}
+
+.ofrecer .carousel-explorar {
+    display: flex;
+    margin: 0 -10px;
+    overflow: hidden;
+}
+
+.ofrecer .card {
+    width: 150px;
+    height: 200px;
+    /* Make each card occupy 25% of the container width with a gap of 20px */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.ofrecer .card:hover {
+    box-shadow: 0 2px 20px rgba(131, 131, 131, 0.5);
+}
+
+.ofrecer .card .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.ofrecer .card .overlay {
+    /* Estilos para el gradiente */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+}
+
+.ofrecer .card .text {
+    /* Estilos para el texto dentro de la imagen */
+    position: absolute;
+    bottom: 0;
+    /* Colocamos el texto en la parte inferior de la imagen */
+    left: 0;
+    width: 100%;
+    padding: 20px 15px;
+    color: white;
+    z-index: 100;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.ofrecer .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.ofrecer .card img:hover{
+    transform: scale(1.1);
+}
+
+.ofrecer .slick-prev,
+.ofrecer .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 3;
+}
+
+.ofrecer .slick-prev {
+    left: 0;
+}
+
+.ofrecer .slick-next {
+    right: 0;
 }
