@@ -33,6 +33,7 @@
     </nav>
     <main>
         <nav class="navbar">
+            <div class="row-gradient"></div>
             <div class="row">
                 <div class="logo">
                     <a href=""><img decoding="async" loading="lazy" src="materials/Logos/LOGO VACILANDIA FINAL.png"
@@ -85,7 +86,6 @@
                             id="ingresar">INGRESAR</button></a>
                 </div>
             </div>
-            <div class="row-gradient"></div>
         </nav>
 
 
@@ -97,9 +97,11 @@
             </ul>
         </div>
 
-        <!--BANNER-->
-        <section class="banner">
-            <swiper-container class="articulo" navigation="true" pagination="true" pagination-dynamic-bullets="true">
+        <!--PROMOS-->
+        <section class="promos">
+            <swiper-container class="articulo" pagination-clickable="true" navigation="true"
+            pagination="true" autoplay-delay="2000"
+            autoplay-disable-on-interaction="false">
                 <swiper-slide>
                     <video
                         src="materials/Vacilandia Park - ¡El parque acuático más grande de Lima! 🥳 (1080p) (online-video-cutter.com).mp4"
@@ -108,7 +110,17 @@
                 </swiper-slide>
                 <swiper-slide>
                     <img decoding="async" loading="lazy"
-                        src="https://scontent.flim19-1.fna.fbcdn.net/v/t39.30808-6/376734383_297552266210797_4009138311169183619_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=52f669&_nc_eui2=AeF0SXakH-CXQjbheTmCLDZTQztqkAYCIOpDO2qQBgIg6rAxVONskPG7B7r1tVW46L0MbLmWSUifuTGCrsrQDbOR&_nc_ohc=8ZB7r0BiWc4AX-9o-eU&_nc_ht=scontent.flim19-1.fna&oh=00_AfAYVsLxD5fTN-WjfTgP7H1dMAXs2eJXir1_0H0Bq0bEHg&oe=650F6C3F"
+                        src="https://scontent.flim19-1.fna.fbcdn.net/v/t39.30808-6/380701900_300949292537761_7531567049499040318_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=52f669&_nc_eui2=AeFJVHq1afEdPjlTO8T_76oUp6rFWUj2pRmnqsVZSPalGSZJ-JRmv2c9WAHaJ_k9WZXaYJfu89Jg3xDBT5R6N1hj&_nc_ohc=0kFSMKYNsWAAX-i_2va&_nc_ht=scontent.flim19-1.fna&oh=00_AfCf3lPCVO-sAfkKv7zXfk2cBcVzsWC_ZqU8FHT9lACRcQ&oe=651454F8"
+                        alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img decoding="async" loading="lazy"
+                        src="https://scontent.flim19-1.fna.fbcdn.net/v/t39.30808-6/375796252_293391023293588_753499179285170852_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=05bb41&_nc_eui2=AeE8U1ULK7eZvPXqbHMkR48fKgOi1ijXzBIqA6LWKNfMElFdGD4EIHUAj0_vHtfikv1xc01Gc4Gb-oFgoYhDN2sL&_nc_ohc=Kf2GGiT4S0oAX9pOBt4&_nc_ht=scontent.flim19-1.fna&oh=00_AfAF9a8sGR1pglUDQyNtWkeZDpQP8sOwFbUzlXhg7z73MQ&oe=6514DCBD"
+                        alt="">
+                </swiper-slide>
+                <swiper-slide>
+                    <img decoding="async" loading="lazy"
+                        src="https://scontent.flim19-1.fna.fbcdn.net/v/t39.30808-6/367030164_283823750916982_1017400848325657393_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=05bb41&_nc_eui2=AeFe8BE8LjCMVnoIwqgbbfe9Ah8hl3GbMjECHyGXcZsyMVavC25EV9RYffyXhPwOn-S2Ro8-cV_zAbqZu3f3i224&_nc_ohc=1JNSY3B11YgAX-6Kp1S&_nc_ht=scontent.flim19-1.fna&oh=00_AfDSnch_erAvGrgswlS5zys7jocRPPSoEFV3lCU__deiBg&oe=6513FD16"
                         alt="">
                 </swiper-slide>
             </swiper-container>
@@ -124,41 +136,48 @@
                         <h1>NUESTRAS ATRACCIONES</h1>
                     </div>
                     <swiper-container class="carrusel-atracciones" space-between="10" pagination-clickable="true"
-                        navigation="true" pagination="true" slides-per-view="2.5" free-mode="true">
+                        navigation="true" pagination="true" slides-per-view="3.5" free-mode="true" autoplay-delay="2000"
+                        autoplay-disable-on-interaction="false">
                         <swiper-slide>
+                            <i class="fa-solid fa-gamepad"></i>
                             <div class="card">
                                 <img decoding="async" loading="lazy"
                                     src="materials/zona-gamer/atracciones/WhatsApp Image 2023-07-27 at 11.35.09 AM.jpeg"
                                     alt="">
                             </div>
-                            <div class="text">
-                                <h1>RESTAURANTE</h1>
+                            <div class="text" style="background: var(--rojo);">
+                                <h1>ZONA GAMER</h1>
                             </div>
                         </swiper-slide>
                         <swiper-slide>
+                            <i class="fa-solid fa-cow"></i>
                             <div class="card">
                                 <img decoding="async" loading="lazy" src="materials/Granja/conejos.jpg" alt="">
                             </div>
-                            <div class="text">
+                            <div class="text" style="background: var(--naranja);">
                                 <h1>VACIGRANJA</h1>
                             </div>
                         </swiper-slide>
                         <swiper-slide>
+                            <i class="fa-solid fa-water-ladder"></i>
                             <div class="card">
                                 <img decoding="async" loading="lazy" src="materials/piscinas/_DSC7047-min.JPG" alt="">
                             </div>
-                            <div class="text">
+                            <div class="text" style="background: var(--celeste);">
                                 <h1>PISCINAS Y TOBOGANES</h1>
                             </div>
                         </swiper-slide>
                         <swiper-slide>
+                            <i class="fa-solid fa-futbol"></i>
                             <div class="card">
                                 <img decoding="async" loading="lazy" src="materials/Canchas/DJI_0113-min.JPG" alt="">
                             </div>
-                            <div class="text">
+                            <div class="text" style="background: var(--verde);">
                                 <h1>CANCHAS DEPORTIVAS</h1>
                             </div>
                         </swiper-slide>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </swiper-container>
                 </div>
             </section>
@@ -217,16 +236,17 @@
                         <h1>SERVICIOS</h1>
                     </div>
                     <swiper-container class="contenido" space-between="10" pagination-clickable="true" navigation="true"
-                        pagination="true" slides-per-view="3.5" free-mode="true">
+                        pagination="true" slides-per-view="3.5" free-mode="true" autoplay-delay="2000"
+                        autoplay-disable-on-interaction="false">
                         <swiper-slide>
                             <div class="card">
                                 <div class="image">
                                     <img decoding="async" loading="lazy"
                                         src="https://www.vacilandia.com.pe/materials/Colegio%20e%20Instituciones/gymkana.jpeg"
                                         alt="">
-                                    <i class="fa-solid fa-school"></i>
                                 </div>
                                 <div class="text">
+                                    <i class="fa-solid fa-school"></i>
                                     <h1>COLEGIOS E INSTITUCIONES</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, facere.</p>
                                     <a href=""><button>Ver más</button></a>
@@ -238,9 +258,9 @@
                                 <div class="image">
                                     <img decoding="async" loading="lazy"
                                         src="materials/Eventos y Reservas/YDRAY-DJI_0763-min.JPG" alt="">
-                                    <i class="fa-solid fa-tree"></i>
                                 </div>
                                 <div class="text">
+                                    <i class="fa-solid fa-tree"></i>
                                     <h1>ESPACIOS Y RESERVAS</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, facere.</p>
                                     <a href=""><button>Ver más</button></a>
@@ -252,9 +272,9 @@
                                 <div class="image">
                                     <img decoding="async" loading="lazy"
                                         src="materials/Productos Paq Cumpleañero/Carrusel/f-m (3).jpeg" alt="">
-                                    <i class="fa-solid fa-cake-candles"></i>
                                 </div>
                                 <div class="text">
+                                    <i class="fa-solid fa-cake-candles"></i>
                                     <h1>CUMPLEAÑOS</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, facere.</p>
                                     <a href=""><button>Ver más</button></a>
@@ -266,9 +286,9 @@
                                 <div class="image">
                                     <img decoding="async" loading="lazy" src="materials/Corporativos/corporativos.jpeg"
                                         alt="">
-                                    <i class="fa-solid fa-building"></i>
                                 </div>
                                 <div class="text">
+                                    <i class="fa-solid fa-building"></i>
                                     <h1>CORPORATIVOS</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, facere.</p>
                                     <a href=""><button>Ver más</button></a>
@@ -280,9 +300,9 @@
                                 <div class="image">
                                     <img decoding="async" loading="lazy"
                                         src="materials/Alquiler y Campeonatos/canchas.jpg" alt="">
-                                    <i class="fa-solid fa-futbol"></i>
                                 </div>
                                 <div class="text">
+                                    <i class="fa-solid fa-futbol"></i>
                                     <h1>CAMPEONATOS DEPORTIVOS</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, facere.</p>
                                     <a href=""><button>Ver más</button></a>
@@ -294,9 +314,9 @@
                                 <div class="image">
                                     <img decoding="async" loading="lazy" src="materials/piscinas/_DSC7047-min.JPG"
                                         alt="">
-                                    <i class="fa-solid fa-user-check"></i>
                                 </div>
                                 <div class="text">
+                                    <i class="fa-solid fa-user-check"></i>
                                     <h1>ACTIVACIONES BTL</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, facere.</p>
                                     <a href=""><button>Ver más</button></a>
@@ -339,7 +359,8 @@
                         <h1>CLIENTES SATISFECHOS</h1>
                     </div>
                     <swiper-container class="reseña-carrusel" space-between="10" pagination-clickable="true"
-                        navigation="true" pagination="true" slides-per-view="2.5" free-mode="true">
+                        navigation="true" pagination="true" slides-per-view="2.5" free-mode="true" autoplay-delay="2000"
+                        autoplay-disable-on-interaction="false">
                         <swiper-slide>
                             <div class="card">
                                 <div class="punt">

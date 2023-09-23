@@ -7,7 +7,7 @@ body {
 /* VARIABLES */
 
 :root {
-    --espacio: 30px;
+    --espacio: 20px;
     --morado: #724C9F;
     --purpura: #432F87;
     --celeste: #2BABE2;
@@ -17,24 +17,37 @@ body {
     --rosado: #EA0B8B;
     --rojo: #EC2127;
     --gris: #6b6b6b;
-    --blanco: #f4f4f4;
+    --blanco: #fff;
     --negro: #040404;
-    --font-msize: 1.7rem;
+    --font-msize: 1.9rem;
     --font-size: 1.3rem;
     --font-subsize: 0.8rem;
     --font-primario: Paytone One;
     --font-secundario: 'Jockey One', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0px 0px 43px -15px rgba(0, 0, 0, 0.5);
+    --sombra: 0 4px 5px rgba(0, 0, 0, .35);
     --max-width: 1000px;
-    --fondo: #edeaea;
+    --fondo: #f4f4f4;
 }
 
 /* ATRIBUTOS GLOBALES */
 
+.swiper-button-prev,
+.swiper-button-next {
+    --swiper-navigation-color: var(--rojo);
+    --swiper-theme-color: var(--rojo);
+}
+
+.main-content {}
+
+h1 {
+    margin: 0;
+}
+
 main {
     margin-left: 50px;
     overflow: hidden;
+    background: var(--fondo);
 }
 
 img,
@@ -82,18 +95,20 @@ button:hover {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
+    justify-content: center;
+    position: relative;
+    /* Establecemos posición relativa en el contenedor */
 }
 
 .title h1 {
-    color: var(--blanco);
-    font-size: var(--font-size);
+    font-size: var(--font-msize);
     font-family: var(--font-primario);
     font-weight: lighter;
     text-align: center;
-    width: 50%;
-    background: linear-gradient(to right, var(--naranja), var(--rosado));
+    width: auto;
+    color: var(--purpura);
     border-radius: 10px;
-    padding: 15px 0;
+    z-index: 4;
 }
 
 /* SUBNAVBAR */
@@ -300,25 +315,25 @@ button:hover {
     color: var(--blanco);
 }
 
-/* BANNER */
+/* promos */
 
-.banner {
+.promos {
     display: flex;
-    height: 90vh;
-    background: var(--purpura);
+    height: 500px;
 }
 
-.banner .articulo {
+.promos .articulo {
+    max-width: 1600px;
     width: 100%;
     display: flex;
+    overflow: hidden;
 }
 
-.banner .articulo video,
-.banner .articulo img {
-    width: 100vw;
-    min-height: 100vh;
-    min-width: 177.77vh;
-    pointer-events: none;
+.promos .articulo video,
+.promos .articulo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* ATRACCIONES */
@@ -327,7 +342,6 @@ button:hover {
     padding: var(--espacio) 0;
     display: flex;
     justify-content: center;
-    background: var(--fondo);
 }
 
 .atracciones .container {
@@ -344,22 +358,32 @@ button:hover {
 
 .atracciones .card {
     border-radius: 20px;
-    box-shadow: var(--sombra);
     position: relative;
-    height: 200px;
+    height: 300px;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.atracciones i {
+    position: absolute;
+    z-index: 5;
+    color: var(--purpura);
+    padding: 10px;
+    transform: translateX(50%);
+    background: var(--blanco);
+    border-radius: 0 0 5px 5px;
 }
 
 .atracciones .text {
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    bottom: 0;
     left: 0;
-    background: linear-gradient(to top, var(--negro), transparent 40%);
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
     display: flex;
     align-items: flex-end;
+    transition: all 0.2s ease-in-out;
 }
 
 .atracciones .text h1 {
@@ -373,8 +397,17 @@ button:hover {
 
 .atracciones .card img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.atracciones swiper-slide:hover img {
+    transform: scale(1.1);
+}
+
+.atracciones swiper-slide:hover>.text {
+    padding-bottom: 5px;
 }
 
 /* GASTRONOMIA */
@@ -392,13 +425,14 @@ button:hover {
 .gastronomia .contenido {
     display: flex;
     gap: 20px;
+    padding: var(--espacio) 0 0 0;
 }
 
 .gastronomia .col-1 {
     width: 50%;
     border-radius: 20px;
     box-shadow: var(--sombra);
-    background: var(--naranja) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:rgba(0, 124, 197, 0);display:block;z-index:1;position:relative" width="100%" height="894" preserveAspectRatio="xMidYMid" viewBox="0 0 1821 894"><g transform="translate(910.5,447) scale(1,1) translate(-910.5,-447)"><defs><filter id="blur-7owzto2vukw-1" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="3"></feGaussianBlur></filter><filter id="blur-7owzto2vukw-2" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="1.5"></feGaussianBlur></filter><filter id="blur-7owzto2vukw-3" x="-1" y="-1" width="3" height="3"><feGaussianBlur stdDeviation="1"></feGaussianBlur></filter></defs><circle cx="1257.0688548319495" cy="0" transform="translate(0 334.05902184762164)" r="13.42340184949881" fill="%23e99d5c" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-4.359689649095255s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 907.4234018494988;0 -13.42340184949881"></animateTransform></circle><circle cx="338.9602493431341" cy="0" transform="translate(0 826.8395314234938)" r="13.02036756095514" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-5.572230137111668s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 907.0203675609552;0 -13.02036756095514"></animateTransform></circle><circle cx="935.5055802429974" cy="0" transform="translate(0 746.6512676971182)" r="5.196320039239235" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-11.176502649258868s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.1963200392393;0 -5.196320039239235"></animateTransform></circle><circle cx="1399.7561832971714" cy="0" transform="translate(0 577.4002676169146)" r="7.008981328882163" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-10.731288153976033s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.0089813288822;0 -7.008981328882163"></animateTransform></circle><circle cx="318.53129406945544" cy="0" transform="translate(0 140.4737897645513)" r="10.402843444648838" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-8.552537084097322s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.4028434446489;0 -10.402843444648838"></animateTransform></circle><circle cx="485.7177542054521" cy="0" transform="translate(0 105.18963270803194)" r="12.176178289912109" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-1.148276178460262s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 906.1761782899121;0 -12.176178289912109"></animateTransform></circle><circle cx="1140.7425551385884" cy="0" transform="translate(0 750.3183488625876)" r="14.162486318268257" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-5.366184660837709s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 908.1624863182683;0 -14.162486318268257"></animateTransform></circle><circle cx="523.5378573413975" cy="0" transform="translate(0 124.30356136313985)" r="5.417381384725416" fill="%23e99d5c" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-15.708634146749741s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.4173813847254;0 -5.417381384725416"></animateTransform></circle><circle cx="896.2285575116409" cy="0" transform="translate(0 206.5840170135535)" r="14.576742844780409" fill="%23e99d5c" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-3.1524876190957953s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 908.5767428447804;0 -14.576742844780409"></animateTransform></circle><circle cx="321.42124388860464" cy="0" transform="translate(0 516.5268672990693)" r="13.335412324404789" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-5.0740824625254275s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 907.3354123244048;0 -13.335412324404789"></animateTransform></circle><circle cx="759.0964330515577" cy="0" transform="translate(0 618.6187650648529)" r="9.61514171026424" fill="%23e7aa75" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-0.6418297446883825s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 903.6151417102642;0 -9.61514171026424"></animateTransform></circle><circle cx="1487.9692902008035" cy="0" transform="translate(0 312.3059515304985)" r="7.833848983556132" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-8.044678341392352s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.8338489835561;0 -7.833848983556132"></animateTransform></circle><circle cx="464.1736373361408" cy="0" transform="translate(0 739.8965451029059)" r="10.742003674139363" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-2.9733198154046003s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.7420036741394;0 -10.742003674139363"></animateTransform></circle><circle cx="1284.2640375955007" cy="0" transform="translate(0 267.04451384421463)" r="5.6877806339472565" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-17.382199491947144s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.6877806339472;0 -5.6877806339472565"></animateTransform></circle><circle cx="391.84738027165696" cy="0" transform="translate(0 276.37352947973153)" r="12.312992554953723" fill="%23eb964e" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-2.0306369057230738s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 906.3129925549538;0 -12.312992554953723"></animateTransform></circle><circle cx="868.9846670695421" cy="0" transform="translate(0 56.41035468460035)" r="5.1348076326022865" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-13.41594883446231s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.1348076326022;0 -5.1348076326022865"></animateTransform></circle><circle cx="412.8159943954295" cy="0" transform="translate(0 73.15370774769696)" r="15.476859737694562" fill="%23eb964e" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-2.790071999753138s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 909.4768597376946;0 -15.476859737694562"></animateTransform></circle><circle cx="127.55114986611953" cy="0" transform="translate(0 492.2796466006136)" r="4.163628249105343" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-14.081308641494088s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 898.1636282491054;0 -4.163628249105343"></animateTransform></circle><circle cx="1250.424940419925" cy="0" transform="translate(0 728.5106253455285)" r="7.238424957336335" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-8.236171369644612s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.2384249573363;0 -7.238424957336335"></animateTransform></circle><circle cx="1175.4482057476735" cy="0" transform="translate(0 259.9343194911327)" r="5.475538093014032" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-12.720300389966908s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.475538093014;0 -5.475538093014032"></animateTransform></circle><circle cx="20.90768926477683" cy="0" transform="translate(0 530.2579232948622)" r="11.932114299219394" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-2.6408244507165723s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 905.9321142992194;0 -11.932114299219394"></animateTransform></circle><circle cx="682.4600199833538" cy="0" transform="translate(0 628.3993387012857)" r="6.611591797856658" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-11.266933023559158s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 900.6115917978567;0 -6.611591797856658"></animateTransform></circle><circle cx="571.4666717323632" cy="0" transform="translate(0 61.41266068749641)" r="8.460753817902141" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-7.4721552685439026s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 902.4607538179022;0 -8.460753817902141"></animateTransform></circle><circle cx="561.0812958548731" cy="0" transform="translate(0 729.4221301351125)" r="10.281318436364558" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-4.68680350294687s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.2813184363646;0 -10.281318436364558"></animateTransform></circle><circle cx="192.13120741416049" cy="0" transform="translate(0 598.0780523001896)" r="8.385219743392259" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-6.026663611380545s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 902.3852197433922;0 -8.385219743392259"></animateTransform></circle><circle cx="425.7558782055531" cy="0" transform="translate(0 889.5510733636609)" r="11.71564075850887" fill="%23e7aa75" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-5.224013090076736s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 905.7156407585089;0 -11.71564075850887"></animateTransform></circle><circle cx="1237.3229292295628" cy="0" transform="translate(0 324.3951290304195)" r="8.938839399877558" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-3.8190760422160897s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 902.9388393998776;0 -8.938839399877558"></animateTransform></circle><circle cx="547.6773031942619" cy="0" transform="translate(0 50.94510069121408)" r="4.770688226287494" fill="%23e99d5c" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-11.334420507806273s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 898.7706882262875;0 -4.770688226287494"></animateTransform></circle><circle cx="1413.4233525381992" cy="0" transform="translate(0 621.1996904333001)" r="14.797238182196782" fill="%23e99d5c" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-1.3808706100100845s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 908.7972381821968;0 -14.797238182196782"></animateTransform></circle><circle cx="882.0480933731076" cy="0" transform="translate(0 539.5943872372685)" r="7.648074393535252" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-5.732309147010244s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.6480743935352;0 -7.648074393535252"></animateTransform></circle><circle cx="931.3452699676168" cy="0" transform="translate(0 236.77056201011337)" r="6.281432239473132" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-7.975019923497846s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 900.2814322394731;0 -6.281432239473132"></animateTransform></circle><circle cx="347.3088484955056" cy="0" transform="translate(0 227.1383736486641)" r="12.868850109679663" fill="%23e99d5c" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-5.610137263536091s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 906.8688501096797;0 -12.868850109679663"></animateTransform></circle><circle cx="1612.9856983661664" cy="0" transform="translate(0 342.08889502487665)" r="15.26489287315051" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-2.6139522367407833s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 909.2648928731505;0 -15.26489287315051"></animateTransform></circle><circle cx="972.7904891076903" cy="0" transform="translate(0 659.4958274046737)" r="10.643107097495086" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-4.827898324800259s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.6431070974951;0 -10.643107097495086"></animateTransform></circle><circle cx="1584.7063306351445" cy="0" transform="translate(0 73.00355003984538)" r="7.088365644016227" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-12.307590065973177s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.0883656440162;0 -7.088365644016227"></animateTransform></circle><circle cx="660.6257810007454" cy="0" transform="translate(0 684.9891636238597)" r="4.072221502348392" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-11.250268770799154s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 898.0722215023484;0 -4.072221502348392"></animateTransform></circle><circle cx="609.7951794376103" cy="0" transform="translate(0 560.6975703568772)" r="11.384046128739731" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-4.42477851926747s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 905.3840461287398;0 -11.384046128739731"></animateTransform></circle><circle cx="177.55398379214319" cy="0" transform="translate(0 499.8882349432806)" r="10.206529557716856" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-9.376591485897256s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.2065295577169;0 -10.206529557716856"></animateTransform></circle><circle cx="955.5321920022714" cy="0" transform="translate(0 12.028544760529037)" r="14.871185672129359" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-0.8717245903073277s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 908.8711856721294;0 -14.871185672129359"></animateTransform></circle><circle cx="772.8792032207471" cy="0" transform="translate(0 379.352037134544)" r="7.062525134300893" fill="%23e99d5c" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-18.071392160751625s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.0625251343009;0 -7.062525134300893"></animateTransform></circle><circle cx="93.6682198102957" cy="0" transform="translate(0 91.10990263574726)" r="8.504012264634646" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-3.996974524742598s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 902.5040122646346;0 -8.504012264634646"></animateTransform></circle><circle cx="255.6125834495374" cy="0" transform="translate(0 410.21584676809215)" r="5.851870544954674" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-19.755668298475186s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.8518705449546;0 -5.851870544954674"></animateTransform></circle><circle cx="198.9474610940748" cy="0" transform="translate(0 137.34589649319025)" r="9.109047496852892" fill="%23e7aa75" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-9.40555545577457s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 903.1090474968529;0 -9.109047496852892"></animateTransform></circle><circle cx="208.45353932152818" cy="0" transform="translate(0 22.058452861917004)" r="4.728150934944228" fill="%23e99d5c" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-11.778497053663205s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 898.7281509349442;0 -4.728150934944228"></animateTransform></circle><circle cx="738.2863233326061" cy="0" transform="translate(0 398.21636429335734)" r="13.925267643597877" fill="%23eb964e" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-1.3156689917639954s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 907.9252676435979;0 -13.925267643597877"></animateTransform></circle><circle cx="1549.3941452476965" cy="0" transform="translate(0 801.3198965465435)" r="10.66430374540835" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-7.692397761157128s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.6643037454083;0 -10.66430374540835"></animateTransform></circle><circle cx="1721.3485168800657" cy="0" transform="translate(0 801.8457272700738)" r="8.242927751589715" fill="%23e7aa75" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-2.4117310708167583s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 902.2429277515897;0 -8.242927751589715"></animateTransform></circle><circle cx="882.8538642301057" cy="0" transform="translate(0 714.3078345870942)" r="6.532063264933648" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-8.969031615187717s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 900.5320632649336;0 -6.532063264933648"></animateTransform></circle><circle cx="1380.173578973719" cy="0" transform="translate(0 580.6452570643066)" r="5.281105780045852" fill="%23e99d5c" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-10.172028063844314s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.2811057800459;0 -5.281105780045852"></animateTransform></circle><circle cx="1258.4323309097683" cy="0" transform="translate(0 797.7383559788635)" r="5.562800701590432" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-16.220514500503334s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.5628007015904;0 -5.562800701590432"></animateTransform></circle><circle cx="27.062968072120913" cy="0" transform="translate(0 296.8525446571496)" r="10.975723192501269" fill="%23e7aa75" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-2.3303376153129296s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.9757231925013;0 -10.975723192501269"></animateTransform></circle><circle cx="1730.1059747211389" cy="0" transform="translate(0 214.84528736199493)" r="8.3609254154761" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-6.885737439270587s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 902.3609254154761;0 -8.3609254154761"></animateTransform></circle><circle cx="342.9875251440795" cy="0" transform="translate(0 189.59153278486122)" r="13.789004109275108" fill="%23eb964e" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-4.036358301516287s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 907.7890041092751;0 -13.789004109275108"></animateTransform></circle><circle cx="801.5042667386282" cy="0" transform="translate(0 290.5341104195673)" r="7.67219615673503" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-6.5999428125435955s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 901.672196156735;0 -7.67219615673503"></animateTransform></circle><circle cx="1523.5214435535386" cy="0" transform="translate(0 112.83306207864638)" r="11.805500186098394" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-9.04560969315834s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 905.8055001860984;0 -11.805500186098394"></animateTransform></circle><circle cx="1648.9524201301756" cy="0" transform="translate(0 305.63225360575285)" r="5.1517751684567" fill="%23eb964e" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-0.10391115792079741s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 899.1517751684567;0 -5.1517751684567"></animateTransform></circle><circle cx="146.1495764220049" cy="0" transform="translate(0 378.9938383864678)" r="12.038233639681286" fill="%23eb964e" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-3.38120566172235s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 906.0382336396813;0 -12.038233639681286"></animateTransform></circle><circle cx="180.81191319947624" cy="0" transform="translate(0 99.89139831652341)" r="4.17388737264694" fill="%23e7aa75" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-19.854575759922156s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 898.173887372647;0 -4.17388737264694"></animateTransform></circle><circle cx="352.27908953680594" cy="0" transform="translate(0 449.1435943461301)" r="6.87318507108723" fill="%23e99d5c" opacity="0.36000000000000004"><animateTransform attributeName="transform" type="translate" begin="-5.418955512627042s" dur="20s" repeatCount="indefinite" keyTimes="0;1" values="0 900.8731850710873;0 -6.87318507108723"></animateTransform></circle><circle cx="117.94603378224049" cy="0" transform="translate(0 418.7324876733719)" r="14.44834058224353" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-5.798268788365127s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 908.4483405822435;0 -14.44834058224353"></animateTransform></circle><circle cx="151.55114640404184" cy="0" transform="translate(0 95.62215526244154)" r="9.385778971759333" fill="%23e99d5c" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-7.090329549596377s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 903.3857789717594;0 -9.385778971759333"></animateTransform></circle><circle cx="1261.0042205248649" cy="0" transform="translate(0 60.866067803273786)" r="11.824778520090911" fill="%23e7aa75" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-9.94302945000002s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 905.824778520091;0 -11.824778520090911"></animateTransform></circle><circle cx="797.0532463882073" cy="0" transform="translate(0 537.0652900065259)" r="10.931414753883391" fill="%23eb964e" opacity="0.63"><animateTransform attributeName="transform" type="translate" begin="-6.4779502410729854s" dur="10s" repeatCount="indefinite" keyTimes="0;1" values="0 904.9314147538834;0 -10.931414753883391"></animateTransform></circle><circle cx="1067.3322276383915" cy="0" transform="translate(0 393.71630582323195)" r="15.244052699733066" fill="%23e7aa75" opacity="0.7200000000000001"><animateTransform attributeName="transform" type="translate" begin="-3.0855691279083812s" dur="6.666666666666666s" repeatCount="indefinite" keyTimes="0;1" values="0 909.2440526997331;0 -15.244052699733066"></animateTransform></circle></g></svg>');
+    background: var(--naranja);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -463,7 +497,6 @@ button:hover {
 
 .servicios {
     padding: var(--espacio) 0;
-    background: var(--fondo);
 }
 
 .servicios .container {
@@ -477,6 +510,7 @@ button:hover {
     display: flex;
 }
 
+
 .servicios .card {
     display: flex;
     flex-direction: column;
@@ -486,6 +520,7 @@ button:hover {
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .servicios .image {
@@ -493,30 +528,33 @@ button:hover {
     height: 150px;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    width: 100%;
 }
 
 .servicios i {
     position: absolute;
-    bottom: -20px;
+    top: calc(50% - 20px);
     left: 50%;
     transform: translateX(-50%);
     background: var(--blanco);
-    color: var(--negro);
+    color: var(--purpura);
     padding: 10px;
     border-radius: 50%;
     font-size: var(--font-size);
-    z-index: 4;
+    z-index: 5;
 }
 
 .servicios .card .text {
     margin-top: 5px;
     padding: 10px;
     text-align: center;
-    z-index: 3;
+    z-index: 4;
     background: var(--blanco);
 }
 
 .servicios .card .text h1 {
+    padding-top: 15px;
     color: var(--purpura);
     font-family: var(--font-primario);
     font-size: var(--font-subsize);
@@ -531,8 +569,13 @@ button:hover {
 }
 
 .servicios .image img {
-    width: 100%;
+    width: 120%;
     object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.servicios .image:hover img {
+    transform: scale(1.1);
 }
 
 /* MAPA */
@@ -553,6 +596,7 @@ button:hover {
     height: 300px;
     border-radius: 20px;
     overflow: hidden;
+    padding: var(--espacio) 0 0 0;
 }
 
 .mapa .container .frame {
@@ -589,7 +633,7 @@ button:hover {
 .reseñas {
     display: flex;
     justify-content: center;
-    background: var(--fondo);
+    padding: var(--espacio) 0;
 }
 
 .reseñas .container {
@@ -599,6 +643,7 @@ button:hover {
 
 .reseñas .container .reseña-carrusel {
     display: flex;
+    padding: var(--espacio) 0 0 0;
 }
 
 .reseñas .container .card {
@@ -642,7 +687,6 @@ button:hover {
 
 .footer {
     padding: var(--espacio) 0 0 0;
-    background: var(--fondo);
     display: flex;
     justify-content: center;
 }
@@ -752,20 +796,20 @@ button:hover {
         object-fit: contain;
     }
 
-    /* BANNER */
+    /* promos */
 
 }
 
 @media (max-width: 900px) {
 
-    /* BANNER */
+    /* promos */
 
-    .banner .contenido {
+    .promos .contenido {
         width: 100%;
         order: 2;
     }
 
-    .banner .articulo {
+    .promos .articulo {
         width: 100%;
     }
 
