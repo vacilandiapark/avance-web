@@ -19,6 +19,7 @@
     <link rel="icon" href="materials/Logos/LOGO VACILANDIA FINAL.png">
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="canonical" href="https://vacilandia.com.pe/">
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -27,38 +28,35 @@
 
 <body>
 
-    <!-- PLUGIN DE CHAT -->
-
-    <!-- Messenger Plugin de chat Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Plugin de chat code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
+    <!-- Contenedor del botón de WhatsApp -->
+    <div id="whatsapp-button">
+        <div id="whatsapp-chat">
+            <div id="whatsapp-header">
+                <div id="whatsapp-avatar">
+                    <img decoding="async" src="materials/Logos/274996682_108713358421596_5386262468476296445_n.jpg"
+                        alt="Avatar">
+                </div>
+                <div id="whatsapp-title">Vacilandia Park <i class="fa-solid fa-circle-check"
+                        style="color: #00ff33;"></i></div>
+                <button id="whatsapp-close">&times;</button>
+            </div>
+            <div id="whatsapp-messages">
+                <div class="message received">
+                    <span class="bubble">Hola, ¿en qué puedo ayudarte?</span>
+                </div>
+                <div class="message sent">
+                    <span class="bubble">Hola, tengo una pregunta sobre...</span>
+                </div>
+            </div>
+            <div id="whatsapp-input">
+                <input type="text" id="whatsapp-message-input" placeholder="Escribe tu mensaje...">
+                <button id="whatsapp-send">Enviar</button>
+            </div>
+        </div>
+        <div id="whatsapp-icon">
+            <img decoding="async" src="materials/Redes/124034.png" alt="WhatsApp">
+        </div>
     </div>
-
-    <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "108571858435746");
-        chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: 'v18.0'
-            });
-        };
-
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
 
     <main>
         <nav class="navbar">
@@ -135,9 +133,7 @@
                     </video>
                 </swiper-slide>
                 <swiper-slide>
-                    <img decoding="async"
-                        src="materials/bg/PORTADA-FULL-DAY-PRIMAVERA.png"
-                        alt="">
+                    <img decoding="async" src="materials/bg/PORTADA-FULL-DAY-PRIMAVERA.png" alt="">
                 </swiper-slide>
                 <swiper-slide>
                     <img decoding="async"
@@ -191,7 +187,7 @@
                     <div class="title">
                         <h1>NUESTRAS ATRACCIONES</h1>
                     </div>
-                    <swiper-container class="carrusel-atracciones carrusel" space-between="10"
+                    <swiper-container class="carrusel-atracciones carrusel block" space-between="10"
                         pagination-clickable="true" navigation="true" pagination="true" slides-per-view="3.5"
                         free-mode="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
                         <swiper-slide>
@@ -239,7 +235,7 @@
             <!--GASTRONOMIA -->
 
             <section class="gastronomia">
-                <div class="container">
+                <div class="container block">
                     <div class="title">
                         <h1>OFERTA GASTRONÓMICA</h1>
                     </div>
@@ -299,6 +295,21 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TOP ANCHO -->
+
+            <section class="fill-section">
+                <div class="container">
+                    <div class="text">
+                        <h1>Conoce nuestro mapa</h1>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, est?</p>
+                        <a href=""><button id="amarillo">¡IR ALLÁ!</button></a>
+                    </div>
+                    <div class="image">
+                        <img src="materials/Otros/MAPA VACILANDIA/MAPA-VACILANDIA-min.jpg" alt="">
                     </div>
                 </div>
             </section>
@@ -554,7 +565,8 @@
     <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
     <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script async src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
-    <script async src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

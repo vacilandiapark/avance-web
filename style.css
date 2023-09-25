@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--fondo);
+    background: var(--fondo) ;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -107,8 +107,12 @@ button:hover {
     filter: brightness(120%);
 }
 
-#ingresar {
+button#ingresar {
     background: var(--celeste);
+}
+
+button#amarillo{
+    background: var(--amarillo);
 }
 
 
@@ -131,6 +135,226 @@ button:hover {
     color: var(--purpura);
     border-radius: 10px;
     z-index: 4;
+}
+
+
+/* WHATSAPP */
+
+#whatsapp-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+#whatsapp-icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+}
+
+#whatsapp-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* Añade los pseudo-elementos ::before para las ondas de colores */
+#whatsapp-icon::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Añade el box-shadow para la primera onda */
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+    /* Inicia la animación */
+    animation: colorWaveAnimation1 1.5s infinite;
+    /* Asegura que el pseudo-elemento esté detrás del icono */
+    z-index: -1;
+}
+
+#whatsapp-icon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Añade el box-shadow para la segunda onda */
+    box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+    /* Inicia la animación con un retraso para que no se sincronicen */
+    animation: colorWaveAnimation2 1.5s infinite;
+    animation-delay: 0.5s;
+    /* Asegura que el pseudo-elemento esté detrás del icono */
+    z-index: -1;
+}
+
+@keyframes colorWaveAnimation1 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+        opacity: 1;
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(0, 255, 51, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes colorWaveAnimation2 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 255, 51, 0.8);
+        opacity: 0.7;
+    }
+
+    100% {
+        box-shadow: 0 0 0 50px rgba(0, 255, 51, 0);
+        opacity: 0;
+    }
+}
+
+#whatsapp-icon img:hover {
+    filter: brightness(150%);
+}
+
+#whatsapp-chat {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 320px;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+    z-index: 9998;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    animation: jellyAnimation 0.6s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes jellyAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    75% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+#whatsapp-chat.open {
+    display: block;
+}
+
+#whatsapp-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #075e54;
+}
+
+#whatsapp-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#whatsapp-title {
+    flex: 1;
+    color: var(--blanco);
+    font-weight: bold;
+}
+
+#whatsapp-close {
+    background: none;
+    border: none;
+    color: var(--blanco);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#whatsapp-close:focus {
+    outline: none;
+}
+
+#whatsapp-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+.bubble {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f1f0f0;
+
+
+}
+
+.message.sent .bubble {
+    background-color: #dcf8c6;
+}
+
+.message.received .bubble {
+    background-color: #e6e6e6;
+}
+
+#whatsapp-input {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#whatsapp-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background-color: #f1f0f0;
+}
+
+#whatsapp-input button {
+    background-color: #25D366;
+    color: var(--blanco);
+    padding: 8px 16px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#whatsapp-input button:hover {
+    background-color: #128C7E;
 }
 
 /* NAVBAR */
@@ -502,10 +726,10 @@ button:hover {
 }
 
 .gastronomia .col-1 .content {
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .gastronomia .col-1 .content h1 {
@@ -612,7 +836,6 @@ button:hover {
     flex-direction: column;
     align-items: center;
     background: var(--blanco);
-    max-width: 300px;
     margin: 0 auto;
     border-radius: 10px;
     overflow: hidden;
@@ -848,6 +1071,66 @@ button:hover {
     color: var(--negro);
     font-size: var(--font-subsize);
     font-family: var(--font-terciario);
+}
+
+/* FILL SECTTION */
+
+.fill-section{
+    display: flex;
+    justify-content: center;
+    padding: var(--espacio) 0;
+}
+
+.fill-section .container{
+    max-width: var(--max-width);
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.fill-section .text{
+    background: var(--naranja);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px var(--espacio);
+}
+
+.fill-section .text h1{
+    color: var(--blanco);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.fill-section .text p{
+    color: var(--blanco);
+    font-family: var(--font-secundario);
+    font-weight: lighter;
+}
+
+.fill-section .image{
+    width: 60%;
+    position: relative;
+}
+
+.fill-section .image::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(var(--rgba-naranja), 1), rgba(var(--rgba-naranja), 10%));
+}
+
+.fill-section .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 1100px) {
