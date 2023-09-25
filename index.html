@@ -26,6 +26,40 @@
 </head>
 
 <body>
+
+    <!-- PLUGIN DE CHAT -->
+
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "108571858435746");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <main>
         <nav class="navbar">
             <div class="row">
@@ -102,7 +136,7 @@
                 </swiper-slide>
                 <swiper-slide>
                     <img decoding="async"
-                        src="https://scontent.flim19-1.fna.fbcdn.net/v/t39.30808-6/380701900_300949292537761_7531567049499040318_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=52f669&_nc_eui2=AeFJVHq1afEdPjlTO8T_76oUp6rFWUj2pRmnqsVZSPalGSZJ-JRmv2c9WAHaJ_k9WZXaYJfu89Jg3xDBT5R6N1hj&_nc_ohc=0kFSMKYNsWAAX-i_2va&_nc_ht=scontent.flim19-1.fna&oh=00_AfCf3lPCVO-sAfkKv7zXfk2cBcVzsWC_ZqU8FHT9lACRcQ&oe=651454F8"
+                        src="materials/bg/PORTADA-FULL-DAY-PRIMAVERA.png"
                         alt="">
                 </swiper-slide>
                 <swiper-slide>
@@ -157,9 +191,9 @@
                     <div class="title">
                         <h1>NUESTRAS ATRACCIONES</h1>
                     </div>
-                    <swiper-container class="carrusel-atracciones carrusel" space-between="10" pagination-clickable="true"
-                        navigation="true" pagination="true" slides-per-view="3.5" free-mode="true" autoplay-delay="2000"
-                        autoplay-disable-on-interaction="false">
+                    <swiper-container class="carrusel-atracciones carrusel" space-between="10"
+                        pagination-clickable="true" navigation="true" pagination="true" slides-per-view="3.5"
+                        free-mode="true" autoplay-delay="2000" autoplay-disable-on-interaction="false">
                         <swiper-slide>
                             <i class="fa-solid fa-water-ladder"></i>
                             <div class="card">
@@ -213,7 +247,8 @@
                         <div class="col-1">
                             <div class="content">
                                 <h1>RESTAURANTE "EL POLLO VACILÓN"</h1>
-                                <p>Disfruta de una amplia selección de platos, bebidas, snacks y postres que harán que tu experiencia sea verdaderamente deliciosa.</p>
+                                <p>Disfruta de una amplia selección de platos, bebidas, snacks y postres que harán que
+                                    tu experiencia sea verdaderamente deliciosa.</p>
                             </div>
                             <div class="content">
                                 <h1>Tenemos de todo:</h1>
@@ -275,8 +310,8 @@
                     <div class="title">
                         <h1>SERVICIOS</h1>
                     </div>
-                    <swiper-container class="contenido carrusel" space-between="10" pagination-clickable="true" navigation="true"
-                        pagination="true" slides-per-view="3.5" free-mode="true" autoplay-delay="2000"
+                    <swiper-container class="contenido carrusel" space-between="10" pagination-clickable="true"
+                        navigation="true" pagination="true" slides-per-view="3.5" free-mode="true" autoplay-delay="2000"
                         autoplay-disable-on-interaction="false">
                         <swiper-slide>
                             <div class="card">
@@ -287,7 +322,8 @@
                                 <div class="text">
                                     <i class="fa-solid fa-building"></i>
                                     <h1>EVENTOS CORPORATIVOS</h1>
-                                    <p>90mil m2 un espacio ideal con emocionantes atractivos para fortalecer los lazos laborales y lo mejor de todo, sin salir de Lima.</p>
+                                    <p>90mil m2 un espacio ideal con emocionantes atractivos para fortalecer los lazos
+                                        laborales y lo mejor de todo, sin salir de Lima.</p>
                                     <a href=""><button>Ver más</button></a>
                                 </div>
                             </div>
@@ -316,7 +352,8 @@
                                 <div class="text">
                                     <i class="fa-solid fa-school"></i>
                                     <h1>PASEOS Y REENCUENTROS</h1>
-                                    <p>Tenemos espacios pensados para todo tipo de actividades recreativas incluyendo un recorrido ecológico junto a Taulichusco.</p>
+                                    <p>Tenemos espacios pensados para todo tipo de actividades recreativas incluyendo un
+                                        recorrido ecológico junto a Taulichusco.</p>
                                     <a href=""><button>Ver más</button></a>
                                 </div>
                             </div>
@@ -330,7 +367,8 @@
                                 <div class="text">
                                     <i class="fa-solid fa-futbol"></i>
                                     <h1>CAMPEONATOS DEPORTIVOS</h1>
-                                    <p>Organiza y vive la pasión por el deporte en nuestras modernas y amplias canchas de vóley y fútbol.</p>
+                                    <p>Organiza y vive la pasión por el deporte en nuestras modernas y amplias canchas
+                                        de vóley y fútbol.</p>
                                     <a href=""><button>Ver más</button></a>
                                 </div>
                             </div>
@@ -344,7 +382,8 @@
                                 <div class="text">
                                     <i class="fa-solid fa-user-check"></i>
                                     <h1>ESPACIOS PUBLICITARIOS</h1>
-                                    <p>Con más de 230mil visitantes por temporada, podrás visibilizar y fortalecer la presencia de tu marca en nuestras instalaciones.</p>
+                                    <p>Con más de 230mil visitantes por temporada, podrás visibilizar y fortalecer la
+                                        presencia de tu marca en nuestras instalaciones.</p>
                                     <a href=""><button>Ver más</button></a>
                                 </div>
                             </div>
