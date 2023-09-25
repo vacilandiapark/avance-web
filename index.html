@@ -28,35 +28,36 @@
 
 <body>
 
-    <!-- Contenedor del botón de WhatsApp -->
-    <div id="whatsapp-button">
-        <div id="whatsapp-chat">
-            <div id="whatsapp-header">
-                <div id="whatsapp-avatar">
-                    <img decoding="async" src="materials/Logos/274996682_108713358421596_5386262468476296445_n.jpg"
-                        alt="Avatar">
-                </div>
-                <div id="whatsapp-title">Vacilandia Park <i class="fa-solid fa-circle-check"
-                        style="color: #00ff33;"></i></div>
-                <button id="whatsapp-close">&times;</button>
-            </div>
-            <div id="whatsapp-messages">
-                <div class="message received">
-                    <span class="bubble">Hola, ¿en qué puedo ayudarte?</span>
-                </div>
-                <div class="message sent">
-                    <span class="bubble">Hola, tengo una pregunta sobre...</span>
-                </div>
-            </div>
-            <div id="whatsapp-input">
-                <input type="text" id="whatsapp-message-input" placeholder="Escribe tu mensaje...">
-                <button id="whatsapp-send">Enviar</button>
-            </div>
-        </div>
-        <div id="whatsapp-icon">
-            <img decoding="async" src="materials/Redes/124034.png" alt="WhatsApp">
-        </div>
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
     </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "108571858435746");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <main>
         <nav class="navbar">
