@@ -149,8 +149,8 @@ button#amarillo {
 }
 
 #music-card .container {
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: auto;
     background: var(--fondo);
     box-shadow: var(--sombra);
     display: flex;
@@ -175,7 +175,7 @@ button#amarillo {
 }
 
 #music-card #song-title {
-    height: 30px;
+    height: 20px;
     font-size: var(--font-subsize);
     font-family: var(--font-secundario);
     overflow: hidden;
@@ -214,6 +214,8 @@ button#amarillo {
     /* Color del texto del botón de reproducción (puedes personalizarlo) */
     border: none;
     border-radius: 5px;
+    font-family: var(--font-primario);
+    font-weight: lighter;
     font-size: var(--font-subsize);
     cursor: pointer;
     margin: 5px 0;
