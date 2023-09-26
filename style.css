@@ -2,10 +2,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--fondo) ;
+    background: var(--fondo);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    scroll-behavior: smooth;
 }
 
 /* VARIABLES */
@@ -36,12 +37,12 @@ body {
     --rgba-negro: 0, 0, 0;
     --borde: #d3d3d3;
     --font-msize: 1.7rem;
-    --font-size: 1.3rem;
-    --font-subsize: 1rem;
+    --font-size: 1rem;
+    --font-subsize: 0.8rem;
     --font-primario: 'Lilita One', cursive;
-    --font-secundario: 'Jockey One', sans-serif;
+    --font-secundario: 'Montserrat Alternates', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
-    --sombra: 0 5px 20px -15px black;
+    --sombra: 0 4px 12px 0 rgba(0, 0, 0, .15);
     --max-width: 1000px;
     --fondo: #f7f7f7;
 }
@@ -94,24 +95,24 @@ button {
     height: 100%;
     padding: 5px 10px;
     border-radius: 10px;
-    background: var(--naranja);
+    background: var(--rosado);
     color: var(--blanco);
     font-size: var(--font-subsize);
-    font-family: var(--font-secundario);
+    font-family: var(--font-terciario);
+    font-weight: bolder;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
 button:hover {
-    transform: scale(0.95);
-    filter: brightness(120%);
+    filter: brightness(110%);
 }
 
 button#ingresar {
     background: var(--celeste);
 }
 
-button#amarillo{
+button#amarillo {
     background: var(--amarillo);
 }
 
@@ -135,6 +136,88 @@ button#amarillo{
     color: var(--purpura);
     border-radius: 10px;
     z-index: 4;
+}
+
+/* MUSICA */
+
+#music-card {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    z-index: 4;
+}
+
+#music-card .container {
+    width: 250px;
+    height: 200px;
+    background: var(--fondo);
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#music-card .cerrar {
+    display: flex;
+    justify-content: right;
+
+}
+
+#music-card #song-image {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+#music-card #song-title {
+    height: 30px;
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+    overflow: hidden;
+    color: var(--purpura);
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Estilos para el botón de cierre */
+#music-card #close-button {
+    position: absolute;
+    z-index: 4;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para los controles de reproducción de música */
+#music-card #play-button {
+    width: 50px;
+    /* Ancho del botón de reproducción */
+    height: 30px;
+    /* Altura del botón de reproducción */
+    background-color: var(--celeste);
+    /* Color de fondo del botón de reproducción (puedes personalizarlo) */
+    color: var(--blanco);
+    /* Color del texto del botón de reproducción (puedes personalizarlo) */
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-subsize);
+    cursor: pointer;
+    margin: 5px 0;
+    /* Espacio entre los botones */
 }
 
 /* NAVBAR */
@@ -309,6 +392,7 @@ button#amarillo{
 /* SUBPANEL*/
 
 .subpanel {
+    background: var(--naranja);
     padding: var(--espacio) 0;
     display: flex;
     justify-content: center;
@@ -323,7 +407,6 @@ button#amarillo{
 }
 
 .subpanel .container .box {
-    background: var(--blanco);
     display: flex;
     position: relative;
     align-items: center;
@@ -331,7 +414,6 @@ button#amarillo{
     height: 100%;
     padding: 10px 20px 10px 10px;
     gap: 10px;
-    color: var(--morado);
     text-align: left;
     width: calc(100% / 4);
     border-right: 1px solid var(--borde);
@@ -343,7 +425,7 @@ button#amarillo{
 
 .subpanel .container .box::after {
     content: "";
-    border-color: var(--gris);
+    border-color: var(--blanco);
     border-style: solid;
     border-width: 2px 2px 0 0;
     position: absolute;
@@ -355,11 +437,11 @@ button#amarillo{
 }
 
 .subpanel .container .box:hover {
-    background: var(--borde);
+    background: var(--celeste);
 }
 
 .subpanel .container .box i {
-    color: var(--morado);
+    color: var(--blanco);
     font-size: var(--font-size);
 }
 
@@ -367,25 +449,26 @@ button#amarillo{
     font-size: var(--font-subsize);
     font-family: var(--font-primario);
     font-weight: lighter;
+    color: var(--blanco);
 }
 
 .subpanel .container .box p {
     font-family: var(--font-secundario);
     font-size: var(--font-subsize);
     font-weight: lighter;
-    color: var(--gris);
+    color: var(--blanco);
 }
 
 /* promos */
 
 .promos {
     display: flex;
-    height: 510px;
+    height: 593px;
     justify-content: center;
 }
 
 .promos .articulo {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 100%;
     display: flex;
     margin-top: 60px;
@@ -425,7 +508,7 @@ button#amarillo{
 .atracciones .card {
     border-radius: 20px;
     position: relative;
-    height: 300px;
+    height: 400px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -458,13 +541,13 @@ button#amarillo{
     padding: 20px;
     color: var(--blanco);
     font-family: var(--font-primario);
-    font-size: var(--font-subsize);
+    font-size: var(--font-size);
     font-weight: lighter;
 }
 
 .atracciones .card img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     transition: all 0.3s ease-in-out;
 }
@@ -509,13 +592,14 @@ button#amarillo{
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 10px;
 }
 
 .gastronomia .col-1 .content h1 {
     font-family: var(--font-primario);
     font-weight: lighter;
     color: var(--rosado);
+    text-transform: uppercase;
     font-size: var(--font-size);
 }
 
@@ -544,6 +628,8 @@ button#amarillo{
     font-family: var(--font-primario);
     color: var(--naranja);
     font-weight: lighter;
+    font-size: var(--font-size);
+    text-transform: uppercase;
 }
 
 
@@ -589,7 +675,7 @@ button#amarillo{
     padding: 20px;
     color: var(--blanco);
     font-family: var(--font-primario);
-    font-size: var(--font-subsize);
+    font-size: var(--font-size);
     font-weight: lighter;
 }
 
@@ -646,7 +732,7 @@ button#amarillo{
 
 .servicios .card .text {
     position: relative;
-    margin-top: 5px;
+    margin: 5px 5px 0 0;
     padding: 10px;
     text-align: center;
     z-index: 4;
@@ -657,7 +743,7 @@ button#amarillo{
     padding-top: 15px;
     color: var(--purpura);
     font-family: var(--font-primario);
-    font-size: var(--font-subsize);
+    font-size: var(--font-size);
     font-weight: lighter;
     text-transform: uppercase;
 }
@@ -682,6 +768,7 @@ button#amarillo{
 /* MAPA */
 
 .mapa {
+    background: var(--verde);
     display: flex;
     justify-content: center;
 }
@@ -693,10 +780,10 @@ button#amarillo{
 }
 
 .mapa .container .contenido {
+    overflow: hidden;
+    border-radius: 20px;
     display: flex;
     height: 300px;
-    border-radius: 20px;
-    overflow: hidden;
     padding: var(--espacio) 0 0 0;
 }
 
@@ -713,6 +800,10 @@ button#amarillo{
     padding: 20px;
     gap: 15px;
     box-shadow: var(--sombra);
+}
+
+.mapa .title h1 {
+    color: var(--blanco);
 }
 
 .mapa .container .content h1 {
@@ -751,7 +842,7 @@ button#amarillo{
 .reseñas .container .card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     padding: 20px;
     background: var(--blanco);
     z-index: 4;
@@ -778,6 +869,7 @@ button#amarillo{
     padding: 0;
     font-weight: lighter;
     font-size: var(--font-size);
+    text-transform: uppercase;
 }
 
 .reseñas .container p {
@@ -791,11 +883,11 @@ button#amarillo{
 .footer {
     padding: var(--espacio) 0 0 0;
     display: flex;
+    background: var(--morado);
     justify-content: center;
 }
 
 .footer .container {
-    background: var(--morado);
     width: 100%;
     padding: var(--espacio) 0;
     display: flex;
@@ -806,9 +898,9 @@ button#amarillo{
 
 .footer .container .row {
     display: flex;
-    max-width: var(--max-width);
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 100px;
 }
 
 .footer .container .row img {
@@ -834,8 +926,8 @@ button#amarillo{
 
 .footer .container .row ul li {
     color: var(--blanco);
-    font-size: var(--font-subsize);
-    font-family: var(--font-secundario);
+    font-size: 0.8rem;
+    font-family: var(--font-terciario);
 }
 
 .footer .container .terms {
@@ -855,24 +947,29 @@ button#amarillo{
 
 /* FILL SECTTION */
 
-.fill-section{
+.fill-section {
+    background: var(--celeste);
     display: flex;
     justify-content: center;
     padding: var(--espacio) 0;
+    transition: all 0.3s ease-in-out;
 }
 
-.fill-section .container{
+.fill-section:hover .image {
+    transform: translateX(-20px);
+}
+
+.fill-section .container {
     max-width: var(--max-width);
     display: flex;
     width: 100%;
     height: 250px;
-    border-radius: 20px;
     overflow: hidden;
 }
 
-.fill-section .text{
-    background: var(--naranja);
-    width: 40%;
+.fill-section .text {
+    background: var(--celeste);
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -880,34 +977,40 @@ button#amarillo{
     padding: 20px var(--espacio);
 }
 
-.fill-section .text h1{
+.fill-section .text h1 {
     color: var(--blanco);
     font-family: var(--font-primario);
     font-weight: lighter;
+    font-size: var(--font-size);
+    text-transform: uppercase;
 }
 
-.fill-section .text p{
+.fill-section .text p {
     color: var(--blanco);
+    font-size: var(--font-subsize);
     font-family: var(--font-secundario);
     font-weight: lighter;
 }
 
-.fill-section .image{
-    width: 60%;
+.fill-section .image {
+    width: 50%;
     position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
-.fill-section .image::after{
+.fill-section .image::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, rgba(var(--rgba-naranja), 1), rgba(var(--rgba-naranja), 10%));
+    background: linear-gradient(to left, rgba(var(--rgba-celeste), 1), rgba(var(--rgba-celeste), 0.1));
 }
 
-.fill-section .image img{
+.fill-section .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -975,7 +1078,7 @@ button#amarillo{
     }
 
     .subpanel .container .box {
-        width: 100%;
+        width: 90%;
         display: block;
     }
 
