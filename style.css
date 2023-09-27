@@ -2,17 +2,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: var(--fondo);
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
     scroll-behavior: smooth;
 }
 
 /* VARIABLES */
 
 :root {
-    --espacio: 30px;
+    --espacio: 20px;
     --morado: #724C9F;
     --rgba-morado: 114, 76, 159;
     --purpura: #432F87;
@@ -45,6 +41,7 @@ body {
     --sombra: 0 4px 12px 0 rgba(0, 0, 0, .15);
     --max-width: 1000px;
     --fondo: #f7f7f7;
+    --sombra-color: #f8f8f8;
 }
 
 /* ATRIBUTOS GLOBALES */
@@ -95,7 +92,7 @@ button {
     height: 100%;
     padding: 5px 10px;
     border-radius: 10px;
-    background: var(--rosado);
+    background: var(--naranja);
     color: var(--blanco);
     font-size: var(--font-subsize);
     font-family: var(--font-terciario);
@@ -470,6 +467,7 @@ button#amarillo {
 }
 
 .promos .articulo {
+    border-radius: 20px;
     max-width: 1600px;
     width: 100%;
     display: flex;
@@ -477,7 +475,6 @@ button#amarillo {
     cursor: grab;
     overflow: hidden;
     box-shadow: var(--sombra);
-    border-radius: 0 0 20px 20px;
 }
 
 .promos .articulo video,
@@ -560,6 +557,78 @@ button#amarillo {
 
 .atracciones swiper-slide:hover>.text {
     padding-bottom: 5px;
+}
+
+/* ENTRENIMIENTO */
+
+.entretenimiento {
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.entretenimiento .container {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.group {
+    max-width: var(--max-width);
+    padding: var(--espacio) 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Ajuste automático de columnas */
+    grid-gap: var(--espacio);
+    /* Espacio entre las tarjetas */
+    justify-items: center;
+    /* Centramos las tarjetas horizontalmente */
+}
+
+.entretenimiento .card {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.entretenimiento .card .image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.entretenimiento .card .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--blanco);
+    z-index: 4;
+    padding: 20px;
+    height: auto;
+}
+
+.entretenimiento .card .text h1{
+    margin-bottom: 5px;
+    font-size: var(--font-size);
+    color: var(--morado);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+    text-align: center;
+}
+
+.entretenimiento .card .text p{
+    font-size: var(--font-subsize);
+    color:  var(--gris);
+    font-family: var(--font-secundario);
+    text-align: center;
+}
+
+.entretenimiento .card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* GASTRONOMIA */
@@ -690,12 +759,14 @@ button#amarillo {
 .servicios .container {
     max-width: var(--max-width);
     width: 100%;
+    height: auto;
     margin: 0 auto;
 }
 
 .servicios .contenido {
     padding: var(--espacio) 0;
     display: flex;
+    height: auto;
 }
 
 
@@ -706,7 +777,6 @@ button#amarillo {
     background: var(--blanco);
     margin: 0 auto;
     border-radius: 10px;
-    overflow: hidden;
     cursor: pointer;
     box-shadow: var(--sombra);
 }
@@ -738,7 +808,7 @@ button#amarillo {
     padding: 10px;
     text-align: center;
     z-index: 4;
-    background: var(--blanco);
+    background: linear-gradient(25deg, var(--sombra-color) 50%, var(--blanco) 0%);
 }
 
 .servicios .card .text h1 {
@@ -770,7 +840,6 @@ button#amarillo {
 /* MAPA */
 
 .mapa {
-    background: var(--verde);
     display: flex;
     justify-content: center;
 }
@@ -782,7 +851,6 @@ button#amarillo {
 }
 
 .mapa .container .contenido {
-    overflow: hidden;
     border-radius: 20px;
     display: flex;
     height: 300px;
@@ -800,12 +868,8 @@ button#amarillo {
     flex-direction: column;
     justify-content: center;
     padding: 20px;
-    gap: 15px;
     box-shadow: var(--sombra);
-}
-
-.mapa .title h1 {
-    color: var(--blanco);
+    gap: 15px;
 }
 
 .mapa .container .content h1 {
