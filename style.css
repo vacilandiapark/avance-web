@@ -8,7 +8,7 @@ body {
 /* VARIABLES */
 
 :root {
-    --espacio: 20px;
+    --espacio: 40px;
     --morado: #724C9F;
     --rgba-morado: 114, 76, 159;
     --purpura: #432F87;
@@ -146,9 +146,9 @@ button#amarillo {
 }
 
 #music-card .container {
-    width: 200px;
+    width: auto;
     height: auto;
-    background: var(--fondo);
+    background: var(--celeste);
     box-shadow: var(--sombra);
     display: flex;
     flex-direction: column;
@@ -161,24 +161,6 @@ button#amarillo {
     display: flex;
     justify-content: right;
 
-}
-
-#music-card #song-image {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-#music-card #song-title {
-    height: 20px;
-    font-size: var(--font-subsize);
-    font-family: var(--font-secundario);
-    overflow: hidden;
-    color: var(--purpura);
-    white-space: nowrap;
-    text-align: center;
 }
 
 /* Estilos para el botón de cierre */
@@ -562,7 +544,7 @@ button#amarillo {
 /* ENTRENIMIENTO */
 
 .entretenimiento {
-    padding: var(--espacio) 0;
+    padding: var(--espacio) 0 0 0;
     display: flex;
     justify-content: center;
 }
@@ -579,7 +561,7 @@ button#amarillo {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     /* Ajuste automático de columnas */
-    grid-gap: var(--espacio);
+    grid-gap: 20px;
     /* Espacio entre las tarjetas */
     justify-items: center;
     /* Centramos las tarjetas horizontalmente */
