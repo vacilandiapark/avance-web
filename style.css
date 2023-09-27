@@ -39,8 +39,7 @@ body {
     --font-secundario: 'Montserrat Alternates', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
     --sombra: 0 4px 12px 0 rgba(0, 0, 0, .15);
-    --max-width: 1000px;
-    --fondo: #f7f7f7;
+    --max-width: 1100px;
     --sombra-color: #f8f8f8;
 }
 
@@ -90,9 +89,9 @@ button {
     width: auto;
     border: none;
     height: 100%;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background: var(--naranja);
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--rosado);
     color: var(--blanco);
     font-size: var(--font-subsize);
     font-family: var(--font-terciario);
@@ -105,7 +104,7 @@ button:hover {
     filter: brightness(110%);
 }
 
-button#ingresar {
+button#celeste {
     background: var(--celeste);
 }
 
@@ -213,7 +212,7 @@ button#amarillo {
 .navbar .row {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 70px;
     justify-content: space-evenly;
     width: 100%;
     background: var(--purpura);
@@ -892,7 +891,7 @@ button#amarillo {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background: var(--blanco);
+    background: var(--rosado);
     z-index: 4;
     overflow: hidden;
     border-radius: 20px;
@@ -911,7 +910,7 @@ button#amarillo {
 }
 
 .reseñas .container .card h1 {
-    color: var(--purpura);
+    color: var(--blanco);
     font-family: var(--font-primario);
     margin: 0;
     padding: 0;
@@ -922,7 +921,7 @@ button#amarillo {
 
 .reseñas .container p {
     font-size: var(--font-subsize);
-    color: var(--gris);
+    color: var(--blanco);
     font-family: var(--font-secundario);
 }
 
