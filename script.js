@@ -41,3 +41,17 @@ function playMusic() {
     isPlaying = false;
   }
 }
+
+
+
+
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / scrollHeight) * 100;
+
+  // Ajusta la escala (ancho) de la barra de progreso
+  const scaleX = 1 + progress / 100; // Aumenta el ancho de 1 a 2
+  document.querySelector(".row-gradient").style.transform = `scaleX(${scaleX})`;
+});

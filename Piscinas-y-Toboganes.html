@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscina y Toboganes - Vacilandia Park 💜</title>
+    <meta name="description"
+        content="Somos el parque campestre mas grande de todo Lima, contamos con piscinas y toboganes, áreas verdes, juegos, conciertos, restaurante, divertidos juegos en familia y sobre todo un espacio de más de 90000m2 para que nos podamos divertir a lo grande!.">
+    <meta name="author" content="ZeyN">
+    <meta http-equiv="cache-control" content="public">
+    <meta http-equiv="expires" content="0">
+    <meta name="theme-color" content="#18401E">
+    <meta name="keywords"
+        content="piscinas, restaurante, campestre, conciertos, toboganes, pollo, canchas, parque acuatico, parque de diversiones, eventos corporativos, promociones de colegio, reserva de espacios">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="icon"
+        href="https://res.cloudinary.com/dlvqvbok1/image/upload/w_100/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css" />
+    <link rel="canonical" href="https://vacilandia.com.pe/">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "108571858435746");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- Contenedor de la tarjeta -->
+    <!-- Contenedor de la tarjeta -->
+    <div id="music-card">
+        <div class="container">
+            <div class="cerrar">
+                <!-- Botón de cierre -->
+                <button id="close-button" onclick="closeCard()">X</button>
+            </div>
+            <!-- Botón de reproducción de música -->
+            <button id="play-button" onclick="playMusic()">Play</button>
+        </div>
+    </div>
+
+
+    <main>
+        <nav class="navbar">
+            <div class="row-gradient"></div>
+            <div class="row">
+                <div class="logo">
+                    <a href="/"><img decoding="async" loading="lazy"
+                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
+                            alt=""></a>
+                </div>
+                <div class="hamburguer">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <ul class="navigation">
+                    <li><a href="#">ATRACCIONES<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="Piscinas-y-Toboganes.html">PISCINAS Y TOBOGANES</a></li>
+                            <li><a href="Zona-Gamer.html">ZONA GAMER</a></li>
+                            <li><a href="Vacigranja.html">VACIGRANJA</a></li>
+                            <li><a href="Canchas-Deportivas.html">CANCHAS DEPORTIVAS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">ENTRETENIMIENTO<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="Recorrido-Ecológico.html">RECORRIDO ECOLÓGICO</a></li>
+                            <li><a href="La-Hora-Vacilona.html">LA HORA VACILONA</a></li>
+                            <li><a href="Gynkana-Vacilona.html">GYNKANA VACILONA</a></li>
+                            <li><a href="Recorrido-Corazones.html">RECORRIDO CORAZONES</a></li>
+                            <li><a href="Shows-en-Vivo.html">SHOWS EN VIVO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">GASTRONOMÍA<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="Restaurante.html">RESTAURANTE</a></li>
+                            <li><a href="Barcilón.html">BARCILÓN</a></li>
+                            <li><a href="Rincón-Chelero.html">RINCÓN CHELERO</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">SERVICIOS<i class="fa-solid fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="Eventos-Corporativos.html">EVENTOS CORPORATIVOS</a></li>
+                            <li><a href="Celebra-tu-Cumpleaños.html">CELEBRA TU CUMPLEAÑOS</a></li>
+                            <li><a href="Paseos-y-Reencuentros.html">PASEOS Y REENCUENTROS</a></li>
+                            <li><a href="Campeonatos-Deportivos.html">CAMPEONATOS DEPORTIVOS</a></li>
+                            <li><a href="Espacios-Publicitarios.html">ESPACIOS PUBLICITARIOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">¿CÓMO LLEGAR?</a>
+                    </li>
+                    <li><a target="_blank" href="https://vacilandia-park.odoo.com/contactus">CONTÁCTENOS</a></li>
+                </ul>
+                <div class="icons">
+                    <a target="_blank" href="https://www.facebook.com/vacilandiapark"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/vacilandiapark/?hl=es"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.tiktok.com/@vacilandiapark"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@vacilandiapark8512/videos"><i
+                            class="fa-brands fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/vacilandia-park/mycompany/"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="buttons">
+                    <a target="_blank" href="https://vaope.com/parque-acuatico/vacilandia-park"><button
+                            id="comprar">COMPRAR TICKETS</button></a>
+                    <a target="_blank" href="https://vacilandia-park.odoo.com/web/login" target="_blank"><button
+                            id="celeste">INGRESAR</button></a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!--SUBNAVBAR-->
+        <div id="menuPanel">
+            <div class="close-button"><i class="fa-solid fa-x"></i></div>
+            <ul class="panel-navigation">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, consequatur.
+            </ul>
+        </div>
+
+        <!--PROMOS-->
+        <section class="promos">
+            <swiper-container class="articulo" space-between="10" pagination-clickable="true" navigation="true"
+                pagination="true">
+                <swiper-slide>
+                    <img decoding="async"
+                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_auto/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/bgqq6zedxgk3b5tl8dpl"
+                        alt="">
+                </swiper-slide>
+            </swiper-container>
+        </section>
+
+        <section class="title2">
+            <h1>PISCINAS Y TOBOGANES</h1>
+        </section>
+
+        <div class="main-content">
+
+            <!-- CARDS GLOBALES -->
+
+            <section class="cards-globales">
+                <div class="container">
+                    <div class="title">
+                        <h1>NUESTROS TOBOGANES</h1>
+                    </div>
+                    <swiper-container class="carrusel-atracciones" space-between="10" pagination-clickable="true"
+                        navigation="true" pagination="true" slides-per-view="1" free-mode="true" autoplay-delay="2000"
+                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 4.5}}'>
+                        <swiper-slide>
+                            <img decoding="async" loading="lazy" id="marca"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/pfbxxspww56mxlnngn39"
+                                alt="">
+                            <div class="card">
+                                <a href="Piscinas-y-Toboganes.html"><img decoding="async" loading="lazy"
+                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/Toboganes/mxx5ma8vms2cvfvwenel"
+                                        alt=""></a>
+                            </div>
+                            <div class="text">
+                                <h1>TÓRPEDO</h1>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" loading="lazy" id="marca"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/b7dmcjdb20rklozzd4gg"
+                                alt="">
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/Toboganes/r5e9jhpnzziuzja6sws3"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <h1>RESBALÓN</h1>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" loading="lazy" id="marca"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/kewhptpfb12kwkc7jnta"
+                                alt="">
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/Toboganes/twl3h9dqp9sayqabitgz"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <h1>PERUANÓN</h1>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" loading="lazy" id="marca"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/jydxxpgyhxj5b227rvcj"
+                                alt="">
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/Toboganes/xoamrsqr5xmjkp44vsnc"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <h1>TUTTI FRUTTI</h1>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" loading="lazy" id="marca"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/ffxno0gg73zcmnokwmyc"
+                                alt="">
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/Toboganes/feohczhh1wkttgn3p7wa"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <h1>ISLA CHAPUZÓN</h1>
+                            </div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img decoding="async" loading="lazy" id="marca"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/orjm3jun4yrbmleitqdh"
+                                alt="">
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Piscinas%20y%20Toboganes/Toboganes/rxcfaqszhtcdqkrtcwhn"
+                                    alt="">
+                            </div>
+                            <div class="text">
+                                <h1>MEDUSA</h1>
+                            </div>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </section>
+
+        </div>
+
+        <!--FOOTER-->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img decoding="async" loading="lazy"
+                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_300/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
+                            alt="">
+                    </div>
+                    <div class="col">
+                        <h1>ATRACCIONES</h1>
+                        <ul>
+                            <li><a href="Piscinas-y-Toboganes.html">PISCINAS Y TOBOGANES</a></li>
+                            <li><a href="Zona-Gamer.html">ZONA GAMER</a></li>
+                            <li><a href="Vacigranja.html">VACIGRANJA</a></li>
+                            <li><a href="Canchas-Deportivas.html">CANCHAS DEPORTIVAS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h1>GASTRONOMÍA</h1>
+                        <ul>
+                            <li><a href="Restaurante.html">RESTAURANTE</a></li>
+                            <li><a href="Barcilón.html">BARCILÓN</a></li>
+                            <li><a href="Rincón-Chelero.html">RINCÓN CHELERO</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h1>SERVICIOS</h1>
+                        <ul>
+                            <li><a href="Eventos-Corporativos.html">EVENTOS CORPORATIVOS</a></li>
+                            <li><a href="Celebra-tu-Cumpleaños.html">CELEBRA TU CUMPLEAÑOS</a></li>
+                            <li><a href="Paseos-y-Reencuentros.html">PASEOS Y REENCUENTROS</a></li>
+                            <li><a href="Campeonatos-Deportivos.html">CAMPEONATOS DEPORTIVOS</a></li>
+                            <li><a href="Espacios-Publicitarios.html">ESPACIOS PUBLICITARIOS</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h1>ENTRETENIMIENTO</h1>
+                        <ul>
+                            <li><a href="Recorrido-Ecológico.html">RECORRIDO ECOLÓGICO</a></li>
+                            <li><a href="La-Hora-Vacilona.html">LA HORA VACILONA</a></li>
+                            <li><a href="Gynkana-Vacilona.html">GYNKANA VACILONA</a></li>
+                            <li><a href="Recorrido-Corazones.html">RECORRIDO CORAZONES</a></li>
+                            <li><a href="Shows-en-Vivo.html">SHOWS EN VIVO</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h1>MÁS</h1>
+                        <ul>
+                            <li><a href="Quienes-Somos.html">¿QUIENES SOMOS?</a></li>
+                            <li><a href="Libro-de-Reclamaciones.html">LIBRO DE RECLAMACIONES</a></li>
+                            <li><a href="Términos-y-Condiciones">TÉRMINOS Y CONDICIONES</a></li>
+                            <li><a href="Bolsa-Laboral.html">BOLSA LABORAL</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="https://vacilandia-park.odoo.com/contactus"><button>CONTACTÁNOS</button></a>
+                    <a href="/"><button>VOLVER AL INICIO</button></a>
+                </div>
+                <div class="terms">
+                    <h1>Desarrollado por <span><a target="_blank"
+                                href="https://www.linkedin.com/in/michael-de-la-cruz-2784951a9/">ZeyN</a></span></h1>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script async src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script async src="https://kit.fontawesome.com/f8eb9b1ffa.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

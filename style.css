@@ -86,12 +86,6 @@ video {
 
 a {
     text-decoration: none;
-    color: var(--blanco);
-    transition: all 0.3s ease-in-out;
-}
-
-a:hover {
-    color: var(--amarillo);
 }
 
 button {
@@ -140,6 +134,22 @@ button#amarillo {
     width: auto;
     color: var(--purpura);
     z-index: 4;
+}
+
+.title2 {
+    width: 100%;
+    height: auto;
+    background: var(--celeste);
+    display: flex;
+    justify-content: center;
+}
+
+.title2 h1 {
+    max-width: var(--max-width);
+    width: 100%;
+    font-family: var(--font-primario);
+    color: var(--blanco);
+    padding: 10px 0;
 }
 
 /* MUSICA */
@@ -220,16 +230,28 @@ button#amarillo {
 .navbar .row {
     display: flex;
     align-items: center;
-    height: 50px;
+    height: 60px;
     justify-content: space-evenly;
     width: 100%;
-    background: var(--purpura);
+    background: var(--blanco);
 }
 
-.navbar .row-gradient {
+.row-gradient {
     height: 10px;
+    /* Altura de la barra de progreso */
     width: 100%;
+    /* Ancho de la barra de progreso al 100% */
     background: linear-gradient(to right, var(--rojo), var(--rosado), var(--naranja), var(--amarillo), var(--verde), var(--celeste), var(--morado), var(--purpura));
+    /* Fija la barra de progreso en la ventana */
+    top: 0;
+    /* Ubica la barra de progreso en la parte superior */
+    left: 0;
+    transform-origin: left;
+    /* Establece el punto de transformación a la izquierda */
+    transform: scaleX(1);
+    /* Inicialmente, el ancho es 100% */
+    transition: transform 0.3s;
+    /* Animación de transformación */
 }
 
 .navbar .navigation {
@@ -239,8 +261,8 @@ button#amarillo {
     margin: 0;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-primario);
-    color: var(--blanco);
+    font-family: var(--font-terciario);
+    font-weight: bolder;
     font-size: var(--font-subsize);
     height: 100%;
 }
@@ -257,7 +279,7 @@ button#amarillo {
 }
 
 .navbar .navigation li:hover {
-    background: var(--morado);
+    background: var(--borde);
 }
 
 .navbar .navigation .submenu {
@@ -267,8 +289,9 @@ button#amarillo {
     left: 0;
     padding: 0;
     list-style: none;
-    background: var(--purpura);
+    background: var(--blanco);
     transition: all 0.3s ease-in-out;
+    border-radius: 0 0 20px 20px;
 }
 
 .navbar .navigation .submenu li {
@@ -290,6 +313,7 @@ button#amarillo {
     align-items: center;
     height: 100%;
     width: 100%;
+    color: var(--purpura);
 }
 
 .navbar .buttons {
@@ -456,10 +480,9 @@ button#amarillo {
 }
 
 .promos .articulo {
-    border-radius: 20px;
     width: 100%;
     display: flex;
-    margin-top: 60px;
+    margin-top: 70px;
     cursor: grab;
     overflow: hidden;
     box-shadow: var(--sombra);
@@ -544,6 +567,82 @@ button#amarillo {
 }
 
 .atracciones swiper-slide:hover>.text {
+    padding-bottom: 5px;
+}
+
+
+
+/* CARDS GLOBALES */
+
+.cards-globales {
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-globales .container {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.cards-globales .carrusel-atracciones {
+    max-width: var(--max-width);
+    width: 100%;
+    display: flex;
+    padding: var(--espacio) 0 0 0;
+}
+
+.cards-globales .card {
+    border-radius: 20px;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+.cards-globales #marca {
+    position: absolute;
+    z-index: 5;
+    width: 60px;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease-out;
+}
+
+.cards-globales .text {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.2s ease-in-out;
+}
+
+.cards-globales .text h1 {
+    margin: 0;
+    padding: 20px;
+    color: var(--blanco);
+    font-family: var(--font-primario);
+    font-size: var(--font-size);
+    font-weight: lighter;
+}
+
+.cards-globales .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+
+.cards-globales swiper-slide:hover img {
+    transform: scale(1.1);
+}
+
+.cards-globales swiper-slide:hover>.text {
     padding-bottom: 5px;
 }
 
@@ -636,6 +735,18 @@ button#amarillo {
     padding: var(--espacio) 0;
 }
 
+.gastronomia button {
+    width: 100%;
+    background: var(--blanco);
+    color: var(--rosado);
+    border: 1px solid var(--rosado);
+}
+
+.gastronomia button:hover {
+    background: var(--rosado);
+    color: var(--blanco);
+}
+
 .gastronomia .container {
     max-width: var(--max-width);
 }
@@ -654,6 +765,7 @@ button#amarillo {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: var(--sombra-global);
 }
 
 .gastronomia .col-1 .content {
@@ -686,8 +798,8 @@ button#amarillo {
 .gastronomia .col-1 .content li {
     background: var(--gris);
     color: var(--blanco);
-    font-family: var(--font-primario);
-    font-weight: lighter;
+    font-family: var(--font-terciario);
+    font-weight: bolder;
     padding: 5px;
     border-radius: 5px;
 }
@@ -864,6 +976,18 @@ button#amarillo {
     justify-content: center;
 }
 
+.mapa button {
+    width: 100%;
+    background: var(--blanco);
+    border: 1px solid var(--rosado);
+    color: var(--rosado);
+}
+
+.mapa button:hover {
+    background: var(--rosado);
+    color: var(--blanco);
+}
+
 .mapa .container {
     max-width: var(--max-width);
     width: 100%;
@@ -890,6 +1014,9 @@ button#amarillo {
     padding: 20px;
     box-shadow: var(--sombra);
     gap: 15px;
+    background: var(--sombra-global);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .mapa .container .content h1 {
@@ -1007,6 +1134,7 @@ button#amarillo {
 }
 
 .footer .container .row {
+    margin-top: 170px;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -1032,6 +1160,10 @@ button#amarillo {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.footer a {
+    color: var(--blanco);
 }
 
 .footer .container .row ul li {
@@ -1070,6 +1202,18 @@ button#amarillo {
     transition: all 0.3s ease-in-out;
 }
 
+.fill-section button {
+    background: var(--blanco);
+    color: var(--celeste);
+    width: 100%;
+    border: 1px solid var(--celeste);
+}
+
+.fill-section button:hover {
+    background: var(--celeste);
+    color: var(--blanco);
+}
+
 .fill-section:hover .image {
     transform: translateX(-20px);
 }
@@ -1083,8 +1227,8 @@ button#amarillo {
 
 .fill-section .content {
     display: flex;
-    padding: var(--espacio) 0 0 0;
-    height: 250px;
+    padding: var(--espacio) 0;
+    height: auto;
 }
 
 .fill-section .title h1 {
@@ -1099,6 +1243,7 @@ button#amarillo {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    background: var(--sombra-global);
 }
 
 .fill-section .text h1 {
