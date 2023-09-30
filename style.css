@@ -33,7 +33,7 @@ body {
     --rgba-rosado: 234, 11, 139;
     --rojo: #EC2127;
     --rgba-rojo: 236, 33, 39;
-    --gris: #949494;
+    --gris: #777777;
     --rgba-gris: 148, 148, 148;
     --blanco: #fff;
     --rgba-blanco: 255, 255, 255;
@@ -167,11 +167,11 @@ button#amarillo {
     height: auto;
     background: var(--celeste);
     box-shadow: var(--sombra);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 10px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 #music-card .cerrar {
@@ -187,12 +187,12 @@ button#amarillo {
     top: 10px;
     right: 10px;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 1px;
+    height: 14px;
     background-color: var(--rojo);
     color: var(--blanco);
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,11 +210,14 @@ button#amarillo {
     /* Color del texto del botón de reproducción (puedes personalizarlo) */
     border: none;
     border-radius: 5px;
-    font-family: var(--font-primario);
+    font-family: var(--font-secundario);
     font-weight: lighter;
     font-size: var(--font-subsize);
     cursor: pointer;
     margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     /* Espacio entre los botones */
 }
 
@@ -224,7 +227,6 @@ button#amarillo {
     width: 100%;
     position: fixed;
     z-index: 5;
-    box-shadow: var(--sombra);
 }
 
 .navbar .row {
@@ -234,6 +236,8 @@ button#amarillo {
     justify-content: space-evenly;
     width: 100%;
     background: var(--blanco);
+    z-index: 6;
+    box-shadow: var(--sombra);
 }
 
 .row-gradient {
@@ -275,7 +279,8 @@ button#amarillo {
     margin: 0;
     height: 100%;
     padding: 0 10px;
-    transition: all 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out;
+    /* Agregamos una transición suave al fondo */
 }
 
 .navbar .navigation li:hover {
@@ -290,8 +295,12 @@ button#amarillo {
     padding: 0;
     list-style: none;
     background: var(--blanco);
-    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    /* Inicialmente, el submenu es invisible */
+    transition: opacity 0.3s ease-in-out;
+    /* Agregamos una transición suave a la opacidad */
     border-radius: 0 0 20px 20px;
+    box-shadow: var(--sombra);
 }
 
 .navbar .navigation .submenu li {
@@ -305,6 +314,8 @@ button#amarillo {
 
 .navbar .navigation li:hover>.submenu {
     display: block;
+    opacity: 1;
+    /* Hacemos el submenu visible al hacer hover */
 }
 
 .navbar .navigation a {
@@ -429,6 +440,7 @@ button#amarillo {
     text-align: left;
     width: calc(100% / 4);
     border-right: 1px solid var(--borde);
+    transition: all 0.3s ease-in-out;
 }
 
 .subpanel .container .box:nth-child(1) {
@@ -449,7 +461,7 @@ button#amarillo {
 }
 
 .subpanel .container .box:hover {
-    background: var(--celeste);
+    background: var(--borde);
 }
 
 .subpanel .container .box i {
@@ -486,6 +498,7 @@ button#amarillo {
     cursor: grab;
     overflow: hidden;
     box-shadow: var(--sombra);
+    border-radius: 20px;
 }
 
 .promos .articulo video,
@@ -602,6 +615,16 @@ button#amarillo {
     box-shadow: var(--sombra);
 }
 
+.cards-globales .card::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(var(--rgba-negro), 0.7), transparent);
+}
+
 .cards-globales #marca {
     position: absolute;
     z-index: 5;
@@ -687,6 +710,11 @@ button#amarillo {
     height: auto;
     border-radius: 20px;
     box-shadow: var(--sombra);
+    transition: all 0.3s ease-in-out;
+}
+
+.entretenimiento .card:hover{
+    transform: scale(1.04);
 }
 
 .entretenimiento .card .image {
@@ -796,12 +824,18 @@ button#amarillo {
 }
 
 .gastronomia .col-1 .content li {
-    background: var(--gris);
+    background: rgba(var(--rgba-rosado), 0.4);
     color: var(--blanco);
     font-family: var(--font-terciario);
     font-weight: bolder;
     padding: 5px;
     border-radius: 5px;
+    animation: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.gastronomia .col-1 .content li:hover{
+    background: var(--rosado);
 }
 
 .gastronomia .col-1 h3 {
@@ -1244,6 +1278,9 @@ button#amarillo {
     justify-content: center;
     gap: 10px;
     background: var(--sombra-global);
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
 }
 
 .fill-section .text h1 {
