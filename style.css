@@ -1248,9 +1248,6 @@ button#amarillo {
     color: var(--blanco);
 }
 
-.fill-section:hover .image {
-    transform: translateX(-20px);
-}
 
 .fill-section .container {
     max-width: var(--max-width);
