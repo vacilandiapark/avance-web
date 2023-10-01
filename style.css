@@ -13,6 +13,7 @@ body {
     scroll-behavior: smooth;
 }
 
+
 /* VARIABLES */
 
 :root {
@@ -35,6 +36,8 @@ body {
     --rgba-rojo: 236, 33, 39;
     --gris: #777777;
     --rgba-gris: 148, 148, 148;
+    --marron: #683A10;
+    --rgba-marron: 104, 58, 16;
     --blanco: #fff;
     --rgba-blanco: 255, 255, 255;
     --negro: #040404;
@@ -50,8 +53,9 @@ body {
     --max-width: 1000px;
     --sombra-color: #f0f0f0;
     --sombra-global: linear-gradient(25deg, var(--sombra-color) 50%, var(--blanco) 0%);
+    --swiper-navigation-color: #ffffff;
+    --swiper-pagination-color: #ffffff;
 }
-
 
 .main-content {}
 
@@ -94,7 +98,7 @@ button {
     height: 100%;
     padding: 10px 20px;
     border-radius: 20px;
-    background: var(--rosado);
+    background: var(--purpura);
     color: var(--blanco);
     font-size: var(--font-subsize);
     font-family: var(--font-terciario);
@@ -134,22 +138,6 @@ button#amarillo {
     width: auto;
     color: var(--purpura);
     z-index: 4;
-}
-
-.title2 {
-    width: 100%;
-    height: auto;
-    background: var(--celeste);
-    display: flex;
-    justify-content: center;
-}
-
-.title2 h1 {
-    max-width: var(--max-width);
-    width: 100%;
-    font-family: var(--font-primario);
-    color: var(--blanco);
-    padding: 10px 0;
 }
 
 /* MUSICA */
@@ -324,7 +312,8 @@ button#amarillo {
     align-items: center;
     height: 100%;
     width: 100%;
-    color: var(--purpura);
+    color: var(--negro);
+    font-size: var(--font-subsize);
 }
 
 .navbar .buttons {
@@ -349,14 +338,20 @@ button#amarillo {
     gap: 10px;
 }
 
+.navbar .icons i{
+    color: var(--negro);
+}
+
 .navbar .logo img {
     width: 100%;
 }
 
 .navbar .hamburguer {
     display: none;
-    color: var(--blanco);
+    color: var(--purpura);
     cursor: pointer;
+    font-size: var(--font-msize);
+    padding-right: 20px;
 }
 
 /* NAVBAR RESPONSIVE */
@@ -498,7 +493,6 @@ button#amarillo {
     cursor: grab;
     overflow: hidden;
     box-shadow: var(--sombra);
-    border-radius: 20px;
 }
 
 .promos .articulo video,
@@ -615,7 +609,7 @@ button#amarillo {
     box-shadow: var(--sombra);
 }
 
-.cards-globales .card::after{
+.cards-globales .card::after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -641,7 +635,7 @@ button#amarillo {
     left: 0;
     border-radius: 0 0 20px 20px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
     transition: all 0.2s ease-in-out;
 }
 
@@ -713,7 +707,7 @@ button#amarillo {
     transition: all 0.3s ease-in-out;
 }
 
-.entretenimiento .card:hover{
+.entretenimiento .card:hover {
     transform: scale(1.04);
 }
 
@@ -834,7 +828,7 @@ button#amarillo {
     cursor: pointer;
 }
 
-.gastronomia .col-1 .content li:hover{
+.gastronomia .col-1 .content li:hover {
     background: var(--rosado);
 }
 
@@ -1318,10 +1312,432 @@ button#amarillo {
     object-fit: cover;
 }
 
+/* PISCINAS */
+
+.piscinas {
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-celeste), 0.9), rgba(var(--rgba-celeste), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.piscinas .container {
+    max-width: var(--max-width);
+    width: 100%;
+    padding: var(--espacio) 0;
+}
+
+.piscinas .container .title h1 {
+    color: var(--blanco);
+}
+
+.piscinas .row {
+    display: flex;
+    justify-content: center;
+    padding: var(--espacio) 0 0 0;
+    gap: 20px;
+}
+
+.piscinas .row .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.piscinas .row h1 {
+    color: var(--blanco);
+    font-family: var(--font-primario);
+    font-size: var(--font-msize);
+}
+
+.piscinas .row p {
+    color: var(--blanco);
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+}
+
+.piscinas .row .text,
+.piscinas .row .carrusel-image {
+    width: 50%;
+}
+
+.piscinas .image {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: all 0.2s ease-in-out;
+}
+
+.piscinas .image:hover {
+    transform: scale(0.97);
+}
+
+.piscinas .image img {
+    width: 100%;
+}
+
+.piscinas .text-interno {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: var(--espacio) 0 0 0;
+    gap: 30px;
+}
+
+.piscinas .ct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.piscinas .ct i {
+    color: var(--blanco);
+    font-size: var(--font-msize);
+}
+
+.piscinas .ct h3 {
+    font-family: var(--font-terciario);
+    font-size: var(--font-subsize);
+    color: var(--blanco);
+    margin: 0;
+}
+
+.piscinas .ct h1 {
+    font-size: var(--font-size);
+}
+
+/* ESTILOS PREGUNTAS Y RESPUESTAS */
+
+
+.faq-section {
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-section i {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.faq-section .container {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.faq-section .faq-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: var(--espacio) 0 0 0;
+}
+
+.faq-section .faq-item {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: var(--sombra);
+    background: var(--blanco);
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.faq-section .faq-item.active {
+
+    /* Color de fondo cuando la pregunta está abierta */
+}
+
+.faq-section .faq-item .question {
+    font-size: var(--font-size);
+    font-family: var(--font-secundario);
+    font-weight: bolder;
+    color: var(--purpura);
+    padding: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.faq-section .faq-item.active .question {
+    color: var(--blanco);
+    background: var(--purpura);
+    /* Color de texto cuando la pregunta está abierta */
+}
+
+.faq-section .faq-item .answer-wrapper {
+    overflow: hidden;
+    max-height: 0;
+    /* Agregamos esta propiedad aquí */
+    transition: max-height 0.3s ease;
+}
+
+.faq-section .faq-item.active .answer-wrapper {
+    max-height: 500px;
+    /* Ajusta la altura máxima deseada para el answer abierto */
+}
+
+.faq-section .faq-item .answer {
+    font-size: var(--font-size);
+    font-family: var(--font-secundario);
+    font-weight: bolder;
+    padding: 20px;
+    /* Fondo blanco del answer */
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.4s ease-in-out;
+    display: flex;
+    align-items: center;
+    /* Añadir transición */
+    opacity: 0;
+    /* Ocultar la modal inicialmente */
+    pointer-events: none;
+    /* Evitar clics en la modal oculta */
+}
+
+.modal .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modal.active {
+    opacity: 1;
+    /* Mostrar la modal activa */
+    pointer-events: auto;
+    /* Permitir interacción en la modal activa */
+}
+
+.modal-content {
+    margin: 0 auto;
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+    transform: scale(0.8);
+    /* Añadir escala inicial */
+    transition: transform 0.4s ease-in-out;
+    /* Añadir transición de escala */
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+    /* Escala completa en la modal activa */
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    opacity: 0;
+    /* Ocultar la "X" inicialmente */
+    transition: opacity 0.2s ease-in-out;
+    /* Añadir transición de opacidad */
+}
+
+.modal.active .close-modal {
+    opacity: 1;
+    /* Mostrar la "X" en la modal activa */
+}
+
+/* GALERIA */
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    padding: var(--espacio) 0;
+}
+
+.galeria .container {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.galeria .group {
+    width: 100%;
+    padding: var(--espacio) 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* Ajuste automático de columnas */
+    grid-gap: 20px;
+    /* Espacio entre las tarjetas */
+    justify-items: center;
+    overflow: hidden;
+}
+
+.galeria .image {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+}
+
+.galeria .image img {
+    width: 100%;
+}
+
+/* Cambia el cursor al pasar el ratón por encima de las imágenes */
+.galeria .image:hover {
+    opacity: 0.7;
+}
+
+.info {
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.info .container {
+    max-width: var(--max-width);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.info .text,
+.info .image {
+    width: 50%;
+}
+
+.info .image {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    transition: all 0.2s ease-in-out;
+}
+
+.info .image:hover {
+    transform: scale(0.95);
+}
+
+.info .image img {
+    width: 100%;
+}
+
+.info .text h1 {
+    color: var(--marron);
+    font-size: var(--font-msize);
+    font-family: var(--font-primario);
+}
+
+.info .text p {
+    color: var(--gris);
+    font-size: var(--font-size);
+    font-family: var(--font-secundario);
+    margin: 5px 0;
+}
+
+/* ANIMALES */
+
+.animales {
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.animales .container {
+    max-width: var(--max-width);
+    width: 100%;
+    padding: var(--espacio) 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.animales .card {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    gap: var(--espacio);
+    overflow: hidden;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    background: blanco;
+    transition: all 0.3s ease-in-out;
+}
+
+.animales .card:hover {
+    transform: scale(0.97);
+}
+
+.animales .text,
+.animales .image {
+    width: 50%;
+    overflow: hidden;
+}
+
+.animales .text h1 {
+    font-family: var(--font-primario);
+    font-size: var(--font-msize);
+    color: var(--marron);
+}
+
+.animales .text p {
+    margin: 5px 0;
+    font-family: var(--font-secundario);
+    font-size: var(--font-size);
+    color: var(--gris);
+}
+
+.animales .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* PROMOCIONES */
+
+.promociones{
+    width: 100%;
+    height: 600px;
+}
+
+.promociones img{
+    width: 100%;
+    height: 100%;
+}
+
 @media (max-width: 1100px) {
 
     main {
         margin: 0;
+    }
+
+    .atracciones,
+    .entretenimiento,
+    .servicios,
+    .mapa,
+    .fill-section,
+    .gastronomia,
+    .subpanel,
+    .reseñas,
+    .faq-section,
+    .piscinas,
+    .cards-globales,
+    .galeria {
+        padding: 20px;
+        overflow: hidden;
     }
 
     /* NAVBAR */
@@ -1384,18 +1800,6 @@ button#amarillo {
         display: block;
     }
 
-    .atracciones,
-    .entretenimiento,
-    .servicios,
-    .mapa,
-    .fill-section,
-    .gastronomia,
-    .subpanel,
-    .reseñas {
-        padding: 20px;
-        overflow: hidden;
-    }
-
     .title h1 {
         width: 100%;
     }
@@ -1417,6 +1821,21 @@ button#amarillo {
 
     .mapa .container .frame,
     .mapa .container .content {
+        width: 100%;
+    }
+
+    /* PISCINAS */
+
+    .piscinas .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .piscinas .row .text,
+    .piscinas .row .carrusel-image {
         width: 100%;
     }
 
