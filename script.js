@@ -148,3 +148,53 @@ window.addEventListener('click', (event) => {
     closeModalFunction();
   }
 });
+
+
+
+
+/* CARTA */
+
+// Activar la pestaña 1 por defecto
+document.addEventListener("DOMContentLoaded", function () {
+  openTab("tab1");
+});
+
+function openTab(tabId) {
+  // Oculta todos los contenidos de pestañas
+  const tabContents = document.querySelectorAll(".tab-content");
+  tabContents.forEach((content) => {
+    content.classList.remove("active");
+  });
+
+  // Desactivar todas las pestañas y quitar la clase 'active' y 'hovered'
+  const tabButtons = document.querySelectorAll(".tab-button");
+  tabButtons.forEach((button) => {
+    button.classList.remove("active", "hovered");
+  });
+
+  // Muestra el contenido de la pestaña seleccionada
+  const selectedTab = document.getElementById(tabId);
+  selectedTab.classList.add("active");
+
+  // Marcar la pestaña como activa y agregar la clase 'hovered'
+  const selectedTabButton = document.querySelector(`[onclick="openTab('${tabId}')"]`);
+  selectedTabButton.classList.add("active", "hovered");
+}
+
+
+
+
+
+
+
+// Obtén una referencia al botón y al pop-up
+const popupButton = document.getElementById('popup-button');
+const popup = document.querySelector('.pop-up');
+
+// Agrega un manejador de clic al botón
+popupButton.addEventListener('click', () => {
+  // Cambia el estilo del pop-up al hacer clic en el botón
+  popup.style.height = '200px';
+  popup.style.background = 'rgba(var(--rgba-blanco), 0.9)';
+  popup.style.opacity = '1';
+});
