@@ -183,18 +183,3 @@ function openTab(tabId) {
 
 
 
-
-
-
-
-// Obtén una referencia al botón y al pop-up
-const popupButton = document.getElementById('popup-button');
-const popup = document.querySelector('.pop-up');
-
-// Agrega un manejador de clic al botón
-popupButton.addEventListener('click', () => {
-  // Cambia el estilo del pop-up al hacer clic en el botón
-  popup.style.height = '200px';
-  popup.style.background = 'rgba(var(--rgba-blanco), 0.9)';
-  popup.style.opacity = '1';
-});
