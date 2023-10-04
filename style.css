@@ -232,7 +232,8 @@ button#amarillo {
     /* Altura de la barra de progreso */
     width: 100%;
     /* Ancho de la barra de progreso al 100% */
-    background: linear-gradient(to right, var(--rojo), var(--rosado), var(--naranja), var(--amarillo), var(--verde), var(--celeste), var(--morado), var(--purpura));*/
+    background: linear-gradient(to right, var(--rojo), var(--rosado), var(--naranja), var(--amarillo), var(--verde), var(--celeste), var(--morado), var(--purpura));
+    */
     /* Fija la barra de progreso en la ventana */
     top: 0;
     /* Ubica la barra de progreso en la parte superior */
@@ -1721,107 +1722,48 @@ button#amarillo {
 
 /* CARTA */
 
-.carta#tabs {
-    display: flex;
-    justify-content: center;
-}
-
-.carta#carta {
-    padding: 0;
-}
-
-.carta#tabs .container {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.carta .tabs-container {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: auto;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--blanco);
-    box-shadow: var(--sombra);
-    padding: 5px 0;
-}
-
-.carta .tabs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.carta .tab-button {
-    color: var(--negro);
-    background: transparent;
-    font-family: var(--font-secundario);
-    border: none;
-    border-radius: 0;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: var(--font-subsize);
-    margin: 0 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Agregamos una transición para el cambio de color de fondo y transformación (efecto suave al hacer clic) */
-}
-
-.carta .tab-button:hover,
-/* Efecto hover */
-.carta .tab-button.active,
-/* Efecto cuando el botón está activo */
-.carta .tab-button.active.hovered {
-    background: transparent;
-    color: var(--negro);
-    border-bottom: 3px solid var(--naranja);
-    /* Cambio de color al pasar el ratón por encima */
+.carta {
+    padding: var(--espacio) 0;
 }
 
 .carta .tab-content {
-    padding: var(--espacio) 0;
+    padding: var(--espacio) 0 0 0;
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
     border-radius: 5px;
-    opacity: 0;
+    display: flex;
+    opacity: 1;
     /* Inicialmente, ocultar contenido */
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, display 0.3s ease;
     /* Agregamos una transición de opacidad */
+    cursor: grab;
 }
 
 .carta .tab-content p {
     margin: 0;
 }
 
-.carta .tab-content.active {
-    opacity: 1;
-    /* Mostrar contenido y hacerlo opaco */
-}
-
 .carta .card {
     width: 250px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: var(--sombra);
-    transition: all 0.2s ease-in-out;
-    cursor: pointer;
     position: relative;
 }
 
-.carta .card:hover {
-    transform: scale(1.03);
+.carta .card .image {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    box-shadow: var(--sombra);
+    overflow: hidden;
 }
 
-.carta .card .image {
-    height: 200px;
-    width: 100%;
+
+.carta .card .image:hover {
+    transform: scale(1.03);
 }
 
 .carta .card .text {
@@ -1859,7 +1801,7 @@ button#amarillo {
 
 .carta .card .image img {
     width: 100%;
-    height: 100%;
+    height: 220px;
     object-fit: cover;
 }
 
@@ -1872,7 +1814,7 @@ button#amarillo {
     width: auto;
 }
 
-.carta .card:hover button {
+.carta button:hover {
     background: var(--purpura);
     color: var(--blanco);
 }
@@ -1882,6 +1824,163 @@ button#amarillo {
     color: var(--purpura);
 }
 
+/* Estilo para el botón de cierre */
+.carta .card .image .overlay .close-button {
+    position: absolute;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: var(--blanco);
+    position: sticky;
+    top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    line-height: 1;
+    text-align: right;
+    z-index: 2;
+}
+
+.carta .overlay .container {
+    padding: 15px;
+}
+
+.carta .card .overlay p {
+    margin: 5px 0;
+}
+
+.carta .card .overlay a {
+    color: var(--amarillo);
+}
+
+/* Estilo para el overlay (se mantiene como estaba) */
+.carta .card .image .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(var(--rgba-purpura), 0.95);
+    opacity: 0;
+    transition: opacity 0.3s ease, height 0.5s ease;
+    font-family: var(--font-terciario);
+    font-size: var(--font-subsize);
+    font-weight: bolder;
+    color: var(--blanco);
+    overflow-y: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.carta .terms {
+    padding: 0;
+    font-size: 0.6rem;
+    padding: 3px 5px;
+    background: transparent;
+    border: none;
+    color: var(--rosado);
+}
+
+/* PDF CARTA */
+
+.pdf {
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-naranja), 0.9), rgba(var(--rgba-naranja), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pdf button {
+    background: var(--blanco);
+    color: var(--naranja);
+}
+
+.pdf button:hover {
+    background: var(--rosado);
+    color: var(--blanco);
+}
+
+.pdf .container {
+    padding: var(--espacio) 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.pdf .carta-pdf {
+    width: 40%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.pdf .content {
+    width: 60%;
+    padding: 30px;
+    height: auto;
+}
+
+.pdf .content img {
+    width: 30%;
+
+}
+
+.pdf .content h1 {
+    font-family: var(--font-primario);
+    font-size: var(--font-msize);
+    color: var(--blanco);
+}
+
+.pdf .content p {
+    font-family: var(--font-terciario);
+    font-size: var(--font-size);
+    color: var(--blanco);
+    margin: 10px 0;
+}
+
+.pdf .carta-pdf img {
+    width: 100%;
+}
+
+/* MAP PARK */
+
+.mappark{
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    padding: var(--espacio) 0;
+}
+
+.mappark .container{
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.mappark .content{
+    padding: var(--espacio) 0 0 0;
+    width: 100%;
+}
+
+.mappark .content .map{
+    width: 80%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.mappark .content .map img{
+    width: 100%;
+}
+
+.mappark .content .filtros{
+    width: 20%;
+}
 
 @media (max-width: 1100px) {
 
@@ -1889,7 +1988,8 @@ button#amarillo {
         margin: 0;
     }
 
-    .carta#carta,
+    .pdf,
+    .carta,
     .atracciones,
     .entretenimiento,
     .servicios,
@@ -2003,6 +2103,22 @@ button#amarillo {
     .piscinas .row .text,
     .piscinas .row .carrusel-image {
         width: 100%;
+    }
+
+    .pdf .container {
+        flex-direction: column;
+    }
+
+    .pdf .carta-pdf,
+    .pdf .content{
+        width: 100%;
+    }
+
+    .pdf .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
 }

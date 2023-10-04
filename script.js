@@ -154,32 +154,26 @@ window.addEventListener('click', (event) => {
 
 /* CARTA */
 
-// Activar la pestaña 1 por defecto
-document.addEventListener("DOMContentLoaded", function () {
-  openTab("tab1");
-});
 
-function openTab(tabId) {
-  // Oculta todos los contenidos de pestañas
-  const tabContents = document.querySelectorAll(".tab-content");
-  tabContents.forEach((content) => {
-    content.classList.remove("active");
+
+function showOverlay(event) {
+  const card = event.currentTarget.closest(".card");
+  const overlay = card.querySelector(".overlay");
+
+  // Añadir la clase 'active' al overlay
+  overlay.classList.add("active");
+
+  // Establecer la altura y la opacidad deseada
+  overlay.style.height = "220px";
+  overlay.style.opacity = 1;
+
+  // Obtener el botón de cierre (X) dentro del overlay
+  const closeButton = overlay.querySelector(".close-button");
+
+  // Agregar un evento clic al botón de cierre
+  closeButton.addEventListener("click", function () {
+    // Establecer la altura y la opacidad deseada
+    overlay.style.height = "0px";
+    overlay.style.opacity = 0;
   });
-
-  // Desactivar todas las pestañas y quitar la clase 'active' y 'hovered'
-  const tabButtons = document.querySelectorAll(".tab-button");
-  tabButtons.forEach((button) => {
-    button.classList.remove("active", "hovered");
-  });
-
-  // Muestra el contenido de la pestaña seleccionada
-  const selectedTab = document.getElementById(tabId);
-  selectedTab.classList.add("active");
-
-  // Marcar la pestaña como activa y agregar la clase 'hovered'
-  const selectedTabButton = document.querySelector(`[onclick="openTab('${tabId}')"]`);
-  selectedTabButton.classList.add("active", "hovered");
 }
-
-
-
