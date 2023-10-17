@@ -177,3 +177,24 @@ function showOverlay(event) {
     overlay.style.opacity = 0;
   });
 }
+
+
+
+
+
+// Función para cambiar la pestaña activa
+function changeTab(tabIndex) {
+  // Obtener todas las pestañas y el contenido de las pestañas
+  const tabs = document.querySelectorAll('.tab');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  // Desactivar todas las pestañas y ocultar su contenido
+  for (let i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove('active');
+      tabContents[i].classList.remove('active');
+  }
+
+  // Activar la pestaña seleccionada y mostrar su contenido
+  tabs[tabIndex - 1].classList.add('active');
+  tabContents[tabIndex - 1].classList.add('active');
+}
