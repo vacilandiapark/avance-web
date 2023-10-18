@@ -190,11 +190,13 @@ function changeTab(tabIndex) {
 
   // Desactivar todas las pestañas y ocultar su contenido
   for (let i = 0; i < tabs.length; i++) {
-      tabs[i].classList.remove('active');
-      tabContents[i].classList.remove('active');
+    tabs[i].classList.remove('active');
+    tabContents[i].classList.remove('active');
   }
 
   // Activar la pestaña seleccionada y mostrar su contenido
   tabs[tabIndex - 1].classList.add('active');
   tabContents[tabIndex - 1].classList.add('active');
 }
+
+

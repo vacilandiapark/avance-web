@@ -125,8 +125,11 @@ button#amarillo {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
+    flex-direction: column;
     justify-content: center;
+    gap: 10px;
     position: relative;
+    text-align: center;
     /* Establecemos posición relativa en el contenedor */
 }
 
@@ -138,6 +141,12 @@ button#amarillo {
     width: auto;
     color: var(--purpura);
     z-index: 4;
+}
+
+.title p {
+    font-size: var(--font-size);
+    color: var(--gris);
+    font-family: var(--font-secundario);
 }
 
 /* MUSICA */
@@ -1611,7 +1620,6 @@ button#amarillo {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
 }
 
 .info .text,
@@ -1619,9 +1627,21 @@ button#amarillo {
     width: 50%;
 }
 
+.info .text {
+    background: var(--blanco);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    box-shadow: var(--sombra);
+    border-radius: 20px 0 0 20px;
+    z-index: 4;
+}
+
 .info .image {
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     box-shadow: var(--sombra);
     transition: all 0.2s ease-in-out;
     height: 300px;
@@ -1640,13 +1660,14 @@ button#amarillo {
     color: var(--marron);
     font-size: var(--font-msize);
     font-family: var(--font-primario);
+    padding: 0 20px;
 }
 
 .info .text p {
     color: var(--gris);
     font-size: var(--font-size);
     font-family: var(--font-secundario);
-    margin: 5px 0;
+    padding: 0 20px;
 }
 
 /* ANIMALES */
@@ -1671,6 +1692,7 @@ button#amarillo {
     width: 100%;
     height: 200px;
     gap: var(--espacio);
+    background: var(--blanco);
     overflow: hidden;
     align-items: center;
     border-radius: 20px;
@@ -2083,13 +2105,13 @@ button#amarillo {
 }
 
 .galeria-2 .container {
+    max-width: var(--max-width);
     width: 100%;
     padding: 0 var(--espacio);
     overflow: hidden;
 }
 
 .galeria-2 .carrusel-atracciones {
-    width: 100%;
     display: flex;
     padding: var(--espacio) 0 0 0;
 }
@@ -2100,7 +2122,7 @@ button#amarillo {
     height: 400px;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    cursor: pointer;
+    cursor: grab;
     box-shadow: var(--sombra);
 }
 
@@ -2135,7 +2157,7 @@ button#amarillo {
     font-weight: lighter;
 }
 
-.galeria-2 .text p{
+.galeria-2 .text p {
     color: var(--blanco);
     padding: 0 10px 20px 20px;
     font-family: var(--font-terciario);
@@ -2155,6 +2177,137 @@ button#amarillo {
 
 .galeria-2 swiper-slide:hover>.text {
     padding-bottom: 5px;
+}
+
+
+/* pasq cumpl*/
+
+.paqs {
+    padding: var(--espacio) 0;
+    display: flex;
+    justify-content: center;
+}
+
+.paqs .container {
+    display: flex;
+    padding: 0 var(--espacio);
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.paqs .card {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.paqs .card:nth-child(1) {
+    background: var(--morado);
+}
+
+.paqs .card:nth-child(2) {
+    background: var(--rosado);
+}
+
+.paqs .card:nth-child(3) {
+    background: var(--verde);
+}
+
+.paqs .image,
+.paqs .text {
+    width: 50%;
+    height: auto;
+}
+
+.paqs .image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* galeria-3 */
+
+#galeria-3 {
+    width: 100%;
+    height: auto;
+    background: var(--purpura);
+    margin-top: 40px;
+    position: relative;
+}
+
+#galeria-3 .container {
+    max-width: var(--max-width);
+    padding-top: 40px;
+    padding-bottom: 50px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    z-index: 4;
+    align-items: center;
+    position: relative;
+}
+
+#galeria-3 .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(var(--rgba-purpura), 0), rgba(var(--rgba-purpura), 1));
+    z-index: 8;
+    /* Ajustar z-index para colocarlo detrás del carrusel */
+}
+
+#galeria-3 .carrusel-fotos {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Agregar posición relativa */
+    z-index: 3;
+    /* Asegurarse de que el carrusel esté adelante del gradiente */
+}
+
+#galeria-3 .image {
+    width: 280px;
+    height: auto;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+#galeria-3 .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#galeria-3 .image img:hover {
+    filter: brightness(70%);
+    transform: scale(1.1);
+}
+
+
+
+#galeria-3 .text {
+    font-size: var(--font-msize);
+    color: var(--blanco);
+    font-family: var(--font-primario);
+    padding: 20px;
+}
+
+#galeria-3 .carousel .slick-prev,
+#galeria-3 .carousel .slick-next {
+    display: none;
 }
 
 @media (max-width: 1100px) {
@@ -2181,7 +2334,8 @@ button#amarillo {
     .faq-section,
     .piscinas,
     .cards-globales,
-    .galeria {
+    .galeria,
+    .paqs {
         padding: 20px;
         overflow: hidden;
     }
