@@ -1432,7 +1432,7 @@ button#amarillo {
 
 .faq-section#zona_gamer{
     background:
-        linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-rojo), 0.9)),
+        linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-naranja), 0.9)),
         url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1635,7 +1635,7 @@ button#amarillo {
 }
 
 .info .text {
-    background: var(--blanco);
+    background: var(--sombra-global);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -1712,7 +1712,7 @@ button#amarillo {
     align-items: center;
     border-radius: 20px;
     box-shadow: var(--sombra);
-    background: blanco;
+    background: var(--sombra-global);
     transition: all 0.3s ease-in-out;
 }
 
@@ -2168,6 +2168,14 @@ button#amarillo {
     justify-content: center;
 }
 
+.galeria-2#barcilon{
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-purpura), 0.9), rgba(var(--rgba-morado), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .galeria-2 .container {
     max-width: var(--max-width);
     width: 100%;
@@ -2210,6 +2218,7 @@ button#amarillo {
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease-in-out;
+    background: var(--morado);
 }
 
 .galeria-2 .text h1 {
@@ -2246,6 +2255,10 @@ button#amarillo {
 
 /* pasq cumpl*/
 
+.title-3{
+    padding: var(--espacio) 0 0 0;
+}
+
 .paqs {
     padding: var(--espacio) 0;
     display: flex;
@@ -2257,6 +2270,8 @@ button#amarillo {
     padding: 0 var(--espacio);
     max-width: var(--max-width);
     width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
 .paqs .card {
@@ -2264,21 +2279,9 @@ button#amarillo {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
     overflow: hidden;
+    border-radius: 20px;
     box-shadow: var(--sombra);
-}
-
-.paqs .card:nth-child(1) {
-    background: var(--morado);
-}
-
-.paqs .card:nth-child(2) {
-    background: var(--rosado);
-}
-
-.paqs .card:nth-child(3) {
-    background: var(--verde);
 }
 
 .paqs .image,
@@ -2293,13 +2296,58 @@ button#amarillo {
 }
 
 
+.paqs .text{
+    background: var(--sombra-global);
+    height: 100%;
+}
+
+.paqs .text .content{
+    gap: 15px;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.paqs .text h1{
+    color: var(--purpura);
+    font-size: var(--font-msize);
+    font-family: var(--font-primario);
+}
+
+.paqs .text p{
+    color: var(--negro);
+    font-family: var(--font-secundario);
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.paqs li{
+    color: var(--negro);
+    font-family: var(--font-terciario);
+    font-size: var(--font-subsize);
+}
+
+.paqs button{
+    width: 100%;
+    background: var(--blanco);
+    color: var(--morado);
+    border: 1px solid var(--morado);
+}
+
+.paqs button:hover{
+    background: var(--morado);
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+}
+
 /* galeria-3 */
 
 #galeria-3 {
     width: 100%;
     height: auto;
     background:
-        linear-gradient(45deg, rgba(var(--rgba-purpura), 0.9), rgba(var(--rgba-purpura), 0.9)),
+        linear-gradient(45deg, rgba(var(--rgba-purpura), 0.9), rgba(var(--rgba-rosado), 0.9)),
         url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Entretenimiento/7.%20RECORRIDO%20CORAZONES);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2338,6 +2386,19 @@ button#amarillo {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--sombra);
+    position: relative;
+}
+
+#galeria-3 .image .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--font-size);
+    display: flex;
+    background: linear-gradient(to bottom, rgba(var(--rgba-negro), 0.7), transparent 50%);
+
 }
 
 #galeria-3 .image img {
@@ -2347,13 +2408,6 @@ button#amarillo {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
-
-#galeria-3 .image img:hover {
-    filter: brightness(70%);
-    transform: scale(1.1);
-}
-
-
 
 #galeria-3 .text {
     font-size: var(--font-msize);
@@ -2377,7 +2431,7 @@ button#amarillo {
 
 .canchas#voley {
     background:
-        linear-gradient(45deg, rgba(var(--rgba-celeste), 0.9), rgba(var(--rgba-celeste), 0.9)),
+        linear-gradient(45deg, rgba(var(--rgba-celeste), 0.9), rgba(var(--rgba-morado), 0.9)),
         url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2385,7 +2439,7 @@ button#amarillo {
 
 .canchas#futbol {
     background:
-        linear-gradient(45deg, rgba(var(--rgba-verde), 0.9), rgba(var(--rgba-verde), 0.9)),
+        linear-gradient(45deg, rgba(var(--rgba-verde), 0.9), rgba(var(--rgba-amarillo), 0.9)),
         url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0109-min_tbgstq.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2534,6 +2588,21 @@ button#amarillo {
     }
 
     .promos .articulo {
+        width: 100%;
+    }
+
+    
+
+    .paqs .card {
+        flex-direction: column;
+    }
+
+    .paqs .container {
+        padding: 0;
+    }
+    
+    .paqs .image,
+    .paqs .text {
         width: 100%;
     }
 
