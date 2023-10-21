@@ -162,7 +162,8 @@
         </div>
 
         <swiper-container class="promociones" class="articulo" space-between="10" pagination-clickable="true"
-            navigation="true" pagination="true">
+            navigation="true" pagination="true" autoplay-delay="1500"
+            autoplay-disable-on-interaction="false">
             <swiper-slide>
                 <img src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_auto/q_auto/f_auto/v1/Materials/Gastronom%C3%ADa/ypd8cvagdyhcez8clrsz"
                     alt="">
@@ -186,123 +187,454 @@
             <section class="platos">
                 <div class="container">
                     <div class="tabs">
-                        <div class="tab active" onclick="changeTab(1)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-salad" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z"></path>
-                            <path d="M18.5 11c.351 -1.017 .426 -2.236 .5 -3.714v-1.286h-2.256c-2.83 0 -4.616 .804 -5.64 2.076"></path>
-                            <path d="M5.255 11.008a12.204 12.204 0 0 1 -.255 -2.008v-1h1.755c.98 0 1.801 .124 2.479 .35"></path>
-                            <path d="M8 8l1 -4l4 2.5"></path>
-                            <path d="M13 11v-.5a2.5 2.5 0 1 0 -5 0v.5"></path>
-                         </svg>Entradas</div>
-                        <div class="tab" onclick="changeTab(2)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3"></path>
-                         </svg>Platos de fondo</div>
-                        <div class="tab" onclick="changeTab(3)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M4 3h8l-1 9h-6z"></path>
-                            <path d="M7 18h2v3h-2z"></path>
-                            <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z"></path>
-                            <path d="M20 15v6h-1v-3"></path>
-                            <path d="M8 12l0 6"></path>
-                         </svg>Platos de fondo kids</div>
-                        <div class="tab" onclick="changeTab(4)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bottle" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M10 5h4v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v2z"></path>
-                            <path d="M14 3.5c0 1.626 .507 3.212 1.45 4.537l.05 .07a8.093 8.093 0 0 1 1.5 4.694v6.199a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2v-6.2c0 -1.682 .524 -3.322 1.5 -4.693l.05 -.07a7.823 7.823 0 0 0 1.45 -4.537"></path>
-                            <path d="M7 14.803a2.4 2.4 0 0 0 1 -.803a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 1 -.805"></path>
-                         </svg>Bebidas</div>
-                        <div class="tab" onclick="changeTab(5)"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-baguette" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M5.628 11.283l5.644 -5.637c2.665 -2.663 5.924 -3.747 8.663 -1.205l.188 .181a2.987 2.987 0 0 1 0 4.228l-11.287 11.274a3 3 0 0 1 -4.089 .135l-.143 -.135c-2.728 -2.724 -1.704 -6.117 1.024 -8.841z"></path>
-                            <path d="M9.5 7.5l1.5 3.5"></path>
-                            <path d="M6.5 10.5l1.5 3.5"></path>
-                            <path d="M12.5 4.5l1.5 3.5"></path>
-                         </svg>Sanguches</div>
+                        <div class="tab active" onclick="changeTab(1)"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-salad" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M4 11h16a1 1 0 0 1 1 1v.5c0 1.5 -2.517 5.573 -4 6.5v1a1 1 0 0 1 -1 1h-8a1 1 0 0 1 -1 -1v-1c-1.687 -1.054 -4 -5 -4 -6.5v-.5a1 1 0 0 1 1 -1z">
+                                </path>
+                                <path
+                                    d="M18.5 11c.351 -1.017 .426 -2.236 .5 -3.714v-1.286h-2.256c-2.83 0 -4.616 .804 -5.64 2.076">
+                                </path>
+                                <path
+                                    d="M5.255 11.008a12.204 12.204 0 0 1 -.255 -2.008v-1h1.755c.98 0 1.801 .124 2.479 .35">
+                                </path>
+                                <path d="M8 8l1 -4l4 2.5"></path>
+                                <path d="M13 11v-.5a2.5 2.5 0 1 0 -5 0v.5"></path>
+                            </svg>Entradas</div>
+                        <div class="tab" onclick="changeTab(2)"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-tools-kitchen-2" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3">
+                                </path>
+                            </svg>Platos de fondo</div>
+                        <div class="tab" onclick="changeTab(3)"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-tools-kitchen" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 3h8l-1 9h-6z"></path>
+                                <path d="M7 18h2v3h-2z"></path>
+                                <path d="M20 3v12h-5c-.023 -3.681 .184 -7.406 5 -12z"></path>
+                                <path d="M20 15v6h-1v-3"></path>
+                                <path d="M8 12l0 6"></path>
+                            </svg>Platos de fondo kids</div>
+                        <div class="tab" onclick="changeTab(4)"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-bottle" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M10 5h4v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v2z"></path>
+                                <path
+                                    d="M14 3.5c0 1.626 .507 3.212 1.45 4.537l.05 .07a8.093 8.093 0 0 1 1.5 4.694v6.199a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2v-6.2c0 -1.682 .524 -3.322 1.5 -4.693l.05 -.07a7.823 7.823 0 0 0 1.45 -4.537">
+                                </path>
+                                <path
+                                    d="M7 14.803a2.4 2.4 0 0 0 1 -.803a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 1 -.805">
+                                </path>
+                            </svg>Bebidas</div>
+                        <div class="tab" onclick="changeTab(5)"><svg xmlns="http://www.w3.org/2000/svg"
+                                class="icon icon-tabler icon-tabler-baguette" width="24" height="24" viewBox="0 0 24 24"
+                                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M5.628 11.283l5.644 -5.637c2.665 -2.663 5.924 -3.747 8.663 -1.205l.188 .181a2.987 2.987 0 0 1 0 4.228l-11.287 11.274a3 3 0 0 1 -4.089 .135l-.143 -.135c-2.728 -2.724 -1.704 -6.117 1.024 -8.841z">
+                                </path>
+                                <path d="M9.5 7.5l1.5 3.5"></path>
+                                <path d="M6.5 10.5l1.5 3.5"></path>
+                                <path d="M12.5 4.5l1.5 3.5"></path>
+                            </svg>Sanguches</div>
                     </div>
                     <div class="content">
                         <div class="tab-content active" id="tab1">
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://www.pequerecetas.com/wp-content/uploads/2019/07/causa-limena-receta.jpg"
+                                    alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
-                                </div>
-                            </div>
-                            
-                            <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
-                                <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>Causa a la leña clásica</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
 
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://www.pequerecetas.com/wp-content/uploads/2019/07/causa-limena-receta.jpg"
+                                    alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>Causa a la leña con ají pollero</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
 
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://madreandina.com.pe/wp-content/uploads/2021/06/salchibrasa.png" alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>Salchi Brasa</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
-                            
+
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://elcomercio.pe/resizer/aGbzSmL01MS_U4yjObfjx-4F_AQ=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/KNFMESPTIVFJ7JGL4FDNHEAFVM.jpg"
+                                    alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>Salchipapa Clásica</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Entradas/lirjcjbtjfzhqowscrra.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Alitas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://tofuu.getjusto.com/orioneat-local/resized2/zXEwXfjwCYfHP58PF-1200-1200.webp"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Porción de papas fritas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/c_fill,ar_1:1,g_auto/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Entradas/WhatsApp_Image_2022-11-23_at_13.46.51_2_fuv7iq.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Leche de tigre</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
 
                         </div>
                         <div class="tab-content" id="tab2">
-                            
+
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo/20220911_175238000_iOS_jmgnom.jpg"
+                                    alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>1/4 de Pollo con doble ensalada</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
 
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo/20220911_175238000_iOS_jmgnom.jpg"
+                                    alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
-                                </div>
-                            </div>
-                            
-                            <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
-                                <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>1/4 de pollo con papas y ensalada</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
 
                             <div class="card">
-                                <img decoding="async" loading="lazy" src="https://panellis.com/wp-content/uploads/2020/01/LSC-grisplomo.jpg" alt="">
+                                <img decoding="async" loading="lazy"
+                                    src="https://tofuu.getjusto.com/orioneat-prod-resized/fLakncEqXsZHD5HYL-1200-1200.webp"
+                                    alt="">
                                 <div class="text">
-                                    <h1>Lorem, ipsum dolor.</h1>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, necessitatibus?</p>
+                                    <h1>1/4 de pollo con tallarines</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://sumerlabs.com/sumer-app-90b8f.appspot.com/product_photos%2F697115b7af933fa7efb87d2559379baa%2Fac7d1ee0-3dec-11ec-af40-3577d9425182?alt=media&token=1cfb4e9e-9556-4318-aaee-2bd52bba12f3"
+                                    alt="">
+                                <div class="text">
+                                    <h1>1/4 de pollo con chaufa</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://tofuu.getjusto.com/orioneat-prod-resized/xkz54mLAPWd4grEoZ-1200-1200.webp"
+                                    alt="">
+                                <div class="text">
+                                    <h1>1/4 de pollo - Mostrito
+                                    </h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo/Hamburguesa_zkixzj.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pan con Hamburguesa y papas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo/Ceviches_rd8d3g.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Ceviche de pescado</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://okdiario.com/img/2017/01/12/arroz-chaufa-con-pollo_-receta-peruana.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Chaufa de pollo</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://perudelights.com/wp-content/uploads/2013/08/Chaufa-de-pescado.-jpg-2.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Chaufa de pescado</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://www.chabucarestaurant.com/wp-content/uploads/2021/02/chaufa_carne-300x374.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Chaufa de lomo</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://i.ytimg.com/vi/kkebV3kJkHg/maxresdefault.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pollo saltado</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://comidaperuanaweb.org/wp-content/uploads/2018/10/Receta-de-Tallarines-Saltado-de-Pollo-Carne-1-1-500x375.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Tallarin saltado de pollo</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://content-cocina.lecturas.com/medio/2022/03/22/salteado-de-pollo-con-verduras-y-tallarines_9f35f4ac_1200x1200.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pollo al wok con fettucini</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://wfg32p.s3.amazonaws.com/media/dishes/pescado_saltado_5323-reg.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pescado saltado</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://img-global.cpcdn.com/recipes/9d10d6621e12bd4e/400x400cq70/photo.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Tallarin saltado de pescado</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjXYnCq2KcS1RQ_nsDVVWBT_vxBEurXA9JbtlkFKnwoygDNry4_nCant5eScZi6yksSsE&usqp=CAU"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pollo al wok con fettucini</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://i.ytimg.com/vi/r2oGrH__hT0/maxresdefault.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Lomo saltado</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://larepublica.cronosmedia.glr.pe/migration/images/RGCTJNWBYFE3BKCXRQWDUQSA34.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Tallarin saltado de lomo</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://tofuu.getjusto.com/orioneat-prod/XHRZughg3MyxAuK8f-Fetuchini%20a%20la%20huancahina%20mar%20y%20tierra.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Lomo al wok con fettucini</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
                                 </div>
                             </div>
 
                         </div>
                         <div class="tab-content" id="tab3">
-                            Contenido del Producto 3.
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo%20kids/nuggets_e7lhju.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Nuggets con papas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://thumbs.dreamstime.com/b/un-plato-de-espagueti-con-nuggets-pollo-cierre-247871346.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Nuggets con tallarines</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo%20kids/WhatsApp_Image_2022-06-02_at_1.53.11_PM_dabnqh.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Hamburguesa con papas y queso</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo%20kids/sanguches_jovd8p.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pan con pollo a la leña</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/Materials/Gastronom%C3%ADa/carta/Platos%20de%20fondo%20kids/panes_qkkx17.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Pan con hotdog jumbo</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="tab-content" id="tab4">
-                            Contenido del Producto 4.
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://tiptop.com.pe/wp-content/uploads/2023/06/Gaseosas-personales-scaled.jpg"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Gaseosas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://s.cornershopapp.com/product-images/862944.jpg?versionId=q9t3o29nasXmX0Mowk.t7TcP9aFc0W22"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Rehidratantes</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <img decoding="async" loading="lazy"
+                                    src="https://tofuu.getjusto.com/orioneat-prod-resized/T9NGkZp4bYbc6atvZ-350-350.webp"
+                                    alt="">
+                                <div class="text">
+                                    <h1>Aguas</h1>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione,
+                                        necessitatibus?</p>
+                                </div>
+                            </div>
+
                         </div>
                         <div class="tab-content" id="tab5">
                             Contenido del Producto 5.

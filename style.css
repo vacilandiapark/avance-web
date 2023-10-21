@@ -96,8 +96,8 @@ button {
     width: auto;
     border: none;
     height: 100%;
-    padding: 10px 20px;
-    border-radius: 20px;
+    padding: 10px 10px;
+    border-radius: 10px;
     background: var(--purpura);
     color: var(--blanco);
     font-size: var(--font-subsize);
@@ -498,11 +498,11 @@ button#amarillo {
     max-width: 1400px;
     width: 100%;
     display: flex;
-    margin-top: 90px;
+    margin-top: calc(90px + var(--espacio));
     cursor: grab;
     overflow: hidden;
     box-shadow: var(--sombra);
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
 }
 
 .promos .articulo video,
@@ -1156,7 +1156,6 @@ button#amarillo {
 .footer {
     display: flex;
     justify-content: center;
-    padding: var(--espacio) 0 0 0;
 }
 
 .footer .container {
@@ -1431,6 +1430,14 @@ button#amarillo {
     justify-content: center;
 }
 
+.faq-section#zona_gamer{
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-rojo), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .faq-section i {
     margin-right: 20px;
     font-size: 20px;
@@ -1673,6 +1680,11 @@ button#amarillo {
 /* ANIMALES */
 
 .animales {
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-marron), 0.9), rgba(var(--rgba-marron), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: var(--espacio) 0;
     display: flex;
     justify-content: center;
@@ -1681,16 +1693,19 @@ button#amarillo {
 .animales .container {
     max-width: var(--max-width);
     width: 100%;
+}
+
+.animales .contenido {
     padding: var(--espacio) 0 0 0;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 15px;
 }
 
 .animales .card {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 150px;
     gap: var(--espacio);
     background: var(--blanco);
     overflow: hidden;
@@ -1713,14 +1728,14 @@ button#amarillo {
 
 .animales .text h1 {
     font-family: var(--font-primario);
-    font-size: var(--font-msize);
+    font-size: var(--font-size);
     color: var(--marron);
 }
 
 .animales .text p {
     margin: 5px 0;
     font-family: var(--font-secundario);
-    font-size: var(--font-size);
+    font-size: var(--font-subsize);
     color: var(--gris);
 }
 
@@ -1734,9 +1749,18 @@ button#amarillo {
 /* PROMOCIONES */
 
 .promociones {
+    max-width: 1400px;
     width: 100%;
-    height: 480px;
-    margin-top: 90px;
+    height: 450px;
+    margin-top: calc(90px + var(--espacio));
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.promociones .overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .promociones img {
@@ -1745,6 +1769,40 @@ button#amarillo {
     object-fit: cover;
 }
 
+.promociones .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(to right, rgba(var(--rgba-negro), 0.7), transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promociones .text {
+    max-width: var(--max-width);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.promociones .text h1{
+    /* Fondo oscuro con 50% de transparencia */
+    color: var(--blanco);
+    font-size: var(--font-msize);
+    font-family: var(--font-primario);
+    font-weight: lighter;
+}
+
+.promociones .text p{
+    /* Fondo oscuro con 50% de transparencia */
+    color: var(--blanco);
+    font-size: var(--font-size);
+    font-family: var(--font-secundario);
+    font-weight: lighter;
+}
 
 /* CARTA */
 
@@ -2036,6 +2094,7 @@ button#amarillo {
     display: flex;
     overflow: hidden;
     border-radius: 20px;
+    height: 150px;
     background: var(--blanco);
 }
 
@@ -2046,7 +2105,11 @@ button#amarillo {
 }
 
 .platos .text {
-    padding: 5px 20px;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
 }
 
 .platos .text h1 {
@@ -2054,6 +2117,7 @@ button#amarillo {
     font-family: var(--font-terciario);
     font-size: var(--font-size);
     font-weight: bolder;
+    line-height: 1.3;
 }
 
 .platos .text p {
@@ -2141,27 +2205,27 @@ button#amarillo {
     width: 100%;
     bottom: 0;
     left: 0;
+    gap: 10px;
     border-radius: 0 0 20px 20px;
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease-in-out;
-    background: var(--morado);
 }
 
 .galeria-2 .text h1 {
     margin: 0;
-    padding: 15px 20px;
     color: var(--blanco);
     font-family: var(--font-primario);
     font-size: var(--font-size);
     font-weight: lighter;
+    padding: 10px 0 0px 20px;
 }
 
 .galeria-2 .text p {
     color: var(--blanco);
-    padding: 0 10px 20px 20px;
     font-family: var(--font-terciario);
     font-size: var(--font-subsize);
+    padding: 0 0 20px 20px;
 }
 
 .galeria-2 .card img {
@@ -2234,10 +2298,15 @@ button#amarillo {
 #galeria-3 {
     width: 100%;
     height: auto;
-    background: var(--purpura);
-    margin-top: 40px;
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-purpura), 0.9), rgba(var(--rgba-purpura), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Entretenimiento/7.%20RECORRIDO%20CORAZONES);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
+
+
 
 #galeria-3 .container {
     max-width: var(--max-width);
@@ -2249,18 +2318,6 @@ button#amarillo {
     z-index: 4;
     align-items: center;
     position: relative;
-}
-
-#galeria-3 .container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(to right, rgba(var(--rgba-purpura), 0), rgba(var(--rgba-purpura), 1));
-    z-index: 8;
-    /* Ajustar z-index para colocarlo detrás del carrusel */
 }
 
 #galeria-3 .carrusel-fotos {
@@ -2308,6 +2365,97 @@ button#amarillo {
 #galeria-3 .carousel .slick-prev,
 #galeria-3 .carousel .slick-next {
     display: none;
+}
+
+/* CANCHAS */
+
+.canchas {
+    padding: var(--espacio);
+    display: flex;
+    justify-content: center;
+}
+
+.canchas#voley {
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-celeste), 0.9), rgba(var(--rgba-celeste), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.canchas#futbol {
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-verde), 0.9), rgba(var(--rgba-verde), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0109-min_tbgstq.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.canchas .container {
+    max-width: var(--max-width);
+    width: 100%;
+}
+
+.canchas .contenido {
+    display: flex;
+    padding: var(--espacio) 0 0 0;
+    align-items: center;
+    gap: var(--espacio);
+}
+
+.canchas#futbol .contenido {
+    padding: 0;
+}
+
+.canchas .col-image {
+    width: 60%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.canchas .col-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.canchas .col-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.canchas .col-text h5 {
+    color: var(--purpura);
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.canchas .col-text p {
+    color: var(--negro);
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+    font-weight: bold;
+}
+
+.canchas .content {
+    background: var(--blanco);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    transition: all 0.2s ease-in-out;
+}
+
+.canchas .content:hover {
+    transform: scale(1.03);
+}
+
+.canchas button {
+    width: 100%;
 }
 
 @media (max-width: 1100px) {
