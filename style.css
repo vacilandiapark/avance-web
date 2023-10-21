@@ -1648,7 +1648,7 @@ button#amarillo {
 
 .info .image {
     overflow: hidden;
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px;
     box-shadow: var(--sombra);
     transition: all 0.2s ease-in-out;
     height: 300px;
@@ -2042,7 +2042,7 @@ button#amarillo {
 
 .platos .tabs {
     display: flex;
-    overflow: hidden;
+    overflow: scroll;
     border-radius: 20px;
     width: 100%;
     gap: 15px;
@@ -2468,6 +2468,7 @@ button#amarillo {
         padding: 0;
     }
 
+    .info,
     .platos,
     .pdf,
     .carta,
@@ -2483,7 +2484,8 @@ button#amarillo {
     .piscinas,
     .cards-globales,
     .galeria,
-    .paqs {
+    .paqs,
+    .promociones .text {
         padding: 20px;
         overflow: hidden;
     }
@@ -2601,6 +2603,32 @@ button#amarillo {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .info .container {
+        flex-direction: column;
+    }
+    
+    .info .text,
+    .info .image {
+        width: 100%;
+    }
+
+    .canchas .contenido {
+        flex-direction: column;
+    }
+
+    .canchas .col-image{
+        order: 1;
+    }
+
+    .canchas .col-text{
+        order: 2;
+    }
+
+    .canchas .col-image,
+    .canchas .col-text{
+        width: 100%;
     }
 
 }
