@@ -298,6 +298,7 @@ button#amarillo {
     /* Agregamos una transición suave a la opacidad */
     border-radius: 0 0 20px 20px;
     box-shadow: var(--sombra);
+    overflow: hidden;
 }
 
 .navbar .navigation .submenu li {
@@ -595,6 +596,11 @@ button#amarillo {
     padding: var(--espacio) 0;
     display: flex;
     justify-content: center;
+    background:
+        linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-naranja), 0.9)),
+        url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .cards-globales .container {
@@ -1430,7 +1436,7 @@ button#amarillo {
     justify-content: center;
 }
 
-.faq-section#zona_gamer{
+.faq-section#zona_gamer {
     background:
         linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-naranja), 0.9)),
         url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
@@ -1769,7 +1775,7 @@ button#amarillo {
     object-fit: cover;
 }
 
-.promociones .content{
+.promociones .content {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1788,7 +1794,7 @@ button#amarillo {
     gap: 10px;
 }
 
-.promociones .text h1{
+.promociones .text h1 {
     /* Fondo oscuro con 50% de transparencia */
     color: var(--blanco);
     font-size: var(--font-msize);
@@ -1796,7 +1802,7 @@ button#amarillo {
     font-weight: lighter;
 }
 
-.promociones .text p{
+.promociones .text p {
     /* Fondo oscuro con 50% de transparencia */
     color: var(--blanco);
     font-size: var(--font-size);
@@ -2042,7 +2048,6 @@ button#amarillo {
 
 .platos .tabs {
     display: flex;
-    overflow: scroll;
     border-radius: 20px;
     width: 100%;
     gap: 15px;
@@ -2168,7 +2173,7 @@ button#amarillo {
     justify-content: center;
 }
 
-.galeria-2#barcilon{
+.galeria-2#barcilon {
     background:
         linear-gradient(45deg, rgba(var(--rgba-purpura), 0.9), rgba(var(--rgba-morado), 0.9)),
         url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
@@ -2255,7 +2260,7 @@ button#amarillo {
 
 /* pasq cumpl*/
 
-.title-3{
+.title-3 {
     padding: var(--espacio) 0 0 0;
 }
 
@@ -2284,10 +2289,14 @@ button#amarillo {
     box-shadow: var(--sombra);
 }
 
-.paqs .image,
+.paqs .image {
+    width: 50%;
+    height: 100%;
+}
+
 .paqs .text {
     width: 50%;
-    height: auto;
+    height: 100%;
 }
 
 .paqs .image img {
@@ -2296,12 +2305,12 @@ button#amarillo {
 }
 
 
-.paqs .text{
+.paqs .text {
     background: var(--sombra-global);
     height: 100%;
 }
 
-.paqs .text .content{
+.paqs .text .content {
     gap: 15px;
     display: flex;
     height: 100%;
@@ -2309,33 +2318,33 @@ button#amarillo {
     padding: 20px;
 }
 
-.paqs .text h1{
+.paqs .text h1 {
     color: var(--purpura);
     font-size: var(--font-msize);
     font-family: var(--font-primario);
 }
 
-.paqs .text p{
+.paqs .text p {
     color: var(--negro);
     font-family: var(--font-secundario);
     font-size: var(--font-size);
     font-weight: bold;
 }
 
-.paqs li{
+.paqs li {
     color: var(--negro);
     font-family: var(--font-terciario);
     font-size: var(--font-subsize);
 }
 
-.paqs button{
+.paqs button {
     width: 100%;
     background: var(--blanco);
     color: var(--morado);
     border: 1px solid var(--morado);
 }
 
-.paqs button:hover{
+.paqs button:hover {
     background: var(--morado);
     color: var(--blanco);
     border: 1px solid var(--blanco);
@@ -2389,7 +2398,7 @@ button#amarillo {
     position: relative;
 }
 
-#galeria-3 .image .text{
+#galeria-3 .image .text {
     position: absolute;
     top: 0;
     left: 0;
@@ -2512,6 +2521,67 @@ button#amarillo {
     width: 100%;
 }
 
+/* GALERIA 4 */
+
+.galeria-4 {
+    padding: var(--espacio);
+}
+
+.galeria-4 .container {
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.galeria-4 .mySwiper,
+.galeria-4 .mySwiper2 {
+    height: 100%;
+}
+
+.galeria-4 .content {
+    display: flex;
+    height: 400px;
+    gap: 10px;
+}
+
+.galeria-4 .mySwiper {
+    width: 70%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.galeria-4 .mySwiper2 {
+    width: 30%;
+}
+
+.galeria-4 swiper-slide img {
+    display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria-4 .mySwiper2 swiper-slide {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.galeria-4 .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.galeria-4 swiper-slide img {
+    display: sw </swiper-slidek;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (max-width: 1100px) {
 
     main {
@@ -2591,7 +2661,7 @@ button#amarillo {
         width: 100%;
     }
 
-    
+
 
     .paqs .card {
         flex-direction: column;
@@ -2600,7 +2670,7 @@ button#amarillo {
     .paqs .container {
         padding: 0;
     }
-    
+
     .paqs .image,
     .paqs .text {
         width: 100%;
@@ -2677,7 +2747,7 @@ button#amarillo {
     .info .container {
         flex-direction: column;
     }
-    
+
     .info .text,
     .info .image {
         width: 100%;
@@ -2687,16 +2757,16 @@ button#amarillo {
         flex-direction: column;
     }
 
-    .canchas .col-image{
+    .canchas .col-image {
         order: 1;
     }
 
-    .canchas .col-text{
+    .canchas .col-text {
         order: 2;
     }
 
     .canchas .col-image,
-    .canchas .col-text{
+    .canchas .col-text {
         width: 100%;
     }
 
