@@ -1875,7 +1875,7 @@ button#amarillo {
 }
 
 .carta .card .text {
-    background: var(--blanco);
+    background: var(--sombra-global);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2609,7 +2609,7 @@ button#amarillo {
     width: 100%;
     display: flex;
     align-items: center;
-    height: 130vh;
+    height: 140vh;
 }
 
 .wave .col-image{
@@ -2625,6 +2625,7 @@ button#amarillo {
 .wave .col-text{
     width: 65%;
     height: 100%;
+    overflow-y: auto;
 }
 
 .wave .content{
@@ -2648,7 +2649,7 @@ button#amarillo {
 
 .wave .row h1{
     color: var(--negro);
-    font-size: var(--font-msize);
+    font-size: var(--font-size);
     font-family: var(--font-primario);
 }
 
@@ -2656,6 +2657,135 @@ button#amarillo {
     color: var(--negro);
     font-size: var(--font-subsize);
     font-family: var(--font-secundario);
+}
+
+.wave button{
+    width: 100%;
+    background: none;
+    color: var(--purpura);
+    border: 1px solid var(--purpura);
+}
+
+.wave button:hover{
+    background: var(--purpura);
+    color: var(--blanco);
+}
+
+/* TRABAJO */
+
+.trabajo{
+    padding: var(--espacio) 0;
+    
+}
+
+.trabajo .container{
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+.trabajo .content{
+    display: flex;
+    gap: 10px;
+    padding: var(--espacio) 0 0 0;
+}
+
+.trabajo .fram{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.trabajo iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.trabajo .col-wrapper{
+    width: 60%;
+}
+
+.trabajo .col-form{
+    width: 40%;
+    background: var(--blanco);
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.trabajo .col-form .text h1{
+    color: var(--negro);
+    font-size: var(--font-size);
+    font-family: var(--font-primario);
+    text-transform: uppercase;
+}
+
+.trabajo .col-form .text p{
+    margin: 10px 0;
+    color: var(--negro);
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+}
+
+.trabajo li{
+    color: var(--negro);
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+}
+
+.trabajo .col-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trabajo .card{
+    display: flex;
+    height: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.trabajo .card img{
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.trabajo .card .text{
+    padding: 20px;
+    background: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.trabajo .card .text h1{
+    color: var(--negro);
+    font-size: var(--font-size);
+    font-family: var(--font-primario);
+}
+
+.trabajo .card .text p{
+    color: var(--negro);
+    font-size: var(--font-subsize);
+    font-family: var(--font-secundario);
+}
+
+.trabajo .col-wrapper button{
+    width: 100%;
+    background: none;
+    color: var(--purpura);
+    border: 1px solid var(--purpura);
+}
+
+.trabajo .col-wrapper button:hover{
+    background: var(--purpura);
+    color: var(--blanco);
 }
 
 @media (max-width: 1100px) {
