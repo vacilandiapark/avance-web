@@ -159,7 +159,7 @@
 
         <!--PROMOS-->
         <section class="promos">
-            <swiper-container class="articulo" space-between="10" pagination-clickable="true" navigation="true"
+            <swiper-container class="articulo" space-between="15" pagination-clickable="true" navigation="true"
                 pagination="true">
                 <swiper-slide>
                     <video
@@ -188,52 +188,56 @@
                     <div class="title">
                         <h1>NUESTRAS ATRACCIONES</h1>
                     </div>
-                    <swiper-container class="carrusel-atracciones" space-between="10" pagination-clickable="true"
-                        navigation="true" pagination="true" slides-per-view="1" free-mode="true" autoplay-delay="2000"
+                    <swiper-container class="carrusel-atracciones" space-between="15" pagination-clickable="true"
+                        navigation="true" pagination="true" slides-per-view="1.5" free-mode="true" autoplay-delay="2000"
                         autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}'>
                         <swiper-slide>
                             <i class="fa-solid fa-water-ladder"></i>
-                            <div class="card">
-                                <a href="Piscinas-y-Toboganes.html"><img decoding="async" loading="lazy"
+                            <a href="Piscinas-y-Toboganes.html">
+                                <div class="card">
+                                    <img decoding="async" loading="lazy"
                                         src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp"
-                                        alt=""></a>
-                            </div>
-                            <div class="text" style="background: var(--celeste);">
-                                <h1>PISCINAS Y TOBOGANES</h1>
-                            </div>
+                                        alt="">
+                                </div>
+                                <div class="text" style="background: var(--celeste);">
+                                    <h1>PISCINAS Y TOBOGANES</h1>
+                                </div>
+                            </a>
                         </swiper-slide>
                         <swiper-slide>
                             <i class="fa-solid fa-cow"></i>
-                            <div class="card">
-                                <a href="Vacigranja.html"><img decoding="async" loading="lazy"
-                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/dwezh6fmq4oc2dhrsvqt"
-                                        alt=""></a>
-                            </div>
-                            <div class="text" style="background: var(--morado);">
-                                <h1>VACIGRANJA</h1>
-                            </div>
+                            <a href="Vacigranja.html">
+                                <div class="card">
+                                    <a href="Vacigranja.html"><img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/dwezh6fmq4oc2dhrsvqt"
+                                            alt="">
+                                </div>
+                                <div class="text" style="background: var(--morado);">
+                                    <h1>VACIGRANJA</h1>
+                                </div>
+                            </a>
                         </swiper-slide>
                         <swiper-slide>
                             <i class="fa-solid fa-gamepad"></i>
-                            <div class="card">
+                            <a href="Zona-Gamer.html"><div class="card">
                                 <img decoding="async" loading="lazy"
                                     src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/ttubxel0u0muarubleju"
                                     alt="">
                             </div>
                             <div class="text" style="background: var(--rojo);">
                                 <h1>ZONA GAMER</h1>
-                            </div>
+                            </div></a>
                         </swiper-slide>
                         <swiper-slide>
                             <i class="fa-solid fa-futbol"></i>
-                            <div class="card">
+                            <a href="Canchas-Deportivas.html"><div class="card">
                                 <img decoding="async" loading="lazy"
                                     src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/mwbkfyjigdrigsozcxjh"
                                     alt="">
                             </div>
                             <div class="text" style="background: var(--verde);">
                                 <h1>CANCHAS DEPORTIVAS</h1>
-                            </div>
+                            </div></a>
                         </swiper-slide>
                     </swiper-container>
                 </div>
@@ -280,7 +284,7 @@
                 <div class="title">
                     <h1>PROMOCIONES</h1>
                 </div>
-                <swiper-container class="tab-content active" class="carrusel-atracciones" space-between="30"
+                <swiper-container class="tab-content active" class="carrusel-atracciones" space-between="15"
                     pagination-clickable="true" navigation="true" pagination="true" slides-per-view="1.5"
                     free-mode="true" breakpoints='{"900": {"slidesPerView": 3.5}}'>
                     <swiper-slide class="card">
@@ -314,8 +318,11 @@
                                     </div>
                                 </div>
                                 <a href="#" class="terms">Términos y condiciones</a>
-                                <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
-                                    información</button>
+                                <div class="buttons">
+                                    <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
+                                        información</button>
+                                    <a href=""><button id="comprar">Comprar</button></a>
+                                </div>
                             </div>
                         </div>
                     </swiper-slide>
@@ -352,8 +359,11 @@
                                     </div>
                                 </div>
                                 <a href="#" class="terms">Términos y condiciones</a>
-                                <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
-                                    información</button>
+                                <div class="buttons">
+                                    <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
+                                        información</button>
+                                    <a href=""><button id="comprar">Comprar</button></a>
+                                </div>
                             </div>
                         </div>
                     </swiper-slide>
@@ -391,8 +401,11 @@
                                     </div>
                                 </div>
                                 <a href="#" class="terms">Términos y condiciones</a>
-                                <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
-                                    información</button>
+                                <div class="buttons">
+                                    <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
+                                        información</button>
+                                    <a href=""><button id="comprar">Comprar</button></a>
+                                </div>
                             </div>
                         </div>
                     </swiper-slide>
@@ -431,8 +444,11 @@
                                     </div>
                                 </div>
                                 <a href="#" class="terms">Términos y condiciones</a>
-                                <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
-                                    información</button>
+                                <div class="buttons">
+                                    <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
+                                        información</button>
+                                    <a href=""><button id="comprar">Comprar</button></a>
+                                </div>
                             </div>
                         </div>
                     </swiper-slide>
@@ -614,8 +630,8 @@
                     <div class="title">
                         <h1>SERVICIOS</h1>
                     </div>
-                    <swiper-container class="contenido carrusel" space-between="10" pagination-clickable="true"
-                        navigation="true" pagination="true" slides-per-view="1" free-mode="true" autoplay-delay="2000"
+                    <swiper-container class="contenido carrusel" space-between="15" pagination-clickable="true"
+                        navigation="true" pagination="true" slides-per-view="1.5" free-mode="true" autoplay-delay="2000"
                         autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}'>
                         <swiper-slide>
                             <div class="card">
@@ -707,8 +723,8 @@
                     <div class="title">
                         <h1>CLIENTES SATISFECHOS</h1>
                     </div>
-                    <swiper-container class="reseña-carrusel carrusel" space-between="10" pagination-clickable="true"
-                        navigation="true" pagination="true" slides-per-view="1" free-mode="true" autoplay-delay="2000"
+                    <swiper-container class="reseña-carrusel carrusel" space-between="15" pagination-clickable="true"
+                        navigation="true" pagination="true" slides-per-view="1.5" free-mode="true" autoplay-delay="2000"
                         autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}'>
                         <swiper-slide>
                             <div class="card">
