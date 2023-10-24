@@ -465,7 +465,7 @@ button#amarillo {
 
 #menuPanel {
     display: none;
-    background: var(--morado);
+    background: var(--blanco);
     color: var(--blanco);
     position: fixed;
     top: 0;
@@ -1555,6 +1555,24 @@ button#amarillo {
     justify-content: center;
 }
 
+#nav-responsive .answer{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+}
+
+#nav-responsive .container{
+    overflow-x: auto;
+}
+
+#nav-responsive button{
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    background: var(--blanco);
+    color: var(--negro);
+}
+
 .faq-section#zona_gamer {
     background:
         linear-gradient(45deg, rgba(var(--rgba-rojo), 0.9), rgba(var(--rgba-naranja), 0.9)),
@@ -1609,6 +1627,22 @@ button#amarillo {
 .faq-section .faq-item.active .question {
     color: var(--blanco);
     background: var(--purpura);
+    /* Color de texto cuando la pregunta está abierta */
+}
+
+#nav-responsive .faq-item .question {
+    color: var(--purpura);
+    padding: 10px;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-family: var(--font-terciario);
+    font-size: var(--font-subsize);
+}
+
+#nav-responsive .faq-item.active .question {
+    color: var(--blanco);
+    background: var(--gris);
     /* Color de texto cuando la pregunta está abierta */
 }
 
@@ -2915,6 +2949,7 @@ button#amarillo {
 
     .subnavbar .container {
         flex-direction: row;
+        justify-content: center;
         padding: 10px;
     }
 
