@@ -227,17 +227,28 @@ button#amarillo {
 .info-container {
     position: fixed;
     top: 0;
-    left: -100%; /* Inicialmente, fuera de la pantalla */
-    width: 400px; /* Ancho personalizable */
-    height: 100%; /* Alto personalizable */
+    left: -100%;
+    /* Inicialmente, fuera de la pantalla */
+    width: 400px;
+    /* Ancho personalizable */
+    height: 100%;
+    /* Alto personalizable */
     padding-left: 50px;
     background: #f6f5f5;
     box-shadow: var(--sombra);
-    transition: left 0.3s ease; /* Agregar transición */
+    transition: left 0.3s ease;
+    /* Agregar transición */
     z-index: 6;
 }
 
-.info-container .content{
+
+
+.info-container.active {
+    left: 0;
+    /* Mostrar el contenedor desde la izquierda */
+}
+
+.info-container .content {
     padding: 40px 20px 20px 20px;
     display: flex;
     flex-direction: column;
@@ -245,13 +256,13 @@ button#amarillo {
     align-items: start;
 }
 
-.info-container h1{
+.info-container h1 {
     color: var(--purpura);
     font-family: var(--font-primario);
     font-size: var(--font-msize);
 }
 
-.info-container h2{
+.info-container h2 {
     width: auto;
     color: var(--blanco);
     font-family: var(--font-primario);
@@ -260,51 +271,47 @@ button#amarillo {
     border-radius: 10px;
 }
 
-.info-container .image{
+.info-container .image {
     width: 100%;
     overflow: hidden;
     border-radius: 20px;
     box-shadow: var(--sombra);
 }
 
-.info-container .image img{
+.info-container .image img {
     width: 100%;
 }
 
-.info-container button{
+.info-container button {
     width: 100%;
 }
 
-.info-container p{
+.info-container p {
     font-size: var(--font-subsize);
     color: var(--negro);
     font-family: var(--font-secundario);
 }
 
-.info-container h2:nth-child(2){
+.info-container h2:nth-child(2) {
     background: linear-gradient(to right, rgba(var(--rgba-verde)), rgba(var(--rgba-celeste)));
 }
 
-.info-container h2:nth-child(4){
+.info-container h2:nth-child(4) {
     background: linear-gradient(to right, rgba(var(--rgba-celeste)), rgba(var(--rgba-morado)));
 }
 
-.info-container h2:nth-child(6){
+.info-container h2:nth-child(6) {
     background: linear-gradient(to right, rgba(var(--rgba-rojo)), rgba(var(--rgba-naranja)));
 }
 
-.info-container h2:nth-child(8){
+.info-container h2:nth-child(8) {
     background: linear-gradient(to right, rgba(var(--rgba-naranja)), rgba(var(--rgba-rosado)));
 }
 
-.info-container h2:nth-child(10){
+.info-container h2:nth-child(10) {
     background: linear-gradient(to right, rgba(var(--rgba-verde)), rgba(var(--rgba-amarillo)));
 }
 
-
-.info-container.active {
-    left: 0; /* Mostrar el contenedor desde la izquierda */
-}
 
 
 
@@ -1278,7 +1285,7 @@ button#amarillo {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    padding: var(--espacio) 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1289,7 +1296,7 @@ button#amarillo {
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 .footer .container .row img {
@@ -2900,6 +2907,31 @@ button#amarillo {
         margin: 0;
     }
 
+    .subnavbar {
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+    }
+
+    .subnavbar .container {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    /* INFO CONTAINER */
+
+    .info-container{
+        left: -200%;
+        padding: 0;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .promos .articulo,
+    .promociones .articulo{
+        border-radius: 0;
+    }
+
     .platos .container {
         padding: 0;
     }
@@ -2927,6 +2959,10 @@ button#amarillo {
     }
 
     /* NAVBAR */
+
+    .navbar {
+        width: 100%;
+    }
 
     .navbar .hamburguer {
         display: block;
@@ -2960,6 +2996,21 @@ button#amarillo {
 
     :root {
         --sombra: 0;
+    }
+
+    .footer{
+        height: calc(100% - 50px);
+    }
+
+    .footer .container .row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .footer .container .col{
+        padding: 0;
+        padding: 20px;
+        border-bottom: 1px solid var(--blanco);
     }
 
     /* promos */
