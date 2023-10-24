@@ -2440,6 +2440,7 @@ button#amarillo {
     width: 100%;
     overflow: hidden;
     border-radius: 20px;
+    height: auto;
 }
 
 .paqs .card {
@@ -2453,12 +2454,12 @@ button#amarillo {
 }
 
 .paqs .image {
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
 
 .paqs .text {
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 
