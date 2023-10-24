@@ -113,7 +113,7 @@ const closeModal = document.getElementById('close-modal');
 // Función para mostrar el modal
 function openModal(imgSrc) {
   // Restablecer la escala a su valor inicial
-  modalContent.style.transform = 'scale(0.8)';
+  modalContent.style.transform = 'scale(0.3)';
 
   modal.style.display = 'block';
   modal.classList.add('active'); // Agregar la clase "active" para mostrar la modal
@@ -121,7 +121,7 @@ function openModal(imgSrc) {
 
   // Retrasar ligeramente la aplicación de la escala para permitir la transición
   setTimeout(() => {
-    modalContent.style.transform = 'scale(1)';
+    modalContent.style.transform = 'scale(0.5)';
   }, 0);
 }
 
@@ -203,33 +203,24 @@ function changeTab(tabIndex) {
 
 
 
-
-
 function toggleInfo(infoNumber) {
-  const infoContainer = document.getElementById(`info-${infoNumber}`);
+  const targetClass = `info-${infoNumber}`;
+  const infoContainers = document.querySelectorAll(`.${targetClass}`);
 
   // Verificar si el contenedor está activo o inactivo
-  if (infoContainer.classList.contains('active')) {
-    // Ocultar el contenedor con animación inversa
-    infoContainer.classList.remove('active');
-  } else {
-    // Mostrar el contenedor con animación de izquierda a derecha
-    infoContainer.classList.add('active');
-  }
+  const isOpen = infoContainers[0].classList.contains('active');
 
-  // Cerrar todos los demás contenedores activos
+  // Cerrar todos los contenedores activos
   const allInfoContainers = document.querySelectorAll('.info-container');
-  allInfoContainers.forEach((container) => {
-    if (container.id !== `info-${infoNumber}` && container.classList.contains('active')) {
-      container.classList.remove('active');
-    }
-  });
-}
-
-// Cerrar todos los contenedores al hacer clic en cualquier parte de la pantalla
-document.addEventListener('click', function (event) {
-  const allInfoContainers = document.querySelectorAll('.info-container');
-  allInfoContainers.forEach((container) => {
+  allInfoContainers.forEach(container => {
     container.classList.remove('active');
   });
-});
+
+  // Abrir el contenedor si no estaba abierto previamente
+  if (!isOpen) {
+    infoContainers[0].classList.add('active');
+  }
+
+  // Evitar la propagación del evento para que no afecte al modal de imagen
+  event.stopPropagation();
+}
