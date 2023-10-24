@@ -46,7 +46,8 @@ body {
     --font-msize: 2rem;
     --font-size: 1rem;
     --font-subsize: 0.75rem;
-    --font-primario: 'Lilita One', sans-serif;;
+    --font-primario: 'Lilita One', sans-serif;
+    ;
     --font-secundario: 'Montserrat Alternates', sans-serif;
     --font-terciario: 'Poppins', sans-serif;
     --sombra: 1px 1px 14px 6px rgba(0, 0, 0, .06);
@@ -81,6 +82,7 @@ b {
 
 main {
     overflow: hidden;
+    margin-left: 50px;
 }
 
 img,
@@ -96,7 +98,7 @@ button {
     width: auto;
     border: none;
     height: 100%;
-    padding: 10px 10px;
+    padding: 5px 10px;
     border-radius: 10px;
     background: var(--purpura);
     color: var(--blanco);
@@ -152,23 +154,7 @@ button#amarillo {
 /* MUSICA */
 
 #music-card {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 20px;
-    z-index: 4;
-}
-
-#music-card .container {
-    width: auto;
-    height: auto;
-    background: var(--celeste);
-    box-shadow: var(--sombra);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    width: 100%;
 }
 
 #music-card .cerrar {
@@ -177,51 +163,155 @@ button#amarillo {
 
 }
 
-/* Estilos para el botón de cierre */
-#music-card #close-button {
-    position: absolute;
-    z-index: 4;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    width: 1px;
-    height: 14px;
-    background-color: var(--rojo);
-    color: var(--blanco);
-    border: none;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 /* Estilos para los controles de reproducción de música */
 #music-card #play-button {
-    width: 50px;
-    /* Ancho del botón de reproducción */
-    height: 30px;
     /* Altura del botón de reproducción */
-    background-color: var(--celeste);
+    background: linear-gradient(to top right, rgba(var(--rgba-celeste)), rgba(var(--rgba-rosado)));
     /* Color de fondo del botón de reproducción (puedes personalizarlo) */
     color: var(--blanco);
-    /* Color del texto del botón de reproducción (puedes personalizarlo) */
-    border: none;
-    border-radius: 5px;
     font-family: var(--font-secundario);
     font-weight: lighter;
     font-size: var(--font-subsize);
     cursor: pointer;
-    margin: 5px 0;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     text-align: center;
     /* Espacio entre los botones */
 }
 
+.subnavbar {
+    width: 50px;
+    height: 100%;
+    background: var(--blanco);
+    box-shadow: var(--sombra);
+    position: fixed;
+    z-index: 7;
+}
+
+.subnavbar .container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    align-items: center;
+    gap: 10px;
+}
+
+.subnavbar .item {
+    width: 85%;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.subnavbar p {
+    color: var(--negro);
+    font-family: var(--font-secundario);
+    font-size: var(--font-subsize);
+}
+
+.subnavbar .item:hover {
+    background: var(--borde);
+}
+
+.subnavbar img,
+.subnavbar svg {
+    width: 100%;
+}
+
+.subnavbar svg {
+    width: 25px;
+    color: var(--gris);
+}
+
+.info-container {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Inicialmente, fuera de la pantalla */
+    width: 400px; /* Ancho personalizable */
+    height: 100%; /* Alto personalizable */
+    padding-left: 50px;
+    background: #f6f5f5;
+    box-shadow: var(--sombra);
+    transition: left 0.3s ease; /* Agregar transición */
+    z-index: 6;
+}
+
+.info-container .content{
+    padding: 40px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+}
+
+.info-container h1{
+    color: var(--purpura);
+    font-family: var(--font-primario);
+    font-size: var(--font-msize);
+}
+
+.info-container h2{
+    width: auto;
+    color: var(--blanco);
+    font-family: var(--font-primario);
+    font-size: var(--font-size);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.info-container .image{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.info-container .image img{
+    width: 100%;
+}
+
+.info-container button{
+    width: 100%;
+}
+
+.info-container p{
+    font-size: var(--font-subsize);
+    color: var(--negro);
+    font-family: var(--font-secundario);
+}
+
+.info-container h2:nth-child(2){
+    background: linear-gradient(to right, rgba(var(--rgba-verde)), rgba(var(--rgba-celeste)));
+}
+
+.info-container h2:nth-child(4){
+    background: linear-gradient(to right, rgba(var(--rgba-celeste)), rgba(var(--rgba-morado)));
+}
+
+.info-container h2:nth-child(6){
+    background: linear-gradient(to right, rgba(var(--rgba-rojo)), rgba(var(--rgba-naranja)));
+}
+
+.info-container h2:nth-child(8){
+    background: linear-gradient(to right, rgba(var(--rgba-naranja)), rgba(var(--rgba-rosado)));
+}
+
+.info-container h2:nth-child(10){
+    background: linear-gradient(to right, rgba(var(--rgba-verde)), rgba(var(--rgba-amarillo)));
+}
+
+
+.info-container.active {
+    left: 0; /* Mostrar el contenedor desde la izquierda */
+}
+
+
+
 /* NAVBAR */
 
 .navbar {
-    width: 100%;
+    width: calc(100% - 50px);
     position: fixed;
     z-index: 5;
 }
@@ -229,7 +319,7 @@ button#amarillo {
 .navbar .row {
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 50px;
     justify-content: space-evenly;
     width: 100%;
     background: var(--blanco);
@@ -237,7 +327,7 @@ button#amarillo {
 }
 
 .row-gradient {
-    height: 15px;
+    height: 10px;
     /* Altura de la barra de progreso */
     width: 100%;
     /* Ancho de la barra de progreso al 100% */
@@ -323,7 +413,7 @@ button#amarillo {
     height: 100%;
     width: 100%;
     font-family: var(--font-terciario);
-    color: var(--negro);
+    color: var(--gris);
     font-size: var(--font-subsize);
 }
 
@@ -334,7 +424,7 @@ button#amarillo {
 }
 
 .navbar .logo {
-    width: 100px;
+    width: 70px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     display: flex;
@@ -491,15 +581,15 @@ button#amarillo {
 
 .promos {
     display: flex;
-    height: 593px;
+    height: 520px;
     justify-content: center;
 }
 
 .promos .articulo {
-    max-width: 1400px;
+    max-width: 1200px;
     width: 100%;
     display: flex;
-    margin-top: calc(90px + var(--espacio));
+    margin-top: calc(60px + var(--espacio));
     cursor: grab;
     overflow: hidden;
     box-shadow: var(--sombra);
@@ -852,7 +942,7 @@ button#amarillo {
 }
 
 .gastronomia .col-1 .content li {
-    background: rgba(var(--rgba-rosado), 0.4);
+    background: rgba(var(--rgba-celeste));
     color: var(--blanco);
     font-family: var(--font-terciario);
     font-weight: bolder;
@@ -1363,7 +1453,7 @@ button#amarillo {
     padding: var(--espacio) 0;
 }
 
-.piscinas .carrusel{
+.piscinas .carrusel {
     cursor: grab;
 }
 
@@ -1504,6 +1594,7 @@ button#amarillo {
     font-weight: bolder;
     color: var(--purpura);
     padding: 20px;
+    background: linear-gradient(to top right, rgba(var(--rgba-blanco)), rgba(var(--rgba-gris), 0.3));
     cursor: pointer;
     transition: color 0.3s ease;
 }
@@ -1777,10 +1868,10 @@ button#amarillo {
 /* PROMOCIONES */
 
 .promociones {
-    max-width: 1400px;
+    max-width: 1200px;
     width: 100%;
-    height: 450px;
-    margin-top: calc(90px + var(--espacio));
+    height: 400px;
+    margin-top: calc(60px + var(--espacio));
     overflow: hidden;
     border-radius: 20px;
 }
@@ -1993,7 +2084,7 @@ button#amarillo {
     color: var(--rosado);
 }
 
-.carta #comprar{
+.carta #comprar {
     background: var(--rosado);
     color: var(--blanco);
     border: none;
@@ -2616,14 +2707,14 @@ button#amarillo {
 
 /* WAVVE */
 
-.wave{
+.wave {
     width: 100%;
     display: flex;
     align-items: center;
     height: 100%;
 }
 
-.wave .col-image{
+.wave .col-image {
     background:
         linear-gradient(45deg, rgba(var(--rgba-celeste), 0.7), rgba(var(--rgba-purpura), 0.7));
     background-repeat: no-repeat;
@@ -2633,17 +2724,17 @@ button#amarillo {
     height: 100%;
 }
 
-.wave .col-image img{
+.wave .col-image img {
     height: 100%;
     object-fit: cover;
 }
 
-.wave .col-text{
+.wave .col-text {
     width: 65%;
     height: 100%;
 }
 
-.wave .content{
+.wave .content {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -2652,7 +2743,7 @@ button#amarillo {
     margin-top: calc(60px + var(--espacio));
 }
 
-.wave .content .row{
+.wave .content .row {
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -2662,66 +2753,66 @@ button#amarillo {
     border-radius: 20px;
 }
 
-.wave .row h1{
+.wave .row h1 {
     color: var(--negro);
     font-size: var(--font-size);
     font-family: var(--font-primario);
 }
 
-.wave .row p{
+.wave .row p {
     color: var(--negro);
     font-size: var(--font-subsize);
     font-family: var(--font-secundario);
 }
 
-.wave button{
+.wave button {
     width: 100%;
     background: none;
     color: var(--purpura);
     border: 1px solid var(--purpura);
 }
 
-.wave button:hover{
+.wave button:hover {
     background: var(--purpura);
     color: var(--blanco);
 }
 
 /* TRABAJO */
 
-.trabajo{
+.trabajo {
     padding: var(--espacio) 0;
-    
+
 }
 
-.trabajo .container{
+.trabajo .container {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
 }
 
-.trabajo .content{
+.trabajo .content {
     display: flex;
     gap: 10px;
     padding: var(--espacio) 0 0 0;
 }
 
-.trabajo .fram{
+.trabajo .fram {
     width: 100%;
     height: 100%;
     overflow: hidden;
     border-radius: 20px;
 }
 
-.trabajo iframe{
+.trabajo iframe {
     width: 100%;
     height: 100%;
 }
 
-.trabajo .col-wrapper{
+.trabajo .col-wrapper {
     width: 60%;
 }
 
-.trabajo .col-form{
+.trabajo .col-form {
     width: 40%;
     background: var(--blanco);
     padding: 20px;
@@ -2729,33 +2820,33 @@ button#amarillo {
     border-radius: 20px;
 }
 
-.trabajo .col-form .text h1{
+.trabajo .col-form .text h1 {
     color: var(--negro);
     font-size: var(--font-size);
     font-family: var(--font-primario);
     text-transform: uppercase;
 }
 
-.trabajo .col-form .text p{
+.trabajo .col-form .text p {
     margin: 10px 0;
     color: var(--negro);
     font-size: var(--font-subsize);
     font-family: var(--font-secundario);
 }
 
-.trabajo li{
+.trabajo li {
     color: var(--negro);
     font-size: var(--font-subsize);
     font-family: var(--font-secundario);
 }
 
-.trabajo .col-wrapper{
+.trabajo .col-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.trabajo .card{
+.trabajo .card {
     display: flex;
     height: auto;
     overflow: hidden;
@@ -2763,13 +2854,13 @@ button#amarillo {
     box-shadow: var(--sombra);
 }
 
-.trabajo .card img{
+.trabajo .card img {
     width: 200px;
     height: auto;
     object-fit: cover;
 }
 
-.trabajo .card .text{
+.trabajo .card .text {
     padding: 20px;
     background: var(--blanco);
     display: flex;
@@ -2779,26 +2870,26 @@ button#amarillo {
     height: 100%;
 }
 
-.trabajo .card .text h1{
+.trabajo .card .text h1 {
     color: var(--negro);
     font-size: var(--font-size);
     font-family: var(--font-primario);
 }
 
-.trabajo .card .text p{
+.trabajo .card .text p {
     color: var(--negro);
     font-size: var(--font-subsize);
     font-family: var(--font-secundario);
 }
 
-.trabajo .col-wrapper button{
+.trabajo .col-wrapper button {
     width: 100%;
     background: none;
     color: var(--purpura);
     border: 1px solid var(--purpura);
 }
 
-.trabajo .col-wrapper button:hover{
+.trabajo .col-wrapper button:hover {
     background: var(--purpura);
     color: var(--blanco);
 }

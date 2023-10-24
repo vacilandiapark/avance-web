@@ -32,12 +32,14 @@ function playMusic() {
   if (!isPlaying) {
     // Reproducimos la música cuando se presiona el botón de reproducción
     audio.play();
-    playButton.textContent = 'Pause';
+    playButton.getElementsByTagName('svg')[0].style.display = 'none'; // Ocultar el primer SVG (reproducción)
+    playButton.getElementsByTagName('svg')[1].style.display = 'inline'; // Mostrar el segundo SVG (pausa)
     isPlaying = true;
   } else {
     // Pausamos la música cuando se presiona nuevamente el botón de reproducción
     audio.pause();
-    playButton.textContent = 'Play';
+    playButton.getElementsByTagName('svg')[0].style.display = 'inline'; // Mostrar el primer SVG (reproducción)
+    playButton.getElementsByTagName('svg')[1].style.display = 'none'; // Ocultar el segundo SVG (pausa)
     isPlaying = false;
   }
 }
@@ -200,3 +202,34 @@ function changeTab(tabIndex) {
 }
 
 
+
+
+
+function toggleInfo(infoNumber) {
+  const infoContainer = document.getElementById(`info-${infoNumber}`);
+
+  // Verificar si el contenedor está activo o inactivo
+  if (infoContainer.classList.contains('active')) {
+    // Ocultar el contenedor con animación inversa
+    infoContainer.classList.remove('active');
+  } else {
+    // Mostrar el contenedor con animación de izquierda a derecha
+    infoContainer.classList.add('active');
+  }
+
+  // Cerrar todos los demás contenedores activos
+  const allInfoContainers = document.querySelectorAll('.info-container');
+  allInfoContainers.forEach((container) => {
+    if (container.id !== `info-${infoNumber}` && container.classList.contains('active')) {
+      container.classList.remove('active');
+    }
+  });
+}
+
+// Cerrar todos los contenedores al hacer clic en cualquier parte de la pantalla
+document.addEventListener('click', function (event) {
+  const allInfoContainers = document.querySelectorAll('.info-container');
+  allInfoContainers.forEach((container) => {
+    container.classList.remove('active');
+  });
+});
