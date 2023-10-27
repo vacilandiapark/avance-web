@@ -382,7 +382,6 @@ button#amarillo {
 }
 
 .navbar .navigation .submenu {
-    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -398,6 +397,13 @@ button#amarillo {
     overflow: hidden;
 }
 
+
+.navbar .navigation li:hover>.submenu {
+    display: block;
+    opacity: 1;
+    /* Hacemos el submenu visible al hacer hover */
+}
+
 .navbar .navigation .submenu li {
     float: none;
     width: 200px;
@@ -407,11 +413,6 @@ button#amarillo {
     padding: 15px 0;
 }
 
-.navbar .navigation li:hover>.submenu {
-    display: block;
-    opacity: 1;
-    /* Hacemos el submenu visible al hacer hover */
-}
 
 .navbar .navigation a {
     display: flex;
