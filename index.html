@@ -399,7 +399,7 @@
         <!--PROMOS-->
         <section class="promos">
             <swiper-container class="articulo" space-between="15" pagination-clickable="true" navigation="true"
-                pagination="true">
+                autoplay-delay="3000" autoplay-disable-on-interaction="true" pagination="true" keyboard="true">
                 <swiper-slide>
                     <video
                         src="https://res.cloudinary.com/dlvqvbok1/video/upload/w_auto/q_auto/f_auto/v1/Materials/Videos/agy880kx4rkisrfq6keo"
@@ -422,14 +422,14 @@
 
             <!-- ATRACCIONES -->
 
-            <section class="atracciones" >
+            <section class="atracciones">
                 <div class="container">
                     <div class="title">
                         <h1>NUESTRAS ATRACCIONES</h1>
                     </div>
                     <swiper-container class="carrusel-atracciones" space-between="15" pagination-clickable="true"
                         navigation="true" pagination="true" slides-per-view="1.5" free-mode="true" autoplay-delay="2000"
-                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}'>
+                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
                         <swiper-slide>
                             <i class="fa-solid fa-water-ladder"></i>
                             <a href="Piscinas-y-Toboganes.html">
@@ -488,7 +488,7 @@
 
             <!-- NAVEGACION -->
 
-            <section class="subpanel" >
+            <section class="subpanel">
                 <div class="container">
                     <a target="_blank" href="https://vaope.com/parque-acuatico" class="box">
                         <i class="fa-solid fa-ticket"></i>
@@ -523,13 +523,13 @@
 
             <!--PROMOCIONES-->
 
-            <section class="carta" >
+            <section class="carta">
                 <div class="title">
                     <h1>PROMOCIONES</h1>
                 </div>
                 <swiper-container class="tab-content active" class="carrusel-atracciones" space-between="15"
                     pagination-clickable="true" navigation="true" pagination="true" slides-per-view="1.5"
-                    free-mode="true" breakpoints='{"900": {"slidesPerView": 3.5}}'>
+                    free-mode="true" breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
                     <swiper-slide class="card">
                         <div class="image">
                             <img decoding="async" loading="lazy"
@@ -701,7 +701,7 @@
             <!-- ENTRETENIMIENTO -->
 
             <section class="entretenimiento">
-                <div class="container" >
+                <div class="container">
                     <div class="title">
                         <h1>ENTRETENIMIENTO</h1>
                     </div>
@@ -775,7 +775,7 @@
 
             <!-- TOP ANCHO -->
 
-            <section class="fill-section" >
+            <section class="fill-section">
                 <div class="container">
                     <div class="title">
                         <h1>MAPA INTERACTIVO</h1>
@@ -796,10 +796,10 @@
 
             <!--GASTRONOMIA -->
 
-            <section class="gastronomia" >
+            <section class="gastronomia">
                 <div class="container">
                     <div class="title">
-                        <h1>OFERTA GASTRONÓMICA</h1>
+                        <h1 style="color: var(--blanco);">OFERTA GASTRONÓMICA</h1>
                     </div>
                     <div class="contenido">
                         <div class="col-1">
@@ -807,22 +807,6 @@
                                 <h1>RESTAURANTE "EL POLLO VACILÓN"</h1>
                                 <p>Disfruta de una amplia selección de platos, bebidas, snacks y postres que harán que
                                     tu experiencia sea verdaderamente deliciosa.</p>
-                            </div>
-                            <div class="content">
-                                <h1>Tenemos de todo:</h1>
-                                <ul class="categorias">
-                                    <li>Sopas</li>
-                                    <li>Sanguches</li>
-                                    <li>Batidos</li>
-                                    <li>Tragos</li>
-                                    <li>Pescados</li>
-                                    <li>Gourmets</li>
-                                    <li>Pollos a la leña</li>
-                                    <li>Hamburguesas</li>
-                                    <li>Filtrantes</li>
-                                    <li>Chifa</li>
-                                    <li>Crepes</li>
-                                </ul>
                             </div>
                             <div class="content">
                                 <h3>Descarga nuestra carta gastronómica</h3>
@@ -868,92 +852,106 @@
 
             <!-- SERVICIOS -->
 
-            <section class="servicios" >
+            <section class="servicios">
                 <div class="container">
                     <div class="title">
                         <h1>SERVICIOS</h1>
                     </div>
                     <swiper-container class="contenido carrusel" space-between="15" pagination-clickable="true"
                         navigation="true" pagination="true" slides-per-view="1.5" free-mode="true" autoplay-delay="2000"
-                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}'>
+                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
                         <swiper-slide>
-                            <div class="card">
-                                <div class="image">
-                                    <img decoding="async" loading="lazy"
-                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1200/q_auto/f_auto/v1/Materials/Servicios/becddgyozm7d3qqv6zly"
-                                        alt="">
+                            <a href="Eventos-Corporativos.html">
+                                <div class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1200/q_auto/f_auto/v1/Materials/Servicios/becddgyozm7d3qqv6zly"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <i class="fa-solid fa-building"></i>
+                                        <h1>EVENTOS CORPORATIVOS</h1>
+                                        <p>90mil m2 un espacio ideal con emocionantes atractivos para fortalecer los
+                                            lazos
+                                            laborales y lo mejor de todo, sin salir de Lima.</p>
+                                        <a href="Eventos-Corporativos.html"><button>Ver más</button></a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <i class="fa-solid fa-building"></i>
-                                    <h1>EVENTOS CORPORATIVOS</h1>
-                                    <p>90mil m2 un espacio ideal con emocionantes atractivos para fortalecer los lazos
-                                        laborales y lo mejor de todo, sin salir de Lima.</p>
-                                    <a href="Eventos-Corporativos.html"><button>Ver más</button></a>
-                                </div>
-                            </div>
+                            </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <div class="card">
-                                <div class="image">
-                                    <img decoding="async" loading="lazy"
-                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/weylpss5slgfpkfgs7va"
-                                        alt="">
+                            <a href="Celebra-tu-cumpleaños.html">
+                                <div class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/weylpss5slgfpkfgs7va"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <i class="fa-solid fa-cake-candles"></i>
+                                        <h1>CELEBRA TU CUMPLEAÑOS</h1>
+                                        <p>Haz de tu cumpleaños un día de full diversión con tus seres queridos.</p>
+                                        <a href="Celebra-tu-cumpleaños.html"><button>Ver más</button></a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <i class="fa-solid fa-cake-candles"></i>
-                                    <h1>CELEBRA TU CUMPLEAÑOS</h1>
-                                    <p>Haz de tu cumpleaños un día de full diversión con tus seres queridos.</p>
-                                    <a href="Celebra-tu-cumpleaños.html"><button>Ver más</button></a>
-                                </div>
-                            </div>
+                            </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <div class="card">
-                                <div class="image">
-                                    <img decoding="async" loading="lazy"
-                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/c1sh7znnzz4wxtumlmt4"
-                                        alt="">
+                            <a href="Paseos-y-Reencuentros.html">
+                                <div class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/c1sh7znnzz4wxtumlmt4"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <i class="fa-solid fa-school"></i>
+                                        <h1>PASEOS Y REENCUENTROS</h1>
+                                        <p>Tenemos espacios pensados para todo tipo de actividades recreativas
+                                            incluyendo un
+                                            recorrido ecológico junto a Taulichusco.</p>
+                                        <a href="Paseos-y-Reencuentros.html"><button>Ver más</button></a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <i class="fa-solid fa-school"></i>
-                                    <h1>PASEOS Y REENCUENTROS</h1>
-                                    <p>Tenemos espacios pensados para todo tipo de actividades recreativas incluyendo un
-                                        recorrido ecológico junto a Taulichusco.</p>
-                                    <a href="Paseos-y-Reencuentros.html"><button>Ver más</button></a>
-                                </div>
-                            </div>
+                            </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <div class="card">
-                                <div class="image">
-                                    <img decoding="async" loading="lazy"
-                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/uvnyrfwlbq4vaadncrni"
-                                        alt="">
+                            <a href="Campeonatos-Deportivos.html">
+                                <div class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/uvnyrfwlbq4vaadncrni"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <i class="fa-solid fa-futbol"></i>
+                                        <h1>CAMPEONATOS DEPORTIVOS</h1>
+                                        <p>Organiza y vive la pasión por el deporte en nuestras modernas y amplias
+                                            canchas
+                                            de vóley y fútbol.</p>
+                                        <a href="Campeonatos-Deportivos.html"><button>Ver más</button></a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <i class="fa-solid fa-futbol"></i>
-                                    <h1>CAMPEONATOS DEPORTIVOS</h1>
-                                    <p>Organiza y vive la pasión por el deporte en nuestras modernas y amplias canchas
-                                        de vóley y fútbol.</p>
-                                    <a href="Campeonatos-Deportivos.html"><button>Ver más</button></a>
-                                </div>
-                            </div>
+                            </a>
                         </swiper-slide>
                         <swiper-slide>
-                            <div class="card">
-                                <div class="image">
-                                    <img decoding="async" loading="lazy"
-                                        src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/lwnqw7f6mc43pgcygesp"
-                                        alt="">
+                            <a href="Espacios-Publicitarios.html">
+                                <div class="card">
+                                    <div class="image">
+                                        <img decoding="async" loading="lazy"
+                                            src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Servicios/lwnqw7f6mc43pgcygesp"
+                                            alt="">
+                                    </div>
+                                    <div class="text">
+                                        <i class="fa-solid fa-user-check"></i>
+                                        <h1>ESPACIOS PUBLICITARIOS</h1>
+                                        <p>Con más de 230mil visitantes por temporada, podrás visibilizar y fortalecer
+                                            la
+                                            presencia de tu marca en nuestras instalaciones.</p>
+                                        <a href="Espacios-Publicitarios.html"><button>Ver más</button></a>
+                                    </div>
                                 </div>
-                                <div class="text">
-                                    <i class="fa-solid fa-user-check"></i>
-                                    <h1>ESPACIOS PUBLICITARIOS</h1>
-                                    <p>Con más de 230mil visitantes por temporada, podrás visibilizar y fortalecer la
-                                        presencia de tu marca en nuestras instalaciones.</p>
-                                    <a href="Espacios-Publicitarios.html"><button>Ver más</button></a>
-                                </div>
-                            </div>
+                            </a>
                         </swiper-slide>
                     </swiper-container>
                 </div>
@@ -961,14 +959,14 @@
 
             <!--RESEÑAS-->
 
-            <section class="reseñas" >
+            <section class="reseñas">
                 <div class="container">
                     <div class="title">
                         <h1>CLIENTES SATISFECHOS</h1>
                     </div>
                     <swiper-container class="reseña-carrusel carrusel" space-between="15" pagination-clickable="true"
                         navigation="true" pagination="true" slides-per-view="1.5" free-mode="true" autoplay-delay="2000"
-                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}'>
+                        autoplay-disable-on-interaction="false" breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
                         <swiper-slide>
                             <div class="card">
                                 <div class="punt">
@@ -1060,7 +1058,7 @@
 
             <!-- MAPA -->
 
-            <section class="mapa" >
+            <section class="mapa">
                 <div class="container">
                     <div class="title">
                         <h1>NUESTRA UBICACIÓN</h1>
