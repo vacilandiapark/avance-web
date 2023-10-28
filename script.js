@@ -1,5 +1,8 @@
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const hamburguer = document.querySelector(".hamburguer");
   const menuPanel = document.getElementById("menuPanel");
@@ -43,25 +46,6 @@ function playMusic() {
     isPlaying = false;
   }
 }
-
-
-
-
-
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const progress = (scrollTop / scrollHeight) * 100;
-
-  // Ajusta la escala (ancho) de la barra de progreso
-  const scaleX = 1 + progress / 100; // Aumenta el ancho de 1 a 2
-  document.querySelector(".row-gradient").style.transform = `scaleX(${scaleX})`;
-});
-
-
-
-
-
 // PREGUNTAS Y RESPUESTAS //
 document.addEventListener('DOMContentLoaded', function () {
   const faqItems = document.querySelectorAll('.faq-item');
@@ -121,7 +105,7 @@ function openModal(imgSrc) {
 
   // Retrasar ligeramente la aplicación de la escala para permitir la transición
   setTimeout(() => {
-    modalContent.style.transform = 'scale(0.5)';
+    modalContent.style.transform = 'scale(1)';
   }, 0);
 }
 
