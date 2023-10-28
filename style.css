@@ -16,7 +16,7 @@ body {
 /* VARIABLES */
 
 :root {
-    --espacio: 30px;
+    --espacio: 35px;
     --morado: #724C9F;
     --rgba-morado: 114, 76, 159;
     --purpura: #432A88;
@@ -2609,7 +2609,7 @@ button#amarillo {
 
 #galeria-3 .image {
     width: 280px;
-    height: auto;
+    height: 200px;
     margin: 0 10px;
     border-radius: 10px;
     overflow: hidden;
@@ -2820,30 +2820,18 @@ button#amarillo {
     display: flex;
     align-items: center;
     height: 100%;
-}
-
-.wave .col-image {
-    background:
-        linear-gradient(45deg, rgba(var(--rgba-celeste), 0.7), rgba(var(--rgba-purpura), 0.7));
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 35%;
-    overflow: hidden;
-    height: 100%;
-}
-
-.wave .col-image img {
-    height: 100%;
-    object-fit: cover;
+    padding-bottom: var(--espacio);
 }
 
 .wave .col-text {
-    width: 65%;
-    height: 100%;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
 }
 
 .wave .content {
-    padding: 20px;
+    max-width: var(--max-width);
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
