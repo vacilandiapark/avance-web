@@ -243,7 +243,45 @@ button#amarillo {
     overflow-y: auto;
 }
 
+.info-container .tickets{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 100%;
+}
 
+.info-container .tickets .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-container #teleticket{
+    background: linear-gradient(to right, 
+    #31078C, #D90D32);
+}
+
+.info-container #cuponidad{
+    background: linear-gradient(to right, 
+    #DE0101, #F25C05);
+}
+
+.info-container #vaope{
+    background: linear-gradient(to right, 
+    #18B5D9, #E2346C, #F2A516);
+}
+
+.info-container #joinnus{
+    background: linear-gradient(to right, 
+    #05F2AF, #010001);
+}
+
+.info-container .tickets h5{
+    font-family: var(--font-primario);
+    font-size: var(--font-size);
+    color: var(--negro);
+}
 
 .info-container.active {
     left: 0;
@@ -930,7 +968,7 @@ button#amarillo {
 }
 
 .gastronomia .col-1 .content {
-    padding: 10px 20px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;

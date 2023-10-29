@@ -103,19 +103,17 @@
                     <path d="M19 18v.01" />
                 </svg>
             </div>
-            <div class="item" title="Comprar ticket">
-                <a target="_blank" href="https://vaope.com/parque-acuatico/vacilandia-park">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ticket" width="36"
-                        height="36" viewBox="0 0 24 24" stroke-width="0.7" stroke="#000000" fill="none"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M15 5l0 2" />
-                        <path d="M15 11l0 2" />
-                        <path d="M15 17l0 2" />
-                        <path
-                            d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
-                    </svg>
-                </a>
+            <div class="item" onclick="toggleInfo(4)" title="Comprar ticket">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="icon icon-tabler icon-tabler-ticket" width="36" height="36" viewBox="0 0 24 24"
+                    stroke-width="0.7" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M15 5l0 2" />
+                    <path d="M15 11l0 2" />
+                    <path d="M15 17l0 2" />
+                    <path
+                        d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2" />
+                </svg>
             </div>
             <div class="item" onclick="toggleInfo(3)" title="Preguntas frecuentes">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help-hexagon" width="36"
@@ -315,6 +313,30 @@
                     </div>
                 </div>
             </section>
+        </div>
+    </div>
+
+    <div class="info-container info-4">
+        <div class="content">
+            <h1>COMPRAR TICKETS</h1>
+            <div class="tickets">
+                <div class="row">
+                    <h5>CUPONIDAD:</h5>
+                    <a target="_blank" href="https://cuponidad.pe/entrada-para-vacilandia-park-el-parque-acuatico-mas-grande-de-lima-42700"><button id="cuponidad">CUPONIDAD</button></a>
+                </div>
+                <div class="row">
+                    <h5>VAOPE:</h5>
+                    <a target="_blank" href="https://vaope.com/parque-acuatico/vacilandia-park"><button id="vaope">VAOPE</button></a>
+                </div>
+                <div class="row">
+                    <h5>JOINNUS:</h5>
+                    <a target="_blank" href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225"><button id="joinnus">JOINNUS</button></a>
+                </div>
+                <div class="row">
+                    <h5>TELETICKET:</h5>
+                    <a href=""><button id="teleticket">TELETICKET</button></a>
+                </div>
+            </div>
         </div>
     </div>
 
