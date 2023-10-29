@@ -3088,6 +3088,23 @@ button#amarillo {
 
 @media (max-width: 1100px) {
 
+    .footer{
+        padding-bottom: 50px;
+    }
+
+    .footer .terms{
+        padding: 10px;
+        text-align: center;
+    }
+
+    .animales .contenido .card{
+        width: calc(100% - 25px);
+    }
+
+    .wave .col-text{
+        width: calc(100% - 35px);
+    }
+
     main {
         margin: 0;
     }
@@ -3114,7 +3131,7 @@ button#amarillo {
     }
 
     .promos .articulo,
-    .promociones .articulo {
+    .promociones {
         border-radius: 0;
     }
 
@@ -3122,7 +3139,25 @@ button#amarillo {
         padding: 0;
     }
 
+    .galeria-2 .container{
+        padding: 0;
+    }
+
+    .info .text {
+        background: none;
+    }
+
+    .info .text h1{
+        padding: 0;
+    }
+
+    .info .text p{
+        padding: 0;
+    }
+
+    .canchas,
     .info,
+    .galeria-4,
     .platos,
     .pdf,
     .carta,
@@ -3138,10 +3173,43 @@ button#amarillo {
     .piscinas,
     .cards-globales,
     .galeria,
+    .galeria-2,
     .paqs,
+    .title-3,
+    .mappark,
+    .trabajo,
+    .formulario,
+    .animales,
     .promociones .text {
         padding: 20px;
         overflow: hidden;
+    }
+
+    .formulario .contenido{
+        flex-direction: column;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .formulario .col-form,
+    .formulario .content{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .trabajo .col-wrapper,
+    .trabajo .col-form{
+        width: 100%;
+    }
+
+    .trabajo .col-wrapper .card{
+        flex-direction: column;
+    }
+
+    .trabajo .content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     /* NAVBAR */
