@@ -1,3 +1,8 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
+
+
 // Función para introducir una pausa (delay) antes de completar una transición
 function delay(n) {
   n = n || 700; // Puedes ajustar la duración del retraso aquí
