@@ -26,6 +26,13 @@ body {
     align-items: center;
 }
 
+.loading-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    opacity: 0; /* Inicialmente, la imagen tiene opacidad 0 */
+}
+
 .load-container{
     position: fixed;
     top: 0;

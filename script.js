@@ -1,5 +1,6 @@
+// Función para introducir una pausa (delay) antes de completar una transición
 function delay(n) {
-  n = n || 2000;
+  n = n || 700; // Puedes ajustar la duración del retraso aquí
   return new Promise((done) => {
     setTimeout(() => {
       done();
@@ -7,39 +8,46 @@ function delay(n) {
   });
 }
 
+// Función para obtener un color aleatorio de una lista de colores
 function getRandomColor() {
   const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
   const randomIndex = Math.floor(Math.random() * colors.length);
   return colors[randomIndex];
 }
 
-
+// Función para manejar la transición de la página
 function pageTransition() {
   var tl = gsap.timeline();
   tl.to(".loading-screen", {
-    duration: 1.2,
+    duration: 0.5, // Reduz la duración de la primera animación a 0.8 segundos
     width: "100%",
     left: "0%",
     ease: "Expo.easeInOut",
-    backgroundColor: getRandomColor() // Cambia el color de fondo aleatoriamente entre tus colores
+    backgroundColor: getRandomColor(),
+    onComplete: function () {
+      gsap.to(".loading-image", { opacity: 1, duration: 0.1 }); // Hacer que la imagen aparezca gradualmente
+    }
   });
 
   tl.to(".loading-screen", {
-    duration: 1,
+    duration: 0.5, // Reduz la duración de la segunda animación a 0.8 segundos
     width: "100%",
     left: "100%",
     ease: "Expo.easeInOut",
-    delay: 0.3
+    delay: 0.2 // Reduce el retraso
   });
   tl.set(".loading-screen", { left: "-100%" });
 }
 
-
-
+// Función para animar el contenido de la página
 function contentAnimation() {
   var tl = gsap.timeline();
   tl.from(".animate-this", {
-    duration: 1, y: 30, opacity: 0, stagger: 0.4, delay: 0.2
+    duration: 0.4, // Reduz la duración de la animación del contenido a 0.6 segundos
+    y: 30,
+    opacity: 0,
+    stagger: 0.4,
+    delay: 0.2
   });
 }
 
@@ -49,12 +57,10 @@ $(function () {
 
     transitions: [
       {
-
         async leave(data) {
           const done = this.async();
-
           pageTransition();
-          await delay(1000);
+          await delay(500); // Reduce el tiempo de espera a 800 milisegundos
           done();
         },
 
@@ -65,7 +71,6 @@ $(function () {
         async once(data) {
           contentAnimation();
         },
-
       },
     ],
   });
