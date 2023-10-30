@@ -13,7 +13,7 @@ body {
     scroll-behavior: smooth;
 }
 
-.loading-screen{
+.loading-screen {
     position: relative;
     padding-left: 0;
     padding-right: 0;
@@ -30,10 +30,11 @@ body {
     width: 150px;
     height: 150px;
     object-fit: contain;
-    opacity: 0; /* Inicialmente, la imagen tiene opacidad 0 */
+    opacity: 0;
+    /* Inicialmente, la imagen tiene opacidad 0 */
 }
 
-.load-container{
+.load-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -274,41 +275,41 @@ button#amarillo {
     overflow-y: auto;
 }
 
-.info-container .tickets{
+.info-container .tickets {
     display: flex;
     gap: 30px;
     flex-direction: column;
     width: 100%;
 }
 
-.info-container .tickets .row{
+.info-container .tickets .row {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
 }
 
-.info-container #teleticket{
-    background: linear-gradient(to right, 
-    #31078C, #D90D32);
+.info-container #teleticket {
+    background: linear-gradient(to right,
+            #31078C, #D90D32);
 }
 
-.info-container #cuponidad{
-    background: linear-gradient(to right, 
-    #DE0101, #F25C05);
+.info-container #cuponidad {
+    background: linear-gradient(to right,
+            #DE0101, #F25C05);
 }
 
-.info-container #vaope{
-    background: linear-gradient(to right, 
-    #18B5D9, #E2346C, #F2A516);
+.info-container #vaope {
+    background: linear-gradient(to right,
+            #18B5D9, #E2346C, #F2A516);
 }
 
-.info-container #joinnus{
-    background: linear-gradient(to right, 
-    #05F2AF, #010001);
+.info-container #joinnus {
+    background: linear-gradient(to right,
+            #05F2AF, #010001);
 }
 
-.info-container .tickets h5{
+.info-container .tickets h5 {
     font-family: var(--font-primario);
     font-size: var(--font-size);
     color: var(--negro);
@@ -355,6 +356,30 @@ button#amarillo {
 
 .info-container button {
     width: 100%;
+}
+
+.info-container .close-button {
+    position: absolute;
+    top: 10px;
+    /* Ajusta la posición vertical según tu diseño */
+    right: 10px;
+    /* Ajusta la posición horizontal según tu diseño */
+    background-color: purple;
+    /* Cambia el color de fondo según tus preferencias */
+    color: var(--blanco);
+    /* Cambia el color del texto según tus preferencias */
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    /* Ajusta el tamaño según tus preferencias */
+    height: 20px;
+    /* Ajusta el tamaño según tus preferencias */
+    font-size: 12px;
+    /* Ajusta el tamaño del texto según tus preferencias */
+    cursor: pointer;
 }
 
 .info-container p {
@@ -497,9 +522,44 @@ button#amarillo {
 }
 
 .navbar .buttons {
+    position: relative;
     display: flex;
     justify-content: center;
     gap: 10px;
+}
+
+.navbar .buttons .dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--blanco);
+    min-width: 130px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+    z-index: 1;
+    overflow: hidden;
+}
+
+.navbar .buttons.open .dropdown-content {
+    display: block;
+}
+
+.navbar .buttons .dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: var(--font-terciario);
+    font-size: var(--font-subsize);
+    font-weight: bolder;
+}
+
+.navbar .buttons .dropdown-content #vaope {
+    background: linear-gradient(to right, #18B5D9, #E2346C, #F2A516);
+}
+
+
+.navbar .buttons .dropdown-content #joinnus {
+    background: linear-gradient(to right, #05F2AF, var(--negro));
 }
 
 .navbar .logo {
@@ -1432,7 +1492,7 @@ button#amarillo {
     border-radius: 10px;
 }
 
-.footer .terms a{
+.footer .terms a {
     color: var(--blanco);
     font-weight: bolder;
 }
@@ -2447,7 +2507,7 @@ button#amarillo {
     gap: 5px;
 }
 
-.mappark button{
+.mappark button {
     background: var(--morado);
     color: var(--blanco);
 }
@@ -3157,20 +3217,20 @@ button#amarillo {
 
 @media (max-width: 1100px) {
 
-    .footer{
+    .footer {
         padding-bottom: 50px;
     }
 
-    .footer .terms{
+    .footer .terms {
         padding: 10px;
         text-align: center;
     }
 
-    .animales .contenido .card{
+    .animales .contenido .card {
         width: calc(100% - 25px);
     }
 
-    .wave .col-text{
+    .wave .col-text {
         width: calc(100% - 35px);
     }
 
@@ -3208,7 +3268,7 @@ button#amarillo {
         padding: 0;
     }
 
-    .galeria-2 .container{
+    .galeria-2 .container {
         padding: 0;
     }
 
@@ -3216,11 +3276,11 @@ button#amarillo {
         background: none;
     }
 
-    .info .text h1{
+    .info .text h1 {
         padding: 0;
     }
 
-    .info .text p{
+    .info .text p {
         padding: 0;
     }
 
@@ -3254,28 +3314,28 @@ button#amarillo {
         overflow: hidden;
     }
 
-    .formulario .contenido{
+    .formulario .contenido {
         flex-direction: column;
         border-radius: 20px;
         overflow: hidden;
     }
 
     .formulario .col-form,
-    .formulario .content{
+    .formulario .content {
         width: 100%;
         border-radius: 0;
     }
 
     .trabajo .col-wrapper,
-    .trabajo .col-form{
+    .trabajo .col-form {
         width: 100%;
     }
 
-    .trabajo .col-wrapper .card{
+    .trabajo .col-wrapper .card {
         flex-direction: column;
     }
 
-    .trabajo .content{
+    .trabajo .content {
         display: flex;
         flex-direction: column;
         gap: 10px;

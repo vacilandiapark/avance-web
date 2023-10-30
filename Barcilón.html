@@ -162,6 +162,7 @@
         </nav>
 
         <div class="info-container info-1">
+            <button class="close-button" onclick="closeInfo(1)">X</button>
             <div class="content">
                 <h1>HORARIOS DISPONIBLES</h1>
 
@@ -169,7 +170,7 @@
                 <p>10:00am hasta las 05:00pm (Sábados, Domingos y Feriados)</p>
 
                 <h2>PISCINAS Y TOBOGANES</h2>
-                <p>11:00am hasta las 04:00pm (Sabados, Domingos y Feriados)</p>
+                <p>10:00am hasta las 05:00pm (Sabados, Domingos y Feriados)</p>
 
                 <h2>ZONA GAMER</h2>
                 <p>11:00am hasta las 04:00pm (Sabados, Domingos y Feriados)</p>
@@ -183,6 +184,7 @@
         </div>
 
         <div class="info-container info-2">
+            <button class="close-button" onclick="closeInfo(2)">X</button>
             <div class="content">
                 <h1>INTERACTÚA CON NUESTRO MAPA</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam impedit.</p>
@@ -196,6 +198,7 @@
         </div>
 
         <div class="info-container info-3">
+            <button class="close-button" onclick="closeInfo(3)">X</button>
             <div class="content">
                 <h1>PREGUNTAS Y RESPUESTAS</h1>
                 <section class="faq-section" style="padding: 0;">
@@ -331,6 +334,7 @@
         </div>
 
         <div class="info-container info-4">
+            <button class="close-button" onclick="closeInfo(4)">X</button>
             <div class="content">
                 <h1>COMPRAR TICKETS</h1>
                 <div class="tickets">
@@ -421,9 +425,15 @@
                                 class="fa-brands fa-linkedin"></i></a>
                     </div>
                     <div class="buttons">
-                        <a target="_blank" href="https://vaope.com/parque-acuatico/vacilandia-park"><button
-                                id="comprar">COMPRAR TICKETS</button></a>
-                        <a target="_blank" href="https://vacilandia-park.odoo.com/web/login" target="_blank"><button
+                        <div class="dropdown">
+                            <button id="comprar" onclick="toggleDropdown()">COMPRAR TICKETS</button>
+                            <div class="dropdown-content">
+                                <a target="_blank" id="joinnus"
+                                    href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225">JOINNUS</a>
+                                <a target="_blank" id="vaope" href="https://vaope.com/parque-acuatico/vacilandia-park">VAOPE</a>
+                            </div>
+                        </div>
+                        <a target="_blank" href="https://vacilandia-park.odoo.com/web/login"><button
                                 id="celeste">INGRESAR</button></a>
                     </div>
                 </div>

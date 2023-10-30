@@ -94,6 +94,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+function toggleDropdown() {
+  var dropdown = document.querySelector(".dropdown-content");
+  var buttons = document.querySelector(".buttons");
+
+  if (dropdown.style.display === "block") {
+    dropdown.style.display = "none";
+    buttons.classList.remove("open");
+  } else {
+    dropdown.style.display = "block";
+    buttons.classList.add("open");
+  }
+}
 
 // Obtenemos el elemento de audio y el botón de reproducción
 var playButton = document.getElementById('play-button');
@@ -282,4 +294,12 @@ function toggleInfo(infoNumber) {
 
   // Evitar la propagación del evento para que no afecte al modal de imagen
   event.stopPropagation();
+}
+
+function closeInfo(infoNumber) {
+  const targetClass = `info-${infoNumber}`;
+  const infoContainer = document.querySelector(`.${targetClass}`);
+
+  // Cerrar el contenedor
+  infoContainer.classList.remove('active');
 }
