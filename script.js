@@ -2,70 +2,162 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
+document.addEventListener("DOMContentLoaded", function () {
+  let hamburguer;
+  let menuPanel;
+  let closeButton;
+  let faqItems;
+  let modal;
+  let modalContent;
+  let closeModal;
 
-// Función para introducir una pausa (delay) antes de completar una transición
-function delay(n) {
-  n = n || 700; // Puedes ajustar la duración del retraso aquí
-  return new Promise((done) => {
-    setTimeout(() => {
-      done();
-    }, n);
-  });
-}
+  function initializeHamburguer() {
+    hamburguer = document.querySelector(".hamburguer");
+    menuPanel = document.getElementById("menuPanel");
+    closeButton = document.querySelector("#menuPanel .close-button");
 
-// Función para obtener un color aleatorio de una lista de colores
-function getRandomColor() {
-  const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
-  const randomIndex = Math.floor(Math.random() * colors.length);
-  return colors[randomIndex];
-}
+    hamburguer.addEventListener("click", function () {
+      menuPanel.classList.add("open");
+    });
 
-// Función para manejar la transición de la página
-function pageTransition() {
-  var tl = gsap.timeline();
-  tl.to(".loading-screen", {
-    duration: 0.5, // Reduz la duración de la primera animación a 0.8 segundos
-    width: "100%",
-    left: "0%",
-    ease: "Expo.easeInOut",
-    backgroundColor: getRandomColor(),
-    onComplete: function () {
-      gsap.to(".loading-image", { opacity: 1, duration: 0.1 }); // Hacer que la imagen aparezca gradualmente
+    closeButton.addEventListener("click", function () {
+      menuPanel.classList.remove("open");
+    });
+  }
+
+
+
+  function initializeModal() {
+    modal = document.getElementById("modal");
+    modalContent = document.getElementById("modal-img");
+    closeModal = document.getElementById("close-modal");
+
+    // Abrir el modal cuando se haga clic en una imagen
+    const images = document.querySelectorAll(".image img");
+    images.forEach((image) => {
+      image.addEventListener("click", function () {
+        modal.style.display = "flex";
+        modalContent.src = this.src;
+        modal.classList.add("active");
+      });
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cierre (X)
+    closeModal.addEventListener("click", function () {
+      modal.style.display = "none";
+      modal.classList.remove("active");
+    });
+  }
+
+  // Función para inicializar preguntas y respuestas
+  function initializeFAQ() {
+    faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.question');
+      const answerWrapper = item.querySelector('.answer-wrapper');
+
+      item.classList.add('closed'); // Agregamos la clase "closed" por defecto
+
+      question.addEventListener('click', () => {
+        if (!item.classList.contains('active')) {
+          // Abrir la pregunta
+          closeAllQuestions();
+          item.classList.add('active');
+          item.classList.remove('closed');
+          answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
+        } else {
+          // Cerrar la pregunta
+          item.classList.remove('active');
+          item.classList.add('closed');
+          answerWrapper.style.maxHeight = '0';
+        }
+      });
+    });
+
+    function closeAllQuestions() {
+      faqItems.forEach(item => {
+        const answerWrapper = item.querySelector('.answer-wrapper');
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+          item.classList.add('closed');
+          answerWrapper.style.maxHeight = '0';
+        }
+      });
     }
-  });
+  }
 
-  tl.to(".loading-screen", {
-    duration: 0.5, // Reduz la duración de la segunda animación a 0.8 segundos
-    width: "100%",
-    left: "100%",
-    ease: "Expo.easeInOut",
-    delay: 0.2 // Reduce el retraso
-  });
-  tl.set(".loading-screen", { left: "-100%" });
-}
 
-// Función para animar el contenido de la página
-function contentAnimation() {
-  var tl = gsap.timeline();
-  tl.from(".animate-this", {
-    duration: 0.4, // Reduz la duración de la animación del contenido a 0.6 segundos
-    y: 30,
-    opacity: 0,
-    stagger: 0.4,
-    delay: 0.2
-  });
-}
+  // Función para introducir una pausa (delay) antes de completar una transición
+  function delay(n) {
+    n = n || 700; // Puedes ajustar la duración del retraso aquí
+    return new Promise((done) => {
+      setTimeout(() => {
+        done();
+      }, n);
+    });
+  }
 
-$(function () {
+  // Función para obtener un color aleatorio de una lista de colores
+  function getRandomColor() {
+    const colors = ["#EC2127", "#EA0B8B", "#F58220", "#FFD200", "#77C043", "#2BABE2", "#724C9F", "#432F87"];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
+  }
+
+  // Función para manejar la transición de la página
+  function pageTransition() {
+    var tl = gsap.timeline();
+    tl.to(".loading-screen", {
+      duration: 0.5,
+      width: "100%",
+      left: "0%",
+      ease: "Expo.easeInOut",
+      backgroundColor: getRandomColor(),
+      onComplete: function () {
+        gsap.to(".loading-image", { opacity: 1, duration: 0.1 });
+      }
+    });
+
+    tl.to(".loading-screen", {
+      duration: 0.5,
+      width: "100%",
+      left: "100%",
+      ease: "Expo.easeInOut",
+      delay: 0.2
+    });
+    tl.set(".loading-screen", { left: "-100%" });
+  }
+
+  // Función para animar el contenido de la página
+  function contentAnimation() {
+    var tl = gsap.timeline();
+    tl.from(".animate-this", {
+      duration: 0.4,
+      y: 30,
+      opacity: 0,
+      stagger: 0.4,
+      delay: 0.2,
+      onComplete: function () {
+        initializeHamburguer(); // Inicializar hamburguesa
+        initializeFAQ(); // Inicializar preguntas y respuestas
+        initializeModal();
+      }
+    });
+  }
+
+  // Ejecutar la animación de transición
+  pageTransition();
+
+  // Configuración de Barba.js
   barba.init({
     sync: true,
-
     transitions: [
       {
         async leave(data) {
           const done = this.async();
           pageTransition();
-          await delay(500); // Reduce el tiempo de espera a 800 milisegundos
+          await delay(500);
           done();
         },
 
@@ -82,23 +174,6 @@ $(function () {
 });
 
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburguer = document.querySelector(".hamburguer");
-  const menuPanel = document.getElementById("menuPanel");
-  const closeButton = document.querySelector("#menuPanel .close-button");
-
-  hamburguer.addEventListener("click", function () {
-    menuPanel.classList.add("open");
-  });
-
-  closeButton.addEventListener("click", function () {
-    menuPanel.classList.remove("open");
-  });
-});
-
-
-
 function toggleDropdown() {
   var dropdown = document.querySelector(".dropdown-content");
   var buttons = document.querySelector(".buttons");
@@ -110,7 +185,17 @@ function toggleDropdown() {
     dropdown.style.display = "block";
     buttons.classList.add("open");
   }
+
+  // Agregar un event listener para cerrar el dropdown cuando se hace clic fuera de él
+  document.addEventListener("click", function (event) {
+    if (!dropdown.contains(event.target) && !buttons.contains(event.target)) {
+      // El clic ocurrió fuera del dropdown y los botones
+      dropdown.style.display = "none";
+      buttons.classList.remove("open");
+    }
+  });
 }
+
 
 // Obtenemos el elemento de audio y el botón de reproducción
 var playButton = document.getElementById('play-button');
@@ -138,94 +223,6 @@ function playMusic() {
     isPlaying = false;
   }
 }
-// PREGUNTAS Y RESPUESTAS //
-document.addEventListener('DOMContentLoaded', function () {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const question = item.querySelector('.question');
-    const answerWrapper = item.querySelector('.answer-wrapper');
-
-    item.classList.add('closed'); // Agregamos la clase "closed" por defecto
-
-    question.addEventListener('click', () => {
-      if (!item.classList.contains('active')) {
-        // Abrir la pregunta
-        closeAllQuestions();
-        item.classList.add('active');
-        item.classList.remove('closed');
-        answerWrapper.style.maxHeight = answerWrapper.scrollHeight + 'px';
-      } else {
-        // Cerrar la pregunta
-        item.classList.remove('active');
-        item.classList.add('closed');
-        answerWrapper.style.maxHeight = '0';
-      }
-    });
-  });
-
-  function closeAllQuestions() {
-    faqItems.forEach(item => {
-      const answerWrapper = item.querySelector('.answer-wrapper');
-      if (item.classList.contains('active')) {
-        item.classList.remove('active');
-        item.classList.add('closed');
-        answerWrapper.style.maxHeight = '0';
-      }
-    });
-  }
-});
-
-
-
-
-// Obtén elementos del DOM
-const images = document.querySelectorAll('.galeria .image img');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modal-img');
-const modalContent = document.querySelector('.modal-content');
-const closeModal = document.getElementById('close-modal');
-
-// Función para mostrar el modal
-function openModal(imgSrc) {
-  // Restablecer la escala a su valor inicial
-  modalContent.style.transform = 'scale(0.3)';
-
-  modal.style.display = 'block';
-  modal.classList.add('active'); // Agregar la clase "active" para mostrar la modal
-  modalImg.src = imgSrc;
-
-  // Retrasar ligeramente la aplicación de la escala para permitir la transición
-  setTimeout(() => {
-    modalContent.style.transform = 'scale(1)';
-  }, 0);
-}
-
-// Función para cerrar el modal
-function closeModalFunction() {
-  modal.style.display = 'none';
-  modal.classList.remove('active'); // Remover la clase "active" para ocultar la modal
-  modalContent.style.transform = 'scale(0.8)'; // Restablecer la escala
-}
-
-// Agrega un controlador de clic a cada imagen
-images.forEach((image) => {
-  image.addEventListener('click', () => {
-    openModal(image.src);
-  });
-});
-
-// Agrega un controlador de clic para cerrar el modal
-closeModal.addEventListener('click', () => {
-  closeModalFunction();
-});
-
-// Cierra el modal si se hace clic en cualquier parte de la pantalla
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    closeModalFunction();
-  }
-});
 
 
 
@@ -308,3 +305,46 @@ function closeInfo(infoNumber) {
   // Cerrar el contenedor
   infoContainer.classList.remove('active');
 }
+
+
+
+function openModal(imageSrc) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-img");
+
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+
+  // Agrega una clase "active" para aplicar estilos específicos a la modal
+  modal.classList.add("active");
+}
+
+// Función para cerrar la modal
+function closeModal() {
+  var modal = document.getElementById("modal");
+
+  modal.style.display = "none";
+
+  // Remueve la clase "active" para ocultar la modal
+  modal.classList.remove("active");
+}
+
+// Agrega un evento clic a cada imagen de la galería
+var images = document.querySelectorAll(".image img");
+images.forEach(function (image) {
+  image.addEventListener("click", function () {
+    openModal(this.src);
+  });
+});
+
+// Agrega un evento clic para cerrar la modal al hacer clic en la "X"
+var closeModalButton = document.getElementById("close-modal");
+closeModalButton.addEventListener("click", closeModal);
+
+// Agrega un evento clic para cerrar la modal al hacer clic fuera de la imagen
+window.addEventListener("click", function (event) {
+  var modal = document.getElementById("modal");
+  if (event.target == modal) {
+    closeModal();
+  }
+});
