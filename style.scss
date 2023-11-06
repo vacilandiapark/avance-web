@@ -124,9 +124,10 @@ body {
     scroll-behavior: smooth;
 }
 
-/* IMG PERSONALIZABLE CON SATURACIÓN */
+/* IMG y VIDEO PERSONALIZABLE CON SATURACIÓN */
 
-img {
+img,
+video {
     filter: saturate(150%);
 }
 
