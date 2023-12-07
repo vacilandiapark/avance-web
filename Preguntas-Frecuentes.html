@@ -50,7 +50,7 @@
 
     <!-- DIV DE LA ANIMACIÓN, POSTERIORMENTE SE ESTILIZA -->
 
-    <div class="load-container">
+    <div class="pantalla_de_carga">
         <div class="loading-screen">
             <img src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
                 alt="Imagen de carga" class="loading-image">
@@ -64,7 +64,7 @@
         <!-- DIV DEL BOTÓN DEL WHATSAPP FLOTANTE -->
 
         <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0">
-            <div id="whatsapp-button">
+            <div id="boton_de_whatsapp">
                 <div id="whatsapp-icon">
                     <img decoding="async"
                         src="https://static-00.iconduck.com/assets.00/whatsapp-icon-512x512-8q344er8.png"
@@ -75,7 +75,7 @@
 
         <!-- SEGUNDO NAVBAR QUE VA EN VERTICAL AL LADO IZQUIERDO -->
 
-        <nav class="subnavbar">
+        <nav class="barra_vertical">
             <div class="container">
                 <div class="item" title="Inicio">
                     <a href="/">
@@ -145,7 +145,7 @@
 
                     <!-- CONTENEDOR DE LA TARJETA DE MÚSICA -->
 
-                    <div id="music-card">
+                    <div id="boton_de_musica">
 
                         <!-- BOTÓN DE REPRODUCCIÓN -->
 
@@ -180,7 +180,7 @@
 
         <!-- COLOCAMOS EL NÚMERO QUE MÁS ARRIBA COLOCAMOS PARA PODER HACER REFERENCIA A SU CONTAINER, EN ESTE CASO INFO-"NÚMERO DEL TOGGLEINFO("#")" -->
 
-        <div class="info-container info-1">
+        <div class="contenedor_informacion info-1">
 
             <!-- CLOSEINFO("NÚMERO A CERRAR DE INFO-"#") -->
 
@@ -189,23 +189,20 @@
                 <h1>HORARIOS DISPONIBLES</h1>
 
                 <h2>PARQUE GENERAL</h2>
-                <p>10:00am hasta las 05:00pm (Sábados, Domingos y Feriados)</p>
+                <p>9:00am hasta las 06:00pm de Jueves a Lunes</p>
 
                 <h2>PISCINAS Y TOBOGANES</h2>
-                <p>10:00am hasta las 05:00pm (Sabados, Domingos y Feriados)</p>
-
-                <h2>ZONA GAMER</h2>
-                <p>11:00am hasta las 04:00pm (Sabados, Domingos y Feriados)</p>
+                <p>9:00am hasta las 05:00pm de Jueves a Lunes</p>
 
                 <h2>RESTAURANTE</h2>
-                <p>11:00am hasta las 04:00pm (Sábados, Domingos y Feriados)</p>
+                <p>11:00am hasta las 04:00pm de Jueves a Lunes</p>
 
                 <h2>CANCHAS</h2>
                 <p>07:00am hasta las 12:00am (Todos los días)</p>
             </div>
         </div>
 
-        <div class="info-container info-2">
+        <div class="contenedor_informacion info-2">
             <button class="close-button" onclick="closeInfo(2)">X</button>
             <div class="content">
                 <h1>INTERACTÚA CON NUESTRO MAPA</h1>
@@ -219,14 +216,14 @@
             </div>
         </div>
 
-        <div class="info-container info-3">
+        <div class="contenedor_informacion info-3">
             <button class="close-button" onclick="closeInfo(3)">X</button>
             <div class="content">
                 <h1>PREGUNTAS Y RESPUESTAS</h1>
 
                 <!-- SECCIÓN DE PREGUNTAS Y RESPUESTAS - TOGGLE INFO -->
 
-                <section class="faq-section" style="padding: 0;">
+                <section class="preguntas_y_respuestas" style="padding: 0;">
                     <div class="container" style="padding: 0;">
                         <div class="faq-list" style="padding: 0;">
 
@@ -239,11 +236,7 @@
                                 <!-- ESTILOS DE LA RESPUESTA -->
 
                                 <div class="answer-wrapper">
-                                    <div class="answer">
-                                        Nuestro parque solo apertura los sábados, domingos y feriados de 10:00 a.m. a
-                                        5:00
-                                        p.m.
-                                        También tenemos otros horarios donde puedes ver en el siguiente enlace: <a
+                                    <div class="answer">Lo puedes ver en el siguiente enlace: <a
                                             href="#" onclick="toggleInfo('calendario')"
                                             title="Calendario y Horarios">Ver
                                             Horarios</a>
@@ -279,10 +272,7 @@
                                 </div>
                                 <div class="answer-wrapper">
                                     <div class="answer">
-                                        Actualmente, se tiene abierto la piscina de adultos con toboganes solo los
-                                        sábados,
-                                        domingos y feriados.
-                                        Las demás piscinas abren de acorde al aforo del día.
+                                        Todas las piscinas se encuentran abiertas para el público.
                                     </div>
                                 </div>
                             </div>
@@ -357,11 +347,11 @@
                             </div>
 
                             <div class="faq-item closed">
-                                <div class="question">¿Dónde puedo canjear mi vale de consumo?
+                                <div class="question">¿Dónde puedo canjear mi cupón de descuento?
                                 </div>
                                 <div class="answer-wrapper">
                                     <div class="answer">
-                                        Solo puedes canjear tu vale de consumo en el restaurante y solo es aplicable a
+                                        Solo puedes canjear tu cupón de descuento en el restaurante y solo es aplicable a
                                         los
                                         platos de fondo, no está permitido canjearlo en productos de minimarket.
                                     </div>
@@ -376,7 +366,7 @@
             </div>
         </div>
 
-        <div class="info-container info-4">
+        <div class="contenedor_informacion info-4">
             <button class="close-button" onclick="closeInfo(4)">X</button>
             <div class="content">
                 <h1>COMPRAR TICKETS</h1>
@@ -404,7 +394,7 @@
 
             <!-- SECCIÓN DEL NAVBAR -->
 
-            <nav class="navbar">
+            <nav class="navegacion_principal">
                 <div class="row-gradient"></div>
                 <div class="row">
 
@@ -502,10 +492,10 @@
 
             <!-- NAVBAR DEL RESPONSIVE-->
 
-            <div id="menuPanel">
+            <div id="responsive_navegacion">
                 <div class="close-button"><i class="fa-solid fa-x"></i></div>
                 <ul class="panel-navigation">
-                    <section class="faq-section" id="nav-responsive" style="padding: 0;">
+                    <section class="preguntas_y_respuestas" id="contenido_nav_responsive" style="padding: 0;">
                         <div class="container" style="padding: 0;">
                             <div class="faq-list" style="padding: 0;">
 
@@ -647,7 +637,7 @@
 
                 <!-- SECCIÓN DE PREGUNTAS -->
 
-                <section class="faq-section">
+                <section class="preguntas_y_respuestas">
                     <div class="container">
                         <div class="faq-list">
 
@@ -660,11 +650,7 @@
                                 <!-- ESTILOS PARA LA RESPUESTA -->
 
                                 <div class="answer-wrapper">
-                                    <div class="answer">
-                                        Nuestro parque solo apertura los sábados, domingos y feriados de 10:00 a.m. a
-                                        5:00
-                                        p.m.
-                                        También tenemos otros horarios donde puedes ver en el siguiente enlace: <a
+                                    <div class="answer">Lo puedes ver en el siguiente enlace: <a
                                             href="#" onclick="toggleInfo('calendario')"
                                             title="Calendario y Horarios">Ver
                                             Horarios</a>
@@ -700,10 +686,7 @@
                                 </div>
                                 <div class="answer-wrapper">
                                     <div class="answer">
-                                        Actualmente, se tiene abierto la piscina de adultos con toboganes solo los
-                                        sábados,
-                                        domingos y feriados.
-                                        Las demás piscinas abren de acorde al aforo del día.
+                                        Todas las piscinas se encuentran abiertas para el público.
                                     </div>
                                 </div>
                             </div>
@@ -778,11 +761,11 @@
                             </div>
 
                             <div class="faq-item closed">
-                                <div class="question">¿Dónde puedo canjear mi vale de consumo?
+                                <div class="question">¿Dónde puedo canjear mi cupón de descuento?
                                 </div>
                                 <div class="answer-wrapper">
                                     <div class="answer">
-                                        Solo puedes canjear tu vale de consumo en el restaurante y solo es aplicable a
+                                        Solo puedes canjear tu cupón de descuento en el restaurante y solo es aplicable a
                                         los
                                         platos de fondo, no está permitido canjearlo en productos de minimarket.
                                     </div>
@@ -887,7 +870,8 @@
 
                     <div class="terms">
                         <h1>Desarrollado por <a target="_blank"
-                                href="https://www.linkedin.com/in/michael-de-la-cruz-2784951a9/">ZeyN</a> | Vacilandia
+                                href="https://www.linkedin.com/in/michael-omar-de-la-cruz-ingaruca-2784951a9/">ZeyN</a>
+                            | Vacilandia
                             Park 2023 Todos los derechos reservados.</h1>
                     </div>
                 </div>
@@ -917,12 +901,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <!-- ESTILOS PROPIOS DE JAVASCRIPT -->
-
-    <script src="script.js"></script>
-
-    <!-- CÓDIGO DE GOOGLE ANALYTICS -->
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGSZKJ2VC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -930,6 +910,10 @@
 
         gtag('config', 'G-MBGSZKJ2VC');
     </script>
+
+    <!-- ESTILOS PROPIOS DE JAVASCRIPT -->
+
+    <script src="script.js"></script>
 </body>
 
 </html>

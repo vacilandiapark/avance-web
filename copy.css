@@ -49,6 +49,7 @@ body#venconcierto {
     overflow: hidden;
     z-index: 10;
     pointer-events: none;
+    z
 }
 
 /* VARIABLES */
@@ -200,7 +201,7 @@ button#amarillo {
     z-index: 5;
 }
 
-#whatsapp-button #whatsapp-icon {
+#whatsapp-icon {
     position: relative;
     width: 60px;
     height: 60px;
@@ -209,7 +210,7 @@ button#amarillo {
     border-radius: 50%;
 }
 
-#whatsapp-button #whatsapp-icon img {
+#whatsapp-icon img {
     position: absolute;
     top: 0;
     left: 0;
@@ -219,7 +220,7 @@ button#amarillo {
 }
 
 /* Añade los pseudo-elementos ::before para las ondas de colores */
-#whatsapp-button #whatsapp-icon::before {
+#whatsapp-icon::before {
     content: "";
     position: absolute;
     top: 0;
@@ -235,7 +236,7 @@ button#amarillo {
     z-index: -1;
 }
 
-#whatsapp-button #whatsapp-icon::after {
+#whatsapp-icon::after {
     content: "";
     position: absolute;
     top: 0;
@@ -276,7 +277,7 @@ button#amarillo {
     }
 }
 
-#whatsapp-button #whatsapp-icon img:hover {
+#whatsapp-icon img:hover {
     filter: brightness(150%);
 }
 
@@ -307,6 +308,12 @@ button#amarillo {
 
 #music-card {
     width: 100%;
+}
+
+#music-card .cerrar {
+    display: flex;
+    justify-content: right;
+
 }
 
 /* Estilos para los controles de reproducción de música */
@@ -2927,6 +2934,11 @@ button#amarillo {
     padding: 20px;
 }
 
+#galeria-3 .carousel .slick-prev,
+#galeria-3 .carousel .slick-next {
+    display: none;
+}
+
 /* CANCHAS */
 
 .canchas {
@@ -3162,6 +3174,17 @@ button#amarillo {
     max-width: var(--max-width);
     width: 100%;
     margin: 0 auto;
+}
+
+.trabajo .buscar {
+    width: 100%;
+}
+
+/* Estilo para resaltar las palabras */
+.highlight {
+    background-color: rgba(255, 255, 0, 0.5);
+    /* Amarillo con opacidad */
+    text-decoration: underline;
 }
 
 .trabajo .content {

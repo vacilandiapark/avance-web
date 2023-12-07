@@ -50,7 +50,7 @@
 
     <!-- DIV DE LA ANIMACIÓN, POSTERIORMENTE SE ESTILIZA -->
 
-    <div class="load-container">
+    <div class="pantalla_de_carga">
         <div class="loading-screen">
             <img src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Logos/s7bdcd2tqqmlceg1t5fj"
                 alt="Imagen de carga" class="loading-image">
@@ -64,7 +64,7 @@
         <!-- DIV DEL BOTÓN DEL WHATSAPP FLOTANTE -->
 
         <a href="https://api.whatsapp.com/send/?phone=%2B51913479416&text&type=phone_number&app_absent=0">
-            <div id="whatsapp-button">
+            <div id="boton_de_whatsapp">
                 <div id="whatsapp-icon">
                     <img decoding="async"
                         src="https://static-00.iconduck.com/assets.00/whatsapp-icon-512x512-8q344er8.png"
@@ -75,7 +75,7 @@
 
         <!-- SEGUNDO NAVBAR QUE VA EN VERTICAL AL LADO IZQUIERDO -->
 
-        <nav class="subnavbar">
+        <nav class="barra_vertical">
             <div class="container">
                 <div class="item" title="Inicio">
                     <a href="/">
@@ -145,7 +145,7 @@
 
                     <!-- CONTENEDOR DE LA TARJETA DE MÚSICA -->
 
-                    <div id="music-card">
+                    <div id="boton_de_musica">
 
                         <!-- BOTÓN DE REPRODUCCIÓN -->
 
@@ -180,7 +180,7 @@
 
         <!-- COLOCAMOS EL NÚMERO QUE MÁS ARRIBA COLOCAMOS PARA PODER HACER REFERENCIA A SU CONTAINER, EN ESTE CASO INFO-"NÚMERO DEL TOGGLEINFO("#")" -->
 
-        <div class="info-container info-1">
+        <div class="contenedor_informacion info-1">
 
             <!-- CLOSEINFO("NÚMERO A CERRAR DE INFO-"#") -->
 
@@ -189,23 +189,20 @@
                 <h1>HORARIOS DISPONIBLES</h1>
 
                 <h2>PARQUE GENERAL</h2>
-                <p>10:00am hasta las 05:00pm (Sábados, Domingos y Feriados)</p>
+                <p>9:00am hasta las 06:00pm de Jueves a Lunes</p>
 
                 <h2>PISCINAS Y TOBOGANES</h2>
-                <p>10:00am hasta las 05:00pm (Sabados, Domingos y Feriados)</p>
-
-                <h2>ZONA GAMER</h2>
-                <p>11:00am hasta las 04:00pm (Sabados, Domingos y Feriados)</p>
+                <p>9:00am hasta las 05:00pm de Jueves a Lunes</p>
 
                 <h2>RESTAURANTE</h2>
-                <p>11:00am hasta las 04:00pm (Sábados, Domingos y Feriados)</p>
+                <p>11:00am hasta las 04:00pm de Jueves a Lunes</p>
 
                 <h2>CANCHAS</h2>
                 <p>07:00am hasta las 12:00am (Todos los días)</p>
             </div>
         </div>
 
-        <div class="info-container info-2">
+        <div class="contenedor_informacion info-2">
             <button class="close-button" onclick="closeInfo(2)">X</button>
             <div class="content">
                 <h1>INTERACTÚA CON NUESTRO MAPA</h1>
@@ -219,14 +216,14 @@
             </div>
         </div>
 
-        <div class="info-container info-3">
+        <div class="contenedor_informacion info-3">
             <button class="close-button" onclick="closeInfo(3)">X</button>
             <div class="content">
                 <h1>PREGUNTAS Y RESPUESTAS</h1>
 
                 <!-- SECCIÓN DE PREGUNTAS Y RESPUESTAS - TOGGLE INFO -->
 
-                <section class="faq-section" style="padding: 0;">
+                <section class="preguntas_y_respuestas" style="padding: 0;">
                     <div class="container" style="padding: 0;">
                         <div class="faq-list" style="padding: 0;">
 
@@ -239,11 +236,7 @@
                                 <!-- ESTILOS DE LA RESPUESTA -->
 
                                 <div class="answer-wrapper">
-                                    <div class="answer">
-                                        Nuestro parque solo apertura los sábados, domingos y feriados de 10:00 a.m. a
-                                        5:00
-                                        p.m.
-                                        También tenemos otros horarios donde puedes ver en el siguiente enlace: <a
+                                    <div class="answer">Lo puedes ver en el siguiente enlace: <a
                                             href="#" onclick="toggleInfo('calendario')"
                                             title="Calendario y Horarios">Ver
                                             Horarios</a>
@@ -279,10 +272,7 @@
                                 </div>
                                 <div class="answer-wrapper">
                                     <div class="answer">
-                                        Actualmente, se tiene abierto la piscina de adultos con toboganes solo los
-                                        sábados,
-                                        domingos y feriados.
-                                        Las demás piscinas abren de acorde al aforo del día.
+                                        Todas las piscinas se encuentran abiertas para el público.
                                     </div>
                                 </div>
                             </div>
@@ -357,11 +347,11 @@
                             </div>
 
                             <div class="faq-item closed">
-                                <div class="question">¿Dónde puedo canjear mi vale de consumo?
+                                <div class="question">¿Dónde puedo canjear mi cupón de descuento?
                                 </div>
                                 <div class="answer-wrapper">
                                     <div class="answer">
-                                        Solo puedes canjear tu vale de consumo en el restaurante y solo es aplicable a
+                                        Solo puedes canjear tu cupón de descuento en el restaurante y solo es aplicable a
                                         los
                                         platos de fondo, no está permitido canjearlo en productos de minimarket.
                                     </div>
@@ -376,7 +366,7 @@
             </div>
         </div>
 
-        <div class="info-container info-4">
+        <div class="contenedor_informacion info-4">
             <button class="close-button" onclick="closeInfo(4)">X</button>
             <div class="content">
                 <h1>COMPRAR TICKETS</h1>
@@ -404,7 +394,7 @@
 
             <!-- SECCIÓN DEL NAVBAR -->
 
-            <nav class="navbar">
+            <nav class="navegacion_principal">
                 <div class="row-gradient"></div>
                 <div class="row">
 
@@ -502,10 +492,10 @@
 
             <!-- NAVBAR DEL RESPONSIVE-->
 
-            <div id="menuPanel">
+            <div id="responsive_navegacion">
                 <div class="close-button"><i class="fa-solid fa-x"></i></div>
                 <ul class="panel-navigation">
-                    <section class="faq-section" id="nav-responsive" style="padding: 0;">
+                    <section class="preguntas_y_respuestas" id="contenido_nav_responsive" style="padding: 0;">
                         <div class="container" style="padding: 0;">
                             <div class="faq-list" style="padding: 0;">
 
@@ -605,7 +595,7 @@
 
 
             <!--PROMOS-->
-            <section class="promos">
+            <section class="banner_principal">
                 <swiper-container class="articulo" space-between="15" pagination-clickable="true" navigation="true"
                     autoplay-delay="3000" autoplay-disable-on-interaction="true" pagination="true" keyboard="true">
                     <swiper-slide>
@@ -619,10 +609,8 @@
                                 alt=""></a>
                     </swiper-slide>
                     <swiper-slide>
-                        <a
-                            href="https://vaope.com/eventos/conciertos/papillon-y-los-5-de-oro-en-vacilandia-park-santa-anita"><img
-                                decoding="async"
-                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_auto/q_auto/f_auto/v1/Materials/Banners/6978-WEB_SLIDER_PAPILON_qwm7jt.jpg"
+                        <a href="#"><img decoding="async"
+                                src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_auto/q_auto/f_auto/v1/Materials/Banners/404628294_336155669017123_8784642876674587095_n_ae02iv.jpg"
                                 alt=""></a>
                     </swiper-slide>
                 </swiper-container>
@@ -631,6 +619,41 @@
             <!-- CONTENIDO TERCERO DE LA PÁGINA DEBAJO DEL BANNER PRINCIPAL -->
 
             <div class="main-content">
+
+                <!-- HORARIOS -->
+
+                <section class="horario">
+                    <div class="container">
+                        <div class="dia" id="abierto">
+                            <h1>LUNES</h1>
+                            <p>Abierto (09:00 am a 6:00pm)</p>
+                        </div>
+                        <div class="dia">
+                            <h1>MARTES</h1>
+                            <p>Cerrado</p>
+                        </div>
+                        <div class="dia">
+                            <h1>MIÉRCOLES</h1>
+                            <p>Cerrado</p>
+                        </div>
+                        <div class="dia" id="abierto">
+                            <h1>JUEVES</h1>
+                            <p>Abierto (09:00 am a 6:00pm)</p>
+                        </div>
+                        <div class="dia" id="abierto">
+                            <h1>VIERNES</h1>
+                            <p>Abierto (09:00 am a 6:00pm)</p>
+                        </div>
+                        <div class="dia" id="abierto">
+                            <h1>SÁBADO</h1>
+                            <p>Abierto (09:00 am a 6:00pm)</p>
+                        </div>
+                        <div class="dia" id="abierto">
+                            <h1>DOMINGO</h1>
+                            <p>Abierto (Horario extendido)</p>
+                        </div>
+                    </div>
+                </section>
 
                 <!-- ATRACCIONES -->
 
@@ -654,7 +677,7 @@
                                             src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp"
                                             alt="">
                                     </div>
-                                    <div class="text" style="background: var(--celeste);">
+                                    <div class="text">
                                         <h1>PISCINAS Y TOBOGANES</h1>
                                     </div>
                                 </a>
@@ -667,7 +690,7 @@
                                                 src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/dwezh6fmq4oc2dhrsvqt"
                                                 alt="">
                                     </div>
-                                    <div class="text" style="background: var(--morado);">
+                                    <div class="text">
                                         <h1>VACIGRANJA</h1>
                                     </div>
                                 </a>
@@ -680,7 +703,7 @@
                                             src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/ttubxel0u0muarubleju"
                                             alt="">
                                     </div>
-                                    <div class="text" style="background: var(--rojo);">
+                                    <div class="text">
                                         <h1>ZONA GAMER</h1>
                                     </div>
                                 </a>
@@ -693,7 +716,7 @@
                                             src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/mwbkfyjigdrigsozcxjh"
                                             alt="">
                                     </div>
-                                    <div class="text" style="background: var(--verde);">
+                                    <div class="text">
                                         <h1>CANCHAS DEPORTIVAS</h1>
                                     </div>
                                 </a>
@@ -704,7 +727,7 @@
 
                 <!-- NAVEGACION -->
 
-                <section class="subpanel">
+                <section class="panel_de_navegacion">
                     <div class="container">
                         <a target="_blank"
                             href="https://www.joinnus.com/events/entertainment/lima-full-day-vacilandia-park-58225"
@@ -741,16 +764,19 @@
 
                 <!--PROMOCIONES-->
 
-                <section class="carta">
+                <section class="promociones_precios">
 
                     <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
 
                     <div class="title">
                         <h1>PROMOCIONES</h1>
                     </div>
-                    <swiper-container class="tab-content active" space-between="15"
+                    <swiper-container class="tab-content active" class="carrusel-atracciones" space-between="15"
                         pagination-clickable="true" navigation="true" pagination="true" slides-per-view="1.5"
                         free-mode="true" breakpoints='{"900": {"slidesPerView": 3.5}}' keyboard="true">
+
+                        <!-- AGREGAR TARJETA DE PRECIO O PROMOCIÓN -->
+
                         <swiper-slide class="card">
                             <div class="image">
                                 <img decoding="async" loading="lazy"
@@ -760,7 +786,7 @@
                                     <div class="container">
                                         <button class="close-button" onclick="closeOverlay(this)"><i
                                                 class="fa-solid fa-xmark"></i></button>
-                                        <p>🌳💚 PROMOCIÓN NOVIEMBRE ¡¡TU FULL DAY CON EL 25% DSCT!! 🌸🥳💚</p>
+                                        <p>🌳💚 PROMOCIÓN HASTA EL 15 DE DICIEMBRE ¡¡TU FULL DAY CON EL 25% DSCT!! 🌸🥳💚</p>
                                         <p>Incluye lo siguiente</p>
                                         <ul class="list">
                                             <li>1 Ticket de ingreso al parque</li>
@@ -818,7 +844,7 @@
                                     <div class="container">
                                         <button class="close-button" onclick="closeOverlay(this)"><i
                                                 class="fa-solid fa-xmark"></i></button>
-                                        <p>🌳💚 PROMOCIÓN NOVIEMBRE ¡¡TU FULL DAY CON EL 25% DSCT!! 🌸🥳💚</p>
+                                        <p>🌳💚 PROMOCIÓN HASTA EL 15 DE DICIEMBRE ¡¡TU FULL DAY CON EL 25% DSCT!! 🌸🥳💚</p>
                                         <p>Incluye lo siguiente</p>
                                         <ul class="list">
                                             <li>1 Ticket de ingreso al parque</li>
@@ -829,11 +855,6 @@
                                         </ul>
                                         <p>Términos y condiciones:</p>
                                         <p>*Precios están sujetos a recargos por venta online
-                                            *Horario de atención sábados, domingo y feriados de
-                                            10a.m. - 5p.m. o sujeto a horario disponible del parque
-                                            *Horario de piscinas. Sábados, una piscina familiar con
-                                            toboganes. Domingos, dos piscinas con toboganes, una de
-                                            niños y una familiar
                                             *Aplica para platos de fondo seleccionados
                                             *Sujeto a horario y stock de restaurante
                                             *No válido para delivery
@@ -865,40 +886,52 @@
                             </div>
                         </swiper-slide>
 
-
                         <swiper-slide class="card">
                             <div class="image">
                                 <img decoding="async" loading="lazy"
-                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Promociones%20-%20Entradas/WhatsApp_Image_2023-10-31_at_10.51.51_AM_ogtemc.jpg"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Promociones%20-%20Entradas/WhatsApp_Image_2023-12-01_at_12.06.51_PM_z9rqta.jpg"
                                     alt="">
                                 <div class="overlay">
                                     <div class="container">
                                         <button class="close-button" onclick="closeOverlay(this)"><i
                                                 class="fa-solid fa-xmark"></i></button>
-                                        <p>Papillón y Los 5 de Oro en Vacilandia Park - Santa Anita</p>
-                                        <p>🎉 ¡La fiesta del año está a punto de comenzar en Vacilandia Park - Santa
-                                            Anita! 🎉
-                                            ¿Estás listo para un día inolvidable de música, baile y pura diversión? No
-                                            te pierdas la oportunidad de ser parte de este espectacular evento con dos
-                                            de las bandas más icónicas de la cumbia peruana, Papillón y Los 5 de Oro.
-                                            🎶 Artistas en Vivo 🎶</p>
-                                        <p>Compra en el siguiente link:</p>
+                                        <p>🌳💚 ¡¡NUESTRAS PROMOS DE PAREJA TAMBIÉN SE EXTIENDEN!! 🌸🥳💚</p>
+                                        <p>Incluye lo siguiente</p>
+                                        <ul class="list">
+                                            <li>2 Tickets de ingreso al parque</li>
+                                            <li>1/2 pollo a la leña con papas</li>
+                                            <li>2 Bebidas personales</li>
+                                            <li>2 Tragos directos o 2 Cervezas 355ml</li>
+                                            <li>2 Cupones de descuento</li>
+                                        </ul>
+                                        <p>Términos y condiciones:</p>
+                                        <p>*Precios están sujetos a recargos por venta online
+                                            *Aplica para platos de fondo seleccionados
+                                            *Sujeto a horario y stock de restaurante
+                                            *No válido para delivery
+                                            *No acumulable con otras promociones
+                                            *No válido para devolución de dinero en efectivo
+                                            *Precios no válido para conciertos
+
+                                            *Cupón de descuento válido para productos seleccionados</p>
+                                        <p>Adquiere este paquete en promoción en boletería presencial presentando la publicación de facebook</p>
                                         <a target="_blank"
-                                            href="https://www.vaope.com/eventos/conciertos/papillon-y-los-5-de-oro-en-vacilandia-park-santa-anita?f=search">Comprar</a>
+                                            href="https://www.facebook.com/photo?fbid=337181758914514&set=pcb.337185678914122">Clic aquí</a>
                                     </div>
                                 </div>
                                 <div class="text">
                                     <div class="name">
-                                        <h1>Entradas al concierto (Papillón, los 5 de Oro)</h1>
+                                        <h1>Paquete Pareja (Todo incluído)</h1>
                                         <div class="precio">
-                                            <p>Entradas desde S/20.00</p>
+                                            <p>S/119.00</p>
+                                            <p id="underline">S/178.00</p>
                                         </div>
                                     </div>
                                     <div class="buttons">
                                         <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
                                             información</button>
-                                        <a
-                                            href="https://www.vaope.com/eventos/conciertos/papillon-y-los-5-de-oro-en-vacilandia-park-santa-anita"><button
+                                        <a target="_blank"
+                                            href="https://www.facebook.com/photo?fbid=337181758914514&set=pcb.337185678914122"><button
                                                 id="comprar">Comprar</button></a>
                                     </div>
                                 </div>
@@ -909,7 +942,60 @@
                         <swiper-slide class="card">
                             <div class="image">
                                 <img decoding="async" loading="lazy"
-                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Cumplea%C3%B1os/WhatsApp_Image_2023-09-16_at_11.35.27_AM_fkx2kw.jpg"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Promociones%20-%20Entradas/WhatsApp_Image_2023-12-01_at_12.06.07_PM_ay7wnr.jpg"
+                                    alt="">
+                                <div class="overlay">
+                                    <div class="container">
+                                        <button class="close-button" onclick="closeOverlay(this)"><i
+                                                class="fa-solid fa-xmark"></i></button>
+                                        <p>🌳💚 ¡¡NUESTRAS PROMOS FAMILIARES TAMBIÉN SE EXTIENDEN!! 🌸🥳💚</p>
+                                        <p>Incluye lo siguiente</p>
+                                        <ul class="list">
+                                            <li>4 Tickets de ingreso al parque</li>
+                                            <li>1 pollo a la leña con papas</li>
+                                            <li>1 Gaseosa de 1.5 Litro</li>
+                                            <li>2 Tragos directos o 2 Cervezas 355ml</li>
+                                            <li>4 Cupones de descuento</li>
+                                        </ul>
+                                        <p>Términos y condiciones:</p>
+                                        <p>*Precios están sujetos a recargos por venta online
+                                            *Aplica para platos de fondo seleccionados
+                                            *Sujeto a horario y stock de restaurante
+                                            *No válido para delivery
+                                            *No acumulable con otras promociones
+                                            *No válido para devolución de dinero en efectivo
+                                            *Precios no válido para conciertos
+
+                                            *Cupón de descuento válido para productos seleccionados</p>
+                                        <p>Adquiere este paquete en promoción en boletería presencial presentando la publicación de facebook</p>
+                                        <a target="_blank"
+                                            href="https://www.facebook.com/photo?fbid=337181778914512&set=pcb.337185678914122">Clic aquí</a>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                    <div class="name">
+                                        <h1>Paquete Familiar (Todo incluído)</h1>
+                                        <div class="precio">
+                                            <p>S/229.00</p>
+                                            <p id="underline">S/336.00</p>
+                                        </div>
+                                    </div>
+                                    <div class="buttons">
+                                        <button onclick="showOverlay(event)" onmousedown="event.preventDefault()">Más
+                                            información</button>
+                                        <a target="_blank"
+                                            href="https://www.facebook.com/photo?fbid=337181778914512&set=pcb.337185678914122"><button
+                                                id="comprar">Comprar</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper-slide>
+
+
+                        <swiper-slide class="card">
+                            <div class="image">
+                                <img decoding="async" loading="lazy"
+                                    src="https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Promociones%20-%20Entradas/399893083_325905280042162_8869961834781765571_n_b3wiht.jpg"
                                     alt="">
                                 <div class="overlay">
                                     <div class="container">
@@ -920,18 +1006,13 @@
                                         <ul class="list">
                                             <li>10 Tickets de ingreso al parque</li>
                                             <li>Toldo + mesas + sillas</li>
-                                            <li>2 + 1/2 pollo a la leña con papas y ensaladas</li>
+                                            <li>2 + 1/2 pollo a la leña con papas</li>
                                             <li>3 Gaseosas de 1.5 Lt</li>
                                             <li>10 Helados</li>
                                             <li>5 Cupones de descuento</li>
                                         </ul>
                                         <p>Términos y condiciones:</p>
                                         <p>*Precios están sujetos a recargos por venta online
-                                            *Horario de atención sábados, domingo y feriados de
-                                            10a.m. - 5p.m. o sujeto a horario disponible del parque
-                                            *Horario de piscinas. Sábados, una piscina familiar con
-                                            toboganes. Domingos, dos piscinas con toboganes, una de
-                                            niños y una familiar
                                             *Aplica para platos de fondo seleccionados
                                             *Sujeto a horario y stock de restaurante
                                             *No válido para delivery
@@ -941,7 +1022,7 @@
 
                                             *Cupón de descuento válido para productos seleccionados</p>
                                         <p>Separa tu full day en el siguiente link:</p>
-                                        <a target="_blank" href="Celebra-tu-cumpleaños">Comprar</a>
+                                        <a href="Celebra-tu-cumpleaños">Comprar</a>
                                     </div>
                                 </div>
                                 <div class="text">
@@ -1351,7 +1432,7 @@
 
                 <!-- TOP ANCHO -->
 
-                <section class="fill-section">
+                <section class="enlace_a_mapa">
                     <div class="container">
 
                         <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
@@ -1376,7 +1457,7 @@
 
                 <!-- MAPA -->
 
-                <section class="mapa">
+                <section class="ubicacion" id="concierto">
                     <div class="container">
 
                         <!-- TÍTULO GLOBAL EN TODAS LAS PÁGINAS -->
@@ -1496,7 +1577,8 @@
 
                     <div class="terms">
                         <h1>Desarrollado por <a target="_blank"
-                                href="https://www.linkedin.com/in/michael-de-la-cruz-2784951a9/">ZeyN</a> | Vacilandia
+                                href="https://www.linkedin.com/in/michael-omar-de-la-cruz-ingaruca-2784951a9/">ZeyN</a>
+                            | Vacilandia
                             Park 2023 Todos los derechos reservados.</h1>
                     </div>
                 </div>
@@ -1526,12 +1608,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
-    <!-- ESTILOS PROPIOS DE JAVASCRIPT -->
-
-    <script src="script.js"></script>
-
-    <!-- CÓDIGO DE GOOGLE ANALYTICS -->
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGSZKJ2VC"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -1539,6 +1617,10 @@
 
         gtag('config', 'G-MBGSZKJ2VC');
     </script>
+
+    <!-- ESTILOS PROPIOS DE JAVASCRIPT -->
+
+    <script src="script.js"></script>
 </body>
 
 </html>

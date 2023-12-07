@@ -122,6 +122,10 @@ body {
     background: #EFEFEF;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    &#concierto {
+        background: $concierto_primario;
+    }
 }
 
 /* IMG y VIDEO PERSONALIZABLE CON SATURACIÓN */
@@ -166,13 +170,46 @@ main {
     margin-left: 50px;
 }
 
-/* NAVBAR */
+/* NAVEGACIÓN PRINCIPAL - NAVBAR */
 
-.navbar {
+.navegacion_principal {
 
     width: calc(100% - 50px);
     position: fixed;
     z-index: 5;
+
+    &#concierto {
+        .row {
+
+            background: $concierto_secundario;
+
+            li {
+
+                a {
+
+                    color: $blanco;
+                }
+            }
+
+            .submenu {
+
+                li {
+
+                    a {
+                        color: $concierto_secundario;
+                    }
+                }
+            }
+
+            .icons {
+
+                i {
+
+                    color: $blanco;
+                }
+            }
+        }
+    }
 
     .row {
         display: flex;
@@ -365,7 +402,7 @@ main {
 
 /* BOTÓN DE MÚSICA */
 
-#music-card {
+#boton_de_musica {
     width: 100%;
 
     #play-button {
@@ -382,7 +419,7 @@ main {
 
 /* PANTALLA DE CARGA */
 
-.load-container {
+.pantalla_de_carga {
     position: fixed;
     top: 0;
     left: 0;
@@ -416,7 +453,7 @@ main {
 
 /* BOTÓN DE WHATSAPP */
 
-#whatsapp-button {
+#boton_de_whatsapp {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -528,13 +565,18 @@ main {
 
 /* BARRA VERTICAL DE NAVEGACIÓN DERECHO*/
 
-.subnavbar {
+.barra_vertical {
     width: 50px;
     height: 100%;
     background: $blanco;
     box-shadow: $sombra;
     position: fixed;
     z-index: 7;
+
+    &#concierto {
+
+        background: $concierto_secundario;
+    }
 
     .container {
         display: flex;
@@ -569,12 +611,32 @@ main {
         &:hover {
             background: $color_borde;
         }
+
+        /* Muestra el título al hacer hover */
+        &::after {
+            content: attr(title);
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            transform: translate(10px, -50%);
+            white-space: nowrap;
+            /* Evita que el título se desplace a la siguiente línea */
+            background: $color_borde;
+            /* Ajusta según tu diseño */
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        &:hover::after {
+            display: block;
+        }
     }
 }
 
 /* CONTENEDOR DE INFORMACIÓN DE LA BARRA VERTICAL DE NAVEGACIÓN */
 
-.info-container {
+.contenedor_informacion {
     position: fixed;
     top: 0;
     left: -100%;
@@ -732,7 +794,7 @@ main {
 
 /* PANEL DE RESPONSIVE DEL NAVBAR */
 
-#menuPanel {
+#responsive_navegacion {
     display: none;
     background: $blanco;
     color: $blanco;
@@ -785,10 +847,19 @@ main {
 
 /* 01 - SECCIÓN DEL BANNER PRINCIPAL DE INICIO */
 
-.promos {
+.banner_principal {
     display: flex;
     height: 520px;
     justify-content: center;
+
+    &#concierto {
+        height: 450px !important;
+        padding: 0;
+
+        .articulo {
+            max-width: $tamaño_maximo;
+        }
+    }
 
     .articulo {
         max-width: 1200px;
@@ -888,7 +959,7 @@ main {
 
 /* 03 - SECCIÓN DE PANEL DE NAVEGACIÓN */
 
-.subpanel {
+.panel_de_navegacion {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -959,7 +1030,7 @@ main {
 
 /* 04 - SECCIÓN DE PRECIOS Y PROMOCIONES */
 
-.carta {
+.promociones_precios {
     padding: $espacio 0;
 
     .tab-content {
@@ -1444,6 +1515,16 @@ main {
     justify-content: center;
     padding: $espacio 0;
 
+    &#concierto {
+        background: none;
+
+        .title {
+            h1 {
+                color: $blanco;
+            }
+        }
+    }
+
     .container {
         max-width: $tamaño_maximo;
         width: 100%;
@@ -1515,7 +1596,7 @@ main {
 
 /* 09 - SECCIÓN DE ENLACE A MAPA INTERACTIVO */
 
-.fill-section {
+.enlace_a_mapa {
     background: linear-gradient(45deg, rgba($rgba-verde, 0.9), rgba($rgba-verde, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1601,9 +1682,17 @@ main {
 
 /* 10 - SECCIÓN DE UBICACIÓN GMAPS */
 
-.mapa {
+.ubicacion {
     display: flex;
     justify-content: center;
+
+    &#concierto {
+        .title {
+            h1 {
+                color: $blanco;
+            }
+        }
+    }
 
     .container {
         max-width: $tamaño_maximo;
@@ -1671,10 +1760,29 @@ main {
     display: flex;
     justify-content: center;
 
+    &#concierto {
+
+        .container {
+            background: $concierto_secundario;
+
+            .col {
+                h1 {
+                    color: $blanco;
+                }
+            }
+
+            li {
+                color: $blanco;
+
+                a {
+                    color: $blanco;
+                }
+            }
+        }
+    }
+
     .container {
-        background: linear-gradient(45deg, rgba($rgba-morado, 0.7), rgba($rgba-rosado, 0.7)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:%23ffffff;display:block;z-index:1;position:relative" width="1920" height="733" preserveAspectRatio="xMidYMid" viewBox="0 0 1920 733"><g transform="translate(960,366.5) scale(1,1) translate(-960,-366.5)"><linearGradient id="lg-0.6414523159003382" x1="0" x2="1" y1="0" y2="0"><stop stop-color="%23432f87" offset="0"></stop><stop stop-color="%23432f87" offset="1"></stop></linearGradient><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="0s" values="M0 0L 0 283.67101309538634Q 192 251.90884526447005 384 219.90646049124118T 768 299.4509100285186T 1152 270.42778080305214T 1536 218.3149507416504T 1920 89.43474323894026L 1920 0 Z;M0 0L 0 256.4143765620531Q 192 299.7801522037929 384 275.15966155989605T 768 262.2504295479387T 1152 178.41284475969195T 1536 197.5822468834999T 1920 127.96264806421516L 1920 0 Z;M0 0L 0 356.4713497916909Q 192 253.36828550994926 384 218.7997337945651T 768 276.6406492885463T 1152 199.16649389647478T 1536 226.55369246880318T 1920 146.09582312717635L 1920 0 Z;M0 0L 0 283.67101309538634Q 192 251.90884526447005 384 219.90646049124118T 768 299.4509100285186T 1152 270.42778080305214T 1536 218.3149507416504T 1920 89.43474323894026L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-2s" values="M0 0L 0 319.11899333912424Q 192 342.44715892858386 384 323.3705368708085T 768 188.31197766532387T 1152 206.3977365614634T 1536 260.0630856779243T 1920 192.7027560727124L 1920 0 Z;M0 0L 0 322.5803039795676Q 192 229.39986654594563 384 204.19325867766983T 768 223.91297831196093T 1152 190.92343104493193T 1536 205.9548905536828T 1920 116.48944682183478L 1920 0 Z;M0 0L 0 278.01581311325333Q 192 357.7116843618869 384 326.47377518937094T 768 189.95166733320247T 1152 238.77923407518517T 1536 194.79213308826797T 1920 229.76568114706322L 1920 0 Z;M0 0L 0 319.11899333912424Q 192 342.44715892858386 384 323.3705368708085T 768 188.31197766532387T 1152 206.3977365614634T 1536 260.0630856779243T 1920 192.7027560727124L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-4s" values="M0 0L 0 265.70792357537226Q 192 325.22216839240366 384 308.09574833381487T 768 284.299085417025T 1152 151.69916492672928T 1536 143.23381353212494T 1920 173.4754185299112L 1920 0 Z;M0 0L 0 300.28048798354644Q 192 315.08891322627363 384 279.73950821969436T 768 190.00694883403486T 1152 252.67385647634717T 1536 237.21356941230746T 1920 108.84577570387708L 1920 0 Z;M0 0L 0 248.25846334993983Q 192 305.09726028659037 384 281.1192359766636T 768 211.52210365369277T 1152 263.5222112452816T 1536 189.94224228611233T 1920 137.51683681406817L 1920 0 Z;M0 0L 0 265.70792357537226Q 192 325.22216839240366 384 308.09574833381487T 768 284.299085417025T 1152 151.69916492672928T 1536 143.23381353212494T 1920 173.4754185299112L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-6s" values="M0 0L 0 286.3493905363014Q 192 342.28420876834826 384 314.8956215557967T 768 215.98284531743803T 1152 260.90811640334937T 1536 216.50072421424076T 1920 178.36056007245588L 1920 0 Z;M0 0L 0 356.8625319430233Q 192 355.9450988834828 384 322.88040687433835T 768 305.87326091898814T 1152 163.61380961400653T 1536 153.31345546376107T 1920 210.78092083370515L 1920 0 Z;M0 0L 0 314.1642929577042Q 192 296.2839880062296 384 275.74125569654603T 768 178.8165812149103T 1152 217.30665057415231T 1536 232.7583527371458T 1920 161.3447175282529L 1920 0 Z;M0 0L 0 286.3493905363014Q 192 342.28420876834826 384 314.8956215557967T 768 215.98284531743803T 1152 260.90811640334937T 1536 216.50072421424076T 1920 178.36056007245588L 1920 0 Z"></animate></path><path d="" fill="url(%23lg-0.6414523159003382)" opacity="0.4"><animate attributeName="d" dur="10s" repeatCount="indefinite" keyTimes="0;0.333;0.667;1" calcMode="spline" keySplines="0.5 0 0.5 1;0.5 0 0.5 1;0.5 0 0.5 1" begin="-8s" values="M0 0L 0 314.4635413808246Q 192 318.68786048494786 384 280.964277423555T 768 241.46074570631606T 1152 269.55787020074393T 1536 173.91253022947163T 1920 132.84624080679197L 1920 0 Z;M0 0L 0 364.7365876051235Q 192 331.5103366576035 384 293.6633783753306T 768 204.87922582630816T 1152 170.6802348569447T 1536 130.9372347072474T 1920 178.07010597963594L 1920 0 Z;M0 0L 0 337.40078620761733Q 192 290.73326277397297 384 266.7934235130969T 768 305.7026594666869T 1152 163.84949370980084T 1536 166.04794457687478T 1920 153.54521712495676L 1920 0 Z;M0 0L 0 314.4635413808246Q 192 318.68786048494786 384 280.964277423555T 768 241.46074570631606T 1152 269.55787020074393T 1536 173.91253022947163T 1920 132.84624080679197L 1920 0 Z"></animate></path></g></svg>');
-        background-size: cover;
-        background-repeat: no-repeat;
+        background: $blanco;
         width: 100%;
         padding: $espacio 20px 20px;
         display: flex;
@@ -1683,7 +1791,7 @@ main {
         gap: 40px;
 
         a {
-            color: $blanco;
+            color: $negro;
         }
 
         .row {
@@ -1697,7 +1805,7 @@ main {
             }
 
             h1 {
-                color: $blanco;
+                color: $negro;
                 font-family: $fuente_primaria;
                 font-weight: lighter;
                 font-size: $texto_mediana;
@@ -1714,7 +1822,7 @@ main {
 
 
                 li {
-                    color: $blanco;
+                    color: $negro;
                     font-size: $texto_pequeña;
                     font-family: $fuente_terciaria;
                 }
@@ -1747,7 +1855,7 @@ main {
 
 /* 11 - SECCIÓN DE PREGUNTAS Y RESPUESTAS*/
 
-.faq-section {
+.preguntas_y_respuestas {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -1825,7 +1933,7 @@ main {
 
 /* 11.1 - SE REUTILIZA LA SECCIÓN 11 PARA EL MENUPANEL*/
 
-#nav-responsive {
+#contenido_nav_responsive {
 
     .container {
         overflow-x: auto;
@@ -1949,7 +2057,7 @@ main {
 
 /* 13 - SECCIÓN DE TARJETAS PARA PRESENTACIÓN DE IMAGEN Y TEXTO */
 
-.cards-globales {
+.tarjetas {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -1978,6 +2086,29 @@ main {
     &#piscinas,
     &#zona_gamer {
         background: linear-gradient(45deg, rgba($rgba-blanco, 0.9), rgba($rgba-blanco, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp);
+    }
+
+    &#concierto {
+        background: linear-gradient(45deg, rgba($rgba-rojo, 0.9), rgba($rgba-rosado, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/v1/Materials/Atracciones/jni1dtqt2oajft7o6osp);
+
+        .container {
+
+            .title {
+
+                h1 {
+                    color: $blanco;
+                }
+            }
+
+            .card {
+
+                height: auto;
+
+                &::after {
+                    background: linear-gradient(to top, $concierto_secundario, transparent);
+                }
+            }
+        }
     }
 
     .container {
@@ -2185,6 +2316,14 @@ main {
     justify-content: center;
     padding: $espacio 0;
 
+    &#concierto {
+        .title {
+            h1 {
+                color: $blanco;
+            }
+        }
+    }
+
     .container {
         max-width: $tamaño_maximo;
         width: 100%;
@@ -2305,7 +2444,7 @@ main {
 
 /* 16 - SECCIÓN DE TARJETAS SECUNDARIAS */
 
-.galeria-2 {
+.carrusel_texto_imagen {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -2352,6 +2491,7 @@ main {
     }
 
     &#rincon_chelero {
+
         .text {
             h1 {
                 color: $purpura;
@@ -2441,12 +2581,20 @@ main {
 
 /* 19 - SECCIÓN DE INFORMACIÓN BREVE E IMAGEN */
 
-.info {
+.introduccion {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
 
     &#rincon_chelero {
+
+        .title {
+
+            h1 {
+                color: $purpura;
+            }
+        }
+
         .text {
             h1 {
                 color: $purpura;
@@ -2537,6 +2685,28 @@ main {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
+
+    &#concierto {
+        background: linear-gradient(45deg, rgba($rgba-celeste, 0.9), rgba($rgba-amarillo, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_1000/q_auto/f_auto/Materials/Canchas%20Deportivas/DJI_0113-min_r7vuby.jpg);
+
+        .card{
+            height: calc(100% - 10px);
+
+            .text {
+                h1 {
+                    color: $celeste;
+                }
+
+                p {
+                    margin: 5px 0;
+                    font-family: $fuente_secundaria;
+                    font-size: $texto_pequeña;
+                    color: $gris;
+                    padding: 0px 20px;
+                }
+            }
+        }
+    }
 
     .container {
         max-width: $tamaño_maximo;
@@ -2709,7 +2879,7 @@ main {
 
 /* 22 - SECCIÓN PARA LOS PLATOS O CARTA GASTRONÓMICA*/
 
-.platos {
+.carta_gastronomica {
     justify-content: center;
     padding: $espacio 0;
 
@@ -2802,7 +2972,7 @@ main {
 
 /* 23 - SECCIÓN DE INFORMACIÓN DE PDF CON QR */
 
-.pdf {
+.seccion_pdf {
     background: linear-gradient(45deg, rgba($rgba-naranja, 0.9), rgba($rgba-rojo, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Otros/k1woujpafqqml8gq7ofr);
     background-repeat: no-repeat;
     background-size: cover;
@@ -2817,7 +2987,7 @@ main {
         max-width: $tamaño_maximo;
         width: 100%;
 
-        .carta-pdf {
+        .promociones_precios-pdf {
             width: 40%;
             height: auto;
             border-radius: 20px;
@@ -2835,8 +3005,9 @@ main {
             height: auto;
 
             img {
-                width: 30%;
+                width: 100px;
             }
+
 
             h1 {
                 font-family: $fuente_primaria;
@@ -2861,12 +3032,20 @@ main {
                 }
             }
         }
+
+        .carta-pdf {
+            width: 30%;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
 /* 24 - SECCIÓN DE IMAGENES ESTILO CARRUSEL VERTICAL */
 
-.galeria-4 {
+.carrusel_imagenes {
     padding: $espacio;
 
     .container {
@@ -2931,7 +3110,7 @@ main {
 
 /* 25 - SECCIÓN DE IMAGENES ESTILO CARRUSEL HORIZONTAL */
 
-#galeria-3 {
+#carrusel_caracteristicas {
     width: 100%;
     height: auto;
     background: linear-gradient(45deg, rgba($rgba-purpura, 0.9), rgba($rgba-celeste, 0.9)), url(https://res.cloudinary.com/dlvqvbok1/image/upload/w_500/q_auto/f_auto/v1/Materials/Entretenimiento/7.%20RECORRIDO%20CORAZONES);
@@ -3000,7 +3179,7 @@ main {
 
 /* 26 - SECCIÓN DE FORMULARIO DE CONTACTO */
 
-.formulario {
+.formulario_de_contacto {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -3050,7 +3229,7 @@ main {
 
 /* 27 - SECCIÓN PARA INFORMACIÓN DE PAQUETES EN CARRUSEL */
 
-.paqs {
+.paquetes_informacion {
     padding: $espacio 0;
     display: flex;
     justify-content: center;
@@ -3135,7 +3314,7 @@ main {
 
 /* 28 - SECCIÓN DE FILAS PARA LA PÁGINA NOSOTROS */
 
-.wave {
+.informacion_empresa {
     width: 100%;
     display: flex;
     align-items: center;
@@ -3319,7 +3498,7 @@ main {
 
 /* 30 - SECCIÓN PARA EL MAPA DEL PARQUE */
 
-.mappark {
+.mapa_del_parque {
     display: flex;
     justify-content: center;
     padding: $espacio 0;
@@ -3397,12 +3576,59 @@ main {
     }
 }
 
+/* 32 - SECCIÓN PARA HORARIOS */
+
+.horario{
+    padding-top: $espacio;
+
+    .container{
+        max-width: $tamaño_maximo;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+        overflow-x: auto;
+
+        .dia{
+            background: rgba($rgba-rojo, 0.8);
+            border-radius: 10px;
+            width: 100%;
+            padding: 15px 0;
+            box-shadow: $sombra;
+            color: $blanco;
+            text-transform: uppercase;
+            border: 2px solid $rojo;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &#abierto{
+                background: rgba($rgba-verde, 0.8);
+                color: $blanco;
+                border: 2px solid $verde;
+            }
+
+            h1{
+                font-family: $fuente_primaria;
+                font-size: $texto_mediana;
+            }
+
+            p{
+                font-family: $fuente_terciaria;
+                font-size: $texto_pequeña;
+            }
+        }
+    }
+}
+
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 1100PX */
 
 @media (max-width: 1100px) {
-    #whatsapp-button {
+    #boton_de_whatsapp {
         bottom: 60px;
     }
 
@@ -3419,7 +3645,7 @@ main {
         width: calc(100% - 25px);
     }
 
-    .wave .col-text {
+    .informacion_empresa .col-text {
         width: calc(100% - 35px);
     }
 
@@ -3427,7 +3653,7 @@ main {
         margin: 0;
     }
 
-    .subnavbar {
+    .barra_vertical {
         width: 100%;
         height: 50px;
         bottom: 0;
@@ -3441,24 +3667,24 @@ main {
 
     /* INFO CONTAINER */
 
-    .info-container {
+    .contenedor_informacion {
         left: -200%;
         padding: 0;
         width: 100%;
         overflow-y: auto;
     }
 
-    .promos .articulo,
+    .banner_principal .articulo,
     .promociones {
         border-radius: 0;
     }
 
-    .platos .container,
-    .galeria-2 .container {
+    .carta_gastronomica .container,
+    .carrusel_texto_imagen .container {
         padding: 0;
     }
 
-    .info .text {
+    .introduccion .text {
         background: none;
 
         h1,
@@ -3468,36 +3694,36 @@ main {
     }
 
     .canchas,
-    .info,
-    .galeria-4,
-    .platos,
-    .pdf,
-    .carta,
+    .introduccion,
+    .carrusel_imagenes,
+    .carta_gastronomica,
+    .seccion_pdf,
+    .promociones_precios,
     .atracciones,
     .entretenimiento,
     .servicios,
-    .mapa,
-    .fill-section,
+    .ubicacion,
+    .enlace_a_mapa,
     .gastronomia,
-    .subpanel,
+    .panel_de_navegacion,
     .reseñas,
-    .faq-section,
+    .preguntas_y_respuestas,
     .piscinas,
-    .cards-globales,
+    .tarjetas,
     .galeria,
-    .galeria-2,
-    .paqs,
+    .carrusel_texto_imagen,
+    .paquetes_informacion,
     .title-3,
-    .mappark,
+    .mapa_del_parque,
     .trabajo,
-    .formulario,
+    .formulario_de_contacto,
     .animales,
     .promociones .text {
         padding: 20px;
         overflow: hidden;
     }
 
-    .formulario {
+    .formulario_de_contacto {
         .contenido {
             flex-direction: column;
             border-radius: 20px;
@@ -3506,7 +3732,7 @@ main {
 
         .col-form,
         .content {
-            width: 100%;
+            width: 100% !important;
             border-radius: 0;
         }
     }
@@ -3531,7 +3757,7 @@ main {
 
     /* NAVBAR */
 
-    .navbar {
+    .navegacion_principal {
         width: 100%;
 
         .hamburguer {
@@ -3552,7 +3778,7 @@ main {
         }
     }
 
-    #menuPanel {
+    #responsive_navegacion {
         display: block;
     }
 }
@@ -3584,7 +3810,7 @@ main {
 
     /* promos */
 
-    .promos {
+    .banner_principal {
         .contenido {
             width: 100%;
             order: 2;
@@ -3595,7 +3821,7 @@ main {
         }
     }
 
-    .paqs {
+    .paquetes_informacion {
         .card {
             flex-direction: column;
         }
@@ -3606,7 +3832,7 @@ main {
 
         .image,
         .text {
-            width: 100%;
+            width: 100% !important;
         }
     }
 }
@@ -3616,7 +3842,7 @@ main {
 /* MEDIA QUERY PARA PANTALLAS INFERIORES A 600PX */
 
 @media (max-width: 600px) {
-    .subpanel .container {
+    .panel_de_navegacion .container {
         flex-direction: column;
 
         .box {
@@ -3642,7 +3868,16 @@ main {
         }
     }
 
-    .mapa .container {
+    .horario{
+
+        padding: 20px 20px;
+
+        .container{
+            flex-direction: column;
+        }
+    }
+
+    .ubicacion .container {
         .contenido {
             flex-direction: column;
         }
@@ -3664,16 +3899,20 @@ main {
 
         .text,
         .carrusel-image {
-            width: 100%;
+            width: 100% !important;
         }
     }
 
-    .pdf {
+    .seccion_pdf {
         .container {
             flex-direction: column;
+
+            .content {
+                width: 100% !important;
+            }
         }
 
-        .carta-pdf {
+        .promociones_precios-pdf {
             width: 100%;
         }
 
@@ -3686,14 +3925,15 @@ main {
         }
     }
 
-    .info {
+    .introduccion {
         .container {
             flex-direction: column;
         }
 
         .text,
         .image {
-            width: 100%;
+            width: 100% !important;
+            text-align: center;
         }
     }
 
@@ -3712,7 +3952,13 @@ main {
 
         .col-image,
         .col-text {
-            width: 100%;
+            width: 100% !important;
+        }
+    }
+
+    .animales {
+        .card {
+            width: calc(100% - 25px) !important;
         }
     }
 }
